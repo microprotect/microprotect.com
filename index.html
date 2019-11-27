@@ -6,13 +6,44 @@
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         <style>
             body { background: #FFF; color: #000; }
-            a { position: absolute; bottom: 0; left: 0; display: inline-block; padding: 10px; text-decoration: none; }
+            #content {
+                margin: 0 auto;
+                width: 80%;
+                min-width: 400px;
+            }
+            .field {
+                padding: .5em 0;
+            }
+            label {
+                display: block;
+                margin-bottom: .4em;
+            }
+            [type=email] {
+                width: 100%;
+                padding: .5em;
+            }
+            [type=submit] {
+                padding: .5em 1em;
+                border: 1px solid #CCC;
+                background: #FFF;
+            }
         </style>
     </head>
     <body>
-        <p>Under construction</p>
-        <div>
-            <a href="https://mailchi.mp/65e7159bb6fe/microprotect_test">.</a>
+        <div id="content">
+            <h1>Subscribe now!</h1>
+            <form method="POST"
+                  action="https://microprotect.us4.list-manage.com/subscribe/post?u=da561f586b14fde34d404137a&amp;id=ce95d6ab5c"
+                  target="_blank"
+            >
+                <div class="field">
+                    <label for="input-email">E-mail address</label>
+                    <input type="email" name="EMAIL" id="input-email">
+                </div>
+                <div class="field">
+                    <button type="submit">Subscribe</button>
+                </div>
+            </form>
         </div>
     </body>
 </html>
