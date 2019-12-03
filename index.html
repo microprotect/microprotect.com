@@ -1,56 +1,71 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>MicroProtect</title>
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
-        <style>
-            body { background: #FFF; color: #000; }
-            #content {
-                margin: 0 auto;
-                width: 80%;
-                min-width: 400px;
-            }
-            .field {
-                padding: .5em 0;
-            }
-            label {
-                display: block;
-                margin-bottom: .4em;
-            }
-            [type=email] {
-                width: 100%;
-                padding: .5em;
-            }
-            [type=submit] {
-                padding: .5em 1em;
-                border: 1px solid #CCC;
-                background: #FFF;
-            }
-        </style>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153178350-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-153178350-1');
-        </script>
-    </head>
-    <body>
-        <div id="content">
-            <h1>Subscribe now!</h1>
-            <form method="POST"
-                  action="https://microprotect.us4.list-manage.com/subscribe/post?u=da561f586b14fde34d404137a&amp;id=ce95d6ab5c"
-                  target="_blank"
-            >
-                <div class="field">
-                    <label for="input-email">E-mail address</label>
-                    <input type="email" name="EMAIL" id="input-email">
-                </div>
-                <div class="field">
-                    <button type="submit">Subscribe</button>
-                </div>
-            </form>
+<head>
+    <meta charset="UTF-8">
+    <title>MicroProtect</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <div class="logo">microprotect</div>
+        <ul class="languages">
+            <li><a href="">Korean</a></li>
+            <li><a href="">English</a></li>
+        </ul>
+    </header>
+    <main>
+        <h1>Secure More People Equally</h1>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/vuenTU4pMwc?controls=0"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
         </div>
-    </body>
+        <form class="subscribe"
+              method="POST"
+              action="https://microprotect.us4.list-manage.com/subscribe/post?u=da561f586b14fde34d404137a&amp;id=ce95d6ab5c"
+              target="_blank"
+        >
+            <div>
+                동참하시려면 이메일 주소를 남겨주세요.
+            </div>
+            <div class="field">
+                <label for="input-email">E-mail address</label>
+                <input type="email" name="EMAIL" id="input-email"
+                       placeholder="E-mail Address"
+                >
+                <button type="submit">Subscribe</button>
+            </div>
+            <ul class="channels">
+                <li><a href="" target="_blank">Facebook</a></li>
+                <li><a href="" target="_blank">Instagram</a></li>
+                <li><a href="" target="_blank">YouTube</a></li>
+                <li><a href="" target="_blank">Twitter</a></li>
+                <li><a href="" target="_blank">Blog</a></li>
+            </ul>
+        </form>
+        <ul class="partners">
+            <li>D3</li>
+            <li>mysc</li>
+            <li>The Wells Investment</li>
+            <li>True Balance</li>
+        </ul>
+    </main>
+    <footer>
+        <p>
+            서울 강남구 테헤란로 87길 22 도심공항터미널 419호 / #419,
+            CALT 22, Teheran-ro 87-gil, Gangnam-gu, Seoul, Korea
+        </p>
+        <p>
+            TEL : +82 2 552 1203 I FAX : +82 2 552 1204
+        </p>
+        <p>
+            Copyright ⓒ THE WELLS INVESTMENT All Right Reserved.
+        </p>
+    </footer>
+</div>
+</body>
 </html>
