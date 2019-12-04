@@ -33,7 +33,7 @@ section {
 }
 
 header {
-    margin: 60px 0;
+    margin-top: 60px;
 }
 
 header:after {
