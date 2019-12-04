@@ -26,7 +26,8 @@ a {
 
 header,
 h1,
-section {
+section,
+footer .wrapper {
     margin: 0 auto;
     width: 90%;
     min-width: 400px;
@@ -207,11 +208,32 @@ label {
 
 footer {
     margin-top: 110px;
-    padding: 30px 0;
+    padding: 80px 0;
     background: #899d9b;
-    color: #FFF;
+    color: #CAD3D2;
+    font-size: 1.2vw;
 }
 
-footer p {
+footer a {
+    color: #CAD3D2;
+    text-decoration: none;
+}
+
+.company {
+    font-size: 1.5vw;
+}
+
+.social-medias ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social-medias li {
+    display: inline-block;
+    margin-right: 1vw;
+}
+
+.copyright {
+    margin-top: 1.2em;
 }
