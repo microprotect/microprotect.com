@@ -34,6 +34,7 @@ section {
 
 header {
     margin-top: 60px;
+    width: 95%;
 }
 
 header:after {
@@ -73,7 +74,9 @@ header:after {
 }
 
 h1 {
-    margin-bottom: 140px;
+    margin-top: 80px;
+    margin-bottom: 160px;
+    line-height: 100%;
     font-size: 12vw;
     font-weight: lighter;
     color: #44d4c2;
