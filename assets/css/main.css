@@ -48,7 +48,7 @@ header:after {
     display: block;
     width: 250px;
     height: 46px;
-    background: transparent url("../images/logo.gif") 0 0 no-repeat;
+    background: transparent url("../images/logo.png") 0 0 no-repeat;
     background-size: contain;
     overflow: hidden;
     text-indent: -1000em;
@@ -191,18 +191,34 @@ label {
 
 .partners {
     margin-top: 140px;
+    text-align: center;
+}
+
+.partners h2 {
+    display: inline-block;
+    margin: 0 0 40px;
+    padding: 0 70px;
+    height: 64px;
+    line-height: 58px;
+    border: 2px solid #000;
+    border-radius: 32px;
+    font-size: 2vw;
+}
+
+.partners ul {
+    margin: 0;
     padding: 0;
     list-style: none;
-    text-align: center;
 }
 
 .partners li {
     display: inline-block;
-    width: 100px;
-    height: 100px;
-    background: #CCC;
-    vertical-align: top;
-    font-size: 12px;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+.partners img {
+    height: 30px;
 }
 
 footer {
