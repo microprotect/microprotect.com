@@ -5,7 +5,8 @@
 body,
 input,
 button {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: lighter;
 }
 
 body {
@@ -21,12 +22,18 @@ a {
 }
 
 #wrapper {
+}
+
+header,
+h1,
+section {
     margin: 0 auto;
     width: 90%;
     min-width: 400px;
 }
 
 header {
+    margin: 60px 0;
 }
 
 header:after {
@@ -38,9 +45,9 @@ header:after {
 .logo {
     float: left;
     display: block;
-    width: 200px;
-    height: 40px;
-    background: transparent url("../images/logo.png") 0 0 no-repeat;
+    width: 250px;
+    height: 46px;
+    background: transparent url("../images/logo.gif") 0 0 no-repeat;
     background-size: contain;
     overflow: hidden;
     text-indent: -1000em;
@@ -66,14 +73,17 @@ header:after {
 }
 
 h1 {
-    margin: 40px 0;
-    font-size: 10vw;
-    font-weight: bold;
-    text-transform: uppercase;
+    margin-bottom: 140px;
+    font-size: 12vw;
+    font-weight: lighter;
+    color: #44d4c2;
+}
+
+.introduction {
+    margin-bottom: 190px;
 }
 
 .video {
-    margin: 40px 0;
     position: relative;
     width: 100%;
     height: 0;
@@ -88,16 +98,37 @@ h1 {
     height: 100%;
 }
 
+.description {
+    margin-bottom: 180px;
+    font-size: 3.2vw;
+}
+
+.description a {
+    display: inline-block;
+    margin-top: 60px;
+    padding: 0 70px;
+    height: 64px;
+    line-height: 58px;
+    border: 2px solid #000;
+    border-radius: 32px;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
 .subscribe {
+    width: 100%;
+    margin: 0;
     padding: 60px 0;
-    background: #CCC;
+    background: #44d4c2;
+    color: #FFF;
+    font-size: 3.5vw;
     text-align: center;
 }
 
 .field {
     position: relative;
-    margin: 40px auto 0;
-    width: 80%;
+    margin: 15px auto 40px;
+    width: 60vw;
 }
 
 label {
@@ -108,39 +139,33 @@ label {
     display: block;
     margin: 0 auto;
     width: 100%;
-    height: 60px;
+    height: 100px;
     padding: 0 30px;
-    font-size: 30px;
+    font-size: 40px;
     border: 0;
-    border-radius: 30px;
+    border-radius: 50px;
+    background: #FFF url(../images/email-icon.png) 40px 50% no-repeat;
+    background-size: 29px 27px;
     overflow: hidden;
     text-align: center;
+}
+
+[type=email]::placeholder {
+    color: #a2a2a2;
 }
 
 [type=submit] {
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: 0;
+    bottom: 0;
     display: block;
-    width: 50px;
-    height: 50px;
-    border: 1px solid #CCC;
-    border-radius: 30px;
-    background: #FFF;
+    width: 100px;
+    height: 100px;
+    border: 0;
+    background: transparent url(../images/email-submit.png) 50% 50% no-repeat;
+    background-size: 27px;
     overflow: hidden;
-}
-
-.more {
-    margin: 40px 0;
-    text-align: center;
-}
-
-.more a {
-    display: inline-block;
-    padding: .5em 1em .3em;
-    background: #333;
-    color: #FFF;
-    text-decoration: none;
+    text-indent: -1000px;
 }
 
 .channels {
@@ -152,10 +177,17 @@ label {
 
 .channels li {
     display: inline-block;
+    margin: 0 .8vw;
+}
+
+.channels a {
+    color: #FFF;
+    font-size: 1.8vw;
+    text-decoration: none;
 }
 
 .partners {
-    margin: 40px 0;
+    margin-top: 140px;
     padding: 0;
     list-style: none;
     text-align: center;
@@ -171,8 +203,10 @@ label {
 }
 
 footer {
+    margin-top: 110px;
     padding: 30px 0;
-    background: #CCC;
+    background: #899d9b;
+    color: #FFF;
 }
 
 footer p {
