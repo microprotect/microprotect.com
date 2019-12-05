@@ -138,6 +138,7 @@ h1 {
 
 @media only screen and (min-width: 960px) {
     .description a {
+        padding: 1vw 6vw;
         font-size: 2vw;
     }
 }
@@ -246,9 +247,15 @@ label {
     text-align: center;
 }
 
+@media only screen and (min-width: 960px) {
+    .partners {
+        width: 70%;
+    }
+}
+
 .partners h2 {
     display: inline-block;
-    margin: 0 0 40px;
+    margin: 0 0 4vw;
     padding: 2vw 6vw;
     border: 2px solid #000;
     border-radius: 100px;
@@ -257,6 +264,7 @@ label {
 
 @media only screen and (min-width: 960px) {
     .partners h2 {
+        padding: 1.8vw 5vw;
         font-size: 2vw;
     }
 }
@@ -268,24 +276,24 @@ label {
 }
 
 .partners li {
-    margin: 20px 0;
+    margin: 5vw 0;
     vertical-align: middle;
 }
 
 @media only screen and (min-width: 960px) {
     .partners li {
-        margin: 0 20px;
+        margin: 2vw 2vw 0;
         display: inline-block;
     }
 }
 
 .partners img {
-    height: 30px;
+    height: 8vw;
 }
 
 @media only screen and (min-width: 960px) {
     .partners img {
-        height: 40px;
+        height: 5vw;
     }
 }
 
