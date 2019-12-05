@@ -14,14 +14,21 @@ body {
     padding: 0;
     background: #FFF;
     color: #000;
-    font-size: 20px;
+    font-size: 4vw;
+}
+
+@media only screen and (min-width: 960px) {
+    body {
+        font-size: 2vw;
+    }
 }
 
 a {
     color: #000;
 }
 
-#wrapper {
+p {
+    margin: 0;
 }
 
 header,
@@ -30,11 +37,10 @@ section,
 footer .wrapper {
     margin: 0 auto;
     width: 90%;
-    min-width: 400px;
 }
 
 header {
-    margin-top: 60px;
+    margin-top: 5vw;
     width: 95%;
 }
 
@@ -47,12 +53,19 @@ header:after {
 .logo {
     float: left;
     display: block;
-    width: 250px;
-    height: 46px;
+    width: 180px;
+    height: 40px;
     background: transparent url("../images/logo.png") 0 0 no-repeat;
     background-size: contain;
     overflow: hidden;
     text-indent: -1000em;
+}
+
+@media only screen and (min-width: 960px) {
+    .logo {
+        width: 250px;
+        height: 46px;
+    }
 }
 
 .languages {
@@ -75,8 +88,8 @@ header:after {
 }
 
 h1 {
-    margin-top: 80px;
-    margin-bottom: 160px;
+    margin-top: 10vw;
+    margin-bottom: 14vw;
     line-height: 100%;
     font-size: 12vw;
     font-weight: lighter;
@@ -84,7 +97,7 @@ h1 {
 }
 
 .introduction {
-    margin-bottom: 190px;
+    margin-bottom: 14vw;
 }
 
 .video {
@@ -103,36 +116,58 @@ h1 {
 }
 
 .description {
-    margin-bottom: 180px;
-    font-size: 3.2vw;
+    margin-bottom: 14vw;
+    font-size: 4vw;
+}
+
+@media only screen and (min-width: 960px) {
+    .description {
+        font-size: 3.2vw;
+    }
 }
 
 .description a {
     display: inline-block;
-    margin-top: 60px;
-    padding: 0 70px;
-    height: 64px;
-    line-height: 58px;
+    margin-top: 5vw;
+    padding: 2vw 6vw;
     border: 2px solid #000;
-    border-radius: 32px;
+    border-radius: 10vw;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 3vw;
+}
+
+@media only screen and (min-width: 960px) {
+    .description a {
+        font-size: 2vw;
+    }
 }
 
 .subscribe {
     width: 100%;
     margin: 0;
-    padding: 60px 0;
+    padding: 10vw 0;
     background: #44d4c2;
     color: #FFF;
-    font-size: 3.5vw;
+    font-size: 5vw;
     text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+    .subscribe {
+        font-size: 3.5vw;
+    }
 }
 
 .field {
     position: relative;
     margin: 15px auto 40px;
-    width: 60vw;
+    width: 90vw;
+}
+
+@media only screen and (min-width: 960px) {
+    .field {
+        width: 60vw;
+    }
 }
 
 label {
@@ -143,15 +178,23 @@ label {
     display: block;
     margin: 0 auto;
     width: 100%;
-    height: 100px;
+    height: 50px;
     padding: 0 30px;
-    font-size: 40px;
     border: 0;
     border-radius: 50px;
     background: #FFF url(../images/email-icon.png) 40px 50% no-repeat;
-    background-size: 29px 27px;
+    background-size: 15px 14px;
+    font-size: 20px;
     overflow: hidden;
     text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+    [type=email] {
+        height: 100px;
+        background-size: 29px 27px;
+        font-size: 40px;
+    }
 }
 
 [type=email]::placeholder {
@@ -163,13 +206,21 @@ label {
     right: 0;
     bottom: 0;
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border: 0;
     background: transparent url(../images/email-submit.png) 50% 50% no-repeat;
-    background-size: 27px;
+    background-size: 15px;
     overflow: hidden;
     text-indent: -1000px;
+}
+
+@media only screen and (min-width: 960px) {
+    [type=submit] {
+        width: 100px;
+        height: 100px;
+        background-size: 27px;
+    }
 }
 
 .channels {
@@ -186,24 +237,28 @@ label {
 
 .channels a {
     color: #FFF;
-    font-size: 1.8vw;
+    font-size: .8em;
     text-decoration: none;
 }
 
 .partners {
-    margin-top: 140px;
+    margin-top: 14vw;
     text-align: center;
 }
 
 .partners h2 {
     display: inline-block;
     margin: 0 0 40px;
-    padding: 0 70px;
-    height: 64px;
-    line-height: 58px;
+    padding: 2vw 6vw;
     border: 2px solid #000;
-    border-radius: 32px;
-    font-size: 2vw;
+    border-radius: 100px;
+    font-size: 3vw;
+}
+
+@media only screen and (min-width: 960px) {
+    .partners h2 {
+        font-size: 2vw;
+    }
 }
 
 .partners ul {
@@ -213,21 +268,40 @@ label {
 }
 
 .partners li {
-    display: inline-block;
-    margin: 0 20px;
+    margin: 20px 0;
     vertical-align: middle;
+}
+
+@media only screen and (min-width: 960px) {
+    .partners li {
+        margin: 0 20px;
+        display: inline-block;
+    }
 }
 
 .partners img {
     height: 30px;
 }
 
+@media only screen and (min-width: 960px) {
+    .partners img {
+        height: 40px;
+    }
+}
+
 footer {
-    margin-top: 110px;
-    padding: 80px 0;
+    margin-top: 14vw;
+    padding: 14vw 0;
     background: #899d9b;
     color: #CAD3D2;
-    font-size: 1.2vw;
+    font-size: 3vw;
+}
+
+@media only screen and (min-width: 960px) {
+    footer {
+        padding: 8vw 0;
+        font-size: 1.2vw;
+    }
 }
 
 footer a {
@@ -236,7 +310,17 @@ footer a {
 }
 
 .company {
-    font-size: 1.5vw;
+    font-size: 4vw;
+}
+
+@media only screen and (min-width: 960px) {
+    .company {
+        font-size: 1.5vw;
+    }
+}
+
+.company p {
+    margin-bottom: 0.8em;
 }
 
 .social-medias ul {
