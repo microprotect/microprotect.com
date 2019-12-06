@@ -249,13 +249,13 @@ label {
 
 @media only screen and (min-width: 960px) {
     .partners {
-        width: 70%;
+        width: 90%;
     }
 }
 
 .partners h2 {
     display: inline-block;
-    margin: 0 0 4vw;
+    margin: 0 0 2vw;
     padding: 2vw 6vw;
     border: 2px solid #000;
     border-radius: 100px;
@@ -264,7 +264,7 @@ label {
 
 @media only screen and (min-width: 960px) {
     .partners h2 {
-        padding: 1.8vw 5vw;
+        padding: 1.3vw 3vw;
         font-size: 2vw;
     }
 }
@@ -293,7 +293,7 @@ label {
 
 @media only screen and (min-width: 960px) {
     .partners img {
-        height: 5vw;
+        height: 4vw;
     }
 }
 
