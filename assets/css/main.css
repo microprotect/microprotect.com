@@ -15,6 +15,7 @@ body {
     background: #FFF;
     color: #000;
     font-size: 4vw;
+    word-break: keep-all;
 }
 
 @media only screen and (min-width: 960px) {
@@ -96,10 +97,6 @@ h1 {
     color: #44d4c2;
 }
 
-.introduction {
-    margin-bottom: 14vw;
-}
-
 .video {
     position: relative;
     width: 100%;
@@ -116,47 +113,57 @@ h1 {
 }
 
 .description {
-    margin-bottom: 14vw;
-    font-size: 4vw;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    font-size: 1.1em;
+    text-align: center;
 }
 
 @media only screen and (min-width: 960px) {
     .description {
-        font-size: 3.2vw;
+        font-size: 1.6em;
     }
 }
 
-.description a {
-    display: inline-block;
-    margin-top: 5vw;
-    padding: 2vw 6vw;
-    border: 2px solid #000;
-    border-radius: 10vw;
-    text-decoration: none;
-    font-size: 3vw;
+.description ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-@media only screen and (min-width: 960px) {
-    .description a {
-        padding: 1vw 6vw;
-        font-size: 2vw;
-    }
+.description li {
+    margin-bottom: .3em;
 }
 
 .subscribe {
     width: 100%;
     margin: 0;
-    padding: 10vw 0;
+    padding: 3em 0;
     background: #44d4c2;
     color: #FFF;
-    font-size: 5vw;
+    font-size: 1.3em;
     text-align: center;
 }
 
 @media only screen and (min-width: 960px) {
     .subscribe {
-        font-size: 3.5vw;
+        font-size: 1.7em;
     }
+}
+
+.subscribe p {
+    margin: 0 auto 2em;
+    width: 60%;
+}
+
+@media only screen and (min-width: 960px) {
+    .subscribe p {
+        width: 100%;
+    }
+}
+
+.subscribe p:last-child {
+    margin: 2em auto 0;
 }
 
 .field {
@@ -222,24 +229,6 @@ label {
         height: 100px;
         background-size: 27px;
     }
-}
-
-.channels {
-    margin: 40px 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.channels li {
-    display: inline-block;
-    margin: 0 .8vw;
-}
-
-.channels a {
-    color: #FFF;
-    font-size: .8em;
-    text-decoration: none;
 }
 
 .partners {
