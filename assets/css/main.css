@@ -248,6 +248,21 @@ label {
     }
 }
 
+.more {
+    margin-top: 7em;
+    padding: 0 10%;
+}
+
+.more a {
+    display: block;
+    height: 0;
+    padding-bottom: calc(100% * 720 / 1280);
+    background: transparent url(../images/videos.jpg) 0 0 no-repeat;
+    background-size: contain;
+    text-indent: -10000px;
+    overflow: hidden;
+}
+
 .partners {
     margin-top: 7em;
     margin-bottom: 7em;
