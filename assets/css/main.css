@@ -98,10 +98,20 @@ header:after {
 
 .languages a {
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 0 0 20px;
     height: 40px;
     line-height: 40px;
     text-decoration: none;
+}
+
+.languages .active {
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 1100px) {
+    .languages a {
+        height: 46px;
+    }
 }
 
 h1 {

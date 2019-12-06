@@ -10,15 +10,15 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/main.css?fe5190e7342a89e46901fd071ba30fd0">
+    <link rel="stylesheet" href="./assets/css/main.css?f7149840be3c01aac7c8de4a1453ca89">
 </head>
 <body>
 <div id="wrapper">
     <header>
         <div class="logo">microprotect</div>
         <ul class="languages">
-            <li><a href="">Korean</a></li>
-            <li><a href="">English</a></li>
+            <li><a href="?locale=ko">Kr</a></li>
+            <li><a href="?locale=en">En</a></li>
         </ul>
     </header>
     <main>
@@ -33,10 +33,10 @@
         </section>
         <section class="description">
             <ul>
-                <li>
+                <li data-key="description1">
                     보험은 우리 모두의 것이어야 합니다.
                 </li>
-                <li>
+                <li data-key="description2">
                     더 많은 분들에게 보험 혜택을 제공하고자 합니다.
                 </li>
             </ul>
@@ -46,17 +46,18 @@
                   action="https://microprotect.us4.list-manage.com/subscribe/post?u=da561f586b14fde34d404137a&amp;id=ce95d6ab5c"
                   target="_blank"
             >
-                <p>
+                <p data-key="subscribe1">
                     2020년 1월 1일부터 시작하는 보험 기부에 동참해주세요
                 </p>
                 <div class="field">
                     <label for="input-email">E-mail address</label>
                     <input type="email" name="EMAIL" id="input-email"
                            placeholder="Your email address"
+                           required
                     >
                     <button type="submit">Subscribe</button>
                 </div>
-                <p>
+                <p data-key="subscribe2">
                     이메일을 남겨주시면 소식을 전해 드리겠습니다.
                 </p>
             </form>
@@ -107,7 +108,7 @@
                 <p>
                     <a href="mailto:hello@microprotect.com">hello@microprotect.com</a>
                 </p>
-                <p>
+                <p data-key="address">
                     서울특별시 성동구 뚝섬로1나길 5<br>
                     헤이그라운드 성수시작점 G406
                 </p>
@@ -128,5 +129,6 @@
         </div>
     </footer>
 </div>
+<script src="assets/js/main.js?5300fa7153824f773aff0748fd3f5f3b"></script>
 </body>
 </html>
