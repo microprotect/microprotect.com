@@ -23,3 +23,9 @@ if (locale === 'en') {
 }
 
 document.querySelector(`[href="?locale=${locale}"]`).className = 'active';
+
+gtag('event', 'visit');
+
+document.querySelector('.subscribe form').addEventListener('submit', () => {
+    gtag('event', 'subscribe');
+});
