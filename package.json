@@ -1,0 +1,26 @@
+{
+  "name": "microprotect-homepage",
+  "version": "1.0.0",
+  "description": "microproect.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack --mode=production && md5 dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microprotect/microprotect.com.git"
+  },
+  "keywords": [],
+  "author": "microprotect",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/microprotect/microprotect.com/issues"
+  },
+  "homepage": "https://microprotect.com/",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
