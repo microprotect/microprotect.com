@@ -7,6 +7,20 @@ module.exports = {
     path: path.resolve(__dirname, './docs'),
     filename: 'bundle-[hash].js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-react'],
+          },
+        },
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: 'index.html',

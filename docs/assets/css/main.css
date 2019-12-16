@@ -32,6 +32,10 @@ p {
     margin: 0;
 }
 
+.default-text {
+    color: transparent;
+}
+
 header,
 h1,
 section,
@@ -104,7 +108,8 @@ header:after {
     text-decoration: none;
 }
 
-.languages .active {
+.locale-ko .languages a.locale-ko,
+.locale-en .languages a.locale-en {
     text-decoration: underline;
 }
 
