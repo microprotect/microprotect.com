@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { t } from '../locale';
-
-export default function Subscribe() {
+export default function Subscribe({t}) {
     return (
         <section className="subscribe">
             <form method="POST"

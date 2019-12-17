@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { t } from '../locale';
-
-export default function Footer() {
+export default function Footer({t}) {
     return (
         <footer>
             <div className="wrapper">

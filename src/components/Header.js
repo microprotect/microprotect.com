@@ -1,15 +1,33 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
 
-import { getLocale } from '../locale';
+import {setLocale} from '../appSlice';
 
-export default function Header() {
-    const locale = getLocale();
+function LocaleLink({children, locale}) {
+    const dispatch = useDispatch();
+
+    const handleClick = e => {
+        e.preventDefault();
+        dispatch(setLocale(locale));
+    };
+
+    return (
+        <a href={`?locale=${locale}`}
+           className={`locale-${locale}`}
+           onClick={handleClick}
+        >
+            {children}
+        </a>
+    );
+}
+
+export default function Header({locale}) {
     return (
         <header className={`locale-${locale}`}>
             <div className="logo">microprotect</div>
             <ul className="languages">
-                <li><a href="?locale=ko" className="locale-ko">Kr</a></li>
-                <li><a href="?locale=en" className="locale-en">En</a></li>
+                <li><LocaleLink locale="ko">Kr</LocaleLink></li>
+                <li><LocaleLink locale="en">En</LocaleLink></li>
             </ul>
         </header>
     );

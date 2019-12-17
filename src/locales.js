@@ -15,15 +15,4 @@ const locales = {
     }
 };
 
-let currentLocale = new Map([...new URLSearchParams(location.search)]).get('locale')
-    || (navigator.language || 'ko').slice(0, 2);
-let t = locales[currentLocale];
-
-function getLocale() {
-    return currentLocale;
-}
-
-export {
-    t,
-    getLocale,
-}
+export default locales;

@@ -1,8 +1,6 @@
 import React from 'react';
 
-import { t } from '../locale';
-
-export default function Describe() {
+export default function Describe({t}) {
     return (
         <section className="description">
             <ul>
