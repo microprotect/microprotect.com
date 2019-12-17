@@ -15,5 +15,5 @@ npm start
 ## Build static files
 
 ```bash
-npm run build
+./build.sh
 ```

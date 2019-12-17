@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "rm -rf docs/* && webpack --mode=production && cp CNAME docs/ && cp -r assets docs/"
+    "build": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
