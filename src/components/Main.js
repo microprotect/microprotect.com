@@ -1,19 +1,29 @@
 import React from 'react';
 
+import YouTube from 'react-youtube';
+
 import Subscribe from './Subscribe';
 import Partners from './Partners';
 import Describe from './Describe';
 
 export default function Main({t}) {
+    const handlePlay = () => window.postMessage({type: 'play-video'}, '*');
+
     return (
         <main>
             <h1>Secure more people equally</h1>
             <section className="introduction">
                 <div className="video">
-                    <iframe src="https://www.youtube.com/embed/GkmM2pbf2AE?controls=0&rel=0"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen></iframe>
+                    <YouTube
+                        videoId="GkmM2pbf2AE"
+                        opts={{
+                            playerVars: {
+                                controls: 0,
+                                rel: 0,
+                            }
+                        }}
+                        onPlay={handlePlay}
+                    />
                 </div>
             </section>
             <Describe t={t}/>
