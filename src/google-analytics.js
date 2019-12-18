@@ -1,10 +1,18 @@
-gtag('event', 'visit');
-
-document.querySelector('.subscribe form').addEventListener('submit', () => {
-    gtag('event', 'subscribe');
-});
+/* global gtag */
 
 (() => {
+  const { location } = window;
+
+  if (location.hostname !== 'microprotect.com') {
+    return;
+  }
+
+  gtag('event', 'visit');
+
+  document.querySelector('.subscribe form').addEventListener('submit', () => {
+    gtag('event', 'subscribe');
+  });
+
   const handleScroll = () => {
     if (window.scrollY < window.innerHeight / 2) {
       return;
@@ -16,7 +24,7 @@ document.querySelector('.subscribe form').addEventListener('submit', () => {
 
   window.addEventListener('scroll', handleScroll);
 
-  window.addEventListener('message', ({data: {type}}) => {
+  window.addEventListener('message', ({ data: { type } }) => {
     if (type === 'play-video') {
       gtag('event', 'play-video');
     }
