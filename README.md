@@ -17,3 +17,9 @@ npm start
 ```bash
 ./build.sh
 ```
+
+## Lint and fix
+
+```bash
+npm run lint
+```
