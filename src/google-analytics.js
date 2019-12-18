@@ -15,4 +15,10 @@ document.querySelector('.subscribe form').addEventListener('submit', () => {
   };
 
   window.addEventListener('scroll', handleScroll);
+
+  window.addEventListener('message', ({data: {type}}) => {
+    if (type === 'play-video') {
+      gtag('event', 'play-video');
+    }
+  });
 })();
