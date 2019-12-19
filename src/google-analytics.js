@@ -9,10 +9,6 @@
 
   gtag('event', 'visit');
 
-  document.querySelector('.subscribe form').addEventListener('submit', () => {
-    gtag('event', 'subscribe');
-  });
-
   const handleScroll = () => {
     if (window.scrollY < window.innerHeight / 2) {
       return;
@@ -25,8 +21,8 @@
   window.addEventListener('scroll', handleScroll);
 
   window.addEventListener('message', ({ data: { type } }) => {
-    if (type === 'play-video') {
-      gtag('event', 'play-video');
+    if (['play-video', 'subscribe'].includes(type)) {
+      gtag('event', type);
     }
   });
 })();

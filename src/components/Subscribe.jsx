@@ -1,12 +1,15 @@
 import React from 'react';
 
 export default function Subscribe({ t }) {
+  const handleSubmit = () => window.postMessage({ type: 'subscribe' }, '*');
+
   return (
     <section className="subscribe">
       <form
         method="POST"
         action="https://microprotect.us4.list-manage.com/subscribe/post?u=da561f586b14fde34d404137a&amp;id=ce95d6ab5c"
         target="_blank"
+        onSubmit={handleSubmit}
       >
         <p>{t.subscribe1}</p>
         <div className="field">
