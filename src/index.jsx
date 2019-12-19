@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { setLocale } from './appSlice';
 
-import App from './App.jsx';
+import App from './App';
 
 import './google-analytics';
 
