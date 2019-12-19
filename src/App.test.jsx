@@ -4,9 +4,9 @@ import Enzyme, { render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import * as ReactRedux from 'react-redux';
-import configureMockStore from 'redux-mock-store'
+import configureMockStore from 'redux-mock-store';
 
-import App from './App.jsx';
+import App from './App';
 
 Enzyme.configure({ adapter: new Adapter() });
 

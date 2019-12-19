@@ -20,12 +20,20 @@ export default function Footer({ t }) {
         <div className="social-medias">
           <ul>
             <li>
-              <a href="https://www.facebook.com/111858463618112" target="_blank">
+              <a
+                href="https://www.facebook.com/111858463618112"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Facebook
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/microprotect/" target="_blank">
+              <a
+                href="https://www.instagram.com/microprotect/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Instagram
               </a>
             </li>
@@ -33,12 +41,17 @@ export default function Footer({ t }) {
               <a
                 href="https://www.youtube.com/channel/UCWWiBU0hQ7IRkcylMoM2k6Q"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Youtube
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/microprotect" target="_blank">
+              <a
+                href="https://twitter.com/microprotect"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Twitter
               </a>
             </li>

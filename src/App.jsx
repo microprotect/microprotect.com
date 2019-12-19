@@ -2,9 +2,9 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
-import Header from './components/Header.jsx';
-import Main from './components/Main.jsx';
-import Footer from './components/Footer.jsx';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
 export default function App() {
   const { t, locale } = useSelector((state) => ({
