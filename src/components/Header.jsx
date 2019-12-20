@@ -27,8 +27,8 @@ export default function Header({ locale }) {
     <header className={`locale-${locale}`}>
       <div className="logo">microprotect</div>
       <ul className="languages">
-        <li><LocaleLink locale="ko">Kr</LocaleLink></li>
-        <li><LocaleLink locale="en">En</LocaleLink></li>
+        <li><LocaleLink locale="ko">Korean</LocaleLink></li>
+        <li><LocaleLink locale="en">English</LocaleLink></li>
       </ul>
     </header>
   );

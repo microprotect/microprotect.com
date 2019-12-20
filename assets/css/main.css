@@ -54,15 +54,9 @@ footer .wrapper {
 }
 
 header {
-    margin-top: 1em;
+    margin-top: 1.5em;
     width: 95%;
     max-width: 1550px;
-}
-
-@media only screen and (min-width: 1100px) {
-    header {
-        margin-top: 2.5em;
-    }
 }
 
 header:after {
@@ -74,8 +68,8 @@ header:after {
 .logo {
     float: left;
     display: block;
-    width: 180px;
-    height: 40px;
+    width: 120px;
+    height: 30px;
     background: transparent url("../images/logo.png") 0 0 no-repeat;
     background-size: contain;
     overflow: hidden;
@@ -102,9 +96,9 @@ header:after {
 
 .languages a {
     display: inline-block;
-    padding: 0 0 0 20px;
-    height: 40px;
-    line-height: 40px;
+    padding: 0 .7em;
+    height: 30px;
+    line-height: 30px;
     text-decoration: none;
 }
 
@@ -121,11 +115,21 @@ header:after {
 
 h1 {
     margin-top: .9em;
-    margin-bottom: 1.1em;
+    margin-bottom: 1.5em;
+    padding-right: 20%;
     line-height: 100%;
-    font-size: 6em;
+    font-size: 5em;
     font-weight: lighter;
     color: #44d4c2;
+    animation: 1.2s ease-out slideup;
+}
+
+@media only screen and (min-width: 1600px) {
+    h1 {
+        margin-top: .4em;
+        margin-bottom: .9em;
+        padding-right: calc(1400px * 0.2);
+    }
 }
 
 .video {
@@ -133,6 +137,8 @@ h1 {
     width: 100%;
     height: 0;
     padding-bottom: calc(100% * 315 / 560);
+    background: #000 url(https://img.youtube.com/vi/GkmM2pbf2AE/maxresdefault.jpg);
+    background-size: cover;
 }
 
 .video iframe {
@@ -141,6 +147,11 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
+    animation: 1s ease-in fadein;
+}
+
+.video iframe.hidden {
+    visibility: hidden;
 }
 
 .description {
@@ -366,4 +377,26 @@ footer a {
 
 .copyright {
     margin-top: 1.2em;
+}
+
+/* Animations */
+
+@keyframes slideup {
+    from {
+        transform: translate3d(0, .4em, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
