@@ -9,6 +9,8 @@ import App from './App';
 
 import './google-analytics';
 
+import './assets/css/main.css';
+
 const { location } = window;
 
 const locale = new Map([...new URLSearchParams(location.search)]).get('locale')
