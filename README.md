@@ -23,3 +23,16 @@ npm start
 ```bash
 npm run lint
 ```
+
+## Run tests
+
+```bash
+# Run unit tests
+npm run test:unit
+
+# Run E2E tests
+npm run test:e2e
+
+# Run all tests
+npm test
+```
