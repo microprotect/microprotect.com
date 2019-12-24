@@ -20,7 +20,7 @@ export default function Main({ t }) {
         <div className="video">
           <YouTube
             videoId="GkmM2pbf2AE"
-            className={!isReady && 'hidden'}
+            className={!isReady ? 'hidden' : ''}
             opts={{
               playerVars: {
                 controls: 0,
