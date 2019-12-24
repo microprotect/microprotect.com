@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'emotion',
   ],
   rules: {
     indent: ['error', 2],
@@ -46,5 +47,6 @@ module.exports = {
     'arrow-spacing': ['error', { before: true, after: true }],
     'react/prop-types': 'off',
     'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
+    'no-unused-vars': ['error', { varsIgnorePattern: 'jsx' }],
   },
 };
