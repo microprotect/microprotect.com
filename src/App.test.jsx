@@ -8,6 +8,8 @@ import configureMockStore from 'redux-mock-store';
 
 import App from './App';
 
+jest.mock('./assets');
+
 Enzyme.configure({ adapter: new Adapter() });
 
 const store = configureMockStore()({

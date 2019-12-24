@@ -32,7 +32,6 @@ p {
     margin: 0;
 }
 
-header,
 h1,
 section,
 footer .wrapper {
@@ -41,71 +40,10 @@ footer .wrapper {
 }
 
 @media only screen and (min-width: 1600px) {
-    header,
     h1,
     section,
     footer .wrapper {
         width: 1400px;
-    }
-}
-
-header {
-    margin-top: 1.5em;
-    width: 95%;
-    max-width: 1550px;
-}
-
-header:after {
-    clear: both;
-    display: block;
-    content: "";
-}
-
-.logo {
-    float: left;
-    display: block;
-    width: 120px;
-    height: 30px;
-    background: transparent url("../images/logo.png") 0 0 no-repeat;
-    background-size: contain;
-    overflow: hidden;
-    text-indent: -1000em;
-}
-
-@media only screen and (min-width: 1100px) {
-    .logo {
-        width: 250px;
-        height: 46px;
-    }
-}
-
-.languages {
-    float: right;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.languages li {
-    float: left;
-}
-
-.languages a {
-    display: inline-block;
-    padding: 0 .7em;
-    height: 30px;
-    line-height: 30px;
-    text-decoration: none;
-}
-
-.locale-ko .languages a.locale-ko,
-.locale-en .languages a.locale-en {
-    text-decoration: underline;
-}
-
-@media only screen and (min-width: 1100px) {
-    .languages a {
-        height: 46px;
     }
 }
 
