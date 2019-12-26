@@ -17,8 +17,8 @@ jobs:
         run: npm ci
       - name: Lint
         run: npx eslint --ext .js,.jsx src test
-      - name: Run unit tests
-        run: npm run test:unit
+      - name: Run tests
+        run: npm test
       - name: Build
         run: |
           npm run build
