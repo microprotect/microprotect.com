@@ -3,8 +3,8 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'http://microprotect.test',
-      show: true,
+      url: 'http://localhost:9999',
+      show: false,
     },
   },
   include: {

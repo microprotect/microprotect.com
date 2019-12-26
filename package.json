@@ -8,9 +8,11 @@
     "build": "webpack --mode=production",
     "lint": "eslint --fix --ext .js,.jsx src test",
     "test": "npm run test:unit && npm run test:e2e",
-    "test:unit": "jest",
-    "test:e2e": "codeceptjs run --steps",
-    "watch": "jest --watchAll"
+    "test:unit": "jest src",
+    "test:e2e": "concurrently -k -s first npm:e2e-start npm:e2e-test",
+    "e2e-start": "webpack-dev-server --config webpack.test.js",
+    "e2e-test": "sleep 2 && codeceptjs run --steps",
+    "watch": "jest --watchAll src"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "codeceptjs": "^2.3.6",
+    "concurrently": "^5.0.2",
     "css-loader": "^3.4.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
