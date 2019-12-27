@@ -12,12 +12,6 @@ npm install
 npm start
 ```
 
-## Build static files
-
-```bash
-./build.sh
-```
-
 ## Lint and fix
 
 ```bash
