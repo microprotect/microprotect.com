@@ -1,10 +1,56 @@
+/* @jsx jsx */
+
 import React from 'react';
+
+import { jsx } from '@emotion/core';
+
+import { mq } from '../styles/utils';
+
+const styles = {
+  container: {
+    padding: '5em 0',
+    background: '#899D9B',
+    color: '#CAD3D2',
+    fontSize: '1rem',
+    '& a': {
+      color: '#CAD3D2',
+      textDecoration: 'none',
+    },
+  },
+  wrapper: {
+    margin: '0 auto',
+    width: '90%',
+    [mq(1600)]: {
+      width: '1400px',
+    },
+  },
+  company: {
+    fontSize: '1.3em',
+    '& p': {
+      marginBottom: '0.8em',
+    },
+  },
+  socialMedias: {
+    '& ul': {
+      margin: 0,
+      padding: 0,
+      listStyle: 'none',
+    },
+    '& li': {
+      display: 'inline-block',
+      marginRight: '.6em',
+    },
+  },
+  copyright: {
+    marginTop: '1.2em',
+  },
+};
 
 export default function Footer({ t }) {
   return (
-    <footer>
-      <div className="wrapper">
-        <div className="company">
+    <footer css={styles.container}>
+      <div css={styles.wrapper}>
+        <div css={styles.company}>
           <p>
             <a href="mailto:hello@microprotect.com">hello@microprotect.com</a>
           </p>
@@ -17,7 +63,7 @@ export default function Footer({ t }) {
             ))}
           </p>
         </div>
-        <div className="social-medias">
+        <div css={styles.socialMedias}>
           <ul>
             <li>
               <a
@@ -57,7 +103,7 @@ export default function Footer({ t }) {
             </li>
           </ul>
         </div>
-        <div className="copyright">
+        <div css={styles.copyright}>
           Copyright ⓒ microprotect All Right Reserved.
         </div>
       </div>
