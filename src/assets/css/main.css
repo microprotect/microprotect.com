@@ -66,29 +66,6 @@ h1 {
     }
 }
 
-.description {
-    margin-top: 4em;
-    margin-bottom: 4em;
-    font-size: 2.2em;
-    text-align: center;
-}
-
-@media only screen and (min-width: 1100px) {
-    .description {
-        font-size: 1.6em;
-    }
-}
-
-.description ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.description li {
-    margin-bottom: .3em;
-}
-
 .subscribe {
     width: 100%;
     margin: 0;
