@@ -1,36 +1,23 @@
-import React, { useState } from 'react';
-
-import YouTube from 'react-youtube';
+import React from 'react';
 
 import Subscribe from './Subscribe';
 import Partners from './Partners';
 import Describe from './Describe';
+import Video from './Video';
 
 export default function Main({ t }) {
-  const [isReady, setReady] = useState(false);
-
   const handlePlay = () => window.postMessage({ type: 'play-video' }, '*');
 
   return (
     <main>
       <h1>
-          Secure more people equally
+        Secure more people equally
       </h1>
       <section className="introduction">
-        <div className="video">
-          <YouTube
-            videoId="GkmM2pbf2AE"
-            className={!isReady ? 'hidden' : ''}
-            opts={{
-              playerVars: {
-                controls: 0,
-                rel: 0,
-              },
-            }}
-            onReady={setReady}
-            onPlay={handlePlay}
-          />
-        </div>
+        <Video
+          videoId="GkmM2pbf2AE"
+          onPlay={handlePlay}
+        />
       </section>
       <Describe t={t} />
       <Subscribe t={t} />
