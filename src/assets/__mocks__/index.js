@@ -1,4 +1,3 @@
 export const LogoImage = jest.fn();
-
-// TODO: When an asset is appended, remove this.
-export const removeThis = jest.fn();
+export const EmailIconImage = jest.fn();
+export const EmailSubmitImage = jest.fn();

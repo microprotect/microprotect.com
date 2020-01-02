@@ -14,6 +14,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 const store = configureMockStore()({
   t: {
+    subscribe1: 'Hello,\nworld!',
     address: 'Address',
   },
   locale: 'ko',
