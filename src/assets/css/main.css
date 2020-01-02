@@ -66,28 +66,6 @@ h1 {
     }
 }
 
-.video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: calc(100% * 315 / 560);
-    background: #000 url(https://img.youtube.com/vi/GkmM2pbf2AE/maxresdefault.jpg);
-    background-size: cover;
-}
-
-.video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    animation: 1s ease-in fadein;
-}
-
-.video iframe.hidden {
-    visibility: hidden;
-}
-
 .description {
     margin-top: 4em;
     margin-bottom: 4em;
