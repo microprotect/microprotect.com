@@ -1,30 +1,50 @@
+/* @jsx jsx */
+
 import React from 'react';
 
-export default function Subscribe({ t }) {
-  const handleSubmit = () => window.postMessage({ type: 'subscribe' }, '*');
+import { jsx } from '@emotion/core';
 
+import SubscribeForm from './SubscribeForm';
+
+import { mq } from '../styles/utils';
+
+const styles = {
+  container: {
+    width: '100%',
+    margin: 0,
+    padding: '3em 0',
+    background: '#44D4C2',
+    color: '#FFF',
+    fontSize: '2.5em',
+    textAlign: 'center',
+    [mq(1100)]: {
+      fontSize: '1.7em',
+    },
+  },
+  text: {
+    margin: '0 auto 2em',
+    width: '60%',
+    [mq(1100)]: {
+      width: '100%',
+    },
+  },
+};
+
+export default function Subscribe({ t }) {
   return (
-    <section className="subscribe">
-      <form
-        method="POST"
-        action="https://microprotect.us4.list-manage.com/subscribe/post?u=da561f586b14fde34d404137a&amp;id=ce95d6ab5c"
-        target="_blank"
-        onSubmit={handleSubmit}
-      >
-        <p>{t.subscribe1}</p>
-        <div className="field">
-          <label htmlFor="input-email">E-mail address</label>
-          <input
-            type="email"
-            name="EMAIL"
-            id="input-email"
-            placeholder="Your email address"
-            required
-          />
-          <button type="submit">Subscribe</button>
-        </div>
-        <p>{t.subscribe2}</p>
-      </form>
+    <section css={styles.container}>
+      <div css={styles.text}>
+        {t.subscribe1.split('\n').map((i) => (
+          <span key={i}>
+            {i}
+            <br />
+          </span>
+        ))}
+      </div>
+      <SubscribeForm t={t} />
+      <div css={styles.text}>
+        {t.subscribe2}
+      </div>
     </section>
   );
 }
