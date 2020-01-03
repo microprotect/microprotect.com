@@ -4,6 +4,7 @@ import Subscribe from './Subscribe';
 import Partners from './Partners';
 import Describe from './Describe';
 import Video from './Video';
+import More from './More';
 
 export default function Main({ t }) {
   const handlePlay = () => window.postMessage({ type: 'play-video' }, '*');
@@ -21,15 +22,7 @@ export default function Main({ t }) {
       </section>
       <Describe t={t} />
       <Subscribe t={t} />
-      <section className="more">
-        <a
-          href="https://www.youtube.com/playlist?list=PLYnkfDX2exRhsXZ3WrgrntFgmeJ1K8IvF"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          See more videos
-        </a>
-      </section>
+      <More />
       <Partners />
     </main>
   );
