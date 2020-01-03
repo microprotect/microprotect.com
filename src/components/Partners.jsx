@@ -1,73 +1,79 @@
+/* @jsx jsx */
+
 import React from 'react';
+
+import { jsx } from '@emotion/core';
+
+import { mq } from '../styles/utils';
+
+import partners from '../data/partners';
+
+const styles = {
+  container: {
+    marginTop: '7em',
+    marginBottom: '7em',
+    textAlign: 'center',
+  },
+  title: {
+    display: 'inline-block',
+    margin: '0 0 .8em',
+    padding: '.6em 1.4em',
+    border: '2px solid #000',
+    borderRadius: '100px',
+    [mq(1100)]: {
+      fontSize: '1em',
+    },
+  },
+  items: {
+    margin: '0 auto',
+    padding: 0,
+    listStyle: 'none',
+    [mq(1100)]: {
+      width: '90%',
+    },
+  },
+  item: {
+    margin: '1em 0',
+    verticalAlign: 'middle',
+    [mq(1100)]: {
+      margin: '1em 20px 0',
+      display: 'inline-block',
+    },
+  },
+  banner: {
+    height: '8vw',
+    [mq(1100)]: {
+      height: '4vw',
+      maxHeight: '60px',
+    },
+  },
+};
 
 export default function Partners() {
   return (
-    <section className="partners">
-      <h2>Partners</h2>
-      <ul>
-        <li>
-          <a
-            href="https://ccei.creativekorea.or.kr/busan/"
-            target="_blank"
-            rel="noopener noreferrer"
+    <section css={styles.container}>
+      <h2 css={styles.title}>
+        Partners
+      </h2>
+      <ul css={styles.items}>
+        {partners.map((partner) => (
+          <li
+            key={partner.title}
+            css={styles.item}
           >
-            <img src="assets/images/partners/busan.png" alt="부산창조경제혁신센터" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://www.svhc.or.kr/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="assets/images/partners/social-venture-hub.png" alt="Social Venture Hub" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://d3jubilee.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="assets/images/partners/d3.png" alt="D3" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://mysc.co.kr/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="assets/images/partners/mysc.png" alt="mysc" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://investwells.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="assets/images/partners/the-wells-investment.png" alt="The Wells Investment" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://truebalance.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="assets/images/partners/true-balance.png" alt="True Balance" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/pet_allowed_korea/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="assets/images/partners/pet.png" alt="펫시민" />
-          </a>
-        </li>
+            <a
+              href={partner.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={`assets/images/partners/${partner.image}`}
+                alt={partner.title}
+                css={styles.banner}
+              />
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
   );

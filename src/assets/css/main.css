@@ -79,61 +79,6 @@ h1 {
     overflow: hidden;
 }
 
-.partners {
-    margin-top: 7em;
-    margin-bottom: 7em;
-    text-align: center;
-}
-
-.partners h2 {
-    display: inline-block;
-    margin: 0 0 .8em;
-    padding: .6em 1.4em;
-    border: 2px solid #000;
-    border-radius: 100px;
-}
-
-@media only screen and (min-width: 1100px) {
-    .partners h2 {
-        font-size: 1em;
-    }
-}
-
-.partners ul {
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-}
-
-@media only screen and (min-width: 1100px) {
-    .partners ul {
-        width: 90%;
-    }
-}
-
-.partners li {
-    margin: 1em 0;
-    vertical-align: middle;
-}
-
-@media only screen and (min-width: 1100px) {
-    .partners li {
-        margin: 1em 20px 0;
-        display: inline-block;
-    }
-}
-
-.partners img {
-    height: 8vw;
-}
-
-@media only screen and (min-width: 1100px) {
-    .partners img {
-        height: 4vw;
-        max-height: 60px;
-    }
-}
-
 /* Animations */
 
 @keyframes slideup {
