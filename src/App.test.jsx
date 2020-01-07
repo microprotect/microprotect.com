@@ -12,25 +12,49 @@ jest.mock('./assets');
 
 Enzyme.configure({ adapter: new Adapter() });
 
-const store = configureMockStore()({
-  t: {
-    subscribe1: 'Hello,\nworld!',
-    address: 'Address',
-  },
-  locale: 'ko',
-});
+describe('App', () => {
+  beforeEach(() => {
+    jest
+      .spyOn(ReactRedux, 'useSelector')
+      .mockImplementation(() => given.store.getState());
 
-beforeEach(() => {
-  jest
-    .spyOn(ReactRedux, 'useSelector')
-    .mockImplementation(() => store.getState());
+    jest
+      .spyOn(ReactRedux, 'useDispatch')
+      .mockImplementation(() => () => {
+      });
+  });
 
-  jest
-    .spyOn(ReactRedux, 'useDispatch')
-    .mockImplementation(() => () => {});
-});
+  describe('with old website', () => {
+    given('store', () => configureMockStore()({
+      t: {
+        subscribe1: 'Hello,\nworld!',
+        address: 'Address',
+      },
+      locale: 'ko',
+      isNew: false,
+    }));
 
-it('renders home page', () => {
-  const wrapper = render(<App store={store} />);
-  expect(wrapper.text()).toMatch('Secure more people equally');
+    it('renders home page', () => {
+      const wrapper = render(<App store={given.store} />);
+      expect(wrapper.text())
+        .toMatch('Secure more people equally');
+    });
+  });
+
+  describe('with new home page', () => {
+    given('store', () => configureMockStore()({
+      t: {
+        subscribe1: 'Hello,\nworld!',
+        address: 'Address',
+      },
+      locale: 'ko',
+      isNew: false,
+    }));
+
+    it('renders home page', () => {
+      const wrapper = render(<App store={given.store} />);
+      expect(wrapper.text())
+        .toMatch('Secure more people equally');
+    });
+  });
 });

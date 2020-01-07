@@ -6,7 +6,6 @@ body,
 input,
 button {
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: lighter;
 }
 
 body {
@@ -14,13 +13,13 @@ body {
     padding: 0;
     background: #FFF;
     color: #000;
-    font-size: 2vw;
+    font-size: 16px;
     word-break: keep-all;
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1024px) {
     body {
-        font-size: 30px;
+        font-size: 20px;
     }
 }
 
