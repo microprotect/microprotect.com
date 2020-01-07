@@ -1,4 +1,10 @@
+/* @jsx jsx */
+
 import React from 'react';
+
+import { jsx } from '@emotion/core';
+
+import { mq } from '../styles/utils';
 
 import Slogan from './Slogan';
 import Subscribe from './Subscribe';
@@ -7,11 +13,21 @@ import Describe from './Describe';
 import Video from './Video';
 import More from './More';
 
+const styles = {
+  container: {
+    fontWeight: 'lighter',
+    fontSize: '2vw',
+    [mq(1600)]: {
+      fontSize: '30px',
+    },
+  },
+};
+
 export default function Main({ t }) {
   const handlePlay = () => window.postMessage({ type: 'play-video' }, '*');
 
   return (
-    <main>
+    <main css={styles.container}>
       <Slogan />
       <section className="introduction">
         <Video

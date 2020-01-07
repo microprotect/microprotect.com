@@ -15,19 +15,20 @@ const styles = {
   },
   title: {
     margin: '0 auto',
-    width: '80%',
-    maxWidth: '1100px',
+    width: '70%',
+    maxWidth: '900px',
     lineHeight: '135%',
     letterSpacing: '.03em',
     fontFamily: 'Georgia',
-    fontSize: '5em',
+    fontSize: '2em',
     fontWeight: 'normal',
     color: '#3ed7e8',
     textAlign: 'center',
     textTransform: 'capitalize',
     transform: 'scale(1, .9)',
-    [mq(2500)]: {
+    [mq(1024)]: {
       maxWidth: '100%',
+      fontSize: '5em',
     },
   },
 };
