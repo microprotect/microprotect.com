@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import store from './store';
-import { setLocale } from './appSlice';
+import { setLocale, setNew } from './appSlice';
 
 import App from './App';
 
@@ -13,10 +13,15 @@ import './assets/css/main.css';
 
 const { location } = window;
 
-const locale = new Map([...new URLSearchParams(location.search)]).get('locale')
-    || (navigator.language || 'ko').slice(0, 2);
+const params = new Map([...new URLSearchParams(location.search)]);
+
+const locale = params.get('locale') || (navigator.language || 'ko').slice(0, 2);
 
 store.dispatch(setLocale(locale));
+
+const isNew = params.get('new') || false;
+
+store.dispatch(setNew(isNew));
 
 const el = document.getElementById('app');
 el.innerHTML = '';

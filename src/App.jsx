@@ -3,14 +3,18 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import Header from './components/Header';
-import Main from './components/Main';
+import OldMain from './components/Main';
+import NewMain from './components/NewMain';
 import Footer from './components/Footer';
 
 export default function App() {
-  const { t, locale } = useSelector((state) => ({
+  const { t, locale, isNew } = useSelector((state) => ({
     t: state.t,
     locale: state.locale,
+    isNew: state.isNew,
   }));
+
+  const Main = isNew ? NewMain : OldMain;
 
   return (
     <>
