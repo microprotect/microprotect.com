@@ -2,10 +2,8 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
-import Header from './components/Header';
-import OldMain from './components/Main';
-import NewMain from './components/NewMain';
-import Footer from './components/Footer';
+import OldHome from './components/OldHome';
+import NewHome from './components/NewHome';
 
 export default function App() {
   const { t, locale, isNew } = useSelector((state) => ({
@@ -14,13 +12,9 @@ export default function App() {
     isNew: state.isNew,
   }));
 
-  const Main = isNew ? NewMain : OldMain;
+  const Home = isNew ? NewHome : OldHome;
 
   return (
-    <>
-      <Header locale={locale} />
-      <Main t={t} />
-      <Footer t={t} />
-    </>
+    <Home t={t} locale={locale} />
   );
 }
