@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Slogan from './Slogan';
 import Subscribe from './Subscribe';
 import Partners from './Partners';
 import Describe from './Describe';
@@ -11,9 +12,7 @@ export default function Main({ t }) {
 
   return (
     <main>
-      <h1>
-        Secure more people equally
-      </h1>
+      <Slogan />
       <section className="introduction">
         <Video
           videoId="GkmM2pbf2AE"
