@@ -6,6 +6,8 @@ import { jsx } from '@emotion/core';
 
 import { mq } from '../styles/utils';
 
+import features from '../data/features';
+
 const styles = {
   title: {
     margin: '0 0 2em',
@@ -22,6 +24,7 @@ const styles = {
     listStyle: 'none',
     [mq(1024)]: {
       display: 'flex',
+      flexWrap: 'wrap',
       justifyContent: 'space-between',
     },
   },
@@ -38,6 +41,31 @@ const styles = {
     fontSize: '1.2em',
     color: '#000',
   },
+  watch: {
+    margin: '4em 0 5em',
+    textAlign: 'center',
+    [mq(1024)]: {
+      marginTop: '1em',
+    },
+  },
+  watchLink: {
+    display: 'block',
+    padding: '.6em',
+    border: '1px solid #000',
+    borderRadius: '4px',
+    fontSize: '1.2em',
+    color: '#444',
+    textDecoration: 'none',
+    '&:hover': {
+      borderColor: '#3ed7e8',
+      color: '#fff',
+      background: '#3ed7e8',
+    },
+    [mq(1024)]: {
+      display: 'inline-block',
+      padding: '.3em .9em',
+    },
+  },
 };
 
 export default function Product() {
@@ -47,41 +75,45 @@ export default function Product() {
         보험을 가치 있게 같이 하세요
       </h2>
       <ul css={styles.features}>
-        <li css={styles.feature}>
-          <h3 css={styles.subtitle}>
-            가입과 해지가 자유롭습니다
-          </h3>
-          <p>
-            이제 월단위로 가입하세요.
-          </p>
-          <p>
-            한 달 사용료를 내는 구조로,
-            보험료와 유지부담이 적습니다.
-          </p>
-        </li>
-        <li css={styles.feature}>
-          <h3 css={styles.subtitle}>
-            사고가 없으면 돌려받으세요
-          </h3>
-          <p>
-            병원 한 번 가지 않았는데 매월 나가는 보험료,
-            아깝다고 생각하지 않으셨나요?
-            사고가 나지 않은 가입자에게
-            매달 일정 수준의 포인트를 드립니다.
-          </p>
-        </li>
-        <li css={styles.feature}>
-          <h3 css={styles.subtitle}>
-            무료보험을 함께 만들어 갑시다
-          </h3>
-          <p>
-            하루 4달러를 버는 저소득층의 사람들은
-            위험에 노출되어 있습니다.
-            저희 보험에 가입하시면
-            무료보험을 제공할 수 있습니다.
-          </p>
-        </li>
+        {features.map(({ title, description }) => (
+          <li
+            key={title}
+            css={styles.feature}
+          >
+            <h3 css={styles.subtitle}>
+              {title}
+            </h3>
+            {description
+              .match(/([^.?]+[.?])/g)
+              .map((text) => (
+                <p key={text}>
+                  {text}
+                </p>
+              ))}
+          </li>
+        ))}
       </ul>
+      <div css={styles.watch}>
+        <a
+          css={styles.watchLink}
+          href="https://www.youtube.com/watch?v=qG--TQhGi00"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Watch the video
+        </a>
+      </div>
+      <div css={styles.feature}>
+        <h3 css={styles.subtitle}>
+          무료보험을 함께 만들어 갑시다
+        </h3>
+        <p>
+          하루 4달러를 버는 저소득층의 사람들은
+          위험에 노출되어 있습니다.
+          저희 보험에 가입하시면
+          무료보험을 제공할 수 있습니다.
+        </p>
+      </div>
     </section>
   );
 }
