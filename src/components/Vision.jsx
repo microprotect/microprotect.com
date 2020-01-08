@@ -7,9 +7,13 @@ import { jsx } from '@emotion/core';
 import { mq } from '../styles/utils';
 
 import {
+  SecureVideoImage,
+  MoreVideoImage,
+  PeopleVideoImage,
+  EquallyVideoImage,
   SecureVideo,
   MoreVideo,
-  PleopleVideo,
+  PeopleVideo,
   EquallyVideo,
 } from '../assets';
 
@@ -35,7 +39,7 @@ const styles = {
   },
   title: {
     margin: '0 auto',
-    maxWidth: '250px',
+    maxWidth: '300px',
     lineHeight: '135%',
     letterSpacing: '.03em',
     fontFamily: 'Georgia',
@@ -47,7 +51,7 @@ const styles = {
     transform: 'scale(1, .9)',
     transition: '.3s',
     [mq(1024)]: {
-      maxWidth: '700px',
+      maxWidth: '800px',
       fontSize: '5em',
     },
   },
@@ -55,7 +59,10 @@ const styles = {
     color: '#FFF',
   },
   word: {
+    display: 'inline-block',
+    margin: '0 .18em',
     cursor: 'pointer',
+    animation: '1.2s ease-out slideup',
   },
   overlay: {
     ...layer,
@@ -79,15 +86,23 @@ const styles = {
 
 const WORDS = 'Secure more people equally'.split(' ');
 
+const IMAGES = {
+  Secure: SecureVideoImage,
+  more: MoreVideoImage,
+  people: PeopleVideoImage,
+  equally: EquallyVideoImage,
+};
+
 const VIDEOS = {
   Secure: SecureVideo,
   more: MoreVideo,
-  people: PleopleVideo,
+  people: PeopleVideo,
   equally: EquallyVideo,
 };
 
 export default function Vision() {
   const [selectedWord, selectWord] = useState('');
+  const [loaded, setLoaded] = useState([]);
 
   const handleMouseOver = (word) => selectWord(word);
   const handleMouseOut = () => selectWord('');
@@ -118,17 +133,34 @@ export default function Vision() {
           ))}
         </h1>
       </div>
-      <div css={[
-        styles.overlay,
-        { opacity: selectedWord ? 1 : 0 },
-      ]}
-      >
-        {selectedWord && (
-          <video css={styles.video} autoPlay loop muted>
-            <source src={VIDEOS[selectedWord]} />
+      {WORDS.map((word) => (
+        <div
+          key={word}
+          css={[
+            styles.overlay,
+            { opacity: word === selectedWord ? 1 : 0 },
+          ]}
+        >
+          <img
+            css={styles.video}
+            src={IMAGES[word]}
+            alt=""
+          />
+          <video
+            css={[
+              styles.video,
+              { opacity: loaded.includes(word) ? 1 : 0 },
+            ]}
+            autoPlay
+            playsInline
+            loop
+            muted
+            onLoadedData={() => setLoaded([...loaded, word])}
+          >
+            <source src={VIDEOS[word]} />
           </video>
-        )}
-      </div>
+        </div>
+      ))}
     </section>
   );
 }
