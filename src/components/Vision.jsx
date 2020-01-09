@@ -125,7 +125,7 @@ export default function Vision() {
               onMouseOver={() => handleMouseOver(word)}
               onMouseOut={handleMouseOut}
               onFocus={() => handleMouseOver(word)}
-              onBlur={handleMouseOver}
+              onBlur={handleMouseOut}
             >
               {word}
               {' '}
