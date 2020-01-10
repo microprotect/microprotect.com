@@ -19,9 +19,9 @@ const locale = params.get('locale') || (navigator.language || 'ko').slice(0, 2);
 
 store.dispatch(setLocale(locale));
 
-const isNew = params.get('new') || false;
+const version = parseInt(params.get('version') || 2, 10);
 
-store.dispatch(setNew(isNew));
+store.dispatch(setNew(version === 2));
 
 const el = document.getElementById('app');
 el.innerHTML = '';

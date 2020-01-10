@@ -23,7 +23,7 @@ const styles = {
   },
 };
 
-export default function Main({ t }) {
+export default function OldMain({ t }) {
   const handlePlay = () => window.postMessage({ type: 'play-video' }, '*');
 
   return (
