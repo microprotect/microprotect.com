@@ -6,8 +6,6 @@ import { jsx } from '@emotion/core';
 
 import { mq } from '../styles/utils';
 
-import features from '../data/features';
-
 const styles = {
   title: {
     margin: '0 0 2em',
@@ -68,22 +66,22 @@ const styles = {
   },
 };
 
-export default function Product() {
+export default function Product({ t }) {
   return (
     <section>
       <h2 css={styles.title}>
-        보험을 가치 있게 같이 하세요
+        {t.title1}
       </h2>
       <ul css={styles.features}>
-        {features.map(({ title, description }) => (
+        {[1, 2, 3].map((index) => (
           <li
-            key={title}
+            key={t[`feature${index}_title`]}
             css={styles.feature}
           >
             <h3 css={styles.subtitle}>
-              {title}
+              {t[`feature${index}_title`]}
             </h3>
-            {description
+            {t[`feature${index}_description`]
               .match(/([^.?]+[.?])/g)
               .map((text) => (
                 <p key={text}>
@@ -103,17 +101,28 @@ export default function Product() {
           Watch the video
         </a>
       </div>
-      <div css={styles.feature}>
-        <h3 css={styles.subtitle}>
-          무료보험을 함께 만들어 갑시다
-        </h3>
-        <p>
-          하루 4달러를 버는 저소득층의 사람들은
-          위험에 노출되어 있습니다.
-          저희 보험에 가입하시면
-          무료보험을 제공할 수 있습니다.
-        </p>
-      </div>
+      <h2 css={styles.title}>
+        {t.title2}
+      </h2>
+      <ul css={styles.features}>
+        {[4, 5, 6, 7].map((index) => (
+          <li
+            key={t[`feature${index}_title`]}
+            css={styles.feature}
+          >
+            <h3 css={styles.subtitle}>
+              {t[`feature${index}_title`]}
+            </h3>
+            {t[`feature${index}_description`]
+              .match(/([^.?]+[.?])/g)
+              .map((text) => (
+                <p key={text}>
+                  {text}
+                </p>
+              ))}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }

@@ -4,11 +4,11 @@ import Vision from './Vision';
 import Product from './Product';
 import Partners from './Partners';
 
-export default function Main() {
+export default function Main({ t }) {
   return (
     <main>
       <Vision />
-      <Product />
+      <Product t={t} />
       <Partners />
     </main>
   );

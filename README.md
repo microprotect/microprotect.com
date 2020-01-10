@@ -32,3 +32,9 @@ npm run test:e2e
 # Run all tests
 npm test
 ```
+
+## Generate locales
+
+```bash
+npm run locales
+```

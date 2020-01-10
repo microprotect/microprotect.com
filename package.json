@@ -12,7 +12,8 @@
     "test:e2e": "concurrently -k -s first npm:e2e-start npm:e2e-test",
     "e2e-start": "webpack-dev-server --config webpack.test.js",
     "e2e-test": "sleep 2 && codeceptjs run --steps",
-    "watch": "jest --watchAll src"
+    "watch": "jest --watchAll src",
+    "locales": "node script/generate-locales.js > src/locales.json"
   },
   "repository": {
     "type": "git",
@@ -58,6 +59,8 @@
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@reduxjs/toolkit": "^1.1.0",
+    "axios": "^0.19.1",
+    "csv-parse": "^4.8.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
