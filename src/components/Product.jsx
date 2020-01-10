@@ -51,6 +51,9 @@ const styles = {
       width: '48%',
     },
   },
+  image: {
+    width: '100%',
+  },
   subtitle: {
     margin: '.8em 0',
     fontSize: '1.2em',
@@ -95,7 +98,11 @@ export default function Product({ t }) {
             key={t[`feature${index}_title`]}
             css={styles.feature}
           >
-            <img src={images[index]} alt="" />
+            <img
+              css={styles.image}
+              src={images[index]}
+              alt=""
+            />
             <h3 css={styles.subtitle}>
               {t[`feature${index}_title`]}
             </h3>

@@ -20,9 +20,9 @@ const partners = [
     image: 'mysc.png',
   },
   {
-    title: 'The Wells Investment',
-    url: 'http://investwells.com/',
-    image: 'the-wells-investment.png',
+    title: 'Hanhwa Life Insurance',
+    url: 'https://www.hanwhalife.com/',
+    image: 'hanhwa-life.png',
   },
   {
     title: 'True Balance',
