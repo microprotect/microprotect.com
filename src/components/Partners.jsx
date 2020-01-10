@@ -15,13 +15,11 @@ const styles = {
     textAlign: 'center',
   },
   title: {
-    display: 'inline-block',
-    margin: '0 0 .8em',
-    padding: '.6em 1.4em',
-    border: '2px solid #000',
-    borderRadius: '100px',
-    [mq(1100)]: {
-      fontSize: '1em',
+    margin: '2em 0',
+    fontSize: '1.7em',
+    [mq(1024)]: {
+      fontSize: '2em',
+      textAlign: 'center',
     },
   },
   items: {
@@ -33,10 +31,10 @@ const styles = {
     },
   },
   item: {
-    margin: '1em 0',
+    margin: '0 0 1em',
     verticalAlign: 'middle',
     [mq(1100)]: {
-      margin: '1em 20px 0',
+      margin: '0 20px 1em',
       display: 'inline-block',
     },
   },
