@@ -12,3 +12,8 @@ export const SecureVideo = jest.fn();
 export const MoreVideo = jest.fn();
 export const PeopleVideo = jest.fn();
 export const EquallyVideo = jest.fn();
+
+export const FeatureImage4 = jest.fn();
+export const FeatureImage5 = jest.fn();
+export const FeatureImage6 = jest.fn();
+export const FeatureImage7 = jest.fn();

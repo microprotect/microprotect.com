@@ -6,26 +6,9 @@ import { jsx } from '@emotion/core';
 
 import { mq } from '../styles/utils';
 
-import {
-  FeatureImage4,
-  FeatureImage5,
-  FeatureImage6,
-  FeatureImage7,
-} from '../assets';
-
-const images = {
-  4: FeatureImage4,
-  5: FeatureImage5,
-  6: FeatureImage6,
-  7: FeatureImage7,
-};
-
 const styles = {
-  container: {
-    marginTop: '5em',
-  },
   title: {
-    margin: '2em 0',
+    margin: '0 0 2em',
     fontSize: '1.5em',
     [mq(1024)]: {
       marginBottom: '3em',
@@ -48,11 +31,11 @@ const styles = {
     lineHeight: '145%',
     color: '#666',
     [mq(1024)]: {
-      width: '48%',
+      width: '31%',
     },
   },
   subtitle: {
-    margin: '.8em 0',
+    margin: '0 0 .8em',
     fontSize: '1.2em',
     color: '#000',
   },
@@ -60,7 +43,7 @@ const styles = {
     margin: '4em 0 5em',
     textAlign: 'center',
     [mq(1024)]: {
-      marginTop: '2em',
+      marginTop: '1em',
     },
   },
   watchLink: {
@@ -83,19 +66,18 @@ const styles = {
   },
 };
 
-export default function Product({ t }) {
+export default function Insurance({ t }) {
   return (
-    <section css={styles.container}>
+    <section>
       <h2 css={styles.title}>
-        {t.title2}
+        {t.title1}
       </h2>
       <ul css={styles.features}>
-        {[4, 5, 6, 7].map((index) => (
+        {[1, 2, 3].map((index) => (
           <li
             key={t[`feature${index}_title`]}
             css={styles.feature}
           >
-            <img src={images[index]} alt="" />
             <h3 css={styles.subtitle}>
               {t[`feature${index}_title`]}
             </h3>
@@ -109,16 +91,6 @@ export default function Product({ t }) {
           </li>
         ))}
       </ul>
-      <div css={styles.watch}>
-        <a
-          css={styles.watchLink}
-          href="https://www.youtube.com/watch?v=qG--TQhGi00"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Watch the video
-        </a>
-      </div>
     </section>
   );
 }
