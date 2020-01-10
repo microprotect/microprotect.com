@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import locales from './locales';
+import locales from './locales.json';
 
 const { actions, reducer } = createSlice({
   name: 'app',
