@@ -61,7 +61,6 @@ const styles = {
   },
   word: {
     display: 'inline-block',
-    margin: '0 .18em',
     cursor: 'pointer',
     animation: '1.2s ease-out slideup',
   },
@@ -117,20 +116,22 @@ export default function Vision() {
         ]}
         >
           {WORDS.map((word) => (
-            <span
-              key={word}
-              css={[
-                styles.word,
-                { opacity: !selectedWord || selectedWord === word ? 1 : 0.3 },
-              ]}
-              onMouseOver={() => handleMouseOver(word)}
-              onMouseOut={handleMouseOut}
-              onFocus={() => handleMouseOver(word)}
-              onBlur={handleMouseOut}
-            >
-              {word}
+            <>
+              <span
+                key={word}
+                css={[
+                  styles.word,
+                  { opacity: !selectedWord || selectedWord === word ? 1 : 0.3 },
+                ]}
+                onMouseOver={() => handleMouseOver(word)}
+                onMouseOut={handleMouseOut}
+                onFocus={() => handleMouseOver(word)}
+                onBlur={handleMouseOut}
+              >
+                {word}
+              </span>
               {' '}
-            </span>
+            </>
           ))}
         </h1>
       </div>
