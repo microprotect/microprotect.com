@@ -40,11 +40,11 @@ const styles = {
   },
   title: {
     margin: '0 auto',
-    maxWidth: '300px',
+    maxWidth: '70vw',
     lineHeight: '135%',
     letterSpacing: '.03em',
     fontFamily: 'Georgia',
-    fontSize: '2em',
+    fontSize: '8vw',
     fontWeight: 'normal',
     color: '#3ed7e8',
     textAlign: 'center',
@@ -116,9 +116,8 @@ export default function Vision() {
         ]}
         >
           {WORDS.map((word) => (
-            <>
+            <span key={word}>
               <span
-                key={word}
                 css={[
                   styles.word,
                   { opacity: !selectedWord || selectedWord === word ? 1 : 0.3 },
@@ -131,7 +130,7 @@ export default function Vision() {
                 {word}
               </span>
               {' '}
-            </>
+            </span>
           ))}
         </h1>
       </div>
