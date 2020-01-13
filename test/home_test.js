@@ -12,3 +12,8 @@ Scenario('Change language', (I) => {
   I.click('English');
   I.see('Offers insurance in Germany');
 });
+
+Scenario('German browser', (I) => {
+  I.amOnPage('/?locale=de');
+  I.see('Offers insurance in Germany');
+});
