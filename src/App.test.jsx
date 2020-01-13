@@ -41,7 +41,7 @@ describe('App', () => {
     });
   });
 
-  describe('with new home page', () => {
+  describe('with new website', () => {
     given('store', () => configureMockStore()({
       t: {
         subscribe1: 'Hello,\nworld!',
