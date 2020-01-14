@@ -6,7 +6,7 @@ import { jsx } from '@emotion/core';
 
 import Header from './Header';
 import Main from './NewMain';
-import Footer from './Footer';
+import Footer from './FooterV2';
 
 const styles = {
   header: {

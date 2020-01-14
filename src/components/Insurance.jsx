@@ -4,6 +4,8 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Text from './Text';
+
 import { mq } from '../styles/utils';
 
 const styles = {
@@ -81,13 +83,9 @@ export default function Insurance({ t }) {
             <h3 css={styles.subtitle}>
               {t[`feature${index}_title`]}
             </h3>
-            {t[`feature${index}_description`]
-              .match(/([^.?]+[.?])/g)
-              .map((text) => (
-                <p key={text}>
-                  {text}
-                </p>
-              ))}
+            <p>
+              <Text value={t[`feature${index}_description`]} />
+            </p>
           </li>
         ))}
       </ul>
