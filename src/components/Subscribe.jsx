@@ -5,6 +5,7 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 
 import SubscribeForm from './SubscribeForm';
+import Text from './Text';
 
 import { mq } from '../styles/utils';
 
@@ -34,12 +35,7 @@ export default function Subscribe({ t }) {
   return (
     <section css={styles.container}>
       <div css={styles.text}>
-        {t.subscribe1.split('\n').map((i) => (
-          <span key={i}>
-            {i}
-            <br />
-          </span>
-        ))}
+        <Text value={t.subscribe1} />
       </div>
       <SubscribeForm t={t} />
       <div css={styles.text}>

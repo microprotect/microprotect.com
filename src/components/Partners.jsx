@@ -26,23 +26,22 @@ const styles = {
     margin: '0 auto',
     padding: 0,
     listStyle: 'none',
-    [mq(1100)]: {
-      width: '90%',
+    [mq(1024)]: {
+      maxWidth: '900px',
     },
   },
   item: {
     margin: '0 0 1em',
     verticalAlign: 'middle',
-    [mq(1100)]: {
+    [mq(1024)]: {
       margin: '0 20px 1em',
       display: 'inline-block',
     },
   },
   banner: {
     height: '8vw',
-    [mq(1100)]: {
-      height: '4vw',
-      maxHeight: '60px',
+    [mq(1024)]: {
+      height: '50px',
     },
   },
 };

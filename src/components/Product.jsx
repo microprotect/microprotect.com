@@ -4,6 +4,8 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Text from './Text';
+
 import { mq } from '../styles/utils';
 
 import {
@@ -34,7 +36,8 @@ const styles = {
     },
   },
   features: {
-    margin: 0,
+    maxWidth: '1600px',
+    margin: '0 auto',
     padding: 0,
     listStyle: 'none',
     [mq(1024)]: {
@@ -106,13 +109,9 @@ export default function Product({ t }) {
             <h3 css={styles.subtitle}>
               {t[`feature${index}_title`]}
             </h3>
-            {t[`feature${index}_description`]
-              .match(/([^.?]+[.?])/g)
-              .map((text) => (
-                <p key={text}>
-                  {text}
-                </p>
-              ))}
+            <p>
+              <Text value={t[`feature${index}_description`]} />
+            </p>
           </li>
         ))}
       </ul>

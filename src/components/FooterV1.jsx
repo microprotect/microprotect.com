@@ -4,6 +4,8 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Text from './Text';
+
 import { mq } from '../styles/utils';
 
 const styles = {
@@ -46,7 +48,7 @@ const styles = {
   },
 };
 
-export default function Footer({ t }) {
+export default function FooterV1({ t }) {
   return (
     <footer css={styles.container}>
       <div css={styles.wrapper}>
@@ -55,12 +57,7 @@ export default function Footer({ t }) {
             <a href="mailto:hello@microprotect.com">hello@microprotect.com</a>
           </p>
           <p>
-            {t.address.split('\n').map((i) => (
-              <span key={i}>
-                {i}
-                <br />
-              </span>
-            ))}
+            <Text value={t.address} />
           </p>
         </div>
         <div css={styles.socialMedias}>
