@@ -5,6 +5,7 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 
 import Text from './Text';
+import Newsletter from './Newsletter';
 
 import { mq } from '../styles/utils';
 import { listContainer, listItem } from '../styles/list';
@@ -27,6 +28,7 @@ const styles = {
     width: '90%',
     maxWidth: '1400px',
     [mq(1024)]: {
+      position: 'relative',
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'row',
@@ -35,8 +37,18 @@ const styles = {
     },
   },
   item: {
+    marginTop: '3em',
     [mq(1024)]: {
       width: '31%',
+      marginTop: 0,
+    },
+  },
+  newsletter: {
+    marginTop: 0,
+    [mq(1024)]: {
+      position: 'absolute',
+      top: 0,
+      right: 0,
     },
   },
   title: {
@@ -51,19 +63,12 @@ const styles = {
     marginBottom: '.5em',
     wordSpacing: '.5em',
   },
-  contacts: {
-    marginTop: '3em',
-    [mq(1024)]: {
-      marginTop: 0,
-    },
-  },
   email: {
     fontSize: '1.3em',
   },
   medias: {
-    marginTop: '3em',
     [mq(1024)]: {
-      marginTop: 0,
+      marginTop: '5em',
     },
   },
   mediaList: {
@@ -83,6 +88,9 @@ export default function Footer({ t }) {
   return (
     <footer css={styles.container}>
       <div css={styles.wrapper}>
+        <div css={[styles.item, styles.newsletter]}>
+          <Newsletter />
+        </div>
         <div css={styles.item}>
           <h2 css={styles.title}>
             Locations
@@ -103,7 +111,7 @@ export default function Footer({ t }) {
             ))}
           </ul>
         </div>
-        <div css={[styles.item, styles.contacts]}>
+        <div css={styles.item}>
           <h2 css={styles.title}>
             Contacts
           </h2>
@@ -112,9 +120,6 @@ export default function Footer({ t }) {
           </div>
         </div>
         <div css={[styles.item, styles.medias]}>
-          <h2 css={styles.title}>
-            Medias
-          </h2>
           <ul css={styles.mediaList}>
             {medias.map(({ title, url }) => (
               <li
