@@ -3,17 +3,19 @@ export const EmailIconImage = jest.fn();
 export const EmailSubmitImage = jest.fn();
 export const VideoImage = jest.fn();
 
-export const SecureVideoImage = jest.fn();
-export const MoreVideoImage = jest.fn();
-export const PeopleVideoImage = jest.fn();
-export const EquallyVideoImage = jest.fn();
+export const SecureVideoImage = '';
+export const MoreVideoImage = '';
+export const PeopleVideoImage = '';
+export const EquallyVideoImage = '';
 
-export const SecureVideo = jest.fn();
-export const MoreVideo = jest.fn();
-export const PeopleVideo = jest.fn();
-export const EquallyVideo = jest.fn();
+export const SecureVideo = '';
+export const MoreVideo = '';
+export const PeopleVideo = '';
+export const EquallyVideo = '';
 
-export const FeatureImage4 = jest.fn();
-export const FeatureImage5 = jest.fn();
-export const FeatureImage6 = jest.fn();
-export const FeatureImage7 = jest.fn();
+export const MainVideo = '';
+
+export const FeatureImage4 = '';
+export const FeatureImage5 = '';
+export const FeatureImage6 = '';
+export const FeatureImage7 = '';

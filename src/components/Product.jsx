@@ -98,7 +98,7 @@ export default function Product({ t }) {
       <ul css={styles.features}>
         {[4, 5, 6, 7].map((index) => (
           <li
-            key={t[`feature${index}_title`]}
+            key={index}
             css={styles.feature}
           >
             <img

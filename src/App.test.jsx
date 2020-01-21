@@ -24,14 +24,11 @@ describe('App', () => {
       });
   });
 
-  describe('with old website', () => {
+  describe('with version 1', () => {
     given('store', () => configureMockStore()({
-      t: {
-        subscribe1: 'Hello,\nworld!',
-        address: 'Address',
-      },
+      t: {},
       locale: 'ko',
-      isNew: false,
+      version: 1,
     }));
 
     it('renders home page', () => {
@@ -41,14 +38,25 @@ describe('App', () => {
     });
   });
 
-  describe('with new website', () => {
+  describe('with version 2', () => {
     given('store', () => configureMockStore()({
-      t: {
-        subscribe1: 'Hello,\nworld!',
-        address: 'Address',
-      },
+      t: {},
       locale: 'ko',
-      isNew: false,
+      version: 2,
+    }));
+
+    it('renders home page', () => {
+      const wrapper = render(<App store={given.store} />);
+      expect(wrapper.text())
+        .toMatch('Secure more people equally');
+    });
+  });
+
+  describe('with version 3', () => {
+    given('store', () => configureMockStore()({
+      t: {},
+      locale: 'ko',
+      version: 3,
     }));
 
     it('renders home page', () => {
