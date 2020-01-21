@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import store from './store';
-import { setLocale, setNew } from './appSlice';
+import { setLocale, setVersion } from './appSlice';
 
 import App from './App';
 
@@ -21,7 +21,7 @@ store.dispatch(setLocale(locale));
 
 const version = parseInt(params.get('version') || 2, 10);
 
-store.dispatch(setNew(version === 2));
+store.dispatch(setVersion(version));
 
 const el = document.getElementById('app');
 el.innerHTML = '';

@@ -77,7 +77,7 @@ export default function Insurance({ t }) {
       <ul css={styles.features}>
         {[1, 2, 3].map((index) => (
           <li
-            key={t[`feature${index}_title`]}
+            key={index}
             css={styles.feature}
           >
             <h3 css={styles.subtitle}>

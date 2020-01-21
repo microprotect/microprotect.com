@@ -13,6 +13,8 @@ import MoreVideo from './videos/more.mp4';
 import PeopleVideo from './videos/people.mp4';
 import EquallyVideo from './videos/equally.mp4';
 
+import MainVideo from './videos/main.mp4';
+
 import FeatureImage4 from './images/feature4.jpg';
 import FeatureImage5 from './images/feature5.jpg';
 import FeatureImage6 from './images/feature6.jpg';
@@ -31,6 +33,7 @@ export {
   MoreVideo,
   PeopleVideo,
   EquallyVideo,
+  MainVideo,
   FeatureImage4,
   FeatureImage5,
   FeatureImage6,

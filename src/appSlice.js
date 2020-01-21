@@ -9,7 +9,7 @@ const { actions, reducer } = createSlice({
   initialState: {
     t: {},
     locale: '',
-    isNew: false,
+    version: 2,
   },
   reducers: {
     setLocale(state, { payload: locale }) {
@@ -20,16 +20,16 @@ const { actions, reducer } = createSlice({
         locale: t ? locale : DEFAULT_LOCALE,
       };
     },
-    setNew: (state, { payload: isNew }) => ({
+    setVersion: (state, { payload: version }) => ({
       ...state,
-      isNew,
+      version,
     }),
   },
 });
 
 export const {
   setLocale,
-  setNew,
+  setVersion,
 } = actions;
 
 export default reducer;
