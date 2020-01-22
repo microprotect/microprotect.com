@@ -1,25 +1,20 @@
-/* @jsx jsx */
-
 import React from 'react';
 
-import { useSelector } from 'react-redux';
+import Eyecatch from './Eyecatch';
+import KeyMessage from './KeyMessage';
 
-import { jsx } from '@emotion/core';
-
-import Header from './HeaderV3';
-import Main from './MainV3';
-import Footer from './FooterV2';
-import Menu from './Menu';
-
-export default function HomeV3({ t, locale }) {
-  const menuOpen = useSelector((state) => state.menuOpen);
-
+export default function HomeV3({ t }) {
   return (
-    <>
-      <Header locale={locale} menuOpen={menuOpen} />
-      <Menu open={menuOpen} />
-      <Main t={t} />
-      <Footer t={t} />
-    </>
+    <main>
+      <Eyecatch />
+      <KeyMessage
+        text={t.key_message1}
+        target="/free-insurance"
+      />
+      <KeyMessage
+        text={t.key_message2}
+        target="free-insurance"
+      />
+    </main>
   );
 }
