@@ -7,7 +7,6 @@ import { jsx } from '@emotion/core';
 import Text from './Text';
 
 import { mq } from '../styles/utils';
-import clearAfter from '../styles/clearAfter';
 
 import {
   IndiaJafarImage,

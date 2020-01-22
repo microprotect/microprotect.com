@@ -2,7 +2,13 @@
 
 import React from 'react';
 
+import { useDispatch } from 'react-redux';
+
+import { Link } from 'react-router-dom';
+
 import { jsx } from '@emotion/core';
+
+import { closeMenu } from '../appSlice';
 
 import { mq } from '../styles/utils';
 import { listContainer, listItem } from '../styles/list';
@@ -74,6 +80,8 @@ const styles = {
 };
 
 export default function Menu({ open }) {
+  const dispatch = useDispatch();
+
   return (
     <div css={[
       styles.container,
@@ -95,25 +103,28 @@ export default function Menu({ open }) {
       <div css={styles.content}>
         <ul css={styles.menuList}>
           <li css={styles.menuItem}>
-            <a
-              href="/"
+            <Link
+              to="/free-insurance"
+              onClick={() => dispatch(closeMenu())}
             >
               Free Insurance
-            </a>
+            </Link>
           </li>
           <li css={styles.menuItem}>
-            <a
-              href="/"
+            <Link
+              to="/subscription-insurance"
+              onClick={() => dispatch(closeMenu())}
             >
               Subscription Insurance
-            </a>
+            </Link>
           </li>
           <li css={styles.menuItem}>
-            <a
-              href="/"
+            <Link
+              to="/"
+              onClick={() => dispatch(closeMenu())}
             >
               About us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
