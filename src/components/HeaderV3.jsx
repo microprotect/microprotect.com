@@ -2,17 +2,21 @@
 
 import React from 'react';
 
+import { useDispatch } from 'react-redux';
+
 import { jsx } from '@emotion/core';
+import { openMenu, closeMenu } from '../appSlice';
+
 
 import { imageReplacement, mq } from '../styles/utils';
 import clearAfter from '../styles/clearAfter';
 
-import { LogoImage } from '../assets';
+import { WhiteLogoImage } from '../assets';
 
 const styles = {
   container: {
-    zIndex: 100,
-    position: 'absolute',
+    zIndex: 20000,
+    position: 'fixed',
     top: 0,
     left: '5%',
     margin: '1.5em auto 0',
@@ -29,14 +33,49 @@ const styles = {
       height: '46px',
       marginLeft: '.8vw',
     },
-    ...imageReplacement(LogoImage),
+    ...imageReplacement(WhiteLogoImage),
+  },
+  menuButton: {
+    float: 'right',
+    border: 0,
+    background: 'transparent',
+    color: '#FFF',
   },
 };
 
-export default function Header() {
+function OpenMenuButton() {
+  const dispatch = useDispatch();
+
+  return (
+    <button
+      css={styles.menuButton}
+      type="button"
+      onClick={() => dispatch(openMenu())}
+    >
+      Menu
+    </button>
+  );
+}
+
+function CloseMenuButton() {
+  const dispatch = useDispatch();
+
+  return (
+    <button
+      css={styles.menuButton}
+      type="button"
+      onClick={() => dispatch(closeMenu())}
+    >
+      Close
+    </button>
+  );
+}
+
+export default function Header({ menuOpen }) {
   return (
     <header css={[styles.container, clearAfter]}>
       <div id="logo" css={styles.logo}>microprotect</div>
+      {menuOpen ? <CloseMenuButton /> : <OpenMenuButton />}
     </header>
   );
 }

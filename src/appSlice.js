@@ -10,6 +10,7 @@ const { actions, reducer } = createSlice({
     t: {},
     locale: '',
     version: 2,
+    menuOpen: false,
   },
   reducers: {
     setLocale(state, { payload: locale }) {
@@ -24,12 +25,22 @@ const { actions, reducer } = createSlice({
       ...state,
       version,
     }),
+    openMenu: (state) => ({
+      ...state,
+      menuOpen: true,
+    }),
+    closeMenu: (state) => ({
+      ...state,
+      menuOpen: false,
+    }),
   },
 });
 
 export const {
   setLocale,
   setVersion,
+  openMenu,
+  closeMenu,
 } = actions;
 
 export default reducer;
