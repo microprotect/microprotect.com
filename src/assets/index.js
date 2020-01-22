@@ -1,4 +1,6 @@
 import LogoImage from './images/logo.png';
+import WhiteLogoImage from './images/logo-white.png';
+
 import EmailIconImage from './images/email-icon.png';
 import EmailSubmitImage from './images/email-submit.png';
 import VideoImage from './images/videos.jpg';
@@ -22,6 +24,7 @@ import FeatureImage7 from './images/feature7.jpg';
 
 export {
   LogoImage,
+  WhiteLogoImage,
   EmailIconImage,
   EmailSubmitImage,
   VideoImage,
