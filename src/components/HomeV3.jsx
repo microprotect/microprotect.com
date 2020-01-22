@@ -13,7 +13,7 @@ export default function HomeV3({ t }) {
       />
       <KeyMessage
         text={t.key_message2}
-        target="free-insurance"
+        target="subscription-insurance"
       />
     </main>
   );
