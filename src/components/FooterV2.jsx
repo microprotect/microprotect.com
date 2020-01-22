@@ -14,6 +14,7 @@ import medias from '../data/medias';
 
 const styles = {
   container: {
+    clear: 'both',
     padding: '3em 0 6em',
     background: '#c6ebef',
     color: '#31343d',
