@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import { jsx } from '@emotion/core';
 
 import { mq } from '../styles/utils';
@@ -68,13 +70,13 @@ const styles = {
   },
 };
 
-export default function KeyMessage({ text }) {
+export default function KeyMessage({ text, target }) {
   const [active, setActive] = useState(false);
 
   return (
-    <a
+    <Link
       css={styles.container}
-      href="/"
+      to={target}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
     >
@@ -105,6 +107,6 @@ export default function KeyMessage({ text }) {
       >
         + Learn more
       </span>
-    </a>
+    </Link>
   );
 }

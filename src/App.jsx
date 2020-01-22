@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import HomeV1 from './components/HomeV1';
 import HomeV2 from './components/HomeV2';
-import HomeV3 from './components/HomeV3';
+import RootV3 from './components/RootV3';
 
 export default function App() {
   const { t, locale, version } = useSelector((state) => ({
@@ -13,7 +13,7 @@ export default function App() {
     version: state.version,
   }));
 
-  const Home = [HomeV1, HomeV2, HomeV3][version - 1];
+  const Home = [HomeV1, HomeV2, RootV3][version - 1];
 
   return (
     <Home t={t} locale={locale} />

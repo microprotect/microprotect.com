@@ -21,3 +21,15 @@ export const FeatureImage4 = '';
 export const FeatureImage5 = '';
 export const FeatureImage6 = '';
 export const FeatureImage7 = '';
+
+export const IndiaJafarImage = '';
+
+export const IndiaPersonImage1 = '';
+export const IndiaPersonImage2 = '';
+export const IndiaPersonImage3 = '';
+export const IndiaPersonImage4 = '';
+export const IndiaPersonImage5 = '';
+export const IndiaPersonImage6 = '';
+export const IndiaPersonImage7 = '';
+export const IndiaPersonImage8 = '';
+export const IndiaPersonImage9 = '';

@@ -22,6 +22,17 @@ import FeatureImage5 from './images/feature5.jpg';
 import FeatureImage6 from './images/feature6.jpg';
 import FeatureImage7 from './images/feature7.jpg';
 
+import IndiaJafarImage from './images/india/jafar-miyan.png';
+import IndiaPersonImage1 from './images/india/person01.png';
+import IndiaPersonImage2 from './images/india/person02.png';
+import IndiaPersonImage3 from './images/india/person03.png';
+import IndiaPersonImage4 from './images/india/person04.png';
+import IndiaPersonImage5 from './images/india/person05.png';
+import IndiaPersonImage6 from './images/india/person06.png';
+import IndiaPersonImage7 from './images/india/person07.png';
+import IndiaPersonImage8 from './images/india/person08.png';
+import IndiaPersonImage9 from './images/india/person09.png';
+
 export {
   LogoImage,
   WhiteLogoImage,
@@ -41,4 +52,14 @@ export {
   FeatureImage5,
   FeatureImage6,
   FeatureImage7,
+  IndiaJafarImage,
+  IndiaPersonImage1,
+  IndiaPersonImage2,
+  IndiaPersonImage3,
+  IndiaPersonImage4,
+  IndiaPersonImage5,
+  IndiaPersonImage6,
+  IndiaPersonImage7,
+  IndiaPersonImage8,
+  IndiaPersonImage9,
 };

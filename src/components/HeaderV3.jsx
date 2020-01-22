@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import { Link, withRouter } from 'react-router-dom';
+
 import { useDispatch } from 'react-redux';
 
 import { jsx } from '@emotion/core';
@@ -18,25 +20,28 @@ const styles = {
     zIndex: 20000,
     position: 'fixed',
     top: 0,
-    left: '5%',
-    margin: '1.5em auto 0',
-    width: '90%',
+    left: 0,
+    width: '100%',
+    padding: '20px 0',
+  },
+  filled: {
+    background: '#181818',
   },
   logo: {
-    float: 'left',
     display: 'block',
+    marginLeft: '5%',
     width: '120px',
     height: '30px',
-    marginLeft: '1vw',
     [mq(1100)]: {
       width: '250px',
       height: '46px',
-      marginLeft: '.8vw',
     },
     ...imageReplacement(WhiteLogoImage),
   },
   menuButton: {
-    float: 'right',
+    position: 'absolute',
+    top: '20px',
+    right: '5%',
     border: 0,
     background: 'transparent',
     color: '#FFF',
@@ -71,11 +76,24 @@ function CloseMenuButton() {
   );
 }
 
-export default function Header({ menuOpen }) {
+function Header({ menuOpen, location }) {
   return (
-    <header css={[styles.container, clearAfter]}>
-      <div id="logo" css={styles.logo}>microprotect</div>
+    <header css={[
+      styles.container,
+      clearAfter,
+      location.pathname !== '/' ? styles.filled : {},
+    ]}
+    >
+      <Link
+        to="/"
+        id="logo"
+        css={styles.logo}
+      >
+        microprotect
+      </Link>
       {menuOpen ? <CloseMenuButton /> : <OpenMenuButton />}
     </header>
   );
 }
+
+export default withRouter(Header);
