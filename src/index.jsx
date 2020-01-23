@@ -9,6 +9,8 @@ import App from './App';
 
 import './google-analytics';
 
+import './give-asia';
+
 import './assets/css/main.css';
 
 const { location } = window;

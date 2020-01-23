@@ -7,6 +7,7 @@ import { jsx } from '@emotion/core';
 import Text from './Text';
 import FreeInsuranceCase from './FreeInsuranceCase';
 import WhyFreeInsurance from './WhyFreeInsurance';
+import FreeInsurancePartners from './FreeInsurancePartners';
 
 import { mq } from '../styles/utils';
 
@@ -41,6 +42,7 @@ export default function FreeInsurance({ t }) {
       </h1>
       <FreeInsuranceCase t={t} />
       <WhyFreeInsurance t={t} />
+      <FreeInsurancePartners t={t} />
     </main>
   );
 }
