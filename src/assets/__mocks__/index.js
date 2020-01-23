@@ -33,3 +33,7 @@ export const IndiaPersonImage6 = '';
 export const IndiaPersonImage7 = '';
 export const IndiaPersonImage8 = '';
 export const IndiaPersonImage9 = '';
+
+export const PartnerTrueBalanceImage = '';
+export const PartnerHanwhaImage = '';
+export const PartnerGiveAsiaImage = '';

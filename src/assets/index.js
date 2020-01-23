@@ -33,6 +33,10 @@ import IndiaPersonImage7 from './images/india/person07.png';
 import IndiaPersonImage8 from './images/india/person08.png';
 import IndiaPersonImage9 from './images/india/person09.png';
 
+import PartnerTrueBalanceImage from './images/partners/truebalance.png';
+import PartnerHanwhaImage from './images/partners/hanwha.png';
+import PartnerGiveAsiaImage from './images/partners/giveasia.png';
+
 export {
   LogoImage,
   WhiteLogoImage,
@@ -62,4 +66,7 @@ export {
   IndiaPersonImage7,
   IndiaPersonImage8,
   IndiaPersonImage9,
+  PartnerTrueBalanceImage,
+  PartnerHanwhaImage,
+  PartnerGiveAsiaImage,
 };
