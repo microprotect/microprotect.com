@@ -7,6 +7,7 @@ import { jsx } from '@emotion/core';
 import Video from './Video';
 import StrongText from './StrongText';
 import AboutCEO from './AboutCEO';
+import AboutNeo from './AboutNeo';
 import Member from './Member';
 
 import members from '../data/members';
@@ -107,6 +108,7 @@ export default function AboutUs({ t }) {
       </div>
       <BossVideo />
       <AboutCEO />
+      <AboutNeo />
       <Members
         title="System development"
         category="system"
