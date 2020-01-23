@@ -21,7 +21,7 @@
   window.addEventListener('scroll', handleScroll);
 
   window.addEventListener('message', ({ data: { type } }) => {
-    if (['play-video', 'subscribe'].includes(type)) {
+    if (['play-video', 'subscribe', 'open-give-asia'].includes(type)) {
       gtag('event', type);
     }
   });
