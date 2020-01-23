@@ -2,13 +2,14 @@
 
 import React from 'react';
 
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import { useDispatch } from 'react-redux';
 
 import { jsx } from '@emotion/core';
 import { openMenu, closeMenu } from '../appSlice';
 
+import Link from './Link';
 
 import { imageReplacement, mq } from '../styles/utils';
 import clearAfter from '../styles/clearAfter';
