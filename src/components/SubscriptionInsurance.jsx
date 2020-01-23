@@ -28,29 +28,35 @@ const styles = {
       fontSize: '5em',
     },
   },
+  slide: {
+    display: 'block',
+    margin: '1em auto',
+    width: '100%',
+    maxWidth: '1024px',
+  },
 };
 
-export default function SubscriptionInsurance({ t }) {
+function format(number, size) {
+  const s = String(number);
+  return '0'.repeat(size - s.length) + s;
+}
+
+export default function SubscriptionInsurance() {
   return (
     <main css={styles.container}>
       <h1 css={styles.title}>
         <Text value={'Microprotect\nprepare for\ncritical illness'} />
       </h1>
-      <h2>
-        {t.subscription_feature1}
-      </h2>
-      <h2>
-        {t.subscription_feature2}
-      </h2>
-      <h2>
-        {t.subscription_feature3}
-      </h2>
-      <h2>
-        {t.subscription_feature4}
-      </h2>
-      <h2>
-        {t.subscription_feature5}
-      </h2>
+      {[...Array(16)].map((_, i) => i + 1)
+        .map((i) => (
+          <div key={i}>
+            <img
+              css={styles.slide}
+              src={`/assets/images/subscription/${format(i, 2)}.jpg`}
+              alt=""
+            />
+          </div>
+        ))}
     </main>
   );
 }
