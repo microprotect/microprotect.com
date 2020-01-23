@@ -68,3 +68,11 @@ section {
         opacity: 1;
     }
 }
+
+/* hack */
+
+#givikiWidgetContainer,
+#givikiWidgetContainer * {
+    width: 0 !important;
+    overflow: hidden !important;
+}
