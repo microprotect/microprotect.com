@@ -37,3 +37,5 @@ export const IndiaPersonImage9 = '';
 export const PartnerTrueBalanceImage = '';
 export const PartnerHanwhaImage = '';
 export const PartnerGiveAsiaImage = '';
+
+export const AboutCeoImage = '';

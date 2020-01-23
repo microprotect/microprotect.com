@@ -11,14 +11,14 @@ const BASE_MQ = mq(640);
 const styles = {
   container: {
     marginTop: '.2em',
-    height: '3em',
+    minHeight: '3em',
     [BASE_MQ]: {
-      height: 'auto',
+      minHeight: 'auto',
     },
   },
 };
 
-const PRODUCTS = [
+const TEXTS = [
   'Critical Illness',
   'Private Accident Insurance',
   'Occupational Disability Insurance',
@@ -35,11 +35,13 @@ export default function ProductRotation() {
     return function cleanup() {
       clearTimeout(id);
     };
-  });
+  }, [index]);
+
+  const text = TEXTS[index % TEXTS.length];
 
   return (
     <div css={styles.container}>
-      {PRODUCTS[index % PRODUCTS.length]}
+      <span>{text}</span>
     </div>
   );
 }

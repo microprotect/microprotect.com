@@ -1,6 +1,6 @@
-Feature('About us page');
+Feature('About us');
 
-Scenario('Show about us page', (I) => {
-  I.amOnPage('/about-us?version=3');
-  I.see('contribute to the world with insurance.');
+Scenario('Visit about us page', (I) => {
+  I.amOnPage('/about-us');
+  I.see('Microprotect offers a way for more people');
 });
