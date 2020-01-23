@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
-
 import { jsx } from '@emotion/core';
+
+import Link from './Link';
 
 import { mq } from '../styles/utils';
 
