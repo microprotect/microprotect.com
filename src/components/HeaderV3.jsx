@@ -49,6 +49,21 @@ const styles = {
   },
 };
 
+function Logo() {
+  const dispatch = useDispatch();
+
+  return (
+    <Link
+      to="/"
+      id="logo"
+      css={styles.logo}
+      onClick={() => dispatch(closeMenu())}
+    >
+      Microprotect
+    </Link>
+  );
+}
+
 function OpenMenuButton() {
   const dispatch = useDispatch();
 
@@ -85,13 +100,7 @@ function Header({ menuOpen, location }) {
       location.pathname !== '/' ? styles.filled : {},
     ]}
     >
-      <Link
-        to="/"
-        id="logo"
-        css={styles.logo}
-      >
-        microprotect
-      </Link>
+      <Logo />
       {menuOpen ? <CloseMenuButton /> : <OpenMenuButton />}
     </header>
   );
