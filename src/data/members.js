@@ -5,15 +5,22 @@ export const ceo = {
   description: `
     *16 years* in insurance industry, *10 years* in insurance product development
     ASA (U.S. *Actuary*)
-    Product planning and *PM* of Samsung Fire & Marine Insurance(SFMI)’s Long
-    Term Insurance (online channel) for the last *3 years*
-    *SFMI*’s long-term insurance (online) *new contract monthly* sales of about *230,000 EUR*
-    SFMI accounts for over *80%* of new contract M / S of Korea’s *online insurance*
+    Product planning and *PM* of Samsung Fire & Marine Insurance(SFMI)’s Long Term Insurance (online channel) for the last *3 years*
+  `,
+};
+
+export const neo = {
+  name: 'Neo Kim',
+  role: 'Germany general manager',
+  description: `
+    LIG Insurance New Contract Subscription System
+    LIG Insurance Field Sales (branch manager)
   `,
 };
 
 const members = [
   ceo,
+  neo,
   {
     category: 'system',
     name: 'Ashal',
@@ -26,18 +33,19 @@ const members = [
   {
     category: 'system',
     name: 'Ong Kim',
-    role: 'Benefit payment system',
+    role: 'Claim system',
     description: `
-      Samsung Fire & Marine Long-term Damage
+      Accident & Health product claim system 
       Compensation Practice & Loss Planning
     `,
   },
   {
     category: 'system',
     name: 'Jay',
-    role: 'Join System',
+    role: 'Underwriting and subscription System',
     description: `
-      MG non-life insurance insurance subscription / maintenance / acquisition system operation
+      Accident & Health product underwriting system
+      Accident & Health product subscription system
     `,
   },
   {
@@ -90,14 +98,6 @@ const members = [
     description: `
       CEO of Anpak Law Firm
       KOSDAQ Listed Company (IT Business, Investment Business)
-    `,
-  },
-  {
-    category: 'product',
-    name: 'Neo Kim',
-    role: 'Gerneral Manager',
-    description: `
-      LIG Insurance New Contract Subscription System Field sales (branch manager)
     `,
   },
   {
