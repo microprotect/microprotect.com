@@ -56,13 +56,15 @@ const styles = {
 };
 
 function DonateButton() {
-  const handleClickDonate = () => window.postMessage({ type: 'open-give-asia' });
+  const handleClick = () => {
+    window.postMessage({ type: 'open-give-asia' }, '*');
+  };
 
   return (
     <button
       css={styles.donateButton}
       type="button"
-      onClick={handleClickDonate}
+      onClick={handleClick}
     >
       Please Donate
     </button>

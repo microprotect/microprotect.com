@@ -1,4 +1,4 @@
-Feature('Home page');
+Feature('Home page - Version #1');
 
 Scenario('Guest visits home page', (I) => {
   I.amOnPage('/?version=1');
