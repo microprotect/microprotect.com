@@ -37,6 +37,8 @@ import PartnerTrueBalanceImage from './images/partners/truebalance.png';
 import PartnerHanwhaImage from './images/partners/hanwha.png';
 import PartnerGiveAsiaImage from './images/partners/giveasia.png';
 
+import AboutCeoImage from './images/about/ceo.png';
+
 export {
   LogoImage,
   WhiteLogoImage,
@@ -69,4 +71,5 @@ export {
   PartnerTrueBalanceImage,
   PartnerHanwhaImage,
   PartnerGiveAsiaImage,
+  AboutCeoImage,
 };
