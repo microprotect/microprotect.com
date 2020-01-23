@@ -120,7 +120,7 @@ export default function Menu({ open }) {
           </li>
           <li css={styles.menuItem}>
             <Link
-              to="/"
+              to="/about-us"
               onClick={() => dispatch(closeMenu())}
             >
               About us

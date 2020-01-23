@@ -19,6 +19,7 @@ import Menu from './Menu';
 import Home from './HomeV3';
 import FreeInsurance from './FreeInsurance';
 import SubscriptionInsurance from './SubscriptionInsurance';
+import AboutUs from './AboutUs';
 
 export default function RootV3({ t, locale }) {
   const menuOpen = useSelector((state) => state.menuOpen);
@@ -33,6 +34,9 @@ export default function RootV3({ t, locale }) {
         </Route>
         <Route path="/subscription-insurance">
           <SubscriptionInsurance t={t} />
+        </Route>
+        <Route path="/about-us">
+          <AboutUs t={t} />
         </Route>
         <Route path="/">
           <Home t={t} />
