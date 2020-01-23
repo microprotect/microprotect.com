@@ -25,7 +25,7 @@ jobs:
           cp CNAME dist/
           cp favicon.ico dist/
           cp -r assets dist/
-          cp index.html dist/404.html
+          cp dist/index.html dist/404.html
       - name: Deploy
         if: github.ref == 'refs/heads/master'
         uses: JamesIves/github-pages-deploy-action@releases/v3

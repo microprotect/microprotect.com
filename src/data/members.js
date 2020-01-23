@@ -1,6 +1,6 @@
 export const ceo = {
   category: 'ceo',
-  name: 'Sangnin Kwon',
+  name: 'Sangmin Kwon',
   role: 'CEO/ACTUARY',
   description: `
     *16 years* in insurance industry, *10 years* in insurance product development
