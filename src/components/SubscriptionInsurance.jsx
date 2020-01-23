@@ -4,7 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import Text from './Text';
+import ProductRotation from './ProductRotation';
 
 import { mq } from '../styles/utils';
 
@@ -28,6 +28,9 @@ const styles = {
       fontSize: '5em',
     },
   },
+  titlePiece: {
+    display: 'block',
+  },
   subtitle: {
     margin: '1em 5% .5em',
     fontFamily: 'Helvetica',
@@ -48,7 +51,13 @@ export default function SubscriptionInsurance() {
   return (
     <main css={styles.container}>
       <h1 css={styles.title}>
-        <Text value={'Microprotect\nprepare for\ncritical illness'} />
+        <span css={styles.titlePiece}>
+          Microprotect
+        </span>
+        <span css={styles.titlePiece}>
+          prepare for
+        </span>
+        <ProductRotation />
       </h1>
       <h2 css={styles.subtitle}>
         Why should insurance be kept long?
