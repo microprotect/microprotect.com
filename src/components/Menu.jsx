@@ -22,57 +22,38 @@ const styles = {
     width: '100%',
     height: '100%',
     visibility: 'hidden',
-    transition: '1s',
   },
   containerOpen: {
     visibility: 'visible',
   },
   background: {
+    zIndex: 10000 + 1,
+    position: 'absolute',
+    top: 0,
+    left: 0,
     display: 'flex',
     width: '100%',
     height: '100%',
   },
-  bgColumn: {
+  bgColumn: (index) => ({
     width: '25%',
     height: 0,
     background: '#181818',
     transition: 'ease-in',
-  },
-  bgColumns: [
-    { transition: '.3s' },
-    { transition: '.5s' },
-    { transition: '.6s' },
-    { transition: '.7s' },
-  ],
+    transitionDuration: ['.05s', '.2s', '.3s', '.35s'][index],
+    transitionDelay: '.1s',
+  }),
   bgColumnOpen: {
     height: '100%',
   },
   content: {
-    position: 'absolute',
-    top: '3em',
+    zIndex: 10000 + 2,
+    position: 'relative',
+    top: 0,
     left: 0,
     width: '100%',
-    minHeight: '100vh',
+    paddingTop: '3em',
     color: '#FFF',
-    opacity: 1,
-    transform: 'translate3d(0, 0, 0)',
-    transition: '.1s ease-out',
-    '& a': {
-      color: '#FFF',
-      fontSize: '12vw',
-      textDecoration: 'none',
-      transition: '.3s',
-      [mq(640)]: {
-        fontSize: '8vw',
-      },
-      '&:hover': {
-        color: '#44d4c3',
-      },
-    },
-  },
-  contentHidden: {
-    opacity: 0,
-    transform: 'translate3d(-10vw, 0, 0)',
   },
   menuList: {
     ...listContainer,
@@ -86,20 +67,55 @@ const styles = {
     ...listItem,
     margin: '3em 0',
     opacity: 0,
-    transform: 'translate3d(-10vw, 0, 0)',
+    transform: 'translate3d(-20vw, 0, 0)',
+    transition: '.2s ease-in',
   },
-  openMenuItem: {
+  menuItemOpen: {
     opacity: 1,
     transform: 'translate3d(0, 0, 0)',
-    transition: '.3s ease-out',
+    transition: '.5s ease-out',
+  },
+  menuLink: {
+    fontSize: '12vw',
+    color: '#FFF',
+    textDecoration: 'none',
+    [mq(640)]: {
+      fontSize: '8vw',
+    },
+    '&:hover': {
+      color: '#44d4c3',
+    },
   },
 };
 
-export default function Menu({ open }) {
+function MenuItem({
+  label, target, delay, open,
+}) {
   const dispatch = useDispatch();
 
   return (
+    <li
+      css={[
+        styles.menuItem,
+        open ? styles.menuItemOpen : {},
+        open ? { transitionDelay: delay } : {},
+      ]}
+    >
+      <Link
+        css={styles.menuLink}
+        to={target}
+        onClick={() => dispatch(closeMenu())}
+      >
+        {label}
+      </Link>
+    </li>
+  );
+}
+
+export default function Menu({ open }) {
+  return (
     <div
+      id="menu"
       css={[
         styles.container,
         open ? styles.containerOpen : {},
@@ -110,62 +126,32 @@ export default function Menu({ open }) {
           <div
             key={i}
             css={[
-              styles.bgColumn,
-              styles.bgColumns[i],
+              styles.bgColumn(i),
               open ? styles.bgColumnOpen : { transitionDelay: '.1s' },
             ]}
           />
         ))}
       </div>
-      <div
-        css={[
-          styles.content,
-          open ? {} : styles.contentHidden,
-        ]}
-      >
+      <div css={styles.content}>
         <ul css={styles.menuList}>
-          <li
-            css={[
-              styles.menuItem,
-              open ? styles.openMenuItem : {},
-              { transitionDelay: '.1s' },
-            ]}
-          >
-            <Link
-              to="/free-insurance"
-              onClick={() => dispatch(closeMenu())}
-            >
-              Free Insurance
-            </Link>
-          </li>
-          <li
-            css={[
-              styles.menuItem,
-              open ? styles.openMenuItem : {},
-              { transitionDelay: '.2s' },
-            ]}
-          >
-            <Link
-              to="/subscription-insurance"
-              onClick={() => dispatch(closeMenu())}
-            >
-              Subscription Insurance
-            </Link>
-          </li>
-          <li
-            css={[
-              styles.menuItem,
-              open ? styles.openMenuItem : {},
-              { transitionDelay: '.3s' },
-            ]}
-          >
-            <Link
-              to="/about-us"
-              onClick={() => dispatch(closeMenu())}
-            >
-              About us
-            </Link>
-          </li>
+          <MenuItem
+            label="Free Insurance"
+            target="/free-insurance"
+            delay=".3s"
+            open={open}
+          />
+          <MenuItem
+            label="Subscription Insurance"
+            target="/subscription-insurance"
+            delay=".4s"
+            open={open}
+          />
+          <MenuItem
+            label="About us"
+            target="/about-us"
+            delay=".5s"
+            open={open}
+          />
         </ul>
       </div>
     </div>

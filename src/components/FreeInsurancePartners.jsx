@@ -31,6 +31,7 @@ const styles = {
   },
   logo: {
     height: '50px',
+    maxWidth: '100%',
   },
   description: {
     fontSize: '1.5em',
