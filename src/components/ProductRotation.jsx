@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { jsx } from '@emotion/core';
 
 import { mq } from '../styles/utils';
+import clearAfter from '../styles/clearAfter';
 
 const BASE_MQ = mq(640);
 
@@ -15,6 +16,16 @@ const styles = {
     [BASE_MQ]: {
       minHeight: 'auto',
     },
+  },
+  text: {
+    float: 'left',
+    height: 0,
+    visibility: 'hidden',
+  },
+  active: {
+    height: 'auto',
+    visibility: 'visible',
+    animation: '.3s ease-out slidein',
   },
 };
 
@@ -29,7 +40,7 @@ export default function ProductRotation() {
 
   useEffect(() => {
     const id = setTimeout(() => {
-      setIndex(index + 1);
+      setIndex((index + 1) % TEXTS.length);
     }, 1500);
 
     return function cleanup() {
@@ -37,11 +48,19 @@ export default function ProductRotation() {
     };
   }, [index]);
 
-  const text = TEXTS[index % TEXTS.length];
-
   return (
-    <div css={styles.container}>
-      <span>{text}</span>
+    <div css={[styles.container, clearAfter]}>
+      {TEXTS.map((text, i) => (
+        <div
+          key={text}
+          css={[
+            styles.text,
+            i === index ? styles.active : {},
+          ]}
+        >
+          {text}
+        </div>
+      ))}
     </div>
   );
 }
