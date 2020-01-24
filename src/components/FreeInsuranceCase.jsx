@@ -37,6 +37,8 @@ const BASE_MQ = mq(640);
 
 const styles = {
   casePicture: {
+    zIndex: 10,
+    position: 'relative',
     display: 'block',
     margin: '0 auto',
     width: '300px',
@@ -52,12 +54,12 @@ const styles = {
     },
   },
   story: {
-    padding: '.8em',
     fontSize: '1.5em',
     background: '#EEE',
     [BASE_MQ]: {
-      display: 'none',
-      paddingLeft: '5%',
+      clear: 'left',
+      height: 0,
+      visibility: 'hidden',
       fontSize: '1.8vw',
     },
     [mq(2200)]: {
@@ -66,9 +68,18 @@ const styles = {
   },
   storyShown: {
     [BASE_MQ]: {
-      clear: 'left',
-      display: 'block',
+      height: 'auto',
+      visibility: 'visible',
+      animation: '.2s ease-out slideup',
     },
+  },
+  storyHidden: {
+    [BASE_MQ]: {
+      animation: '.2s ease-out fadeout',
+    },
+  },
+  storyPadding: {
+    padding: '.8em 5%',
   },
   cases: {
     margin: '2em auto 0',
@@ -76,31 +87,38 @@ const styles = {
     fontSize: '1.5em',
     [BASE_MQ]: {
       clear: 'left',
-      display: 'block',
       margin: 0,
       marginLeft: '5%',
       width: '50%',
-      paddingTop: '2em',
       fontSize: '1.8em',
+      overflow: 'hidden',
+      height: 'auto',
+      opacity: 1,
+      transition: '.5s',
     },
     [mq(1300)]: {
       marginBottom: '1em',
+      paddingTop: '.5em',
       fontSize: '2.2em',
     },
   },
   casesHidden: {
     [BASE_MQ]: {
-      display: 'none',
+      height: 0,
+      opacity: 0,
     },
   },
   people: {
-    margin: '1em 0',
+    margin: '.5em 0',
   },
   person: {
     width: '25%',
     margin: '2%',
     [BASE_MQ]: {
       width: '8%',
+      margin: '0 .1em',
+    },
+    [mq(1300)]: {
       margin: '.2em',
     },
   },
@@ -118,17 +136,21 @@ export default function FreeInsuranceCase({ t }) {
         onMouseEnter={() => setStoryVisible(true)}
         onMouseLeave={() => setStoryVisible(false)}
       />
-      <div css={[
-        styles.story,
-        isShowStory ? styles.storyShown : {},
-      ]}
+      <div
+        css={[
+          styles.story,
+          isShowStory ? styles.storyShown : styles.storyHidden,
+        ]}
       >
-        <Text value={t.free_insurance_story} />
+        <div css={styles.storyPadding}>
+          <Text value={t.free_insurance_story} />
+        </div>
       </div>
-      <div css={[
-        styles.cases,
-        isShowStory ? styles.casesHidden : {},
-      ]}
+      <div
+        css={[
+          styles.cases,
+          isShowStory ? styles.casesHidden : {},
+        ]}
       >
         <Text
           value={t.free_insurance_case}

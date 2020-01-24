@@ -80,6 +80,19 @@ section {
     }
 }
 
+@keyframes fadeout {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
 /* hack */
 
 #givikiWidgetContainer,
