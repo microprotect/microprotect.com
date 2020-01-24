@@ -41,20 +41,19 @@ const styles = {
   },
   menuButton: {
     position: 'absolute',
-    top: '20px',
+    top: 0,
     right: '5%',
+    height: '100%',
     border: 0,
     background: 'transparent',
     color: '#FFF',
-    height: 0,
     opacity: 0,
-    visibility: 'hidden',
+    zIndex: 0,
+    transition: '.5s',
   },
   active: {
-    height: 'auto',
     opacity: 1,
-    visibility: 'visible',
-    transition: '.3s',
+    zIndex: 1,
   },
 };
 
