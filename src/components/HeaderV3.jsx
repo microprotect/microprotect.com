@@ -46,6 +46,15 @@ const styles = {
     border: 0,
     background: 'transparent',
     color: '#FFF',
+    height: 0,
+    opacity: 0,
+    visibility: 'hidden',
+  },
+  active: {
+    height: 'auto',
+    opacity: 1,
+    visibility: 'visible',
+    transition: '.3s',
   },
 };
 
@@ -64,12 +73,15 @@ function Logo() {
   );
 }
 
-function OpenMenuButton() {
+function OpenMenuButton({ active }) {
   const dispatch = useDispatch();
 
   return (
     <button
-      css={styles.menuButton}
+      css={[
+        styles.menuButton,
+        active ? styles.active : {},
+      ]}
       type="button"
       onClick={() => dispatch(openMenu())}
     >
@@ -78,12 +90,15 @@ function OpenMenuButton() {
   );
 }
 
-function CloseMenuButton() {
+function CloseMenuButton({ active }) {
   const dispatch = useDispatch();
 
   return (
     <button
-      css={styles.menuButton}
+      css={[
+        styles.menuButton,
+        active ? styles.active : {},
+      ]}
       type="button"
       onClick={() => dispatch(closeMenu())}
     >
@@ -101,7 +116,8 @@ function Header({ menuOpen, location }) {
     ]}
     >
       <Logo />
-      {menuOpen ? <CloseMenuButton /> : <OpenMenuButton />}
+      <OpenMenuButton active={!menuOpen} />
+      <CloseMenuButton active={menuOpen} />
     </header>
   );
 }
