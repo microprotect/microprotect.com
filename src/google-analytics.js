@@ -1,5 +1,11 @@
 /* global gtag */
 
+const GA_MEASUREMENT_ID = 'UA-153178350-1';
+
+const EVENTS = [
+  'open-menu', 'play-video', 'subscribe', 'open-give-asia',
+];
+
 (() => {
   const { location } = window;
 
@@ -7,6 +13,7 @@
     return;
   }
 
+  gtag('config', 'UA-153178350-1');
   gtag('event', 'visit');
 
   const handleScroll = () => {
@@ -20,9 +27,13 @@
 
   window.addEventListener('scroll', handleScroll);
 
-  window.addEventListener('message', ({ data: { type } }) => {
-    if (['play-video', 'subscribe', 'open-give-asia'].includes(type)) {
+  window.addEventListener('message', ({ data: { type, path } }) => {
+    if (EVENTS.includes(type)) {
       gtag('event', type);
+    }
+
+    if (type === 'pageview') {
+      gtag('config', GA_MEASUREMENT_ID, { page_path: path });
     }
   });
 })();
