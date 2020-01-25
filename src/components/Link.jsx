@@ -6,11 +6,12 @@ import { Link as RouterLink } from 'react-router-dom';
 
 export default function Link(props) {
   const handleClick = (event) => {
-    const { onClick } = props;
+    const { onClick, to } = props;
     if (onClick) {
       onClick(event);
     }
     window.scrollTo(0, 0);
+    window.postMessage({ type: 'pageview', path: to }, '*');
   };
 
   const { children } = props;

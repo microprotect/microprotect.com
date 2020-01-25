@@ -75,6 +75,11 @@ function Logo() {
 function OpenMenuButton({ active }) {
   const dispatch = useDispatch();
 
+  const handleClick = () => {
+    dispatch(openMenu());
+    window.postMessage({ type: 'open-menu' }, '*');
+  };
+
   return (
     <button
       css={[
@@ -82,7 +87,7 @@ function OpenMenuButton({ active }) {
         active ? styles.active : {},
       ]}
       type="button"
-      onClick={() => dispatch(openMenu())}
+      onClick={handleClick}
     >
       Menu
     </button>
