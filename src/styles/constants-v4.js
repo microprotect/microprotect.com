@@ -1,3 +1,7 @@
+import { mq } from './utils';
+
+export const BASE_MQ = mq(800);
+
 export const backgroundColor = '#F8FBFF';
 export const white = '#FFF';
 export const black = '#202020';

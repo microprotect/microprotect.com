@@ -3,27 +3,34 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import { css, jsx } from '@emotion/core';
+import { jsx } from '@emotion/core';
 
 import { setLocale } from '../../appSlice';
 
-import { mq, imageReplacement } from '../../styles/utils';
+import { imageReplacement } from '../../styles/utils';
 import clearAfter from '../../styles/clearAfter';
+import { BASE_MQ } from '../../styles/constants-v4';
 
 import { LogoImage } from '../../assets';
 
 const styles = {
   container: {
-    margin: '1.5em auto 0',
-    width: '95%',
-    maxWidth: '1550px',
+    zIndex: 100,
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    padding: '1em 5%',
+  },
+  filled: {
+    background: 'rgba(255, 255, 255, 0.4)',
   },
   logo: {
     float: 'left',
     display: 'block',
     width: '120px',
     height: '30px',
-    [mq(1100)]: {
+    [BASE_MQ]: {
       width: '250px',
       height: '46px',
     },
@@ -42,7 +49,7 @@ const styles = {
     display: 'inline-block',
     padding: '0 .7em',
     height: '30px',
-    [mq(1100)]: {
+    [BASE_MQ]: {
       height: '46px',
     },
     lineHeight: 1,
@@ -74,13 +81,19 @@ function LocaleLink({ children, locale, target }) {
 
 export default function Header({ locale }) {
   return (
-    <header css={[styles.container, clearAfter]}>
+    <header
+      css={[
+        styles.container,
+        styles.filled,
+        clearAfter,
+      ]}
+    >
       <div id="logo" css={styles.logo}>microprotect</div>
       <ul css={styles.languages}>
         <li css={styles.languageItem}>
           <LocaleLink locale={locale} target="ko">Korean</LocaleLink>
         </li>
-        <li css={css(styles.languageItem)}>
+        <li css={styles.languageItem}>
           <LocaleLink locale={locale} target="en">English</LocaleLink>
         </li>
       </ul>

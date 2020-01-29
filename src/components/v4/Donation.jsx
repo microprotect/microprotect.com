@@ -5,7 +5,7 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 
 import { mq } from '../../styles/utils';
-import { backgroundColor } from '../../styles/version4';
+import { backgroundColor } from '../../styles/constants-v4';
 
 const BASE_MQ = mq(640);
 
@@ -22,6 +22,7 @@ const styles = {
   content: {
     marginLeft: `-${50 / 2}%`,
     width: '150%',
+    padding: `7vw ${50 / 2 + 5}%`,
     minHeight: '20vw',
     background: backgroundColor,
     borderRadius: '100%',
@@ -31,7 +32,9 @@ const styles = {
 export default function Donation() {
   return (
     <div css={styles.container}>
-      <div css={styles.content} />
+      <div css={styles.content}>
+        Hello, world!
+      </div>
     </div>
   );
 }
