@@ -9,6 +9,7 @@ import configureMockStore from 'redux-mock-store';
 import App from './App';
 
 jest.mock('./assets');
+jest.mock('./assets/v4');
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -57,6 +58,20 @@ describe('App', () => {
       t: {},
       locale: 'ko',
       version: 3,
+    }));
+
+    it('renders home page', () => {
+      const wrapper = render(<App store={given.store} />);
+      expect(wrapper.text())
+        .toMatch('Secure more people equally');
+    });
+  });
+
+  describe('with version 4', () => {
+    given('store', () => configureMockStore()({
+      t: {},
+      locale: 'ko',
+      version: 4,
     }));
 
     it('renders home page', () => {
