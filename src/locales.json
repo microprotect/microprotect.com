@@ -46,7 +46,8 @@
     "subscription_feature4": "Free insurance for low-income people",
     "subscription_feature5": "Airfare Assistance",
     "title1": "Microprotect",
-    "title2": "Make your insurance more valuable"
+    "title2": "Make your insurance more valuable",
+    "who_we_are": "We are people who contribute to the world with insurance"
   },
   "ko": {
     "about_us_description": "We are people who *contribute to the world* with *insurance*. *Microprotect* offers a way for more people to benefit from insurance. *Free insurance* for low-income people and *monthly subscription insurance* where insurance is needed.",
@@ -95,6 +96,7 @@
     "subscription_feature4": "Free insurance for low-income people",
     "subscription_feature5": "Airfare Assistance",
     "title1": "마이크로프로텍트는",
-    "title2": "보험을 가치 있게 같이 하세요"
+    "title2": "보험을 가치 있게 같이 하세요",
+    "who_we_are": "우리는 보험으로 세상이 더 따뜻한 곳이 되도록 만들어가는 사람들입니다."
   }
 }
