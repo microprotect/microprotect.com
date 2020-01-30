@@ -35,8 +35,9 @@ const styles = {
     height: '125vw',
     [BASE_MQ]: {
       margin: '0 auto',
+      padding: 0,
       maxWidth: `${width}px`,
-      height: `${height}px`,
+      maxHeight: `${height}px`,
     },
   },
   sprite: {
@@ -58,14 +59,14 @@ const styles = {
   slogan: {
     position: 'relative',
     margin: 0,
-    marginTop: '2.5em',
+    paddingTop: '2.5em',
     fontFamily: 'BMJUA',
     fontSize: '8vw',
     fontWeight: '300',
     letterSpacing: '.1vw',
     textTransform: 'capitalize',
     [BASE_MQ]: {
-      marginTop: '1.4em',
+      paddingTop: '1.4em',
       fontSize: '6em',
     },
   },
