@@ -4,7 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import Text from '../Text';
+import Title from './Title';
 import DonationBox from './DonationBox';
 
 import {
@@ -40,15 +40,6 @@ const styles = {
       padding: `0 ${CONTENT_PADDING} 10px`,
     },
   },
-  title: {
-    fontFamily: 'BMJUA',
-    fontSize: '7vw',
-    textTransform: 'uppercase',
-    textAlign: 'center',
-    [BASE_MQ]: {
-      fontSize: '3em',
-    },
-  },
 };
 
 export default function Donation({ t }) {
@@ -56,9 +47,7 @@ export default function Donation({ t }) {
     <div css={styles.container}>
       <div css={styles.padding} />
       <div css={styles.content}>
-        <h2 css={styles.title}>
-          <Text value={t.donation_title} />
-        </h2>
+        <Title value={t.donation_title} />
         <DonationBox t={t} />
       </div>
     </div>

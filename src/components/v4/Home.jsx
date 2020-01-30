@@ -9,6 +9,7 @@ import Footer from '../FooterV2';
 import HeaderPanel from './HeaderPanel';
 import Donation from './Donation';
 import HowWorks from './HowWorks';
+import Partners from './Partners';
 
 export default function Home({ t, locale }) {
   return (
@@ -17,6 +18,7 @@ export default function Home({ t, locale }) {
       <HeaderPanel t={t} />
       <Donation t={t} />
       <HowWorks t={t} />
+      <Partners t={t} />
       <Footer t={t} />
     </>
   );
