@@ -14,7 +14,10 @@ export default function Home({ t, locale }) {
     <>
       <Header locale={locale} />
       <HeaderPanel t={t} />
-      <Donation />
+      <Donation t={t} />
+      <br />
+      <br />
+      <br />
       <Footer t={t} />
     </>
   );
