@@ -9,7 +9,10 @@ import { setLocale } from '../../appSlice';
 
 import { imageReplacement } from '../../styles/utils';
 import clearAfter from '../../styles/clearAfter';
-import { BASE_MQ } from '../../styles/constants-v4';
+import {
+  CONTENT_PADDING,
+  BASE_MQ,
+} from '../../styles/constants-v4';
 
 import { LogoImage } from '../../assets';
 
@@ -21,6 +24,9 @@ const styles = {
     left: 0,
     width: '100%',
     padding: '1em 5%',
+    [BASE_MQ]: {
+      padding: `1em ${CONTENT_PADDING}`,
+    },
   },
   filled: {
     background: 'rgba(255, 255, 255, 0.4)',

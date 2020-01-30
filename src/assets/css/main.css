@@ -32,12 +32,6 @@ body {
     word-break: keep-all;
 }
 
-@media only screen and (min-width: 1024px) {
-    body {
-        font-size: 20px;
-    }
-}
-
 button {
     cursor: pointer;
 }
