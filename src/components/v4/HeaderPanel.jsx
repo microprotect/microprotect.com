@@ -4,7 +4,10 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import {
+  CONTENT_PADDING,
+  BASE_MQ,
+} from '../../styles/constants-v4';
 
 import {
   HeaderBackgroundImage,
@@ -52,6 +55,9 @@ const styles = {
     width: '100%',
     height: '100%',
     padding: '0 5%',
+    [BASE_MQ]: {
+      padding: `0 ${CONTENT_PADDING}`,
+    },
   },
   slogan: {
     margin: 0,
