@@ -21,7 +21,7 @@ const locale = params.get('locale') || (navigator.language || 'ko').slice(0, 2);
 
 store.dispatch(setLocale(locale));
 
-const version = parseInt(params.get('version') || 3, 10);
+const version = parseInt(params.get('version') || 4, 10);
 
 store.dispatch(setVersion(version));
 
