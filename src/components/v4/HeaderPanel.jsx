@@ -7,6 +7,7 @@ import { jsx } from '@emotion/core';
 import {
   CONTENT_PADDING,
   BASE_MQ,
+  backgroundColor,
 } from '../../styles/constants-v4';
 
 import {
@@ -19,17 +20,23 @@ const height = 2400 * (1161 / 2560);
 
 const styles = {
   container: {
-    position: 'relative',
-    width: '100%',
-    height: '125vw',
+    padding: '0 5%',
     background: `url(${HeaderBackgroundImage}) 50% 100% no-repeat`,
     backgroundSize: '190vw',
+    backgroundColor,
     overflow: 'hidden',
+    [BASE_MQ]: {
+      padding: `0 ${CONTENT_PADDING}`,
+      backgroundSize: `${width}px`,
+    },
+  },
+  content: {
+    position: 'relative',
+    height: '125vw',
     [BASE_MQ]: {
       margin: '0 auto',
       maxWidth: `${width}px`,
       height: `${height}px`,
-      backgroundSize: `${width}px`,
     },
   },
   sprite: {
@@ -48,18 +55,8 @@ const styles = {
       height: '800px',
     },
   },
-  content: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    padding: '0 5%',
-    [BASE_MQ]: {
-      padding: `0 ${CONTENT_PADDING}`,
-    },
-  },
   slogan: {
+    position: 'relative',
     margin: 0,
     marginTop: '2.5em',
     fontFamily: 'BMJUA',
@@ -73,6 +70,7 @@ const styles = {
     },
   },
   description: {
+    position: 'relative',
     marginTop: '5vw',
     width: '90%',
     lineHeight: '140%',
@@ -88,8 +86,8 @@ const styles = {
 export default function HeaderPanel({ t }) {
   return (
     <header css={styles.container}>
-      <div css={styles.sprite} />
       <div css={styles.content}>
+        <div css={styles.sprite} />
         <h1 css={styles.slogan}>
           <div>Secure</div>
           {' '}
