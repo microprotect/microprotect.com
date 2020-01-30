@@ -68,8 +68,12 @@
     "subscription_feature3": "No-claim bonus",
     "subscription_feature4": "Free insurance for low-income people",
     "subscription_feature5": "Airfare Assistance",
+    "subscription_insurance_coming_soon": "*Monthly insurance*\ncoming soon",
+    "subscription_insurance_description": "We sells life insurance and health insurance for sustainable donations.",
+    "subscription_insurance_title": "Another way\nto donate insurance",
     "title1": "Microprotect",
     "title2": "Make your insurance more valuable",
+    "watch_the_video": "Watch the video",
     "who_we_are": "We are people who contribute to the world with insurance"
   },
   "ko": {
@@ -141,8 +145,12 @@
     "subscription_feature3": "No-claim bonus",
     "subscription_feature4": "Free insurance for low-income people",
     "subscription_feature5": "Airfare Assistance",
+    "subscription_insurance_coming_soon": "*월단위 보험*\ncoming soon",
+    "subscription_insurance_description": "마이크로프로텍트는 지속가능한 기부를 위해 생명보험, 건강보험을 판매합니다.",
+    "subscription_insurance_title": "보험을 기부할 수 있는\n또 다른 방법",
     "title1": "마이크로프로텍트는",
     "title2": "보험을 가치 있게 같이 하세요",
+    "watch_the_video": "Watch the video",
     "who_we_are": "우리는 보험으로 세상이 더 따뜻한 곳이 되도록 만들어가는 사람들입니다."
   }
 }
