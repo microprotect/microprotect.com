@@ -2,6 +2,8 @@ import HeaderBackgroundImage from './images/v4/header-background.png';
 import HeaderImage1 from './images/v4/header01.png';
 import HeaderImage2 from './images/v4/header02.png';
 
+import ComingSoonImage from './images/v4/coming-soon.png';
+
 import WorksImage1 from './images/v4/works01.png';
 import WorksImage2 from './images/v4/works02.png';
 import WorksImage3 from './images/v4/works03.png';
@@ -14,6 +16,7 @@ export {
   HeaderBackgroundImage,
   HeaderImage1,
   HeaderImage2,
+  ComingSoonImage,
   WorksImage1,
   WorksImage2,
   WorksImage3,
