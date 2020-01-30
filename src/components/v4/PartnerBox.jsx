@@ -12,6 +12,7 @@ import { BASE_MQ } from '../../styles/constants-v4';
 
 const styles = {
   container: {
+    margin: 0,
     padding: '2em',
   },
   banner: {
@@ -30,18 +31,18 @@ const styles = {
 
 export default function PartnerBox({ t, partner }) {
   return (
-    <Box css={styles.container}>
+    <Box style={styles.container}>
       <img
         src={`assets/images/partners/${partner.image}`}
-        alt={partner.title}
+        alt={t[`partner_title_${partner.id}`]}
         css={styles.banner}
       />
       <Title
         css={styles.title}
         level={3}
-        value={t[`partner_title_${partner.key}`]}
+        value={t[`partner_title_${partner.id}`]}
       />
-      <Text value={t[`partner_description_${partner.key}`]} />
+      <Text value={t[`partner_description_${partner.id}`]} />
     </Box>
   );
 }
