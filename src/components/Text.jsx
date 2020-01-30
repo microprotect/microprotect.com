@@ -8,10 +8,10 @@ export default function Text({ value }) {
   return (
     <>
       {(value || '').split('\n')
-        .map((i) => (
+        .map((i, index) => (
           <span key={i}>
+            {index > 0 && <br />}
             {i}
-            <br />
           </span>
         ))}
     </>

@@ -76,7 +76,7 @@ const styles = {
     marginTop: '5vw',
     width: '90%',
     lineHeight: '140%',
-    fontFamily: 'S-CoreDream-3Light',
+    fontFamily: 'S-CoreDream',
     fontSize: '3.6vw',
     fontWeight: '1000',
     [BASE_MQ]: {

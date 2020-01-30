@@ -1,6 +1,6 @@
 import { mq } from './utils';
 
-export const MAX_WIDTH = 1600;
+export const MAX_WIDTH = 1200;
 
 const contentPadding = 40;
 
