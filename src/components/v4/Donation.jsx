@@ -17,7 +17,6 @@ const styles = {
   container: {
     position: 'relative',
     marginTop: '-15vw',
-    paddingBottom: '10px',
     width: '100%',
     overflow: 'hidden',
     [BASE_MQ]: {
@@ -28,17 +27,17 @@ const styles = {
     marginLeft: `-${50 / 2}%`,
     width: '150%',
     height: '50vw',
-    padding: `7vw ${50 / 2}%`,
+    padding: `7vw ${50 / 2}% 0`,
     boxShadow: '0 0 14px 0 rgba(200, 200, 200, 0.5)',
     background: backgroundColor,
     borderRadius: '100%',
   },
   content: {
     marginTop: '-47vw',
-    padding: '0 5%',
+    padding: '0 5% 10px',
     background: backgroundColor,
     [BASE_MQ]: {
-      padding: `0 ${CONTENT_PADDING}`,
+      padding: `0 ${CONTENT_PADDING} 10px`,
     },
   },
   title: {
