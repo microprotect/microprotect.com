@@ -1,7 +1,7 @@
 Feature('Menu');
 
 Scenario('Open & close menu', (I) => {
-  I.amOnPage('/');
+  I.amOnPage('/?version=3');
   I.dontSee('Free Insurance', 'a');
   I.click('Menu');
   I.waitForText('Subscription Insurance', '#menu');
