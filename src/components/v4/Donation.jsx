@@ -33,10 +33,11 @@ const styles = {
     borderRadius: '100%',
   },
   content: {
-    marginTop: '-47vw',
+    marginTop: '-37vw',
     padding: '0 5% 10px',
     background: backgroundColor,
     [BASE_MQ]: {
+      marginTop: '-43vw',
       padding: `0 ${CONTENT_PADDING} 10px`,
     },
   },

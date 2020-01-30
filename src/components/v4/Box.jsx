@@ -13,7 +13,6 @@ import {
 
 const styles = {
   container: {
-    margin: '2em 0',
     fontSize: '4vw',
     background: white,
     boxShadow: '2px 2px 6px 0 rgba(200, 200, 200, 0.5)',

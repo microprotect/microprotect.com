@@ -1,10 +1,8 @@
-/* eslint-disable react/jsx-props-no-spreading */
-
 /* @jsx jsx */
 
 import React from 'react';
 
-import { jsx } from '@emotion/core';
+import { jsx, ClassNames } from '@emotion/core';
 
 import Text from '../Text';
 
@@ -24,20 +22,27 @@ const styles = {
       },
     },
     {
-      margin: '.7em 0',
-      fontSize: '1.2em',
     },
   ][level - 2],
 };
 
 export default function Title(props) {
-  const { level = 2, value } = props;
+  const { className, level = 2, value } = props;
 
   const Heading = ['h2', 'h3'][level - 2];
 
   return (
-    <Heading {...props} css={styles.title(level)}>
-      <Text value={value} />
-    </Heading>
+    <ClassNames>
+      {({ css }) => (
+        <Heading
+          className={[
+            css(styles.title(level)),
+            className,
+          ].join(' ')}
+        >
+          <Text value={value} />
+        </Heading>
+      )}
+    </ClassNames>
   );
 }

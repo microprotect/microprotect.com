@@ -4,6 +4,16 @@ import HeaderImage2 from './images/v4/header02.png';
 
 import ComingSoonImage from './images/v4/coming-soon.png';
 
+import LabelImage1 from './images/v4/label-01.png';
+import LabelImage2 from './images/v4/label-02.png';
+import LabelImage3 from './images/v4/label-03.png';
+import LabelImage4 from './images/v4/label-04.png';
+
+import LargeLabelImage1 from './images/v4/label-01-large.png';
+import LargeLabelImage2 from './images/v4/label-02-large.png';
+import LargeLabelImage3 from './images/v4/label-03-large.png';
+import LargeLabelImage4 from './images/v4/label-04-large.png';
+
 import WorksImage1 from './images/v4/works01.png';
 import WorksImage2 from './images/v4/works02.png';
 import WorksImage3 from './images/v4/works03.png';
@@ -17,6 +27,14 @@ export {
   HeaderImage1,
   HeaderImage2,
   ComingSoonImage,
+  LabelImage1,
+  LabelImage2,
+  LabelImage3,
+  LabelImage4,
+  LargeLabelImage1,
+  LargeLabelImage2,
+  LargeLabelImage3,
+  LargeLabelImage4,
   WorksImage1,
   WorksImage2,
   WorksImage3,

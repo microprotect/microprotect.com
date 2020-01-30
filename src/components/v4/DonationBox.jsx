@@ -19,9 +19,13 @@ import {
 
 const styles = {
   container: {
+    marginTop: '5vw',
     padding: '5vw 0',
     background: white,
     boxShadow: '0 2px 4px 0 rgba(218, 218, 218, 0.5)',
+    [BASE_MQ]: {
+      marginTop: '3em',
+    },
   },
   optionList: {
     ...listContainer,
