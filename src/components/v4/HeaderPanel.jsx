@@ -4,26 +4,29 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import { mq } from '../../styles/utils';
+import { BASE_MQ } from '../../styles/constants-v4';
 
 import {
   HeaderBackgroundImage,
   HeaderImage1,
 } from '../../assets/v4';
 
-const BASE_MQ = mq(640);
+const width = 2400;
+const height = 2400 * (1161 / 2560);
 
 const styles = {
   container: {
     position: 'relative',
-    minHeight: '110vw',
+    width: '100%',
+    height: '125vw',
     background: `url(${HeaderBackgroundImage}) 50% 100% no-repeat`,
     backgroundSize: '190vw',
+    overflow: 'hidden',
     [BASE_MQ]: {
       margin: '0 auto',
-      maxWidth: '2400px',
-      minHeight: '1100px',
-      backgroundSize: '2400px',
+      maxWidth: `${width}px`,
+      height: `${height}px`,
+      backgroundSize: `${width}px`,
     },
   },
   sprite: {
@@ -48,17 +51,18 @@ const styles = {
     left: 0,
     width: '100%',
     height: '100%',
-    padding: '5vw',
+    padding: '0 5%',
   },
   slogan: {
     margin: 0,
+    marginTop: '2.5em',
     fontFamily: 'BMJUA',
     fontSize: '8vw',
     fontWeight: '300',
     letterSpacing: '.1vw',
     textTransform: 'capitalize',
     [BASE_MQ]: {
-      marginTop: '1.2em',
+      marginTop: '1.4em',
       fontSize: '6em',
     },
   },
