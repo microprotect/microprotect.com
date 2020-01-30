@@ -22,6 +22,10 @@ const styles = {
       height: '50px',
     },
   },
+  title: {
+    margin: '.7em 0',
+    fontSize: '1.2em',
+  },
 };
 
 export default function PartnerBox({ t, partner }) {
@@ -32,7 +36,11 @@ export default function PartnerBox({ t, partner }) {
         alt={partner.title}
         css={styles.banner}
       />
-      <Title level={3} value={t[`partner_title_${partner.key}`]} />
+      <Title
+        css={styles.title}
+        level={3}
+        value={t[`partner_title_${partner.key}`]}
+      />
       <Text value={t[`partner_description_${partner.key}`]} />
     </Box>
   );

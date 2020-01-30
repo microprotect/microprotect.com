@@ -8,7 +8,6 @@ import Title from './Title';
 import StrongText from '../StrongText';
 import Text from '../Text';
 
-import { ComingSoonImage } from '../../assets/v4';
 import {
   BASE_MQ,
   CONTENT_PADDING,
@@ -16,12 +15,14 @@ import {
   white,
 } from '../../styles/constants-v4';
 
+import { ComingSoonImage } from '../../assets/v4';
+
 const styles = {
   container: {
-    padding: '10vw 5%',
+    padding: '10vw 5% 0',
     backgroundColor,
     [BASE_MQ]: {
-      padding: `5em ${CONTENT_PADDING}`,
+      padding: `5em ${CONTENT_PADDING} 0`,
     },
   },
   title: {
@@ -34,14 +35,14 @@ const styles = {
       },
     },
   },
-  watch: {
+  link: {
     display: 'block',
     fontFamily: 'S-CoreDream-8',
     fontSize: '4.5vw',
     textAlign: 'center',
     textDecoration: 'none',
     [BASE_MQ]: {
-      fontSize: '2em',
+      fontSize: '1.6em',
     },
   },
   comingSoon: {
@@ -70,7 +71,7 @@ const styles = {
     fontSize: '4vw',
     [BASE_MQ]: {
       marginTop: '1.5em',
-      fontSize: '2em',
+      fontSize: '1.6em',
       textAlign: 'center',
     },
   },
@@ -92,7 +93,7 @@ export default function SubscriptionInsurance({ t }) {
         value={t.subscription_insurance_title}
       />
       <a
-        css={styles.watch}
+        css={styles.link}
         href="https://www.youtube.com/watch?v=qG--TQhGi00"
         target="_blank"
         rel="noopener noreferrer"
