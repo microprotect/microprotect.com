@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 
 import { jsx } from '@emotion/core';
 
-import { listContainer, listItem } from '../../styles/list';
+import ListContainer from '../ListContainer';
+import ListItem from '../ListItem';
+
 import {
   BASE_MQ,
   red,
@@ -12,16 +14,16 @@ import {
 
 const styles = {
   items: {
-    ...listContainer,
     [BASE_MQ]: {
       display: 'flex',
       flexWrap: 'wrap',
     },
   },
-  item: {
-    ...listItem,
+  item: (more, index, limit) => ({
+    display: (more || index < limit) ? 'block' : 'none',
     marginBottom: '4vw',
     [BASE_MQ]: {
+      display: (more || index < limit * 2) ? 'block' : 'none',
       marginBottom: '2em',
       width: '50%',
       paddingRight: '1em',
@@ -29,12 +31,6 @@ const styles = {
         paddingRight: 0,
         paddingLeft: '1em',
       },
-    },
-  },
-  more: (more, index, limit) => ({
-    display: (more || index < limit) ? 'block' : 'none',
-    [BASE_MQ]: {
-      display: (more || index < limit * 2) ? 'block' : 'none',
     },
   }),
   moreButton: {
@@ -54,6 +50,18 @@ const styles = {
   },
 };
 
+function MoreButton({ render, onClick }) {
+  return (
+    <button
+      css={styles.moreButton}
+      type="button"
+      onClick={onClick}
+    >
+      {render()}
+    </button>
+  );
+}
+
 export default function GridList({
   limit = 1, items, render, renderMore,
 }) {
@@ -61,24 +69,21 @@ export default function GridList({
 
   return (
     <>
-      <ul css={styles.items}>
+      <ListContainer style={styles.items}>
         {items.map((item, index) => (
-          <li
+          <ListItem
             key={item.id}
-            css={[styles.item, styles.more(more, index, limit)]}
+            style={styles.item(more, index, limit)}
           >
             {render(item)}
-          </li>
+          </ListItem>
         ))}
-      </ul>
+      </ListContainer>
       {!more && (
-        <button
-          css={styles.moreButton}
-          type="button"
+        <MoreButton
+          render={() => renderMore()}
           onClick={() => setMore(true)}
-        >
-          {!more && renderMore()}
-        </button>
+        />
       )}
     </>
   );

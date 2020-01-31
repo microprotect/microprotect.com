@@ -7,10 +7,11 @@ import { jsx } from '@emotion/core';
 import Section from './Section';
 import Text from '../Text';
 import Title from './Title';
+import ListContainer from '../ListContainer';
+import ListItem from '../ListItem';
 import GridList from './GridList';
 import PartnerBox from './PartnerBox';
 
-import { listContainer, listItem } from '../../styles/list';
 import {
   BASE_MQ,
   white,
@@ -29,7 +30,6 @@ const styles = {
     },
   },
   items: {
-    ...listContainer,
     margin: '2vw 0',
     textAlign: 'center',
     [BASE_MQ]: {
@@ -37,7 +37,6 @@ const styles = {
     },
   },
   item: {
-    ...listItem,
     display: 'inline-block',
     margin: '1vw 3vw',
     verticalAlign: 'middle',
@@ -74,16 +73,16 @@ export default function Partners({ t }) {
   return (
     <Section style={styles.container}>
       <Title value={t.partners_title} />
-      <ul css={styles.items}>
+      <ListContainer style={styles.items}>
         {partners.map((partner) => (
-          <li
+          <ListItem
             key={partner.id}
-            css={styles.item}
+            style={styles.item}
           >
             <Partner partner={partner} />
-          </li>
+          </ListItem>
         ))}
-      </ul>
+      </ListContainer>
       <GridList
         items={partners}
         render={(item) => (

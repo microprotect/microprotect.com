@@ -11,42 +11,28 @@ import Text from '../Text';
 import { BASE_MQ } from '../../styles/constants-v4';
 
 const styles = {
-  container: {
-    margin: 0,
-    padding: '2em',
-    fontSize: '3.5vw',
-    [BASE_MQ]: {
-      fontSize: '1em',
-    },
-  },
   banner: {
     display: 'block',
-    margin: '0 auto',
+    margin: '0 auto .7em',
     height: '10vw',
     [BASE_MQ]: {
       height: '50px',
     },
   },
-  title: {
-    margin: '.7em 0',
-    fontSize: '1.4em',
-  },
 };
 
 export default function PartnerBox({ t, partner }) {
+  const { id, image } = partner;
+
   return (
-    <Box style={styles.container}>
+    <Box>
       <img
-        src={`assets/images/partners/${partner.image}`}
-        alt={t[`partner_title_${partner.id}`]}
+        src={`assets/images/partners/${image}`}
+        alt={t[`partner_title_${id}`]}
         css={styles.banner}
       />
-      <Title
-        style={styles.title}
-        level={3}
-        value={t[`partner_title_${partner.id}`]}
-      />
-      <Text value={t[`partner_description_${partner.id}`]} />
+      <Title level={3} value={t[`partner_title_${id}`]} />
+      <Text value={t[`partner_description_${id}`]} />
     </Box>
   );
 }
