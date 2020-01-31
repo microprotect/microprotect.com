@@ -8,11 +8,11 @@
     "build": "webpack --mode=production",
     "lint": "eslint --fix --ext .js,.jsx src test",
     "test": "npm run test:unit && npm run test:e2e",
-    "test:unit": "jest src",
+    "test:unit": "jest",
     "test:e2e": "concurrently -k -s first npm:e2e-start npm:e2e-test",
-    "e2e-start": "webpack-dev-server --config webpack.test.js",
+    "e2e-start": "webpack-dev-server --config webpack.test.config.js",
     "e2e-test": "sleep 2 && codeceptjs run --steps",
-    "watch": "jest --watchAll src",
+    "watch": "jest --watchAll",
     "locales": "node script/generate-locales.js > src/locales.json"
   },
   "repository": {

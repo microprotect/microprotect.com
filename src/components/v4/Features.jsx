@@ -45,7 +45,7 @@ const styles = {
   box: {
     position: 'relative',
     margin: '4vw 0',
-    padding: '5vw 2vw',
+    padding: '5vw 3vw',
     fontSize: '4vw',
     [BASE_MQ]: {
       margin: '1em 0',
@@ -111,7 +111,7 @@ function Label({ index }) {
 
 function Feature({ t, index }) {
   return (
-    <Box css={styles.box}>
+    <Box style={styles.box}>
       <Label index={index} />
       <Title
         css={styles.featureTitle}
