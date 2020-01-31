@@ -7,6 +7,9 @@ import WhyBackgroundImage from './images/v4/why-bg-01.png';
 
 import ComingSoonImage from './images/v4/coming-soon.png';
 
+import DonatePriceKoImage from './images/v4/donate-price-ko.png';
+import DonatePriceEnImage from './images/v4/donate-price-en.png';
+
 import LabelImage1 from './images/v4/label-01.png';
 import LabelImage2 from './images/v4/label-02.png';
 import LabelImage3 from './images/v4/label-03.png';
@@ -32,6 +35,8 @@ export {
   WhyThanksImage,
   WhyBackgroundImage,
   ComingSoonImage,
+  DonatePriceKoImage,
+  DonatePriceEnImage,
   LabelImage1,
   LabelImage2,
   LabelImage3,

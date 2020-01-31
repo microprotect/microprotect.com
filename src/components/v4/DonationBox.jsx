@@ -34,7 +34,6 @@ const styles = {
   optionItem: {
     ...listItem,
     width: '50%',
-    padding: '0 5vw',
     fontFamily: 'S-CoreDream',
     fontSize: '2.8vw',
     textAlign: 'center',

@@ -9,6 +9,7 @@ import Footer from '../FooterV2';
 import HeaderPanel from './HeaderPanel';
 import Donation from './Donation';
 import WhyDonate from './WhyDonate';
+import HowDonate from './HowDonate';
 import SubscriptionInsurance from './SubscriptionInsurance';
 import Features from './Features';
 import HowWorks from './HowWorks';
@@ -30,6 +31,7 @@ export default function Home({ t, locale }) {
       <HeaderPanel t={t} />
       <Donation t={t} />
       <WhyDonate t={t} />
+      <HowDonate t={t} locale={locale} />
       <SubscriptionInsurance t={t} />
       <Features t={t} />
       <HowWorks t={t} />
