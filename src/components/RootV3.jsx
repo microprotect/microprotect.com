@@ -21,6 +21,16 @@ import FreeInsurance from './FreeInsurance';
 import SubscriptionInsurance from './SubscriptionInsurance';
 import AboutUs from './AboutUs';
 
+import { mq } from '../styles/utils';
+
+const styles = {
+  container: {
+    [mq(1024)]: {
+      fontSize: '20px',
+    },
+  },
+};
+
 export default function RootV3({ t, locale }) {
   const menuOpen = useSelector((state) => state.menuOpen);
 
@@ -28,20 +38,22 @@ export default function RootV3({ t, locale }) {
     <Router>
       <Header locale={locale} menuOpen={menuOpen} />
       <Menu open={menuOpen} />
-      <Switch>
-        <Route path="/free-insurance">
-          <FreeInsurance t={t} />
-        </Route>
-        <Route path="/subscription-insurance">
-          <SubscriptionInsurance t={t} />
-        </Route>
-        <Route path="/about-us">
-          <AboutUs t={t} />
-        </Route>
-        <Route path="/">
-          <Home t={t} />
-        </Route>
-      </Switch>
+      <div css={styles.container}>
+        <Switch>
+          <Route path="/free-insurance">
+            <FreeInsurance t={t} />
+          </Route>
+          <Route path="/subscription-insurance">
+            <SubscriptionInsurance t={t} />
+          </Route>
+          <Route path="/about-us">
+            <AboutUs t={t} />
+          </Route>
+          <Route path="/">
+            <Home t={t} />
+          </Route>
+        </Switch>
+      </div>
       <Footer t={t} />
     </Router>
   );

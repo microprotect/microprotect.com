@@ -11,7 +11,6 @@ import { mq } from '../styles/utils';
 
 const styles = {
   container: {
-    width: '100%',
     margin: 0,
     padding: '3em 0',
     background: '#44D4C2',
@@ -33,7 +32,7 @@ const styles = {
 
 export default function Subscribe({ t }) {
   return (
-    <section css={styles.container}>
+    <div css={styles.container}>
       <div css={styles.text}>
         <Text value={t.subscribe1} />
       </div>
@@ -41,6 +40,6 @@ export default function Subscribe({ t }) {
       <div css={styles.text}>
         {t.subscribe2}
       </div>
-    </section>
+    </div>
   );
 }
