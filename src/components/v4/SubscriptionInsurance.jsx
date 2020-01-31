@@ -4,27 +4,19 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Section from './Section';
 import Title from './Title';
 import StrongText from '../StrongText';
 import Text from '../Text';
 
 import {
   BASE_MQ,
-  CONTENT_PADDING,
-  backgroundColor,
   white,
 } from '../../styles/constants-v4';
 
 import { ComingSoonImage } from '../../assets/v4';
 
 const styles = {
-  container: {
-    padding: '10vw 5% 0',
-    backgroundColor,
-    [BASE_MQ]: {
-      padding: `5em ${CONTENT_PADDING} 0`,
-    },
-  },
   title: {
     [BASE_MQ]: {
       '& br': {
@@ -87,7 +79,7 @@ function ComingSoon({ t }) {
 
 export default function SubscriptionInsurance({ t }) {
   return (
-    <div css={styles.container}>
+    <Section>
       <Title
         css={styles.title}
         value={t.subscription_insurance_title}
@@ -104,6 +96,6 @@ export default function SubscriptionInsurance({ t }) {
       <div css={styles.description}>
         <Text value={t.subscription_insurance_description} />
       </div>
-    </div>
+    </Section>
   );
 }

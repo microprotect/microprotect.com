@@ -4,6 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Section from './Section';
 import Box from './Box';
 import Title from './Title';
 import Text from '../Text';
@@ -12,8 +13,6 @@ import { listContainer, listItem } from '../../styles/list';
 
 import {
   BASE_MQ,
-  CONTENT_PADDING,
-  backgroundColor,
   white,
 } from '../../styles/constants-v4';
 
@@ -29,13 +28,6 @@ import {
 } from '../../assets/v4';
 
 const styles = {
-  container: {
-    padding: '10vw 5% 10px',
-    backgroundColor,
-    [BASE_MQ]: {
-      padding: `5em ${CONTENT_PADDING} 10px`,
-    },
-  },
   features: {
     ...listContainer,
   },
@@ -125,7 +117,7 @@ function Feature({ t, index }) {
 
 export default function Features({ t }) {
   return (
-    <div css={styles.container}>
+    <Section>
       <ul css={styles.features}>
         {[1, 2, 3, 4].map((index) => (
           <li
@@ -136,6 +128,6 @@ export default function Features({ t }) {
           </li>
         ))}
       </ul>
-    </div>
+    </Section>
   );
 }

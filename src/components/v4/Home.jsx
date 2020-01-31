@@ -13,9 +13,17 @@ import Features from './Features';
 import HowWorks from './HowWorks';
 import Partners from './Partners';
 
+import { backgroundColor } from '../../styles/constants-v4';
+
+const styles = {
+  container: {
+    backgroundColor,
+  },
+};
+
 export default function Home({ t, locale }) {
   return (
-    <>
+    <div css={styles.container}>
       <Header locale={locale} />
       <HeaderPanel t={t} />
       <Donation t={t} />
@@ -24,6 +32,6 @@ export default function Home({ t, locale }) {
       <HowWorks t={t} />
       <Partners t={t} />
       <Footer t={t} />
-    </>
+    </div>
   );
 }

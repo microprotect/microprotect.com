@@ -47,14 +47,12 @@ const styles = {
     },
     '& > *': {
       display: 'inline-block',
+      marginRight: '.5em',
       lineHeight: '100%',
       textAlign: 'left',
     },
-    '& > span:first-of-type': {
-      marginRight: '.5em',
-    },
-    '& > span:last-of-type': {
-      marginLeft: '.7em',
+    '& > *:last-child': {
+      marginRight: 0,
     },
     '& > b': {
       fontFamily: 'S-CoreDream-8',
