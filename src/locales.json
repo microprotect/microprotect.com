@@ -122,7 +122,15 @@
     "title1": "Microprotect",
     "title2": "Make your insurance more valuable",
     "watch_the_video": "Watch the video",
-    "who_we_are": "We are people who contribute to the world with insurance"
+    "who_we_are": "We are people who contribute to the world with insurance",
+    "why_donate_problem1": "In developed countries, social welfare system will protect a family if the breadwinner is not able to work.",
+    "why_donate_problem2": "But that's not the case with all countries.\nLow-income families may be exposed to insecurities on daily basis.",
+    "why_donate_question1": "What if I get a serious illness?",
+    "why_donate_question2": "What if I lose my job due to a health issue?",
+    "why_donate_question3": "Who is going to take care of my family?",
+    "why_donate_solution_description": "More than 3.7 billion people are not covered by insurance,\nbecause they cannot afford monthly premium of €0.5.\nJust one accident may cause severe damages, especially upon those families with low income.",
+    "why_donate_solution_title": "Microprotect provides a social safety net for those who are short on resources.",
+    "why_donate_title": "Thank you\nfor protecting my family"
   },
   "ko": {
     "about_us_description": "We are people who *contribute to the world* with *insurance*. *Microprotect* offers a way for more people to benefit from insurance. *Free insurance* for low-income people and *monthly subscription insurance* where insurance is needed.",
@@ -247,6 +255,14 @@
     "title1": "마이크로프로텍트는",
     "title2": "보험을 가치 있게 같이 하세요",
     "watch_the_video": "Watch the video",
-    "who_we_are": "우리는 보험으로 세상이 더 따뜻한 곳이 되도록 만들어가는 사람들입니다."
+    "who_we_are": "우리는 보험으로 세상이 더 따뜻한 곳이 되도록 만들어가는 사람들입니다.",
+    "why_donate_problem1": "선진국에서는 가장이 일을 하지 못할 경우 사회보장제도로 가족을 지켜줍니다.",
+    "why_donate_problem2": "하지만 모든 나라가 그렇지는 않습니다.\n저소득층의 가장들은 매일 걱정합니다.",
+    "why_donate_question1": "만약 내가 큰 병에 걸리면 어떡하지?",
+    "why_donate_question2": "만약 내가 병으로 직업을 잃으면 어떡하지?",
+    "why_donate_question3": "내 가족들은 누가 돌봐줄 수 있지?",
+    "why_donate_solution_description": "전세계적으로 37 억 명이 넘는 사람들이 보험에 가입하지 않습니다.\n한달에 600~700원 수준이 없기 때문에 그렇습니다. \n저소득층은 사고가 한 건만 발생해도 삶의 질이 크게 떨어집니다.",
+    "why_donate_solution_title": "Microprotect는 경제적으로 부족한 사람들을 위해 사회안전망을 제공합니다.",
+    "why_donate_title": "우리 가족을\n보호해 주셔서 감사합니다"
   }
 }
