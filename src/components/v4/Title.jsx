@@ -1,8 +1,8 @@
 /* @jsx jsx */
 
-import React from 'react';
+import React, { Fragment } from 'react';
 
-import { jsx, ClassNames } from '@emotion/core';
+import { jsx } from '@emotion/core';
 
 import Text from '../Text';
 
@@ -22,27 +22,29 @@ const styles = {
       },
     },
     {
+      margin: 0,
     },
   ][level - 2],
 };
 
-export default function Title(props) {
-  const { className, level = 2, value } = props;
-
+export default function Title({ style, level = 2, value }) {
   const Heading = ['h2', 'h3'][level - 2];
 
   return (
-    <ClassNames>
-      {({ css }) => (
-        <Heading
-          className={[
-            css(styles.title(level)),
-            className,
-          ].join(' ')}
-        >
-          <Text value={value} />
-        </Heading>
-      )}
-    </ClassNames>
+    <Heading
+      css={[
+        styles.title(level),
+        style,
+      ]}
+    >
+      {(value || '').split('[*]')
+        .filter((i) => i)
+        .map((text, index) => (
+          <Fragment key={text}>
+            {index > 0 && <span>•</span>}
+            <Text value={text} />
+          </Fragment>
+        ))}
+    </Heading>
   );
 }

@@ -12,6 +12,7 @@ import SubscriptionInsurance from './SubscriptionInsurance';
 import Features from './Features';
 import HowWorks from './HowWorks';
 import Partners from './Partners';
+import AboutUs from './AboutUs';
 
 import { backgroundColor } from '../../styles/constants-v4';
 
@@ -31,6 +32,7 @@ export default function Home({ t, locale }) {
       <Features t={t} />
       <HowWorks t={t} />
       <Partners t={t} />
+      <AboutUs t={t} />
       <Footer t={t} />
     </div>
   );
