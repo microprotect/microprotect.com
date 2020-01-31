@@ -7,11 +7,11 @@ import { jsx } from '@emotion/core';
 import { mq } from '../styles/utils';
 
 import Slogan from './Slogan';
-import Subscribe from './Subscribe';
-import Partners from './Partners';
-import Describe from './Describe';
 import Video from './Video';
+import Describe from './Describe';
+import Subscribe from './Subscribe';
 import More from './More';
+import Partners from './Partners';
 
 const styles = {
   container: {
@@ -19,6 +19,11 @@ const styles = {
     fontSize: '2vw',
     [mq(1600)]: {
       fontSize: '30px',
+    },
+    '& section': {
+      margin: '4em auto',
+      width: '90%',
+      maxWidth: '1400px',
     },
   },
 };
