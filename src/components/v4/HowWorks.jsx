@@ -37,7 +37,7 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
   },
-  step: {
+  step: (index) => ({
     ...listItem,
     width: '50%',
     paddingBottom: '6vw',
@@ -45,27 +45,29 @@ const styles = {
     fontSize: '4vw',
     textAlign: 'center',
     [BASE_MQ]: {
-      width: '25%',
+      width: ['23%', '23%', '30%', '24%'][index],
       padding: 0,
       fontSize: '1.5em',
     },
     '& b': {
       fontFamily: 'S-CoreDream-8',
     },
-  },
-  figure: {
-    margin: '0 auto 2vw',
+  }),
+  figure: (index) => ({
     display: 'block',
-    height: '35vw',
+    margin: '0 auto 2vw',
+    marginTop: index < 3 ? 0 : '3vw',
+    height: index < 3 ? '38vw' : '30vw',
     [BASE_MQ]: {
-      width: '80%',
+      marginTop: [0, '40%', 0, '17%'][index],
+      width: ['70%', '63%', '80%', '60%'][index],
       height: 'auto',
     },
-  },
+  }),
   symbol: (index) => ({
     position: 'absolute',
-    width: '6vw',
-    height: '6vw',
+    width: '7vw',
+    height: '7vw',
     transform: 'translate3d(-50%, -50%, 0)',
     background: `url(${WorksPlusImage}) 0 0 no-repeat`,
     backgroundSize: 'contain',
@@ -91,14 +93,14 @@ const styles = {
       top: 'calc((100% - 5em) * .5)',
       ...[
         {
-          left: '25%',
+          left: '23.5%',
         },
         {
-          left: '50%',
+          left: '45.5%',
           backgroundImage: `url(${WorksRightImage})`,
         },
         {
-          left: '75%',
+          left: '77.5%',
         },
       ][index],
     },
@@ -110,9 +112,9 @@ const styles = {
 
 function Step({ t, index }) {
   return (
-    <li css={styles.step}>
+    <li css={styles.step(index)}>
       <img
-        css={styles.figure}
+        css={styles.figure(index)}
         src={FIGURES[index]}
         alt=""
       />
