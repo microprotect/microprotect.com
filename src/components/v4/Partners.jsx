@@ -4,6 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Section from './Section';
 import Text from '../Text';
 import Title from './Title';
 import GridList from './GridList';
@@ -12,16 +13,19 @@ import PartnerBox from './PartnerBox';
 import { listContainer, listItem } from '../../styles/list';
 import {
   BASE_MQ,
-  CONTENT_PADDING,
+  white,
 } from '../../styles/constants-v4';
 
 import partners from '../../data/partners';
 
 const styles = {
   container: {
-    padding: '10vw 5%',
+    paddingTop: '10vw',
+    paddingBottom: '10vw',
+    background: white,
     [BASE_MQ]: {
-      padding: `5em ${CONTENT_PADDING}`,
+      paddingTop: '5em',
+      paddingBottom: '5em',
     },
   },
   items: {
@@ -68,7 +72,7 @@ function Partner({ partner }) {
 
 export default function Partners({ t }) {
   return (
-    <div css={styles.container}>
+    <Section style={styles.container}>
       <Title value={t.partners_title} />
       <ul css={styles.items}>
         {partners.map((partner) => (
@@ -89,6 +93,6 @@ export default function Partners({ t }) {
           <Text value="More about" />
         )}
       />
-    </div>
+    </Section>
   );
 }

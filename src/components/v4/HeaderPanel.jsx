@@ -7,7 +7,6 @@ import { jsx } from '@emotion/core';
 import {
   CONTENT_PADDING,
   BASE_MQ,
-  backgroundColor,
 } from '../../styles/constants-v4';
 
 import {
@@ -23,7 +22,6 @@ const styles = {
     padding: '0 5%',
     background: `url(${HeaderBackgroundImage}) 50% 100% no-repeat`,
     backgroundSize: '190vw',
-    backgroundColor,
     overflow: 'hidden',
     [BASE_MQ]: {
       padding: `0 ${CONTENT_PADDING}`,

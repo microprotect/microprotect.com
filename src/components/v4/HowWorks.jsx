@@ -4,15 +4,14 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Section from './Section';
+import StrongText from '../StrongText';
+
 import {
   listContainer,
   listItem,
 } from '../../styles/list';
-import {
-  BASE_MQ,
-  CONTENT_PADDING,
-  backgroundColor,
-} from '../../styles/constants-v4';
+import { BASE_MQ } from '../../styles/constants-v4';
 
 import {
   WorksImage1,
@@ -23,7 +22,6 @@ import {
   WorksRightImage,
   WorksLeftImage,
 } from '../../assets/v4';
-import StrongText from '../StrongText';
 
 const FIGURES = [
   WorksImage1,
@@ -33,13 +31,6 @@ const FIGURES = [
 ];
 
 const styles = {
-  container: {
-    padding: '10vw 5%',
-    backgroundColor,
-    [BASE_MQ]: {
-      padding: `5em ${CONTENT_PADDING}`,
-    },
-  },
   steps: {
     ...listContainer,
     position: 'relative',
@@ -138,7 +129,7 @@ function Symbol({ index }) {
 
 export default function HowWorks({ t }) {
   return (
-    <div css={styles.container}>
+    <Section>
       <ul css={styles.steps}>
         {[...Array(7)].map((_, i) => i)
           .map((index) => (
@@ -147,6 +138,6 @@ export default function HowWorks({ t }) {
               : <Symbol key={index} index={(index - 1) / 2} />
           ))}
       </ul>
-    </div>
+    </Section>
   );
 }
