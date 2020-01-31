@@ -8,9 +8,11 @@ import { useDispatch } from 'react-redux';
 
 import { setLocale } from '../../appSlice';
 
+import ListContainer from '../ListContainer';
+import ListItem from '../ListItem';
+
 import { imageReplacement } from '../../styles/utils';
 import clearAfter from '../../styles/clearAfter';
-import { listContainer, listItem } from '../../styles/list';
 import {
   CONTENT_PADDING,
   BASE_MQ,
@@ -51,11 +53,9 @@ const styles = {
     ...imageReplacement(LogoImage),
   },
   languages: {
-    ...listContainer,
     float: 'right',
   },
   languageItem: {
-    ...listItem,
     float: 'left',
   },
   localeLink: {
@@ -133,14 +133,14 @@ export default function Header({ locale }) {
       >
         Microprotect
       </div>
-      <ul css={styles.languages}>
-        <li css={styles.languageItem}>
+      <ListContainer style={styles.languages}>
+        <ListItem style={styles.languageItem}>
           <LocaleLink locale={locale} target="ko">Korean</LocaleLink>
-        </li>
-        <li css={styles.languageItem}>
+        </ListItem>
+        <ListItem style={styles.languageItem}>
           <LocaleLink locale={locale} target="en">English</LocaleLink>
-        </li>
-      </ul>
+        </ListItem>
+      </ListContainer>
     </header>
   );
 }

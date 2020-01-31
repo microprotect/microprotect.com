@@ -22,18 +22,30 @@ const styles = {
       },
     },
     {
-      margin: 0,
+      margin: '0 0 .7em',
+      fontSize: '4.5vw',
+      [BASE_MQ]: {
+        fontSize: '1.5em',
+      },
     },
   ][level - 2],
+  heavy: {
+    lineHeight: '140%',
+    fontFamily: 'S-CoreDream-8',
+    fontWeight: 'normal',
+  },
 };
 
-export default function Title({ style, level = 2, value }) {
+export default function Title({
+  style, heavy, level = 2, value,
+}) {
   const Heading = ['h2', 'h3'][level - 2];
 
   return (
     <Heading
       css={[
         styles.title(level),
+        heavy ? styles.heavy : {},
         style,
       ]}
     >

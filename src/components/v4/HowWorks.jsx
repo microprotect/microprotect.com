@@ -5,12 +5,10 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 
 import Section from './Section';
+import ListContainer from '../ListContainer';
+import ListItem from '../ListItem';
 import StrongText from '../StrongText';
 
-import {
-  listContainer,
-  listItem,
-} from '../../styles/list';
 import { BASE_MQ } from '../../styles/constants-v4';
 
 import {
@@ -32,13 +30,11 @@ const FIGURES = [
 
 const styles = {
   steps: {
-    ...listContainer,
     position: 'relative',
     display: 'flex',
     flexWrap: 'wrap',
   },
   step: (index) => ({
-    ...listItem,
     width: '50%',
     paddingBottom: '6vw',
     fontFamily: 'S-CoreDream',
@@ -112,14 +108,14 @@ const styles = {
 
 function Step({ t, index }) {
   return (
-    <li css={styles.step(index)}>
+    <ListItem style={styles.step(index)}>
       <img
         css={styles.figure(index)}
         src={FIGURES[index]}
         alt=""
       />
       <StrongText value={t[`how_works${index + 1}`]} />
-    </li>
+    </ListItem>
   );
 }
 
@@ -132,14 +128,14 @@ function Symbol({ index }) {
 export default function HowWorks({ t }) {
   return (
     <Section>
-      <ul css={styles.steps}>
+      <ListContainer style={styles.steps}>
         {[...Array(7)].map((_, i) => i)
           .map((index) => (
             index % 2 === 0
               ? <Step key={index} t={t} index={index / 2} />
               : <Symbol key={index} index={(index - 1) / 2} />
           ))}
-      </ul>
+      </ListContainer>
     </Section>
   );
 }
