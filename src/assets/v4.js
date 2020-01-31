@@ -2,6 +2,9 @@ import HeaderBackgroundImage from './images/v4/header-background.png';
 import HeaderImage1 from './images/v4/header01.png';
 import HeaderImage2 from './images/v4/header02.png';
 
+import WhyThanksImage from './images/v4/why-family.png';
+import WhyBackgroundImage from './images/v4/why-bg-01.png';
+
 import ComingSoonImage from './images/v4/coming-soon.png';
 
 import LabelImage1 from './images/v4/label-01.png';
@@ -26,6 +29,8 @@ export {
   HeaderBackgroundImage,
   HeaderImage1,
   HeaderImage2,
+  WhyThanksImage,
+  WhyBackgroundImage,
   ComingSoonImage,
   LabelImage1,
   LabelImage2,
