@@ -12,7 +12,7 @@ export default function StrongText({ value }) {
       {(value || '').split('*')
         .map((text, index) => {
           const Tag = ['span', 'b'][index % 2];
-          return (
+          return text && (
             <Tag key={text}>
               <Text value={text} />
             </Tag>

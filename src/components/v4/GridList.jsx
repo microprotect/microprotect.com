@@ -31,16 +31,17 @@ const styles = {
       },
     },
   },
-  more: (more, index) => ({
-    display: (more || index === 0) ? 'block' : 'none',
+  more: (more, index, limit) => ({
+    display: (more || index < limit) ? 'block' : 'none',
     [BASE_MQ]: {
-      display: (more || index < 2) ? 'block' : 'none',
+      display: (more || index < limit * 2) ? 'block' : 'none',
     },
   }),
   moreButton: {
     width: '100%',
     padding: '2vw',
     border: 0,
+    background: 'transparent',
     color: red,
     fontSize: '5vw',
     fontWeight: 'bold',
@@ -53,7 +54,9 @@ const styles = {
   },
 };
 
-export default function GridList({ items, render, renderMore }) {
+export default function GridList({
+  limit = 1, items, render, renderMore,
+}) {
   const [more, setMore] = useState(!renderMore);
 
   return (
@@ -62,7 +65,7 @@ export default function GridList({ items, render, renderMore }) {
         {items.map((item, index) => (
           <li
             key={item.id}
-            css={[styles.item, styles.more(more, index)]}
+            css={[styles.item, styles.more(more, index, limit)]}
           >
             {render(item)}
           </li>

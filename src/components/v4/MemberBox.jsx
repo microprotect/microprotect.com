@@ -13,40 +13,33 @@ import { BASE_MQ } from '../../styles/constants-v4';
 const styles = {
   container: {
     margin: 0,
-    padding: '2em',
+    padding: '8vw',
+    lineHeight: '140%',
+    fontFamily: 'S-CoreDream',
     fontSize: '3.5vw',
     [BASE_MQ]: {
+      padding: '2em',
       fontSize: '1em',
     },
   },
-  banner: {
-    display: 'block',
-    margin: '0 auto',
-    height: '10vw',
-    [BASE_MQ]: {
-      height: '50px',
-    },
-  },
   title: {
-    margin: '.7em 0',
+    marginBottom: '.7em',
+    lineHeight: '140%',
+    fontFamily: 'S-CoreDream-8',
     fontSize: '1.4em',
+    fontWeight: 'normal',
   },
 };
 
-export default function PartnerBox({ t, partner }) {
+export default function MemberBox({ member }) {
   return (
     <Box style={styles.container}>
-      <img
-        src={`assets/images/partners/${partner.image}`}
-        alt={t[`partner_title_${partner.id}`]}
-        css={styles.banner}
-      />
       <Title
         style={styles.title}
         level={3}
-        value={t[`partner_title_${partner.id}`]}
+        value={`${member.position} [*] ${member.name}`}
       />
-      <Text value={t[`partner_description_${partner.id}`]} />
+      <Text value={member.description} />
     </Box>
   );
 }
