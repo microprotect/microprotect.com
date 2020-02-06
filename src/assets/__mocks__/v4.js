@@ -7,6 +7,9 @@ export const WhyBackgroundImage = '';
 
 export const ComingSoonImage = '';
 
+export const DonatePriceKoImage = '';
+export const DonatePriceEnImage = '';
+
 export const LabelImage1 = '';
 export const LabelImage2 = '';
 export const LabelImage3 = '';
