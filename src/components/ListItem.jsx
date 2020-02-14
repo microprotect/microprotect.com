@@ -6,9 +6,15 @@ import { jsx } from '@emotion/core';
 
 import { listItem } from '../styles/list';
 
-export default function ListItem({ style, children }) {
+export default function ListItem({ inline, style, children }) {
   return (
-    <li css={[listItem, style]}>
+    <li
+      css={[
+        listItem,
+        inline ? { display: 'inline-block' } : {},
+        style,
+      ]}
+    >
       {children}
     </li>
   );
