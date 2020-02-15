@@ -80,4 +80,20 @@ describe('App', () => {
         .toMatch('Secure more people equally');
     });
   });
+
+  describe('with version 5', () => {
+    given('store', () => configureMockStore()({
+      t: {},
+      locale: 'ko',
+      version: 5,
+    }));
+
+    it('renders application form', () => {
+      const wrapper = render(<App store={given.store} />);
+      expect(wrapper.text()).toMatch('First name');
+      expect(wrapper.text()).toMatch('E-mail');
+      expect(wrapper.text()).toMatch('Country');
+      expect(wrapper.text()).toMatch('Send application');
+    });
+  });
 });

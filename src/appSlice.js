@@ -11,6 +11,27 @@ const { actions, reducer } = createSlice({
     locale: '',
     version: 2,
     menuOpen: false,
+    applicationForm: {
+      firstName: '',
+      lastName: '',
+      birthDate: '',
+      nationality: '',
+      country: '',
+      zipCode: '',
+      region: '',
+      city: '',
+      address1: '',
+      address2: '',
+      email: '',
+      phoneNumber: '',
+      coverageBeginDate: '',
+      coverageEndDate: '',
+      countryBeforeTrip: '',
+      countryDestination: '',
+      entryDate: '',
+      reason: '',
+      cardNumber: '',
+    },
   },
   reducers: {
     setLocale(state, { payload: locale }) {
@@ -33,6 +54,13 @@ const { actions, reducer } = createSlice({
       ...state,
       menuOpen: false,
     }),
+    setApplicationField: (state, { payload: { key, value } }) => ({
+      ...state,
+      applicationForm: {
+        ...state.applicationForm,
+        [key]: value,
+      },
+    }),
   },
 });
 
@@ -41,6 +69,7 @@ export const {
   setVersion,
   openMenu,
   closeMenu,
+  setApplicationField,
 } = actions;
 
 export default reducer;
