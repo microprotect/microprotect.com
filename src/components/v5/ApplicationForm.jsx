@@ -6,8 +6,25 @@ import { useSelector } from 'react-redux';
 
 import { jsx } from '@emotion/core';
 
+import axios from 'axios';
+
 import TextField from '../TextField';
 import RadioButton from '../RadioButton';
+
+const { error } = console;
+
+async function sendApplication(form, setLoading) {
+  setLoading(true);
+
+  const URL = 'http://berlin.test/care-discover/applications';
+
+  try {
+    await axios.post(URL, form);
+  } catch (e) {
+    error(e);
+    setLoading(false);
+  }
+}
 
 export default function ApplicationForm() {
   const [loading, setLoading] = useState(false);
@@ -18,7 +35,7 @@ export default function ApplicationForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setLoading(true);
+    sendApplication(applicationForm, setLoading);
   };
 
   if (loading) {
