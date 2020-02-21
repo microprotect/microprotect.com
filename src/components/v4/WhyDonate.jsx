@@ -7,7 +7,7 @@ import { jsx } from '@emotion/core';
 import Section from './Section';
 import Title from './Title';
 import Text from '../Text';
-import Box from './Box';
+import Box from '../Box';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
 

@@ -4,7 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import Box from './Box';
+import Box from '../Box';
 import Title from './Title';
 import Text from '../Text';
 

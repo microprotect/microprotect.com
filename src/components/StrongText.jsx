@@ -6,6 +6,10 @@ import { jsx } from '@emotion/core';
 
 import Text from './Text';
 
+function key(text, index) {
+  return `${text}-${index}`;
+}
+
 export default function StrongText({ value }) {
   return (
     <>
@@ -13,7 +17,7 @@ export default function StrongText({ value }) {
         .map((text, index) => {
           const Tag = ['span', 'b'][index % 2];
           return text && (
-            <Tag key={text}>
+            <Tag key={key(text, index)}>
               <Text value={text} />
             </Tag>
           );
