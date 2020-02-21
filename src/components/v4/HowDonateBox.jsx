@@ -5,7 +5,7 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 
 import HowDonatePrice from './HowDonatePrice';
-import Box from './Box';
+import Box from '../Box';
 import Text from '../Text';
 
 import {
