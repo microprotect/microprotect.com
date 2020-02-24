@@ -28,6 +28,7 @@ const styles = {
   container: {
     position: 'relative',
     margin: '-2em 5% 0',
+    borderRadius: '.3em',
     borderTopRightRadius: '5em',
   },
   product: {
@@ -36,7 +37,6 @@ const styles = {
     paddingLeft: '25%',
     borderBottom: '1px solid #E3E9F3',
     lineHeight: '140%',
-    fontFamily: 'S-CoreDream',
     fontSize: '3vw',
   },
   thumbnail: {
@@ -47,7 +47,6 @@ const styles = {
   },
   title: {
     margin: 0,
-    fontFamily: 'S-CoreDream-8',
     fontSize: '5vw',
     letterSpacing: '-1.5px',
   },

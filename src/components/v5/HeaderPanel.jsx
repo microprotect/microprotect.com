@@ -2,9 +2,11 @@
 
 import React from 'react';
 
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 
 import StrongText from '../StrongText';
+
+import underlined from '../../styles/v5/underlined';
 
 import { HeaderImage } from '../../assets/v5';
 
@@ -47,16 +49,6 @@ const styles = {
   },
 };
 
-const underlined = css`
-  &:after {
-    display: block;
-    margin-top: -.7em;
-    height: .7em;
-    background: #FFA1BB;
-    content: "";
-  }
-`;
-
 export default function HeaderPanel({ t }) {
   return (
     <div css={styles.container}>
@@ -64,7 +56,7 @@ export default function HeaderPanel({ t }) {
       <h1 css={styles.slogan1}>
         <StrongText value={t.v5_slogan1} />
       </h1>
-      <h2 css={[styles.slogan2, underlined]}>
+      <h2 css={[styles.slogan2, underlined('#FFA1BB')]}>
         <StrongText value={t.v5_slogan2} />
       </h2>
     </div>
