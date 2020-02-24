@@ -8,6 +8,9 @@ import ProductImage3 from './images/v5/product3.png';
 
 import ArrowImage from './images/v5/arrow.png';
 
+import TalkImage1 from './images/v5/talk1.png';
+import TalkImage2 from './images/v5/talk2.png';
+
 export {
   LogoImage,
   HeaderImage,
@@ -15,4 +18,6 @@ export {
   ProductImage2,
   ProductImage3,
   ArrowImage,
+  TalkImage1,
+  TalkImage2,
 };
