@@ -7,6 +7,7 @@ import { jsx } from '@emotion/core';
 import Box from '../Box';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
+import Link from '../Link';
 import Text from '../Text';
 import ArrowButton from './ArrowButton';
 
@@ -25,22 +26,26 @@ const images = [
 const styles = {
   container: {
     position: 'relative',
-    margin: '-2em 5% 0',
+    margin: '-28vw 5% 7vw',
+    padding: '1em 5%',
     borderRadius: '.3em',
     borderTopRightRadius: '5em',
   },
   product: {
     position: 'relative',
     padding: '2em 0',
-    paddingLeft: '25%',
+    paddingLeft: '30%',
     borderBottom: '1px solid #E3E9F3',
     lineHeight: '140%',
     fontSize: '3vw',
+    '&:last-child': {
+      borderBottom: 0,
+    },
   },
   thumbnail: {
     position: 'absolute',
     top: '2em',
-    left: '-5%',
+    left: 0,
     width: '25%',
   },
   title: {
@@ -50,12 +55,13 @@ const styles = {
   },
   description: {
     marginTop: '1em',
+    color: '#5C5C5C',
   },
   note: {
     color: '#ADB5C1',
   },
   button: {
-    right: '-6%',
+    right: '-2%',
   },
 };
 
@@ -68,21 +74,23 @@ export default function Products({ t }) {
             style={styles.product}
             key={index}
           >
-            <img
-              css={styles.thumbnail}
-              src={images[index - 1]}
-              alt=""
-            />
-            <h2 css={styles.title}>
-              {t[`products_title${index}`]}
-            </h2>
-            <div css={styles.description}>
-              <Text value={t[`products_description${index}`]} />
-            </div>
-            <div css={styles.note}>
-              <Text value={t[`products_note${index}`]} />
-            </div>
-            <ArrowButton style={styles.button} />
+            <Link to="/?version=5">
+              <img
+                css={styles.thumbnail}
+                src={images[index - 1]}
+                alt=""
+              />
+              <h2 css={styles.title}>
+                {t[`products_title${index}`]}
+              </h2>
+              <div css={styles.description}>
+                <Text value={t[`products_description${index}`]} />
+              </div>
+              <div css={styles.note}>
+                <Text value={t[`products_note${index}`]} />
+              </div>
+              <ArrowButton style={styles.button} />
+            </Link>
           </ListItem>
         ))}
       </ListContainer>

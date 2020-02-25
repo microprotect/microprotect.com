@@ -7,6 +7,7 @@ export const ProductImage2 = '';
 export const ProductImage3 = '';
 
 export const ArrowImage = '';
+export const ArrowPinkImage = '';
 export const ArrowDownImage = '';
 
 export const TalkImage1 = '';

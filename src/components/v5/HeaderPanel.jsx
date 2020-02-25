@@ -6,58 +6,58 @@ import { jsx } from '@emotion/core';
 
 import StrongText from '../StrongText';
 
-import underlined from '../../styles/v5/underlined';
-
 import { HeaderImage } from '../../assets/v5';
 
 const styles = {
   container: {
     position: 'relative',
-    padding: '85vw 0 15vw',
-    background: 'linear-gradient(135deg, #FFB4C8 0%, #FF7197 100%)',
+    padding: '25vw 0 40vw',
+    background: 'linear-gradient(135deg, #7AC7F8 0%, #6594F8 100%)',
     color: '#FFF',
   },
-  image: {
+  background: {
     position: 'absolute',
     top: 0,
     left: 0,
     width: '100%',
-    height: '100%',
-    background: `url(${HeaderImage}) 80% 20% no-repeat`,
-    backgroundSize: '60vw',
+    height: '70%',
+    background: `url(${HeaderImage}) 50% 0 no-repeat`,
+    backgroundSize: 'cover',
   },
   slogan1: {
     position: 'relative',
-    margin: '0 5%',
+    margin: 0,
+    lineHeight: '120%',
     fontFamily: 'BMJUA',
-    fontSize: '8vw',
+    fontSize: '9vw',
+    fontWeight: 'normal',
+    textAlign: 'center',
     '& b': {
-      color: '#FFDEE7',
+      fontWeight: 'normal',
+      color: '#CDE8FF',
     },
   },
   slogan2: {
     position: 'relative',
-    display: 'inline-block',
-    margin: '.4em 5% 0',
-    color: '#D03760',
+    margin: '.6em 0 0',
+    color: '#20336A',
     fontFamily: 'BMJUA',
-    fontSize: '4.6vw',
+    fontSize: '7.2vw',
+    fontWeight: 'normal',
     fontStyle: 'italic',
-    '& b': {
-      fontSize: '1.4em',
-    },
+    textAlign: 'center',
   },
 };
 
 export default function HeaderPanel({ t }) {
   return (
     <div css={styles.container}>
-      <div css={styles.image} />
+      <div css={styles.background} />
       <h1 css={styles.slogan1}>
         <StrongText value={t.v5_slogan1} />
       </h1>
-      <h2 css={[styles.slogan2, underlined('#FFA1BB')]}>
-        <StrongText value={t.v5_slogan2} />
+      <h2 css={styles.slogan2}>
+        {t.v5_slogan2}
       </h2>
     </div>
   );

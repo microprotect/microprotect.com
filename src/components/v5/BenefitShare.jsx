@@ -119,9 +119,9 @@ export default function BenefitShare({ t }) {
         </div>
       </div>
       <Box style={styles.more}>
-        <Link to="/">
+        <Link to="/?version=5">
           <StrongText value={t.benefit_share_more} />
-          <ArrowButton style={styles.button} />
+          <ArrowButton style={styles.button} pink />
         </Link>
       </Box>
     </div>
