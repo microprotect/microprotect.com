@@ -8,14 +8,12 @@ import Box from '../Box';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
 import Text from '../Text';
-
-import { imageReplacement } from '../../styles/utils';
+import ArrowButton from './ArrowButton';
 
 import {
   ProductImage1,
   ProductImage2,
   ProductImage3,
-  ArrowImage,
 } from '../../assets/v5';
 
 const images = [
@@ -57,15 +55,7 @@ const styles = {
     color: '#ADB5C1',
   },
   button: {
-    ...imageReplacement(ArrowImage),
-    position: 'absolute',
-    top: '50%',
     right: '-6%',
-    transform: 'translate3d(0, -50%, 0)',
-    display: 'block',
-    width: '4em',
-    height: '4em',
-    border: 0,
   },
 };
 
@@ -92,12 +82,7 @@ export default function Products({ t }) {
             <div css={styles.note}>
               <Text value={t[`products_note${index}`]} />
             </div>
-            <button
-              type="button"
-              css={styles.button}
-            >
-              See more
-            </button>
+            <ArrowButton style={styles.button} />
           </ListItem>
         ))}
       </ListContainer>

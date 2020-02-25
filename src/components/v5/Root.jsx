@@ -16,6 +16,10 @@ import ApplicationForm from './ApplicationForm';
 const styles = {
   container: {
     fontFamily: 'Noto Sans KR',
+    fontSize: '4vw',
+    '& a': {
+      textDecoration: 'none',
+    },
   },
 };
 
