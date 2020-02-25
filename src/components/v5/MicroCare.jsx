@@ -4,29 +4,14 @@ import React, { useState } from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Title from './Title';
 import MicroCareItem from './MicroCareItem';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
 
-import underlined from '../../styles/v5/underlined';
-
 const styles = {
   container: {
     padding: '7vw 5%',
-    fontSize: '4vw',
-  },
-  title: {
-    margin: '0 0 1em',
-    fontsize: '1.8em',
-    '& small': {
-      display: 'block',
-      marginBottom: '.1em',
-      fontSize: '.7em',
-      fontWeight: 'normal',
-    },
-    '& span': {
-      display: 'inline-block',
-    },
   },
   content: {
     position: 'relative',
@@ -88,14 +73,10 @@ export default function MicroCare({ t }) {
 
   return (
     <div css={styles.container}>
-      <h2 css={styles.title}>
-        <small>
-          {t.microcare_pre_title}
-        </small>
-        <span css={underlined('#E3EAF5')}>
-          {t.microcare_title}
-        </span>
-      </h2>
+      <Title
+        preValue={t.microcare_pre_title}
+        value={t.microcare_title}
+      />
       <div
         css={styles.content}
         onTouchStart={handleTouchStart}

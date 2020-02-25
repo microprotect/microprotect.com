@@ -5,23 +5,23 @@ import { render, screen } from '@testing-library/react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import Home from './Home';
+import BenefitShare from './BenefitShare';
 
 jest.mock('../../assets/v5');
 
-describe('Home', () => {
-  it('renders slogan', () => {
+describe('BenefitShare', () => {
+  it('renders “see more” link', () => {
     const t = {
-      v5_slogan1: 'Slogan',
+      benefit_share_more: '무료보험\n*자세히 보기*',
     };
 
     render(
       <Router>
-        <Home t={t} />
+        <BenefitShare t={t} />
       </Router>,
     );
 
-    expect(screen.getByText(/Slogan/))
+    expect(screen.getByText(/자세히 보기/))
       .toBeInTheDocument();
   });
 });
