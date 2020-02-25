@@ -29,14 +29,14 @@ const styles = {
     },
   },
   filled: {
-    backgroundColor: '#FFB4C8',
+    backgroundColor: '#7AC7F8',
     boxShadow: '0 0 6px 0 rgba(200, 200, 200, .5)',
   },
   logo: {
     float: 'left',
     display: 'block',
-    width: '120px',
-    height: '30px',
+    width: '200px',
+    height: '50px',
     cursor: 'pointer',
     [BASE_MQ]: {
       width: '250px',

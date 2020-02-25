@@ -7,6 +7,7 @@ import ProductImage2 from './images/v5/product2.png';
 import ProductImage3 from './images/v5/product3.png';
 
 import ArrowImage from './images/v5/arrow.png';
+import ArrowPinkImage from './images/v5/arrow-pink.png';
 import ArrowDownImage from './images/v5/arrow-down.png';
 
 import TalkImage1 from './images/v5/talk1.png';
@@ -25,6 +26,7 @@ export {
   ProductImage2,
   ProductImage3,
   ArrowImage,
+  ArrowPinkImage,
   ArrowDownImage,
   TalkImage1,
   TalkImage2,

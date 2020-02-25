@@ -6,11 +6,14 @@ import { jsx } from '@emotion/core';
 
 import { imageReplacement } from '../../styles/utils';
 
-import { ArrowImage } from '../../assets/v5';
+import {
+  ArrowImage,
+  ArrowPinkImage,
+} from '../../assets/v5';
 
 const styles = {
-  button: {
-    ...imageReplacement(ArrowImage),
+  button: (pink) => ({
+    ...imageReplacement(pink ? ArrowPinkImage : ArrowImage),
     position: 'absolute',
     top: '50%',
     right: 0,
@@ -19,14 +22,14 @@ const styles = {
     width: '4em',
     height: '4em',
     border: 0,
-  },
+  }),
 };
 
-export default function ArrowButton({ style }) {
+export default function ArrowButton({ style, pink }) {
   return (
     <button
       type="button"
-      css={[styles.button, style || {}]}
+      css={[styles.button(pink), style || {}]}
     >
       See more
     </button>
