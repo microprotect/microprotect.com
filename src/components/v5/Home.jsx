@@ -9,6 +9,7 @@ import HeaderPanel from './HeaderPanel';
 import Products from './Products';
 import MicroCare from './MicroCare';
 import BenefitShare from './BenefitShare';
+import InsurancePartners from './InsurancePartners';
 
 export default function Home({ t }) {
   return (
@@ -18,6 +19,7 @@ export default function Home({ t }) {
       <Products t={t} />
       <MicroCare t={t} />
       <BenefitShare t={t} />
+      <InsurancePartners t={t} />
     </>
   );
 }
