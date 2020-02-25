@@ -14,3 +14,6 @@ export const TalkImage2 = '';
 
 export const DonutCompleteImage = '';
 export const DonutPiecesImage = '';
+
+export const PartnerAllianzImage = '';
+export const PartnerCareConceptImage = '';

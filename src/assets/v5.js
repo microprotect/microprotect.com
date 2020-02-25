@@ -15,6 +15,9 @@ import TalkImage2 from './images/v5/talk2.png';
 import DonutCompleteImage from './images/v5/donut-complete.png';
 import DonutPiecesImage from './images/v5/donut-pieces.png';
 
+import PartnerAllianzImage from './images/v5/partner-allianz.png';
+import PartnerCareConceptImage from './images/v5/partner-careconcept.png';
+
 export {
   LogoImage,
   HeaderImage,
@@ -27,4 +30,6 @@ export {
   TalkImage2,
   DonutCompleteImage,
   DonutPiecesImage,
+  PartnerAllianzImage,
+  PartnerCareConceptImage,
 };
