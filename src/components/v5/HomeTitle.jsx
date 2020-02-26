@@ -22,7 +22,7 @@ const styles = {
   },
 };
 
-export default function Title({ value, preValue }) {
+export default function HomeTitle({ value, preValue }) {
   return (
     <h2 css={styles.title}>
       {preValue && (

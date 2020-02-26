@@ -10,6 +10,7 @@ import Products from './Products';
 import MicroCare from './MicroCare';
 import BenefitShare from './BenefitShare';
 import InsurancePartners from './InsurancePartners';
+import Footer from '../FooterV2';
 
 export default function Home({ t }) {
   return (
@@ -20,6 +21,7 @@ export default function Home({ t }) {
       <MicroCare t={t} />
       <BenefitShare t={t} />
       <InsurancePartners t={t} />
+      <Footer t={t} />
     </>
   );
 }

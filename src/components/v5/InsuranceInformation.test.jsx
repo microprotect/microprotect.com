@@ -5,24 +5,19 @@ import { render, screen } from '@testing-library/react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import Home from './Home';
+import InsuranceInformation from './InsuranceInformation';
 
-jest.mock('../../assets');
 jest.mock('../../assets/v5');
 
-describe('Home', () => {
-  it('renders slogan', () => {
-    const t = {
-      v5_slogan1: 'Slogan',
-    };
-
+describe('InsuranceInformation', () => {
+  it('renders labels', () => {
     render(
       <Router>
-        <Home t={t} />
+        <InsuranceInformation product="carediscover" />
       </Router>,
     );
 
-    expect(screen.getByText(/Slogan/))
+    expect(screen.getByText(/가입연령/))
       .toBeInTheDocument();
   });
 });

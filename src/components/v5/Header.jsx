@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Link from '../Link';
+
 import { imageReplacement } from '../../styles/utils';
 import clearAfter from '../../styles/clearAfter';
 import {
@@ -46,14 +48,6 @@ const styles = {
   },
 };
 
-function handleClickLogo() {
-  window.scroll({
-    top: 0,
-    left: 0,
-    behavior: 'smooth',
-  });
-}
-
 export default function Header() {
   const [filled, setFilled] = useState(false);
 
@@ -71,15 +65,13 @@ export default function Header() {
         filled ? styles.filled : {},
       ]}
     >
-      <div
+      <Link
+        to="/?version=5"
         id="logo"
         css={styles.logo}
-        role="button"
-        aria-hidden="true"
-        onClick={handleClickLogo}
       >
         Microprotect
-      </div>
+      </Link>
     </header>
   );
 }

@@ -1,0 +1,40 @@
+{
+  "carediscover": {
+    "informationItems": [
+      {
+        "icon": "age",
+        "label": "가입연령",
+        "description": "만 65세까지 가입 가능"
+      },
+      {
+        "icon": "duration",
+        "label": "보험기간",
+        "description": "최대 3년까지"
+      },
+      {
+        "icon": "region",
+        "label": "보험지역",
+        "description": "모국을 제외한 전세계"
+      }
+    ],
+    "pricing": {
+      "labels": [
+        "나이(만)",
+        "기본보험료\n_(10일까지 같은 금액)_",
+        "일일연장 보험료"
+      ],
+      "items": [
+        [
+          "0-35세",
+          "13.9EUR\n*17,817원*",
+          "1.39EUR/일\n*1,781원/일*"
+        ],
+        [
+          "36-65세",
+          "24.9EUR\n*31,917원*",
+          "2.49EUR/일\n*3,191원/일*"
+        ]
+      ]
+    }
+  }
+}

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import { jsx } from '@emotion/core';
 
-import Title from './Title';
+import HomeTitle from './HomeTitle';
 import MicroCareItem from './MicroCareItem';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
@@ -73,7 +73,7 @@ export default function MicroCare({ t }) {
 
   return (
     <div css={styles.container}>
-      <Title
+      <HomeTitle
         preValue={t.microcare_pre_title}
         value={t.microcare_title}
       />
