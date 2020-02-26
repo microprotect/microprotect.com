@@ -4,7 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import Title from './Title';
+import HomeTitle from './HomeTitle';
 import Text from '../Text';
 import StrongText from '../StrongText';
 import ListContainer from '../ListContainer';
@@ -76,7 +76,7 @@ const styles = {
 export default function BenefitShare({ t }) {
   return (
     <div css={styles.container}>
-      <Title value={t.benefit_share_title} />
+      <HomeTitle value={t.benefit_share_title} />
       <ListContainer>
         {[1, 2].map((index) => (
           <ListItem

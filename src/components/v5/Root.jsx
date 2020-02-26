@@ -11,6 +11,7 @@ import {
 import { jsx } from '@emotion/core';
 
 import Home from './Home';
+import InsurancePage from './InsurancePage';
 import ApplicationForm from './ApplicationForm';
 
 const styles = {
@@ -30,6 +31,9 @@ export default function Root({ t }) {
         <Switch>
           <Route path="/applications/new">
             <ApplicationForm />
+          </Route>
+          <Route path="/insurances/care-discover">
+            <InsurancePage t={t} product="carediscover" />
           </Route>
           <Route path="/">
             <Home t={t} />

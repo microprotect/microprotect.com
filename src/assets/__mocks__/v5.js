@@ -18,3 +18,9 @@ export const DonutPiecesImage = '';
 
 export const PartnerAllianzImage = '';
 export const PartnerCareConceptImage = '';
+
+export const CheckImage = '';
+
+export const IconAgeImage = '';
+export const IconDurationImage = '';
+export const IconRegionImage = '';

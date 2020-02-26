@@ -19,6 +19,12 @@ import DonutPiecesImage from './images/v5/donut-pieces.png';
 import PartnerAllianzImage from './images/v5/partner-allianz.png';
 import PartnerCareConceptImage from './images/v5/partner-careconcept.png';
 
+import CheckImage from './images/v5/check.png';
+
+import IconAgeImage from './images/v5/icon-age.png';
+import IconDurationImage from './images/v5/icon-duration.png';
+import IconRegionImage from './images/v5/icon-region.png';
+
 export {
   LogoImage,
   HeaderImage,
@@ -34,4 +40,8 @@ export {
   DonutPiecesImage,
   PartnerAllianzImage,
   PartnerCareConceptImage,
+  CheckImage,
+  IconAgeImage,
+  IconDurationImage,
+  IconRegionImage,
 };

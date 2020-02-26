@@ -17,10 +17,22 @@ import {
   ProductImage3,
 } from '../../assets/v5';
 
-const images = [
-  ProductImage1,
-  ProductImage2,
-  ProductImage3,
+const products = [
+  {
+    key: 1,
+    image: ProductImage1,
+    to: '/insurances/care-discover?version=5',
+  },
+  {
+    key: 2,
+    image: ProductImage2,
+    to: '/?version=5',
+  },
+  {
+    key: 3,
+    image: ProductImage3,
+    to: '/?version=5',
+  },
 ];
 
 const styles = {
@@ -69,25 +81,25 @@ export default function Products({ t }) {
   return (
     <Box style={styles.container}>
       <ListContainer>
-        {[1, 2, 3].map((index) => (
+        {products.map(({ key, image, to }, index) => (
           <ListItem
             style={styles.product}
-            key={index}
+            key={key}
           >
-            <Link to="/?version=5">
+            <Link to={to}>
               <img
                 css={styles.thumbnail}
-                src={images[index - 1]}
+                src={image}
                 alt=""
               />
               <h2 css={styles.title}>
-                {t[`products_title${index}`]}
+                {t[`products_title${index + 1}`]}
               </h2>
               <div css={styles.description}>
-                <Text value={t[`products_description${index}`]} />
+                <Text value={t[`products_description${index + 1}`]} />
               </div>
               <div css={styles.note}>
-                <Text value={t[`products_note${index}`]} />
+                <Text value={t[`products_note${index + 1}`]} />
               </div>
               <ArrowButton style={styles.button} />
             </Link>

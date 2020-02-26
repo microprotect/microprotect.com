@@ -13,7 +13,8 @@
     "e2e-start": "webpack-dev-server --config webpack.test.config.js",
     "e2e-test": "sleep 2 && codeceptjs run --steps",
     "watch": "jest --watchAll",
-    "locales": "node script/generate-locales.js > src/locales.json"
+    "locales": "node script/generate-locales.js > src/locales.json",
+    "products": "node script/generate-products.js > src/data/products-ko.json"
   },
   "repository": {
     "type": "git",

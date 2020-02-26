@@ -3,15 +3,15 @@ import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import Title from './Title';
+import HomeTitle from './HomeTitle';
 
 jest.mock('../../assets/v5');
 
-describe('Title', () => {
+describe('HomeTitle', () => {
   it('renders text', () => {
-    render(<Title value="My Title" preValue="My PreTitle" />);
+    render(<HomeTitle value="My HomeTitle" preValue="My PreTitle" />);
 
-    expect(screen.getByText(/My Title/))
+    expect(screen.getByText(/My HomeTitle/))
       .toBeInTheDocument();
     expect(screen.getByText(/My PreTitle/))
       .toBeInTheDocument();

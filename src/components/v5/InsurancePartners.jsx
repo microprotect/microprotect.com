@@ -4,7 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import Title from './Title';
+import HomeTitle from './HomeTitle';
 import StrongText from '../StrongText';
 import Box from '../Box';
 
@@ -47,7 +47,7 @@ const styles = {
 export default function InsurancePartners({ t }) {
   return (
     <div css={styles.container}>
-      <Title value={t.insurance_partners_title} />
+      <HomeTitle value={t.insurance_partners_title} />
       <StrongText value={t.insurance_partners_description} />
       <Box style={styles.partners}>
         {['allianz', 'careconcept'].map((key, index) => (
