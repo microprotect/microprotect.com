@@ -16,6 +16,7 @@ import { CheckImage } from '../../assets/v5';
 const styles = {
   container: {
     padding: '10vw 5%',
+    background: '#FAFCFF',
   },
   description: {
     lineHeight: '180%',

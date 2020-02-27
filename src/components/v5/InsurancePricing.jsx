@@ -14,7 +14,7 @@ const styles = {
     width: '100%',
     marginTop: '1.5em',
     borderSpacing: 0,
-    background: '#FAFCFF',
+    background: '#FFF',
     boxShadow: '2px 2px 10px 0 rgba(200, 200, 200, 0.5)',
     '& th': {
       padding: '.8em',

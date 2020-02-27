@@ -10,6 +10,8 @@ const PRODUCTS = [
     documentId: '2PACX-1vRp0lZ0RzZuGP98LQBpgRwrTHJD4aDEjJx4PLCE-DLlpl4zmQngZFpU7JKg_lPpDlluVSpANIHlf4bZ',
     informationSheetId: '0',
     pricingSheetId: '631227283',
+    coverageSheetId: '861999382',
+    noticeSheetId: '1849224520',
   },
 ];
 
@@ -26,11 +28,13 @@ async function fetchCSV(url) {
 
 async function fetchProduct(product) {
   const {
-    name, documentId, informationSheetId, pricingSheetId,
+    name, documentId, informationSheetId, pricingSheetId, coverageSheetId, noticeSheetId,
   } = product;
 
   const informationItems = await fetchCSV(csvUrl(documentId, informationSheetId));
   const pricingRows = await fetchCSV(csvUrl(documentId, pricingSheetId));
+  const coverageRows = await fetchCSV(csvUrl(documentId, coverageSheetId));
+  const noticeItems = await fetchCSV(csvUrl(documentId, noticeSheetId));
 
   return {
     name,
@@ -44,6 +48,13 @@ async function fetchProduct(product) {
       labels: pricingRows[0],
       items: pricingRows.slice(1, pricingRows.length),
     },
+    coverage: {
+      labels: coverageRows[0],
+      items: coverageRows.slice(1, coverageRows.length),
+    },
+    noticeItems: noticeItems.map((item) => (
+      item[0]
+    )),
   };
 }
 
@@ -54,6 +65,8 @@ async function main() {
     [product.name]: {
       informationItems: product.informationItems,
       pricing: product.pricing,
+      coverage: product.coverage,
+      noticeItems: product.noticeItems,
     },
   }), {});
   print(JSON.stringify(data, null, '  '));
