@@ -7,6 +7,8 @@ import { jsx } from '@emotion/core';
 import WeakText from '../WeakText';
 import StrongText from '../StrongText';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+
 import products from '../../data/products-ko.json';
 
 const styles = {
@@ -16,6 +18,9 @@ const styles = {
     borderSpacing: 0,
     background: '#FFF',
     boxShadow: '2px 2px 10px 0 rgba(200, 200, 200, 0.5)',
+    [BASE_MQ]: {
+      fontSize: '.4em',
+    },
     '& th': {
       padding: '.8em',
       lineHeight: '110%',

@@ -9,21 +9,37 @@ import Text from '../Text';
 import products from '../../data/products-ko.json';
 import WeakText from '../WeakText';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+
 const styles = {
   container: {
     padding: '5vw 5% 20vw',
     background: '#FAFCFF',
+    [BASE_MQ]: {
+      padding: '1em 27% 2em',
+      fontSize: '.8em',
+    },
   },
   title: {
     fontSize: '1.2em',
+    [BASE_MQ]: {
+      fontSize: '.7em',
+    },
   },
   text: {
     display: 'block',
     margin: '.3em 0',
+    [BASE_MQ]: {
+      fontSize: '.4em',
+      margin: '.8em 0',
+    },
   },
   note: {
     marginTop: '2em',
     color: '#ADB5C1',
+    [BASE_MQ]: {
+      fontSize: '.4em',
+    },
   },
 };
 

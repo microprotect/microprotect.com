@@ -8,10 +8,16 @@ import WeakText from '../WeakText';
 
 import products from '../../data/products-ko.json';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+
 const styles = {
   container: {
     padding: '5vw 5% 10vw',
     background: '#FAFCFF',
+    [BASE_MQ]: {
+      padding: '1em 27% 2em',
+      fontSize: '.8em',
+    },
   },
   table: {
     width: '100%',
@@ -20,6 +26,9 @@ const styles = {
     background: '#FFF',
     boxShadow: '2px 2px 10px 0 rgba(200, 200, 200, 0.5)',
     lineHeight: '130%',
+    [BASE_MQ]: {
+      fontSize: '.4em',
+    },
     '& th': {
       padding: '.8em',
       background: '#E7EDF6',

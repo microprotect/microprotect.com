@@ -17,6 +17,8 @@ import InsuranceIntroduction from './InsuranceIntroduction';
 import InsuranceCoverage from './InsuranceCoverage';
 import InsuranceNotice from './InsuranceNotice';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+
 const pages = [
   'introduction',
   'coverage',
@@ -30,12 +32,22 @@ const styles = {
     background: '#FFF',
     borderTopLeftRadius: '3.5em',
     borderTopRightRadius: '3.5em',
+    [BASE_MQ]: {
+      margin: 0,
+      borderTopLeftRadius: 0,
+      borderTopRightRadius: 0,
+      fontSize: '.8em',
+    },
   },
   tabs: {
     display: 'flex',
     justifyContent: 'space-around',
     padding: '.3em 1.5em 0',
     borderBottom: '1px solid #D1D6DE',
+    [BASE_MQ]: {
+      padding: '0 20%',
+      fontSize: '.4em',
+    },
   },
   tab: {
     display: 'block',
@@ -44,6 +56,9 @@ const styles = {
     fontSize: '1.3em',
     '&:hover': {
       color: '#0D5DED',
+    },
+    [BASE_MQ]: {
+      fontSize: '1em',
     },
   },
   active: {
@@ -59,7 +74,7 @@ export default function Tabs({ t, product }) {
   const { path } = useRouteMatch();
 
   return (
-    <div style={styles.container}>
+    <div css={styles.container}>
       <ListContainer style={styles.tabs}>
         {[1, 2, 3].map((index) => (
           <ListItem key={index} inline>
@@ -76,7 +91,6 @@ export default function Tabs({ t, product }) {
           </ListItem>
         ))}
       </ListContainer>
-
       <Switch>
         <Route exact path={`${path}`}>
           <InsuranceIntroduction t={t} product={product} />
