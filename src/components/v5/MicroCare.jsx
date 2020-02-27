@@ -9,9 +9,27 @@ import MicroCareItem from './MicroCareItem';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+import { mq } from '../../styles/utils';
+
 const styles = {
   container: {
     padding: '7vw 5%',
+    [BASE_MQ]: {
+      padding: '1em 10%',
+      fontSize: '.5em',
+    },
+    [mq(1800)]: {
+      padding: '1em 15%',
+    },
+  },
+  title: {
+    [BASE_MQ]: {
+      textAlign: 'center',
+    },
+    [mq(1800)]: {
+      fontSize: '.8em',
+    },
   },
   content: {
     position: 'relative',
@@ -19,11 +37,17 @@ const styles = {
     padding: '0 15%',
     width: '100vw',
     overflow: 'hidden',
+    [BASE_MQ]: {
+      display: 'none',
+    },
   },
   items: {
     display: 'flex',
     width: '200%',
     transition: '.3s ease-in-out',
+    [BASE_MQ]: {
+      width: '100%',
+    },
   },
   item: {
     width: '100%',
@@ -47,6 +71,13 @@ const styles = {
   },
   active: {
     background: '#212E3E',
+  },
+  contentDesktop: {
+    display: 'none',
+    [BASE_MQ]: {
+      display: 'flex',
+      position: 'relative',
+    },
   },
 };
 
@@ -73,10 +104,12 @@ export default function MicroCare({ t }) {
 
   return (
     <div css={styles.container}>
-      <HomeTitle
-        preValue={t.microcare_pre_title}
-        value={t.microcare_title}
-      />
+      <div css={styles.title}>
+        <HomeTitle
+          preValue={t.microcare_pre_title}
+          value={t.microcare_title}
+        />
+      </div>
       <div
         css={styles.content}
         onTouchStart={handleTouchStart}
@@ -118,6 +151,22 @@ export default function MicroCare({ t }) {
             </button>
           ))}
         </div>
+      </div>
+      <div css={styles.contentDesktop}>
+        <ListContainer style={styles.items}>
+          {[1, 2].map((index) => (
+            <ListItem
+              style={styles.item}
+              key={index}
+            >
+              <MicroCareItem
+                t={t}
+                index={index}
+                active
+              />
+            </ListItem>
+          ))}
+        </ListContainer>
       </div>
     </div>
   );

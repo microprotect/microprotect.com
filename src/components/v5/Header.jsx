@@ -27,7 +27,7 @@ const styles = {
     boxShadow: '0 0 6px 0 rgba(200, 200, 200, 0)',
     transition: '.3s ease-out',
     [BASE_MQ]: {
-      padding: `1em ${CONTENT_PADDING}`,
+      padding: `.3em ${CONTENT_PADDING}`,
     },
   },
   filled: {

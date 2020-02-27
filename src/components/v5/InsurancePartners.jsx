@@ -8,6 +8,9 @@ import HomeTitle from './HomeTitle';
 import StrongText from '../StrongText';
 import Box from '../Box';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+import { mq } from '../../styles/utils';
+
 import {
   PartnerAllianzImage,
   PartnerCareConceptImage,
@@ -20,15 +23,32 @@ const images = {
 
 const styles = {
   container: {
+    marginBottom: '10vw',
     padding: '7vw 5%',
     '& b': {
       fontSize: '1.1em',
+    },
+    [BASE_MQ]: {
+      marginBottom: '3em',
+      padding: '1em 10%',
+      fontSize: '.5em',
+    },
+    [mq(1800)]: {
+      padding: '1em 15%',
+    },
+  },
+  description: {
+    [BASE_MQ]: {
+      fontSize: '.7em',
     },
   },
   partners: {
     marginTop: '1em',
     fontSize: '1em',
     color: '#5C5C5C',
+    [BASE_MQ]: {
+      fontSize: '.7em',
+    },
   },
   partner: (index) => [
     {
@@ -48,7 +68,9 @@ export default function InsurancePartners({ t }) {
   return (
     <div css={styles.container}>
       <HomeTitle value={t.insurance_partners_title} />
-      <StrongText value={t.insurance_partners_description} />
+      <div css={styles.description}>
+        <StrongText value={t.insurance_partners_description} />
+      </div>
       <Box style={styles.partners}>
         {['allianz', 'careconcept'].map((key, index) => (
           <div

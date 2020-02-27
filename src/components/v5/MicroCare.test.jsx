@@ -15,7 +15,7 @@ describe('MicroCare', () => {
 
     render(<MicroCare t={t} />);
 
-    expect(screen.getByText(/보험금 청구대행 서비스/))
+    expect(screen.getAllByText(/보험금 청구대행 서비스/)[0])
       .toBeInTheDocument();
   });
 });
