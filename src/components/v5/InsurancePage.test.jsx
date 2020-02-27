@@ -28,7 +28,5 @@ describe('InsurancePage', () => {
       .toBeInTheDocument();
     expect(screen.getByText(/보험 가입하기/))
       .toBeInTheDocument();
-    expect(screen.getByText(/보장 항목/))
-      .toBeInTheDocument();
   });
 });

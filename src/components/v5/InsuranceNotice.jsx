@@ -11,7 +11,7 @@ import WeakText from '../WeakText';
 
 const styles = {
   container: {
-    padding: '10vw 5%',
+    padding: '5vw 5% 20vw',
     background: '#FAFCFF',
   },
   title: {
@@ -22,6 +22,7 @@ const styles = {
     margin: '.3em 0',
   },
   note: {
+    marginTop: '2em',
     color: '#ADB5C1',
   },
 };

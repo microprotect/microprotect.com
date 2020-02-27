@@ -10,7 +10,7 @@ import products from '../../data/products-ko.json';
 
 const styles = {
   container: {
-    padding: '10vw 5%',
+    padding: '5vw 5% 10vw',
     background: '#FAFCFF',
   },
   table: {
