@@ -3,15 +3,19 @@ import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import ArrowButton from './ArrowButton';
+import Section from './Section';
 
 jest.mock('../../assets/v5');
 
-describe('ArrowButton', () => {
-  it('renders text', () => {
-    render(<ArrowButton label="See more" />);
+describe('Section', () => {
+  it('renders children', () => {
+    render(
+      <Section>
+        <p>Hi!</p>
+      </Section>,
+    );
 
-    expect(screen.getByText(/See more/))
+    expect(screen.getByText(/Hi/))
       .toBeInTheDocument();
   });
 });

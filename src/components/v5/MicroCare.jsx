@@ -4,32 +4,42 @@ import React, { useState } from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Section from './Section';
 import HomeTitle from './HomeTitle';
 import MicroCareItem from './MicroCareItem';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
+import { BASE_MQ } from '../../styles/constants-v4';
 
 const styles = {
-  container: {
-    padding: '7vw 5%',
-  },
   content: {
     position: 'relative',
     margin: '0 -5%',
     padding: '0 15%',
     width: '100vw',
     overflow: 'hidden',
+    [BASE_MQ]: {
+      marign: 0,
+      padding: 0,
+      width: 'auto',
+    },
   },
   items: {
     display: 'flex',
     width: '200%',
     transition: '.3s ease-in-out',
+    [BASE_MQ]: {
+      width: '100%',
+    },
   },
   item: {
     width: '100%',
   },
   paginator: {
     textAlign: 'center',
+    [BASE_MQ]: {
+      display: 'none',
+    },
   },
   paginatorButton: {
     display: 'inline-block',
@@ -72,7 +82,7 @@ export default function MicroCare({ t }) {
   };
 
   return (
-    <div css={styles.container}>
+    <Section>
       <HomeTitle
         preValue={t.microcare_pre_title}
         value={t.microcare_title}
@@ -119,6 +129,6 @@ export default function MicroCare({ t }) {
           ))}
         </div>
       </div>
-    </div>
+    </Section>
   );
 }

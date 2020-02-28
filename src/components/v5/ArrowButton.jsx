@@ -6,6 +6,8 @@ import { jsx } from '@emotion/core';
 
 import { imageReplacement } from '../../styles/utils';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+
 import {
   ArrowImage,
   ArrowPinkImage,
@@ -22,16 +24,29 @@ const styles = {
     width: '4em',
     height: '4em',
     border: 0,
+    [BASE_MQ]: {
+      position: 'static',
+      transform: 'unset',
+      display: 'inline-block',
+      width: 'auto',
+      height: 'auto',
+      padding: '.4em 1.4em',
+      borderRadius: '1em',
+      boxShadow: '2px 2px 10px 0 rgba(100, 100, 100, .4)',
+      background: '#2C65ED',
+      color: '#FFF',
+      textIndent: 0,
+    },
   }),
 };
 
-export default function ArrowButton({ style, pink }) {
+export default function ArrowButton({ label, style, pink }) {
   return (
     <button
       type="button"
       css={[styles.button(pink), style || {}]}
     >
-      See more
+      {label}
     </button>
   );
 }

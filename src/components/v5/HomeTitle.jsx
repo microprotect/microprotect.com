@@ -4,6 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import { BASE_MQ } from '../../styles/constants-v4';
 import underlined from '../../styles/v5/underlined';
 
 const styles = {
@@ -18,6 +19,15 @@ const styles = {
     },
     '& span': {
       display: 'inline-block',
+    },
+    [BASE_MQ]: {
+      marginBottom: '2em',
+      textAlign: 'center',
+      '& small': {
+        display: 'inline-block',
+        marginRight: '.5em',
+        fontSize: '.8em',
+      },
     },
   },
 };

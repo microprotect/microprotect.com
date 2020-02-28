@@ -14,12 +14,17 @@ import Home from './Home';
 import InsurancePage from './InsurancePage';
 import ApplicationForm from './ApplicationForm';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+
 const styles = {
   container: {
     fontFamily: 'Noto Sans KR',
     fontSize: '4vw',
     '& a': {
       textDecoration: 'none',
+    },
+    [BASE_MQ]: {
+      fontSize: '1.5em',
     },
   },
 };
