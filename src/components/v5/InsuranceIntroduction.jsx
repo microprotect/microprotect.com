@@ -4,19 +4,18 @@ import React from 'react';
 
 import { jsx, css } from '@emotion/core';
 
+import Section from './Section';
 import Link from '../Link';
 import StrongText from '../StrongText';
 import InsuranceInformation from './InsuranceInformation';
 import InsurancePricing from './InsurancePricing';
 
+import { BASE_MQ } from '../../styles/constants-v4';
 import underlined from '../../styles/v5/underlined';
 
 import { CheckImage } from '../../assets/v5';
 
 const styles = {
-  container: {
-    padding: '10vw 5%',
-  },
   description: {
     lineHeight: '180%',
     color: '#1F1F1F',
@@ -32,6 +31,11 @@ const styles = {
     backgroundSize: '1em',
     fontSize: '1.3em',
   },
+  buttonContainer: {
+    [BASE_MQ]: {
+      textAlign: 'center',
+    },
+  },
   button: {
     display: 'block',
     margin: '2em auto .5em',
@@ -42,6 +46,11 @@ const styles = {
     background: '#2D65ED',
     color: '#FFF',
     textAlign: 'center',
+    [BASE_MQ]: {
+      display: 'inline-block',
+      padding: '.6em 2.5em',
+      width: 'auto',
+    },
   },
 };
 
@@ -53,7 +62,7 @@ const underlinedToBold = css`
 
 export default function InsuranceIntroduction({ t, product }) {
   return (
-    <div css={styles.container}>
+    <Section>
       <div css={[styles.description, underlinedToBold]}>
         <StrongText value={t[`insurance_description_${product}`]} />
       </div>
@@ -65,12 +74,14 @@ export default function InsuranceIntroduction({ t, product }) {
         {t.insurance_pricing_title}
       </h2>
       <InsurancePricing t={t} product={product} />
-      <Link
-        css={styles.button}
-        to="/insurances/care-discover?version=5"
-      >
-        {t.insurance_application_button}
-      </Link>
-    </div>
+      <div css={styles.buttonContainer}>
+        <Link
+          css={styles.button}
+          to="/insurances/care-discover?version=5"
+        >
+          {t.insurance_application_button}
+        </Link>
+      </div>
+    </Section>
   );
 }

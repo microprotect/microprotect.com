@@ -4,6 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import Section from './Section';
 import HomeTitle from './HomeTitle';
 import Text from '../Text';
 import StrongText from '../StrongText';
@@ -13,6 +14,8 @@ import Box from '../Box';
 import Link from '../Link';
 import ArrowButton from './ArrowButton';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+
 import {
   DonutCompleteImage,
   DonutPiecesImage,
@@ -20,8 +23,10 @@ import {
 } from '../../assets/v5';
 
 const styles = {
-  container: {
-    padding: '7vw 5%',
+  descriptions: {
+    [BASE_MQ]: {
+      margin: '0 0 3em',
+    },
   },
   description: {
     margin: '1em 0',
@@ -31,9 +36,19 @@ const styles = {
     '& > *': {
       color: '#000',
     },
+    [BASE_MQ]: {
+      margin: '.3em 0',
+      marginLeft: '8em',
+      '& br': {
+        display: 'none',
+      },
+    },
   },
   donuts: {
-    margin: '0 0 3em',
+    margin: '0 auto 3em',
+    [BASE_MQ]: {
+      width: '60%',
+    },
   },
   image: {
     display: 'block',
@@ -66,18 +81,34 @@ const styles = {
     },
     '& b': {
       fontSize: '1.2em',
+      [BASE_MQ]: {
+        display: 'none',
+      },
+    },
+    [BASE_MQ]: {
+      margin: '0 auto',
+      padding: 0,
+      width: '70%',
+      fontSize: '1.3em',
+      textAlign: 'center',
+      '& br': {
+        display: 'none',
+      },
     },
   },
   button: {
     right: '1em',
+    [BASE_MQ]: {
+      marginLeft: '.6em',
+    },
   },
 };
 
 export default function BenefitShare({ t }) {
   return (
-    <div css={styles.container}>
+    <Section>
       <HomeTitle value={t.benefit_share_title} />
-      <ListContainer>
+      <ListContainer style={styles.descriptions}>
         {[1, 2].map((index) => (
           <ListItem
             key={index}
@@ -121,9 +152,13 @@ export default function BenefitShare({ t }) {
       <Box style={styles.more}>
         <Link to="/?version=5">
           <StrongText value={t.benefit_share_more} />
-          <ArrowButton style={styles.button} pink />
+          <ArrowButton
+            style={styles.button}
+            pink
+            label="자세히 보기"
+          />
         </Link>
       </Box>
-    </div>
+    </Section>
   );
 }

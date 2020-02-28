@@ -5,6 +5,8 @@ import { render, screen } from '@testing-library/react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
+import { getElement } from '../../test_utils';
+
 import BenefitShare from './BenefitShare';
 
 jest.mock('../../assets/v5');
@@ -21,7 +23,7 @@ describe('BenefitShare', () => {
       </Router>,
     );
 
-    expect(screen.getByText(/자세히 보기/))
+    expect(getElement(screen, 'button', '자세히 보기'))
       .toBeInTheDocument();
   });
 });

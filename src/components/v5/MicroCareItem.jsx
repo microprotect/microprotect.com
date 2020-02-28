@@ -4,6 +4,8 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import { BASE_MQ } from '../../styles/constants-v4';
+
 import {
   TalkImage1,
   TalkImage2,
@@ -17,6 +19,9 @@ const images = [
 const styles = {
   container: {
     paddingTop: '5em',
+    [BASE_MQ]: {
+      padding: '0 3em',
+    },
   },
   text: {
     position: 'absolute',
@@ -24,6 +29,10 @@ const styles = {
     left: '5%',
     width: '90%',
     transition: '.3s ease-in-out',
+    [BASE_MQ]: {
+      position: 'static',
+      width: '100%',
+    },
   },
   title: {
     margin: '0 0 .2em',
@@ -42,6 +51,12 @@ const styles = {
     width: '100%',
     transition: '.3s ease-in-out',
   },
+  opacity: (active) => ({
+    opacity: active ? 1 : 0,
+    [BASE_MQ]: {
+      opacity: 1,
+    },
+  }),
 };
 
 export default function MicroCareItem({ t, index, active }) {
@@ -49,7 +64,7 @@ export default function MicroCareItem({ t, index, active }) {
     <div css={styles.container}>
       <div css={[
         styles.text,
-        { opacity: active ? 1 : 0 },
+        styles.opacity(active),
       ]}
       >
         <h3 css={styles.title}>
@@ -66,7 +81,7 @@ export default function MicroCareItem({ t, index, active }) {
       <img
         css={[
           styles.image,
-          { opacity: active ? 1 : 0.5 },
+          styles.opacity(active),
         ]}
         src={images[index - 1]}
         alt=""
