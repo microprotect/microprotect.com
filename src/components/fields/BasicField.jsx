@@ -3,14 +3,14 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import slugify from 'slugify';
 
-import { setApplicationField } from '../appSlice';
+import { setApplicationField } from '../../appSlice';
 
-import FieldTitle from './FieldTitle';
-import FieldBody from './FieldBody';
-import WeakText from './WeakText';
+import FieldTitle from '../FieldTitle';
+import FieldBody from '../FieldBody';
+import WeakText from '../WeakText';
 
-export default function TextField({
-  name, label, type, required = false, readOnly = false, additional = null,
+function Input({
+  id, type, name, required, readOnly,
 }) {
   const dispatch = useDispatch();
 
@@ -25,23 +25,38 @@ export default function TextField({
     }));
   };
 
+  return (
+    <input
+      type={type}
+      id={id}
+      required={required}
+      readOnly={readOnly}
+      value={value}
+      onChange={handleChange}
+    />
+  );
+}
+
+export default function BasicField({
+  field: { name, required = false, readOnly = false },
+  type, additional = null, t,
+}) {
   const id = slugify(`input-${name}`, { lower: true });
 
   return (
     <div>
       <FieldTitle>
         <label htmlFor={id}>
-          <WeakText value={label} />
+          <WeakText value={t[`form_${name}`]} />
         </label>
       </FieldTitle>
       <FieldBody>
-        <input
-          type={type}
+        <Input
           id={id}
+          type={type}
+          name={name}
           required={required}
           readOnly={readOnly}
-          value={value}
-          onChange={handleChange}
         />
         {additional && additional()}
       </FieldBody>

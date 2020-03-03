@@ -22,12 +22,20 @@ describe('TextField', () => {
   });
 
   it('renders label & input control', () => {
+    const t = {
+      form_name: 'Name',
+    };
+
     const wrapper = render(
-      <TextField name="name" label="Name" type="text" />,
+      <TextField
+        field={{
+          name: 'name',
+        }}
+        t={t}
+      />,
     );
-    expect(wrapper.text())
-      .toMatch('Name');
-    expect(wrapper.html())
-      .toMatch('<input type="text"');
+
+    expect(wrapper.text()).toMatch('Name');
+    expect(wrapper.html()).toMatch('<input type="text"');
   });
 });

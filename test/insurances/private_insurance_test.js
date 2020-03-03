@@ -7,6 +7,6 @@ Scenario('Show introduction', (I) => {
 
 Scenario('Visit insurance page', (I) => {
   I.amOnPage('/');
-  I.click('독일 주재원 보험');
+  I.click('독일 주재원 맞춤 보험');
   I.see('가입부터 보험금신청까지 카톡으로 OK');
 });

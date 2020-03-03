@@ -33,8 +33,8 @@ const styles = {
   },
 };
 
-function Item({ name, option: { label, value } }) {
-  const id = slugify(`${name}-${value}`, { lower: true });
+function Item({ name, option, t }) {
+  const id = slugify(`${name}-${option}`, { lower: true });
 
   return (
     <>
@@ -42,33 +42,35 @@ function Item({ name, option: { label, value } }) {
         css={styles.input}
         type="radio"
         name={name}
-        value={value}
+        value={option}
         id={id}
       />
       <label
         css={styles.label}
         htmlFor={id}
       >
-        {label}
+        {t[`form_${name}_${option}`]}
       </label>
     </>
   );
 }
 
-export default function RadioButton({ name, label, options }) {
+export default function RadioButton({ field, t }) {
+  const { name, options } = field;
+
   return (
     <div>
       <FieldTitle>
-        <WeakText value={label} />
+        <WeakText value={t[`form_${name}`]} />
       </FieldTitle>
       <FieldBody>
         <ListContainer>
           {options.map((option) => (
             <ListItem
-              key={option.value}
+              key={option}
               inline
             >
-              <Item name={name} option={option} />
+              <Item name={name} option={option} t={t} />
             </ListItem>
           ))}
         </ListContainer>
