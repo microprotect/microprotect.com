@@ -7,7 +7,7 @@ import { jsx } from '@emotion/core';
 import {
   BASE_MQ,
   white,
-} from '../styles/constants-v4';
+} from '../styles/constants-v5';
 
 const styles = {
   container: {

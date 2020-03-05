@@ -4,7 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import { BASE_MQ } from '../../styles/constants-v5';
 import underlined from '../../styles/v5/underlined';
 
 const styles = {

@@ -12,7 +12,7 @@ import Link from '../Link';
 import Text from '../Text';
 import ArrowButton from './ArrowButton';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import { BASE_MQ } from '../../styles/constants-v5';
 
 import {
   ProductImage1,

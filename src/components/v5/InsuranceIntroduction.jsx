@@ -10,7 +10,7 @@ import StrongText from '../StrongText';
 import InsuranceInformation from './InsuranceInformation';
 import InsurancePricing from './InsurancePricing';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import { BASE_MQ } from '../../styles/constants-v5';
 import underlined from '../../styles/v5/underlined';
 
 import { CheckImage } from '../../assets/v5';

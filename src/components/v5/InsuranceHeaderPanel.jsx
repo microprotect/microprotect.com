@@ -4,7 +4,10 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import {
+  BASE_MQ,
+  CONTENT_PADDING,
+} from '../../styles/constants-v5';
 
 import {
   ProductImage1,
@@ -21,7 +24,7 @@ const styles = {
     background: 'linear-gradient(135deg, #7AC7F8 0%, #6594F8 100%)',
     color: '#FFF',
     [BASE_MQ]: {
-      padding: '5em calc((100% - 1100px) / 2)',
+      padding: `5em ${CONTENT_PADDING}`,
     },
   },
   image: {

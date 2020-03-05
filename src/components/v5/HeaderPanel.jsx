@@ -6,7 +6,10 @@ import { jsx } from '@emotion/core';
 
 import StrongText from '../StrongText';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import {
+  BASE_MQ,
+  CONTENT_PADDING,
+} from '../../styles/constants-v5';
 
 import { HeaderImage } from '../../assets/v5';
 
@@ -43,7 +46,7 @@ const styles = {
     },
     [BASE_MQ]: {
       margin: '0 auto',
-      maxWidth: '1100px',
+      padding: `0 ${CONTENT_PADDING}`,
       fontSize: '3em',
       textAlign: 'left',
     },
@@ -58,7 +61,7 @@ const styles = {
     fontStyle: 'italic',
     textAlign: 'center',
     [BASE_MQ]: {
-      maxWidth: '1100px',
+      padding: `0 ${CONTENT_PADDING}`,
       fontSize: '2.5em',
       textAlign: 'left',
     },

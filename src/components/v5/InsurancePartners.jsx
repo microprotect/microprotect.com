@@ -9,7 +9,7 @@ import HomeTitle from './HomeTitle';
 import StrongText from '../StrongText';
 import Box from '../Box';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import { BASE_MQ } from '../../styles/constants-v5';
 
 import {
   PartnerAllianzImage,

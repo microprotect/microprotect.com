@@ -14,7 +14,7 @@ import Home from './Home';
 import InsurancePage from './InsurancePage';
 import ApplicationForm from './ApplicationForm';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import { BASE_MQ } from '../../styles/constants-v5';
 
 const styles = {
   container: {
