@@ -34,7 +34,7 @@ const products = [
   {
     key: 3,
     image: ProductImage3,
-    to: '/?version=5',
+    to: '/insurances/private-insurance?version=5',
   },
 ];
 

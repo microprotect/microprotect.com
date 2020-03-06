@@ -18,6 +18,13 @@ const PRODUCTS = [
     informationSheetId: '0',
     pricingSheetId: '631227283',
   },
+  {
+    name: 'privateinsurance',
+    locale: 'ko',
+    documentId: '2PACX-1vQF1oA5mVzVP6W2ZSZEQq8ISzN88ZjJLuiyFMeDnvqTEu8HrP0LuN6rHmrE32TjlEY3MAz3Wt-fAJNb',
+    informationSheetId: '0',
+    pricingSheetId: '631227283',
+  },
 ];
 
 const INFORMATION_KEYS = ['icon', 'label', 'description'];

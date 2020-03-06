@@ -14,10 +14,14 @@ import Home from './Home';
 import InsurancePage from './InsurancePage';
 import ApplicationForm from './ApplicationForm';
 
-import { BASE_MQ } from '../../styles/constants-v5';
+import {
+  BASE_MQ,
+  backgroundColor,
+} from '../../styles/constants-v5';
 
 const styles = {
   container: {
+    backgroundColor,
     fontFamily: 'Noto Sans KR',
     fontSize: '4vw',
     '& a': {
@@ -42,6 +46,9 @@ export default function Root({ t }) {
           </Route>
           <Route path="/insurances/care-college">
             <InsurancePage t={t} product="carecollege" />
+          </Route>
+          <Route path="/insurances/private-insurance">
+            <InsurancePage t={t} product="privateinsurance" />
           </Route>
           <Route path="/">
             <Home t={t} />
