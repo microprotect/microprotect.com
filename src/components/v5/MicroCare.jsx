@@ -30,6 +30,7 @@ const styles = {
     width: '200%',
     transition: '.3s ease-in-out',
     [BASE_MQ]: {
+      marginLeft: 0,
       width: '100%',
     },
   },
@@ -74,10 +75,10 @@ export default function MicroCare({ t }) {
   };
   const handleTouchEnd = () => {
     setOffset(0);
-    if (offset < -30) {
+    if (offset < -50) {
       setPage(2);
     }
-    if (offset > 30) {
+    if (offset > 50) {
       setPage(1);
     }
   };
@@ -96,8 +97,8 @@ export default function MicroCare({ t }) {
       >
         <ListContainer
           style={[
-            styles.items,
             { marginLeft: `calc(-${(page - 1) * 100}% + ${offset}px)` },
+            styles.items,
             offset ? { transition: '0s' } : {},
           ]}
         >

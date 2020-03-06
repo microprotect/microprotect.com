@@ -51,8 +51,8 @@ const styles = {
     width: '100%',
     transition: '.3s ease-in-out',
   },
-  opacity: (active) => ({
-    opacity: active ? 1 : 0,
+  opacity: (opacity, active) => ({
+    opacity: active ? 1 : opacity,
     [BASE_MQ]: {
       opacity: 1,
     },
@@ -64,7 +64,7 @@ export default function MicroCareItem({ t, index, active }) {
     <div css={styles.container}>
       <div css={[
         styles.text,
-        styles.opacity(active),
+        styles.opacity(0, active),
       ]}
       >
         <h3 css={styles.title}>
@@ -81,7 +81,7 @@ export default function MicroCareItem({ t, index, active }) {
       <img
         css={[
           styles.image,
-          styles.opacity(active),
+          styles.opacity(0.5, active),
         ]}
         src={images[index - 1]}
         alt=""
