@@ -7,7 +7,7 @@ import { jsx } from '@emotion/core';
 import Header from './Header';
 import InsuranceHeaderPanel from './InsuranceHeaderPanel';
 import InsuranceIntroduction from './InsuranceIntroduction';
-import Footer from '../FooterV2';
+import Footer from './Footer';
 
 export default function InsurancePage({ t, product }) {
   return (
