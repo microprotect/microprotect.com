@@ -39,3 +39,6 @@ export const PartnerHanwhaImage = '';
 export const PartnerGiveAsiaImage = '';
 
 export const AboutCeoImage = '';
+
+export const CheckOnImage = '';
+export const CheckOffImage = '';

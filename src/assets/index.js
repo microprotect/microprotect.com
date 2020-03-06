@@ -39,6 +39,9 @@ import PartnerGiveAsiaImage from './images/partners/giveasia.png';
 
 import AboutCeoImage from './images/about/ceo.png';
 
+import CheckOnImage from './images/check-on.png';
+import CheckOffImage from './images/check-off.png';
+
 export {
   LogoImage,
   WhiteLogoImage,
@@ -72,4 +75,6 @@ export {
   PartnerHanwhaImage,
   PartnerGiveAsiaImage,
   AboutCeoImage,
+  CheckOnImage,
+  CheckOffImage,
 };
