@@ -21,11 +21,13 @@ const styles = {
       lineHeight: '110%',
       background: '#E7EDF6',
       verticalAlign: 'top',
+      fontSize: '.9em',
     },
     '& tbody td': {
       padding: '.8em',
       borderBottom: '1px solid #E7EDF6',
       textAlign: 'center',
+      fontSize: '.8em',
     },
     '& tfoot': {
       color: '#ADB5C1',

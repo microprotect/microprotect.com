@@ -21,6 +21,7 @@ export const PartnerCareConceptImage = '';
 
 export const CheckImage = '';
 
+export const IconTargetImage = '';
 export const IconAgeImage = '';
 export const IconDurationImage = '';
 export const IconRegionImage = '';

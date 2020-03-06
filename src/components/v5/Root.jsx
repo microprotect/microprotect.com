@@ -40,6 +40,9 @@ export default function Root({ t }) {
           <Route path="/insurances/care-discover">
             <InsurancePage t={t} product="carediscover" />
           </Route>
+          <Route path="/insurances/care-college">
+            <InsurancePage t={t} product="carecollege" />
+          </Route>
           <Route path="/">
             <Home t={t} />
           </Route>

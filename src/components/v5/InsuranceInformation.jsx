@@ -7,18 +7,29 @@ import { jsx } from '@emotion/core';
 import products from '../../data/products-ko.json';
 
 import {
+  IconTargetImage,
   IconAgeImage,
   IconDurationImage,
   IconRegionImage,
 } from '../../assets/v5';
 
 const icons = {
+  target: IconTargetImage,
   age: IconAgeImage,
   duration: IconDurationImage,
   region: IconRegionImage,
 };
 
 const styles = {
+  table: {
+    '& th': {
+      paddingTop: '.25em',
+      verticalAlign: 'top',
+    },
+    '& td': {
+      verticalAlign: 'top',
+    },
+  },
   icon: {
     display: 'inline-block',
     marginTop: '-.2em',
@@ -34,7 +45,7 @@ const styles = {
 
 export default function InsuranceInformation({ product }) {
   return (
-    <table>
+    <table css={styles.table}>
       <tbody>
         {products[product].informationItems.map((item) => (
           <tr key={item.label}>

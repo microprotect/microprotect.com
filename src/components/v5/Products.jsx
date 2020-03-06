@@ -29,7 +29,7 @@ const products = [
   {
     key: 2,
     image: ProductImage2,
-    to: '/?version=5',
+    to: '/insurances/care-college?version=5',
   },
   {
     key: 3,
