@@ -13,6 +13,7 @@ import { jsx } from '@emotion/core';
 import Home from './Home';
 import InsurancePage from './InsurancePage';
 import ApplicationForm from './ApplicationForm';
+import ChatBubble from '../ChatBubble';
 
 import {
   BASE_MQ,
@@ -55,6 +56,7 @@ export default function Root({ t }) {
           </Route>
         </Switch>
       </Router>
+      <ChatBubble />
     </div>
   );
 }

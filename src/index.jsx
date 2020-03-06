@@ -1,3 +1,5 @@
+/* global FB */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -24,6 +26,23 @@ store.dispatch(setLocale(locale));
 const version = parseInt(params.get('version') || 4, 10);
 
 store.dispatch(setVersion(version));
+
+if (version < 5) {
+  window.fbAsyncInit = () => {
+    FB.init({ xfbml: true, version: 'v3.2' });
+  };
+
+  const id = 'facebook-jssdk';
+
+  if (!document.getElementById(id)) {
+    const script = document.createElement('script');
+    script.id = id;
+    script.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+
+    const firstScript = document.getElementsByTagName('script')[0];
+    firstScript.parentNode.insertBefore(script, firstScript);
+  }
+}
 
 const el = document.getElementById('app');
 el.innerHTML = '';
