@@ -6,7 +6,7 @@ import { jsx } from '@emotion/core';
 
 import { imageReplacement } from '../../styles/utils';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import { BASE_MQ } from '../../styles/constants-v5';
 
 import {
   ArrowImage,

@@ -11,7 +11,7 @@ import clearAfter from '../../styles/clearAfter';
 import {
   CONTENT_PADDING,
   BASE_MQ,
-} from '../../styles/constants-v4';
+} from '../../styles/constants-v5';
 
 import { LogoImage } from '../../assets/v5';
 

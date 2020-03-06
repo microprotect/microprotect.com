@@ -6,7 +6,6 @@ import { jsx } from '@emotion/core';
 
 import Section from './Section';
 import HomeTitle from './HomeTitle';
-import Text from '../Text';
 import StrongText from '../StrongText';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
@@ -14,7 +13,7 @@ import Box from '../Box';
 import Link from '../Link';
 import ArrowButton from './ArrowButton';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import { BASE_MQ } from '../../styles/constants-v5';
 
 import {
   DonutCompleteImage,
@@ -37,11 +36,8 @@ const styles = {
       color: '#000',
     },
     [BASE_MQ]: {
-      margin: '.3em 0',
-      marginLeft: '8em',
-      '& br': {
-        display: 'none',
-      },
+      margin: '1.5em 0',
+      marginLeft: '3.5em',
     },
   },
   donuts: {
@@ -114,7 +110,7 @@ export default function BenefitShare({ t }) {
             key={index}
             style={styles.description}
           >
-            <Text value={t[`benefit_share_description${index}`]} />
+            <StrongText value={t[`benefit_share_description${index}`]} />
           </ListItem>
         ))}
       </ListContainer>

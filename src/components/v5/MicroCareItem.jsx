@@ -4,7 +4,7 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import { BASE_MQ } from '../../styles/constants-v4';
+import { BASE_MQ } from '../../styles/constants-v5';
 
 import {
   TalkImage1,
@@ -20,7 +20,7 @@ const styles = {
   container: {
     paddingTop: '5em',
     [BASE_MQ]: {
-      padding: '0 3em',
+      padding: '0 1.5em',
     },
   },
   text: {

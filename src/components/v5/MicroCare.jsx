@@ -9,7 +9,8 @@ import HomeTitle from './HomeTitle';
 import MicroCareItem from './MicroCareItem';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
-import { BASE_MQ } from '../../styles/constants-v4';
+
+import { BASE_MQ } from '../../styles/constants-v5';
 
 const styles = {
   content: {
