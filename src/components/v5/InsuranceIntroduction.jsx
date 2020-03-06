@@ -5,7 +5,6 @@ import React from 'react';
 import { jsx, css } from '@emotion/core';
 
 import Section from './Section';
-import Link from '../Link';
 import StrongText from '../StrongText';
 import InsuranceInformation from './InsuranceInformation';
 import InsurancePricing from './InsurancePricing';
@@ -75,12 +74,14 @@ export default function InsuranceIntroduction({ t, product }) {
       </h2>
       <InsurancePricing t={t} product={product} />
       <div css={styles.buttonContainer}>
-        <Link
+        <a
           css={styles.button}
-          to="/insurances/care-discover?version=5"
+          href="https://pf.kakao.com/_MIvxjxb/chat"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {t.insurance_application_button}
-        </Link>
+        </a>
       </div>
     </Section>
   );

@@ -13,7 +13,7 @@ export const CONTENT_PADDING = `
 
 export const BASE_MQ = mq(1024);
 
-export const backgroundColor = '#F8FBFF';
+export const backgroundColor = '#F7FAFF';
 export const white = '#FFF';
 export const black = '#202020';
 export const yellow = '#F5C92A';

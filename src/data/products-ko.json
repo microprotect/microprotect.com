@@ -82,5 +82,41 @@
         ]
       ]
     }
+  },
+  "privateinsurance": {
+    "informationItems": [
+      {
+        "icon": "age",
+        "label": "가입연령",
+        "description": "만 65세까지 가입 가능"
+      },
+      {
+        "icon": "duration",
+        "label": "보험기간",
+        "description": "최소 6개월부터 최대 5년까지"
+      }
+    ],
+    "pricing": {
+      "labels": [
+        "종류",
+        "BASIC",
+        "COMPORT",
+        "PREMIUM"
+      ],
+      "items": [
+        [
+          "연간부담금",
+          "500EUR",
+          "500EUR",
+          "없음"
+        ],
+        [
+          "월 보험료",
+          "134EUR",
+          "235EUR",
+          "353.98EUR"
+        ]
+      ]
+    }
   }
 }
