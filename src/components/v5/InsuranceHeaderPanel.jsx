@@ -11,10 +11,12 @@ import {
 
 import {
   ProductImage1,
+  ProductImage2,
 } from '../../assets/v5';
 
 const images = {
   carediscover: ProductImage1,
+  carecollege: ProductImage2,
 };
 
 const styles = {

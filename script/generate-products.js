@@ -11,6 +11,13 @@ const PRODUCTS = [
     informationSheetId: '0',
     pricingSheetId: '631227283',
   },
+  {
+    name: 'carecollege',
+    locale: 'ko',
+    documentId: '2PACX-1vSq1BKUMN2KMjODrOUtZEyhz2OYb7KzV8Mbhmy44_XKIt6_0lR3tarhIkHxVVC9n3li4LtwjKM6Cn2F',
+    informationSheetId: '0',
+    pricingSheetId: '631227283',
+  },
 ];
 
 const INFORMATION_KEYS = ['icon', 'label', 'description'];

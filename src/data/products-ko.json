@@ -36,5 +36,51 @@
         ]
       ]
     }
+  },
+  "carecollege": {
+    "informationItems": [
+      {
+        "icon": "target",
+        "label": "가입대상",
+        "description": "유학생(학업을 목적으로 출국),\n워킹홀리데이"
+      },
+      {
+        "icon": "age",
+        "label": "가입연령",
+        "description": "만 12세~35세"
+      },
+      {
+        "icon": "duration",
+        "label": "보험기간",
+        "description": "최대 5년까지"
+      },
+      {
+        "icon": "region",
+        "label": "보험지역",
+        "description": "유럽연합(EU),\n솅겐지역(Schegen Area)"
+      }
+    ],
+    "pricing": {
+      "labels": [
+        "종류",
+        "BASIC",
+        "COMPORT",
+        "PREMIUM"
+      ],
+      "items": [
+        [
+          "보험기간\n18개월까지",
+          "28EUR\n35,890원",
+          "35EUR\n44,863원",
+          "63EUR\n80,753원"
+        ],
+        [
+          "보험기간\n9개월 이후",
+          "51EUR\n65,372원",
+          "59EUR\n75,626원",
+          "83EUR\n106,390원"
+        ]
+      ]
+    }
   }
 }
