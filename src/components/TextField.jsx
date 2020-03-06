@@ -1,13 +1,16 @@
 import React from 'react';
-
 import { useSelector, useDispatch } from 'react-redux';
 
 import slugify from 'slugify';
 
 import { setApplicationField } from '../appSlice';
 
+import FieldTitle from './FieldTitle';
+import FieldBody from './FieldBody';
+import WeakText from './WeakText';
+
 export default function TextField({
-  name, label, type, required = false,
+  name, label, type, required = false, readOnly = false, additional = null,
 }) {
   const dispatch = useDispatch();
 
@@ -26,17 +29,22 @@ export default function TextField({
 
   return (
     <div>
-      <label htmlFor={id}>
-        {label}
-        {required ? '*' : ''}
-      </label>
-      <input
-        type={type}
-        id={id}
-        required={required}
-        value={value}
-        onChange={handleChange}
-      />
+      <FieldTitle>
+        <label htmlFor={id}>
+          <WeakText value={label} />
+        </label>
+      </FieldTitle>
+      <FieldBody>
+        <input
+          type={type}
+          id={id}
+          required={required}
+          readOnly={readOnly}
+          value={value}
+          onChange={handleChange}
+        />
+        {additional && additional()}
+      </FieldBody>
     </div>
   );
 }

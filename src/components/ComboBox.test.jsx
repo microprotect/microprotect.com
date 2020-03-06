@@ -3,16 +3,14 @@ import React from 'react';
 import Enzyme, { render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import RadioButton from './RadioButton';
-
-jest.mock('../assets');
+import ComboBox from './ComboBox';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('RadioButton', () => {
+describe('ComboBox', () => {
   it('renders options', () => {
     const wrapper = render(
-      <RadioButton
+      <ComboBox
         name="select"
         label="Select!"
         options={[
@@ -21,7 +19,6 @@ describe('RadioButton', () => {
         ]}
       />,
     );
-    expect(wrapper.html()).toMatch('name="select"');
     expect(wrapper.text()).toMatch('Select!');
     expect(wrapper.text()).toMatch('Option#1');
     expect(wrapper.text()).toMatch('Option#2');

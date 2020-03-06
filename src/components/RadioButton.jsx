@@ -6,8 +6,16 @@ import { jsx } from '@emotion/core';
 
 import slugify from 'slugify';
 
+import FieldTitle from './FieldTitle';
+import FieldBody from './FieldBody';
+import WeakText from './WeakText';
 import ListContainer from './ListContainer';
 import ListItem from './ListItem';
+
+import {
+  CheckOnImage,
+  CheckOffImage,
+} from '../assets';
 
 const styles = {
   input: {
@@ -16,15 +24,17 @@ const styles = {
   label: {
     display: 'inline-block',
     padding: '.2em .5em',
-    background: '#EEE',
+    paddingLeft: '2em',
+    background: `url(${CheckOffImage}) 0 50% no-repeat`,
+    backgroundSize: '1.4em',
     'input:checked + &': {
-      background: '#CCC',
+      backgroundImage: `url(${CheckOnImage})`,
     },
   },
 };
 
-function Item({ name, option }) {
-  const id = slugify(`${name}-${option}`, { lower: true });
+function Item({ name, option: { label, value } }) {
+  const id = slugify(`${name}-${value}`, { lower: true });
 
   return (
     <>
@@ -32,13 +42,14 @@ function Item({ name, option }) {
         css={styles.input}
         type="radio"
         name={name}
+        value={value}
         id={id}
       />
       <label
         css={styles.label}
         htmlFor={id}
       >
-        {option}
+        {label}
       </label>
     </>
   );
@@ -47,19 +58,21 @@ function Item({ name, option }) {
 export default function RadioButton({ name, label, options }) {
   return (
     <div>
-      <div>
-        {label}
-      </div>
-      <ListContainer>
-        {options.map((option) => (
-          <ListItem
-            key={option}
-            inline
-          >
-            <Item name={name} option={option} />
-          </ListItem>
-        ))}
-      </ListContainer>
+      <FieldTitle>
+        <WeakText value={label} />
+      </FieldTitle>
+      <FieldBody>
+        <ListContainer>
+          {options.map((option) => (
+            <ListItem
+              key={option.value}
+              inline
+            >
+              <Item name={name} option={option} />
+            </ListItem>
+          ))}
+        </ListContainer>
+      </FieldBody>
     </div>
   );
 }
