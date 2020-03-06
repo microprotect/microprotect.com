@@ -42,6 +42,8 @@ import AboutCeoImage from './images/about/ceo.png';
 import CheckOnImage from './images/check-on.png';
 import CheckOffImage from './images/check-off.png';
 
+import KakaoTalkChannelImage from './images/kakaotalk-channel.png';
+
 export {
   LogoImage,
   WhiteLogoImage,
@@ -77,4 +79,5 @@ export {
   AboutCeoImage,
   CheckOnImage,
   CheckOffImage,
+  KakaoTalkChannelImage,
 };
