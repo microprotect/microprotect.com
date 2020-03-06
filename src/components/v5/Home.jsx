@@ -10,7 +10,7 @@ import Products from './Products';
 import MicroCare from './MicroCare';
 import BenefitShare from './BenefitShare';
 import InsurancePartners from './InsurancePartners';
-import Footer from '../FooterV2';
+import Footer from './Footer';
 
 export default function Home({ t }) {
   return (
