@@ -25,7 +25,7 @@ export default function ChatBubble() {
   return (
     <a
       css={styles.container}
-      href="https://pf.kakao.com/_MIvxjxb/chat"
+      href="https://pf.kakao.com/_MIvxjxb"
       target="_blank"
       rel="noopener noreferrer"
     >

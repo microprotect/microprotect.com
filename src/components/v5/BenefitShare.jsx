@@ -10,7 +10,6 @@ import StrongText from '../StrongText';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
 import Box from '../Box';
-import Link from '../Link';
 import ArrowButton from './ArrowButton';
 
 import { BASE_MQ } from '../../styles/constants-v5';
@@ -146,14 +145,18 @@ export default function BenefitShare({ t }) {
         </div>
       </div>
       <Box style={styles.more}>
-        <Link to="/?version=5">
+        <a
+          href="https://microprotect.give.asia/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <StrongText value={t.benefit_share_more} />
           <ArrowButton
             style={styles.button}
             pink
             label="자세히 보기"
           />
-        </Link>
+        </a>
       </Box>
     </Section>
   );
