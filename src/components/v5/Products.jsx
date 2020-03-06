@@ -24,17 +24,17 @@ const products = [
   {
     key: 1,
     image: ProductImage1,
-    to: '/insurances/care-discover?version=5',
+    to: '/insurances/care-discover',
   },
   {
     key: 2,
     image: ProductImage2,
-    to: '/insurances/care-college?version=5',
+    to: '/insurances/care-college',
   },
   {
     key: 3,
     image: ProductImage3,
-    to: '/insurances/private-insurance?version=5',
+    to: '/insurances/private-insurance',
   },
 ];
 

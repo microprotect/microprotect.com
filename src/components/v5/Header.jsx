@@ -64,7 +64,7 @@ export default function Header() {
       ]}
     >
       <Link
-        to="/?version=5"
+        to="/"
         id="logo"
         css={styles.logo}
       >

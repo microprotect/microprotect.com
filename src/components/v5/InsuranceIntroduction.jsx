@@ -76,7 +76,7 @@ export default function InsuranceIntroduction({ t, product }) {
       <div css={styles.buttonContainer}>
         <a
           css={styles.button}
-          href="https://pf.kakao.com/_MIvxjxb/chat"
+          href="https://pf.kakao.com/_MIvxjxb"
           target="_blank"
           rel="noopener noreferrer"
         >
