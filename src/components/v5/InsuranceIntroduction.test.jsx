@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import InsuranceIntroduction from './InsuranceIntroduction';
 
+jest.mock('../../assets');
 jest.mock('../../assets/v5');
 
 describe('InsuranceIntroduction', () => {

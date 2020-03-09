@@ -5,6 +5,8 @@ import { render, screen } from '@testing-library/react';
 
 import InsurancePricing from './InsurancePricing';
 
+jest.mock('../../assets');
+
 describe('InsurancePricing', () => {
   it('renders labels', () => {
     const t = {};

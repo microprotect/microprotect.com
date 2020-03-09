@@ -44,3 +44,6 @@ export const CheckOnImage = '';
 export const CheckOffImage = '';
 
 export const KakaoTalkChannelImage = '';
+
+export const IconVImage = '';
+export const IconXImage = '';
