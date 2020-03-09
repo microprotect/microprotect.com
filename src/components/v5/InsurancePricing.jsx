@@ -5,7 +5,7 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 
 import WeakText from '../WeakText';
-import Index from '../PricingText';
+import PricingText from '../PricingText';
 
 import products from '../../data/products-ko.json';
 
@@ -54,7 +54,7 @@ function key(value, index) {
 function renderCells(values) {
   return values.map((value, index) => (
     <td key={key(value, index)}>
-      <Index value={value} />
+      <PricingText value={value} />
     </td>
   ));
 }
