@@ -10,7 +10,7 @@ import { setLocale, setVersion } from './appSlice';
 import App from './App';
 
 import './google-analytics';
-
+import './kakaotalk';
 import './give-asia';
 
 import './assets/css/main.css';

@@ -40,6 +40,7 @@ const styles = {
     margin: '2em auto .5em',
     padding: '.6em 0',
     width: '85%',
+    border: 0,
     borderRadius: '2em',
     fontSize: '1.5em',
     background: '#2D65ED',
@@ -60,6 +61,10 @@ const underlinedToBold = css`
 `;
 
 export default function InsuranceIntroduction({ t, product }) {
+  const handleClick = () => {
+    window.postMessage({ type: 'kakaotalk-chat' }, '*');
+  };
+
   return (
     <Section>
       <div css={[styles.description, underlinedToBold]}>
@@ -74,14 +79,13 @@ export default function InsuranceIntroduction({ t, product }) {
       </h2>
       <InsurancePricing t={t} product={product} />
       <div css={styles.buttonContainer}>
-        <a
+        <button
           css={styles.button}
-          href="https://pf.kakao.com/_MIvxjxb"
-          target="_blank"
-          rel="noopener noreferrer"
+          type="button"
+          onClick={handleClick}
         >
           {t.insurance_application_button}
-        </a>
+        </button>
       </div>
     </Section>
   );
