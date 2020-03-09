@@ -5,7 +5,7 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 
 import WeakText from '../WeakText';
-import StrongText from '../StrongText';
+import Index from '../PricingText';
 
 import products from '../../data/products-ko.json';
 
@@ -39,7 +39,6 @@ const styles = {
     },
     '& small': {
       color: '#969CAB',
-      fontSize: '.6em',
     },
     '& b': {
       color: '#2C65ED',
@@ -47,6 +46,18 @@ const styles = {
     },
   },
 };
+
+function key(value, index) {
+  return `${value}-${index}`;
+}
+
+function renderCells(values) {
+  return values.map((value, index) => (
+    <td key={key(value, index)}>
+      <Index value={value} />
+    </td>
+  ));
+}
 
 export default function InsurancePricing({ t, product }) {
   return (
@@ -68,13 +79,9 @@ export default function InsurancePricing({ t, product }) {
         </tr>
       </tfoot>
       <tbody>
-        {products[product].pricing.items.map((values) => (
-          <tr key={values.join()}>
-            {values.map((value) => (
-              <td key={value}>
-                <StrongText value={value} />
-              </td>
-            ))}
+        {products[product].pricing.items.map((values, index) => (
+          <tr key={key(values, index)}>
+            {renderCells(values)}
           </tr>
         ))}
       </tbody>
