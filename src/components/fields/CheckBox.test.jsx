@@ -5,19 +5,26 @@ import Adapter from 'enzyme-adapter-react-16';
 
 import CheckBox from './CheckBox';
 
-jest.mock('../assets');
+jest.mock('../../assets');
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('CheckBox', () => {
   it('renders options', () => {
+    const t = {
+      form_check: 'Check!',
+    };
+
     const wrapper = render(
       <CheckBox
-        name="check"
-        label="Check!"
-        value="yes"
+        field={{
+          name: 'check',
+          value: 'yes',
+        }}
+        t={t}
       />,
     );
+
     expect(wrapper.text()).toMatch('Check!');
   });
 });

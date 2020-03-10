@@ -6,9 +6,9 @@ import { jsx } from '@emotion/core';
 
 import slugify from 'slugify';
 
-import WeakText from './WeakText';
-import FieldTitle from './FieldTitle';
-import FieldBody from './FieldBody';
+import WeakText from '../WeakText';
+import FieldTitle from '../FieldTitle';
+import FieldBody from '../FieldBody';
 
 const styles = {
   select: {
@@ -16,14 +16,16 @@ const styles = {
   },
 };
 
-export default function ComboBox({ name, label, options }) {
+export default function ComboBox({ field, t }) {
+  const { name, prefix, options } = field;
+
   const id = slugify(`input-${name}`, { lower: true });
 
   return (
     <div>
       <FieldTitle>
         <label htmlFor={id}>
-          <WeakText value={label} />
+          <WeakText value={t[`form_${name}`]} />
         </label>
       </FieldTitle>
       <FieldBody>
@@ -33,10 +35,12 @@ export default function ComboBox({ name, label, options }) {
         >
           {options.map((option) => (
             <option
-              key={option.value}
-              value={option.value}
+              key={option}
+              value={option}
             >
-              {option.label}
+              {prefix
+                ? t[`${prefix}_${option}`]
+                : t[`form_${name}_${option}`]}
             </option>
           ))}
         </select>

@@ -8,6 +8,7 @@ import Section from './Section';
 import StrongText from '../StrongText';
 import InsuranceInformation from './InsuranceInformation';
 import InsurancePricing from './InsurancePricing';
+import Link from '../Link';
 
 import { BASE_MQ } from '../../styles/constants-v5';
 import underlined from '../../styles/v5/underlined';
@@ -60,11 +61,7 @@ const underlinedToBold = css`
   }
 `;
 
-export default function InsuranceIntroduction({ t, product }) {
-  const handleClick = () => {
-    window.postMessage({ type: 'kakaotalk-chat' }, '*');
-  };
-
+export default function InsuranceIntroduction({ t, product, tester }) {
   return (
     <Section>
       <div css={[styles.description, underlinedToBold]}>
@@ -78,15 +75,16 @@ export default function InsuranceIntroduction({ t, product }) {
         {t.insurance_pricing_title}
       </h2>
       <InsurancePricing t={t} product={product} />
-      <div css={styles.buttonContainer}>
-        <button
-          css={styles.button}
-          type="button"
-          onClick={handleClick}
-        >
-          {t.insurance_application_button}
-        </button>
-      </div>
+      {tester && (
+        <div css={styles.buttonContainer}>
+          <Link
+            css={styles.button}
+            to="/applications/new"
+          >
+            {t.insurance_application_button}
+          </Link>
+        </div>
+      )}
     </Section>
   );
 }

@@ -12,7 +12,7 @@ import { jsx } from '@emotion/core';
 
 import Home from './Home';
 import InsurancePage from './InsurancePage';
-import ApplicationForm from './ApplicationForm';
+import ApplicationPage from './ApplicationPage';
 import ChatBubble from '../ChatBubble';
 
 import {
@@ -39,9 +39,6 @@ export default function Root({ t }) {
     <div css={styles.container}>
       <Router>
         <Switch>
-          <Route path="/applications/new">
-            <ApplicationForm />
-          </Route>
           <Route path="/insurances/care-discover">
             <InsurancePage t={t} product="carediscover" />
           </Route>
@@ -50,6 +47,9 @@ export default function Root({ t }) {
           </Route>
           <Route path="/insurances/private-insurance">
             <InsurancePage t={t} product="privateinsurance" />
+          </Route>
+          <Route path="/applications/new">
+            <ApplicationPage t={t} product="carediscover" />
           </Route>
           <Route path="/">
             <Home t={t} />

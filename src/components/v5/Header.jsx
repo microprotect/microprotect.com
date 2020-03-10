@@ -64,9 +64,9 @@ export default function Header() {
       ]}
     >
       <Link
+        css={styles.logo}
         to="/"
         id="logo"
-        css={styles.logo}
       >
         Microprotect
       </Link>

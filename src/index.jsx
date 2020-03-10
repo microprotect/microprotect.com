@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import store from './store';
-import { setLocale, setVersion } from './appSlice';
+import { setLocale, setTester, setVersion } from './appSlice';
 
 import App from './App';
 
@@ -22,6 +22,10 @@ const params = new Map([...new URLSearchParams(location.search)]);
 const locale = params.get('locale') || (navigator.language || 'ko').slice(0, 2);
 
 store.dispatch(setLocale(locale));
+
+const tester = params.get('tester') || false;
+
+store.dispatch(setTester(tester));
 
 const version = parseInt(params.get('version') || 5, 10);
 

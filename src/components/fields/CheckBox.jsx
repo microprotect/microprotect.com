@@ -6,12 +6,12 @@ import { jsx } from '@emotion/core';
 
 import slugify from 'slugify';
 
-import WeakText from './WeakText';
+import WeakText from '../WeakText';
 
 import {
   CheckOnImage,
   CheckOffImage,
-} from '../assets';
+} from '../../assets';
 
 const styles = {
   input: {
@@ -29,7 +29,9 @@ const styles = {
   },
 };
 
-export default function CheckBox({ name, label, value }) {
+export default function CheckBox({ field, t }) {
+  const { name, value } = field;
+
   const id = slugify(`input-${name}`, { lower: true });
 
   return (
@@ -44,7 +46,7 @@ export default function CheckBox({ name, label, value }) {
         css={styles.label}
         htmlFor={id}
       >
-        <WeakText value={label} />
+        <WeakText value={t[`form_${name}`]} />
       </label>
     </div>
   );

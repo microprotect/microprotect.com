@@ -62,9 +62,9 @@ function Logo() {
 
   return (
     <Link
+      css={styles.logo}
       to="/"
       id="logo"
-      css={styles.logo}
       onClick={() => dispatch(closeMenu())}
     >
       Microprotect

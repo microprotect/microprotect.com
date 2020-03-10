@@ -1,5 +1,6 @@
 import reducer, {
   setLocale,
+  setTester,
   setApplicationField,
 } from './appSlice';
 
@@ -9,8 +10,15 @@ describe('reducer', () => {
       locale: 'en',
     };
     const state = reducer(initialState, setLocale('ko'));
-    expect(state.locale)
-      .toBe('ko');
+    expect(state.locale).toBe('ko');
+  });
+
+  test('setTester', () => {
+    const initialState = {
+      tester: false,
+    };
+    const state = reducer(initialState, setTester(true));
+    expect(state.tester).toBeTruthy();
   });
 
   test('setApplicationField', () => {
@@ -26,7 +34,6 @@ describe('reducer', () => {
         value: 'Bruce',
       }),
     );
-    expect(state.applicationForm.firstName)
-      .toBe('Bruce');
+    expect(state.applicationForm.firstName).toBe('Bruce');
   });
 });

@@ -103,7 +103,7 @@ export default function Footer({ t }) {
                 css={styles.addressItem}
               >
                 <div css={styles.addressCountry}>
-                  {t[`country_${country}`]}
+                  {t[`footer_country_${country}`]}
                 </div>
                 <div>
                   <Text value={t[`address_${country}`]} />

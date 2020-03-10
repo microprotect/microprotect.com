@@ -9,14 +9,15 @@ const { actions, reducer } = createSlice({
   initialState: {
     t: {},
     locale: '',
+    tester: false,
     version: 2,
     menuOpen: false,
     applicationForm: {
       firstName: 'Bruce',
       lastName: 'Lee',
       birthDate: '2000-01-01',
-      nationality: 'South Korea',
-      country: 'South Korea',
+      nationality: 'kr',
+      country: 'kr',
       zipCode: '04055',
       region: '',
       city: 'Seoul',
@@ -42,6 +43,10 @@ const { actions, reducer } = createSlice({
         locale: t ? locale : DEFAULT_LOCALE,
       };
     },
+    setTester: (state, { payload: tester }) => ({
+      ...state,
+      tester,
+    }),
     setVersion: (state, { payload: version }) => ({
       ...state,
       version,
@@ -66,6 +71,7 @@ const { actions, reducer } = createSlice({
 
 export const {
   setLocale,
+  setTester,
   setVersion,
   openMenu,
   closeMenu,
