@@ -7,6 +7,8 @@ import { useSelector } from 'react-redux';
 import { jsx } from '@emotion/core';
 
 import axios from 'axios';
+
+import ApplicationSteps from './ApplicationSteps';
 import ApplicationFieldSet1 from './ApplicationFieldSet1';
 import ApplicationFieldSet2 from './ApplicationFieldSet2';
 import ApplicationFieldSet3 from './ApplicationFieldSet3';
@@ -59,6 +61,7 @@ export default function ApplicationForm({ t }) {
 
   return (
     <form onSubmit={handleSubmit}>
+      <ApplicationSteps step={step} setStep={setStep} />
       <FieldSet t={t} onClick={handleClick} />
     </form>
   );

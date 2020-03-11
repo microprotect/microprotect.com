@@ -16,13 +16,6 @@ export default function ApplicationPage({ t, product }) {
       <Header />
       <ApplicationHeaderPanel t={t} product={product} />
       <Section>
-        가입정보
-        |
-        방문국가 정보
-        |
-        결제
-      </Section>
-      <Section>
         <ApplicationForm t={t} product={product} />
       </Section>
       <Footer t={t} />

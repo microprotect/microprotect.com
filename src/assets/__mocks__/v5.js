@@ -25,3 +25,10 @@ export const IconTargetImage = '';
 export const IconAgeImage = '';
 export const IconDurationImage = '';
 export const IconRegionImage = '';
+
+export const ApplicationStep1OnImage = '';
+export const ApplicationStep2OnImage = '';
+export const ApplicationStep3OnImage = '';
+export const ApplicationStep1OffImage = '';
+export const ApplicationStep2OffImage = '';
+export const ApplicationStep3OffImage = '';
