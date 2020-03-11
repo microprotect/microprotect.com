@@ -26,6 +26,13 @@ import IconAgeImage from './images/v5/icon-age.png';
 import IconDurationImage from './images/v5/icon-duration.png';
 import IconRegionImage from './images/v5/icon-region.png';
 
+import ApplicationStep1OnImage from './images/v5/application-step1-on.png';
+import ApplicationStep2OnImage from './images/v5/application-step2-on.png';
+import ApplicationStep3OnImage from './images/v5/application-step3-on.png';
+import ApplicationStep1OffImage from './images/v5/application-step1-off.png';
+import ApplicationStep2OffImage from './images/v5/application-step2-off.png';
+import ApplicationStep3OffImage from './images/v5/application-step3-off.png';
+
 export {
   LogoImage,
   HeaderImage,
@@ -46,4 +53,10 @@ export {
   IconAgeImage,
   IconDurationImage,
   IconRegionImage,
+  ApplicationStep1OnImage,
+  ApplicationStep2OnImage,
+  ApplicationStep3OnImage,
+  ApplicationStep1OffImage,
+  ApplicationStep2OffImage,
+  ApplicationStep3OffImage,
 };
