@@ -9,7 +9,7 @@ import NextButton from './NextButton';
 
 import { fields2 as fields } from './form.json';
 
-export default function ApplicationFieldSet2({ t, onClick }) {
+export default function ApplicationFieldSet2({ t, onNextButtonClick }) {
   return (
     <>
       {fields.map((field) => (
@@ -19,7 +19,7 @@ export default function ApplicationFieldSet2({ t, onClick }) {
           t={t}
         />
       ))}
-      <NextButton t={t} onClick={onClick} />
+      <NextButton t={t} onClick={onNextButtonClick} />
     </>
   );
 }

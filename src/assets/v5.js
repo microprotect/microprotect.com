@@ -33,6 +33,8 @@ import ApplicationStep1OffImage from './images/v5/application-step1-off.png';
 import ApplicationStep2OffImage from './images/v5/application-step2-off.png';
 import ApplicationStep3OffImage from './images/v5/application-step3-off.png';
 
+import BackButtonImage from './images/v5/back-button.png';
+
 export {
   LogoImage,
   HeaderImage,
@@ -59,4 +61,5 @@ export {
   ApplicationStep1OffImage,
   ApplicationStep2OffImage,
   ApplicationStep3OffImage,
+  BackButtonImage,
 };

@@ -34,15 +34,10 @@ const styles = {
     display: 'flex',
     marginBottom: '2em',
   },
-  step: {
-    width: '33.3%',
-  },
-  button: (index) => ({
-    display: 'block',
+  step: (index) => ({
     paddingTop: '4em',
     paddingBottom: '1em',
-    width: '100%',
-    border: 0,
+    width: '33.3%',
     borderBottom: '2px solid #CCD6E7',
     background: `url(${images.off[index]}) 50% 0 no-repeat`,
     backgroundSize: '4em',
@@ -56,24 +51,18 @@ const styles = {
   }),
 };
 
-export default function ApplicationSteps({ step, setStep }) {
+export default function ApplicationSteps({ step }) {
   return (
     <ListContainer style={styles.steps}>
       {['가입정보', '방문국가 정보', '결제'].map((text, index) => (
         <ListItem
           key={text}
-          style={styles.step}
+          style={[
+            styles.step(index),
+            index === step ? styles.active(index) : {},
+          ]}
         >
-          <button
-            type="button"
-            css={[
-              styles.button(index),
-              index === step ? styles.active(index) : {},
-            ]}
-            onClick={() => index < step && setStep(index)}
-          >
-            {text}
-          </button>
+          {text}
         </ListItem>
       ))}
     </ListContainer>

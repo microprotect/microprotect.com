@@ -8,6 +8,7 @@ import { jsx } from '@emotion/core';
 
 import axios from 'axios';
 
+import ApplicationNavigator from './ApplicationNavigator';
 import ApplicationSteps from './ApplicationSteps';
 import ApplicationFieldSet1 from './ApplicationFieldSet1';
 import ApplicationFieldSet2 from './ApplicationFieldSet2';
@@ -28,7 +29,7 @@ async function sendApplication(form, setLoading) {
   }
 }
 
-export default function ApplicationForm({ t }) {
+export default function ApplicationForm({ t, history }) {
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(0);
 
@@ -41,11 +42,11 @@ export default function ApplicationForm({ t }) {
     sendApplication(applicationForm, setLoading);
   };
 
-  const handleClick = (event) => {
+  const handleNextButtonClick = (event) => {
     event.preventDefault();
+    window.scrollTo(0, 0);
     setStep(step + 1);
   };
-
 
   if (loading) {
     return (
@@ -61,8 +62,13 @@ export default function ApplicationForm({ t }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <ApplicationSteps step={step} setStep={setStep} />
-      <FieldSet t={t} onClick={handleClick} />
+      <ApplicationNavigator
+        step={step}
+        setStep={setStep}
+        history={history}
+      />
+      <ApplicationSteps step={step} />
+      <FieldSet t={t} onNextButtonClick={handleNextButtonClick} />
     </form>
   );
 }

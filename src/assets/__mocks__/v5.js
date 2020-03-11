@@ -32,3 +32,5 @@ export const ApplicationStep3OnImage = '';
 export const ApplicationStep1OffImage = '';
 export const ApplicationStep2OffImage = '';
 export const ApplicationStep3OffImage = '';
+
+export const BackButtonImage = '';
