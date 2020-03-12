@@ -170,5 +170,48 @@
       "required": true
     }
   ],
-  "fields3": []
+  "fields3": [
+    {
+      "type": "title",
+      "name": "contact"
+    },
+    {
+      "type": "phone",
+      "name": "phoneNumber",
+      "required": true
+    },
+    {
+      "type": "email",
+      "name": "email",
+      "required": true
+    },
+    {
+      "type": "line",
+      "name": "contact-bottom"
+    },
+    {
+      "type": "title",
+      "name": "payment"
+    },
+    {
+      "type": "creditcard",
+      "name": "cardNumber"
+    },
+    {
+      "type": "text",
+      "name": "cardExpirationDate"
+    },
+    {
+      "type": "text",
+      "name": "cvc"
+    },
+    {
+      "type": "text",
+      "name": "cardOwnerFirstName"
+    },
+    {
+      "type": "text",
+      "name": "cardOwnerLastName"
+    }
+  ]
 }

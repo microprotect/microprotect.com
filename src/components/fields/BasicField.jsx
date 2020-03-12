@@ -1,45 +1,15 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 
 import slugify from 'slugify';
 
-import { setApplicationField } from '../../appSlice';
-
+import Input from './Input';
 import FieldTitle from '../FieldTitle';
 import FieldBody from '../FieldBody';
 import WeakText from '../WeakText';
 
-function Input({
-  id, type, name, required, readOnly,
-}) {
-  const dispatch = useDispatch();
-
-  const { value } = useSelector((state) => ({
-    value: state.applicationForm[name],
-  }));
-
-  const handleChange = (event) => {
-    dispatch(setApplicationField({
-      key: name,
-      value: event.target.value,
-    }));
-  };
-
-  return (
-    <input
-      type={type}
-      id={id}
-      required={required}
-      readOnly={readOnly}
-      value={value}
-      onChange={handleChange}
-    />
-  );
-}
-
 export default function BasicField({
   field: { name, required = false, readOnly = false },
-  type, additional = null, t,
+  style, type, additional = null, t,
 }) {
   const id = slugify(`input-${name}`, { lower: true });
 
@@ -53,6 +23,7 @@ export default function BasicField({
       <FieldBody>
         <Input
           id={id}
+          style={style}
           type={type}
           name={name}
           required={required}

@@ -31,7 +31,7 @@ const { actions, reducer } = createSlice({
       countryDestination: 'Germany',
       entryDate: '2020-03-01',
       reason: 'Tour',
-      cardNumber: '1234567890',
+      cardNumber: '1234567890123456',
     },
   },
   reducers: {

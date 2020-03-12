@@ -7,7 +7,13 @@ import { jsx } from '@emotion/core';
 
 const styles = {
   button: {
-    fontSize: '.9em',
+    marginLeft: '.5em',
+    padding: '.5em 1em',
+    border: '1px solid #526991',
+    background: '#526991',
+    color: '#FFF',
+    fontSize: '1em',
+    cursor: 'pointer',
   },
 };
 

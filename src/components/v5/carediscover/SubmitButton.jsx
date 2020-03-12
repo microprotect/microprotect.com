@@ -22,14 +22,13 @@ const styles = {
   },
 };
 
-export default function NextButton({ t, onClick }) {
+export default function SubmitButton({ t }) {
   return (
     <button
       css={styles.button}
-      type="button"
-      onClick={onClick}
+      type="submit"
     >
-      {t.button_next}
+      {t.button_submit_application}
     </button>
   );
 }
