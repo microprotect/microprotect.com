@@ -128,6 +128,9 @@ export default function Footer({ t }) {
             <Link to="/about-us">
               About us
             </Link>
+            <Link to="/partners">
+              Partners
+            </Link>
           </div>
         </div>
         <div css={[styles.item, styles.medias]}>
