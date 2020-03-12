@@ -13,6 +13,7 @@ import { jsx } from '@emotion/core';
 import Home from './Home';
 import AboutUsPage from './AboutUsPage';
 import PartnersPage from './PartnersPage';
+import FreeInsurancePage from './FreeInsurancePage';
 import InsurancePage from './InsurancePage';
 import ApplicationPage from './ApplicationPage';
 import ChatBubble from '../ChatBubble';
@@ -36,7 +37,7 @@ const styles = {
   },
 };
 
-export default function Root({ t }) {
+export default function Root({ t, locale }) {
   return (
     <div css={styles.container}>
       <Router>
@@ -46,6 +47,9 @@ export default function Root({ t }) {
           </Route>
           <Route path="/partners">
             <PartnersPage t={t} />
+          </Route>
+          <Route path="/free-insurance">
+            <FreeInsurancePage t={t} locale={locale} />
           </Route>
           <Route path="/insurances/care-discover">
             <InsurancePage t={t} product="carediscover" />
