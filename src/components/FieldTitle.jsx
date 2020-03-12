@@ -7,6 +7,7 @@ import { jsx } from '@emotion/core';
 const styles = {
   container: {
     display: 'inline-block',
+    padding: '.6em 0',
     width: '30%',
     lineHeight: '100%',
     '& small': {

@@ -12,6 +12,11 @@ import FieldBody from '../FieldBody';
 
 const styles = {
   select: {
+    padding: '.5em 1em',
+    width: '100%',
+    height: '2.5em',
+    border: '1px solid #E7ECF5',
+    background: '#FFF',
     fontSize: '1em',
   },
 };
