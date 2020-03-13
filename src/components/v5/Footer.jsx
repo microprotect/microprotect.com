@@ -8,18 +8,24 @@ import Text from '../Text';
 import Newsletter from '../Newsletter';
 import Link from '../Link';
 
-import { mq } from '../../styles/utils';
 import { listContainer, listItem } from '../../styles/list';
+import {
+  BASE_MQ,
+  CONTENT_PADDING,
+} from '../../styles/constants-v5';
 
 import medias from '../../data/medias';
 
 const styles = {
   container: {
     clear: 'both',
-    padding: '3em 0 6em',
+    padding: '3em 5% 6em',
     background: '#E3E9F2',
     color: '#31343d',
     fontSize: '1rem',
+    [BASE_MQ]: {
+      padding: `3em ${CONTENT_PADDING} 6em`,
+    },
     '& a': {
       color: '#31343d',
       textDecoration: 'none',
@@ -27,9 +33,7 @@ const styles = {
   },
   wrapper: {
     margin: '0 auto',
-    width: '90%',
-    maxWidth: '1400px',
-    [mq(1024)]: {
+    [BASE_MQ]: {
       position: 'relative',
       display: 'flex',
       flexWrap: 'wrap',
@@ -40,14 +44,14 @@ const styles = {
   },
   item: {
     marginTop: '3em',
-    [mq(1024)]: {
+    [BASE_MQ]: {
       width: '31%',
       marginTop: 0,
     },
   },
   newsletter: {
     marginTop: 0,
-    [mq(1024)]: {
+    [BASE_MQ]: {
       position: 'absolute',
       top: 0,
       right: 0,
@@ -73,7 +77,7 @@ const styles = {
     fontSize: '1.2em',
   },
   medias: {
-    [mq(1024)]: {
+    [BASE_MQ]: {
       marginTop: '5em',
     },
   },

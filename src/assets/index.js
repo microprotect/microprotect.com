@@ -46,6 +46,7 @@ import KakaoTalkChannelImage from './images/kakaotalk-channel.png';
 
 import IconVImage from './images/icon-v.png';
 import IconXImage from './images/icon-x.png';
+import IconCallImage from './images/icon-call.png';
 
 export {
   LogoImage,
@@ -85,4 +86,5 @@ export {
   KakaoTalkChannelImage,
   IconVImage,
   IconXImage,
+  IconCallImage,
 };
