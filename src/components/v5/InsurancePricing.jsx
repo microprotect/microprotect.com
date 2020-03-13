@@ -11,7 +11,7 @@ import products from '../../data/products-ko.json';
 
 const HEAD_ROWS_COUNT = {
   carediscover: 2,
-  carecollege: 0,
+  carecollege: 2,
   privateinsurance: 0,
 };
 
