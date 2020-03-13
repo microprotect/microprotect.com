@@ -40,7 +40,7 @@ const styles = {
       ...bodyStyle(product),
       textAlign: 'center',
     },
-    '& thead td:first-child': {
+    '& thead td:first-of-type': {
       textAlign: product === 'carediscover' ? 'left' : 'center',
     },
     '& tbody td': bodyStyle(product),
@@ -72,7 +72,7 @@ function renderCells(product, values) {
   return values.slice(0, size).map((value, index) => (
     <td
       key={key(value, index)}
-      colSpan={index > 0 && colSpan}
+      colSpan={index > 0 ? colSpan : null}
     >
       <PricingText value={value} />
     </td>
