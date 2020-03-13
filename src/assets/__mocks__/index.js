@@ -47,3 +47,4 @@ export const KakaoTalkChannelImage = '';
 
 export const IconVImage = '';
 export const IconXImage = '';
+export const IconCallImage = '';
