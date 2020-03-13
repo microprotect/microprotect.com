@@ -11,6 +11,7 @@ import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
 import Box from '../Box';
 import ArrowButton from './ArrowButton';
+import Link from '../Link';
 
 import { BASE_MQ } from '../../styles/constants-v5';
 
@@ -83,7 +84,7 @@ const styles = {
     [BASE_MQ]: {
       margin: '0 auto',
       padding: 0,
-      width: '70%',
+      width: '80%',
       fontSize: '1.3em',
       textAlign: 'center',
       '& br': {
@@ -145,18 +146,14 @@ export default function BenefitShare({ t }) {
         </div>
       </div>
       <Box style={styles.more}>
-        <a
-          href="https://microprotect.give.asia/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link to="/free-insurance">
           <StrongText value={t.benefit_share_more} />
           <ArrowButton
             style={styles.button}
             pink
             label="자세히 보기"
           />
-        </a>
+        </Link>
       </Box>
     </Section>
   );
