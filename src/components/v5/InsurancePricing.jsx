@@ -6,13 +6,14 @@ import { jsx } from '@emotion/core';
 
 import PricingText from '../PricingText';
 import Text from '../Text';
+import Link from '../Link';
 
 import products from '../../data/products-ko.json';
 
 const HEAD_ROWS_COUNT = {
   carediscover: 2,
   carecollege: 2,
-  privateinsurance: 0,
+  privateinsurance: 1,
 };
 
 const bodyStyle = (product) => ({
@@ -60,6 +61,16 @@ const styles = {
       fontWeight: 'normal',
     },
   }),
+  button: {
+    display: 'block',
+    margin: '.5em 2em',
+    padding: '.8em',
+    width: 'calc(100% - 2em * 2)',
+    border: '1.5px solid #2C65ED',
+    borderRadius: '4px',
+    background: '#FFF',
+    color: '#2C65ED',
+  },
 };
 
 function key(value, index) {
@@ -77,6 +88,55 @@ function renderCells(product, values) {
       <PricingText value={value} />
     </td>
   ));
+}
+
+function renderCareDiscoverApplicationButton() {
+  const { labels } = products.carediscover.pricing;
+
+  return (
+    <tr>
+      <td />
+      <td colSpan={labels.length - 1}>
+        <Link
+          style={styles.button}
+          to="/applications/new"
+        >
+          가입하기
+        </Link>
+      </td>
+    </tr>
+  );
+}
+
+function renderPrivateInsuranceApplicationButton() {
+  const { labels } = products.privateinsurance.pricing;
+
+  const handleClick = () => {
+    window.postMessage({ type: 'kakaotalk-chat' }, '*');
+  };
+
+  return (
+    <tr>
+      <td colSpan={labels.length}>
+        <button
+          css={styles.button}
+          type="button"
+          onClick={handleClick}
+        >
+          카카오톡으로 가입 상담
+        </button>
+      </td>
+    </tr>
+  );
+}
+
+function renderApplicationButton(product) {
+  const render = {
+    carediscover: renderCareDiscoverApplicationButton,
+    privateinsurance: renderPrivateInsuranceApplicationButton,
+  }[product];
+
+  return render ? render() : null;
 }
 
 export default function InsurancePricing({ t, product }) {
@@ -101,6 +161,7 @@ export default function InsurancePricing({ t, product }) {
             {renderCells('', values)}
           </tr>
         ))}
+        {renderApplicationButton(product)}
       </thead>
       <tfoot>
         <tr>

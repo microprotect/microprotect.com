@@ -26,8 +26,6 @@ describe('InsurancePage', () => {
   it('renders introduction', () => {
     const t = {
       insurance_information_title: '보험정보',
-      insurance_pricing_title: '보험료',
-      insurance_application_button: '보험 가입하기',
     };
 
     const wrapper = render(
@@ -37,6 +35,6 @@ describe('InsurancePage', () => {
     );
 
     expect(wrapper.text()).toMatch('보험정보');
-    expect(wrapper.text()).toMatch('보험 가입하기');
+    expect(wrapper.text()).toMatch('가입하기');
   });
 });
