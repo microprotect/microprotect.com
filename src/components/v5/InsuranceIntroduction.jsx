@@ -4,24 +4,52 @@ import React from 'react';
 
 import { jsx, css } from '@emotion/core';
 
+import ReactMarkdown from 'react-markdown';
+
 import Section from './Section';
-import StrongText from '../StrongText';
 import InsuranceInformation from './InsuranceInformation';
 import InsurancePricing from './InsurancePricing';
 import Link from '../Link';
 
-import { BASE_MQ } from '../../styles/constants-v5';
+import {
+  BASE_MQ,
+  backgroundColor,
+} from '../../styles/constants-v5';
 import underlined from '../../styles/v5/underlined';
 
 import { CheckImage } from '../../assets/v5';
 
 const styles = {
+  container: {
+    position: 'relative',
+    marginTop: '-2.4em',
+    paddingTop: '2em',
+    borderTopLeftRadius: '2.5em',
+    borderTopRightRadius: '2.5em',
+    backgroundColor,
+    [BASE_MQ]: {
+      borderRadius: 0,
+    },
+  },
   description: {
     lineHeight: '180%',
-    color: '#1F1F1F',
-    '& b': {
+    color: '#7C8195',
+    '& strong': {
       display: 'inline-block',
-      fontSize: '1.2em',
+      fontSize: '1em',
+      color: '#000',
+    },
+    '& em': {
+      fontStyle: 'normal',
+      color: '#2C64EC',
+    },
+    '& blockquote': {
+      margin: 0,
+      color: '#1F1F1F',
+    },
+    '& hr': {
+      margin: '1em 0',
+      border: 0,
     },
   },
   title: {
@@ -56,16 +84,16 @@ const styles = {
 };
 
 const underlinedToBold = css`
-  b {
+  strong {
     ${underlined('#E3EAF5')}
   }
 `;
 
 export default function InsuranceIntroduction({ t, product, tester }) {
   return (
-    <Section>
+    <Section style={styles.container}>
       <div css={[styles.description, underlinedToBold]}>
-        <StrongText value={t[`insurance_description_${product}`]} />
+        <ReactMarkdown source={t[`insurance_description_${product}`]} />
       </div>
       <h2 css={styles.title}>
         {t.insurance_information_title}
