@@ -18,7 +18,7 @@ jobs:
       - name: Lint
         run: npx eslint --ext .js,.jsx src test
       - name: Run tests
-        run: npm test
+        run: HEADLESS=true npm test
       - name: Build
         run: |
           npm run build
