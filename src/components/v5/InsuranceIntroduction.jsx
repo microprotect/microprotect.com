@@ -10,7 +10,6 @@ import Section from './Section';
 import InsuranceCallBanner from './InsuranceCallBanner';
 import InsuranceInformation from './InsuranceInformation';
 import InsurancePricing from './InsurancePricing';
-import Link from '../Link';
 
 import {
   BASE_MQ,
@@ -106,7 +105,7 @@ const underlinedToBold = css`
   }
 `;
 
-export default function InsuranceIntroduction({ t, product, tester }) {
+export default function InsuranceIntroduction({ t, product }) {
   return (
     <Section style={styles.container}>
       <div css={[styles.description, underlinedToBold]}>
@@ -121,16 +120,6 @@ export default function InsuranceIntroduction({ t, product, tester }) {
         {t.insurance_pricing_title}
       </h2>
       <InsurancePricing t={t} product={product} />
-      {tester && (
-        <div css={styles.buttonContainer}>
-          <Link
-            css={styles.button}
-            to="/applications/new"
-          >
-            {t.insurance_application_button}
-          </Link>
-        </div>
-      )}
       {product !== 'privateinsurance' && (
         <>
           <h2 css={styles.title}>

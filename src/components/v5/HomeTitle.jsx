@@ -10,7 +10,7 @@ import underlined from '../../styles/v5/underlined';
 const styles = {
   title: {
     margin: '0 0 1em',
-    fontsize: '1.8em',
+    fontSize: '1.4em',
     '& small': {
       display: 'block',
       marginBottom: '.1em',
