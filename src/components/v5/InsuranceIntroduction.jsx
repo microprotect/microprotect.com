@@ -7,6 +7,7 @@ import { jsx, css } from '@emotion/core';
 import ReactMarkdown from 'react-markdown';
 
 import Section from './Section';
+import InsuranceCallBanner from './InsuranceCallBanner';
 import InsuranceInformation from './InsuranceInformation';
 import InsurancePricing from './InsurancePricing';
 import Link from '../Link';
@@ -111,6 +112,7 @@ export default function InsuranceIntroduction({ t, product, tester }) {
       <div css={[styles.description, underlinedToBold]}>
         <ReactMarkdown source={t[`insurance_description_${product}`]} />
       </div>
+      <InsuranceCallBanner t={t} product={product} />
       <h2 css={styles.title}>
         {t.insurance_information_title}
       </h2>

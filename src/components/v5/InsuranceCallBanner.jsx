@@ -4,42 +4,25 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import Text from '../Text';
-
-import {
-  BASE_MQ,
-  CONTENT_PADDING,
-} from '../../styles/constants-v5';
+import StrongText from '../StrongText';
 
 import { IconCallImage } from '../../assets';
 
 const styles = {
   container: {
-    zIndex: 100,
-    position: 'fixed',
-    bottom: 0,
-    left: 0,
-    width: '100vw',
-    height: '4.5em',
-    minHeight: '85px',
-    background: '#F5F9FF',
-    boxShadow: '0 0 10px 0 rgba(200, 200, 200, .4)',
+    margin: '4em 0 3em',
     fontSize: '.9em',
+    textAlign: 'center',
   },
   description: {
-    position: 'absolute',
-    top: '50%',
-    left: '5%',
-    transform: 'translate3d(0, -50%, 0)',
-    [BASE_MQ]: {
-      left: CONTENT_PADDING,
+    marginBottom: '1em',
+    '& b': {
+      display: 'inline-block',
+      fontSize: '1.1em',
     },
   },
   callButton: {
-    position: 'absolute',
-    top: '50%',
-    right: '5%',
-    transform: 'translate3d(0, -50%, 0)',
+    display: 'inline-block',
     paddingLeft: '3em',
     paddingRight: '1em',
     height: '2.8em',
@@ -48,21 +31,6 @@ const styles = {
     background: `#2B65ED url(${IconCallImage}) .4em 50% no-repeat`,
     backgroundSize: '2em',
     color: '#FFF',
-    [BASE_MQ]: {
-      right: CONTENT_PADDING,
-    },
-  },
-  callText: {
-    display: 'block',
-    [BASE_MQ]: {
-      display: 'none',
-    },
-  },
-  phoneNumber: {
-    display: 'none',
-    [BASE_MQ]: {
-      display: 'block',
-    },
   },
 };
 
@@ -76,18 +44,13 @@ export default function InsuranceCallBanner({ t, product }) {
   return (
     <div css={styles.container}>
       <div css={styles.description}>
-        <Text value={t.call_banner_description} />
+        <StrongText value={t.call_banner_description} />
       </div>
       <a
         css={styles.callButton}
         href={`tel:${PHONE_NUMBER}`}
       >
-        <span css={styles.callText}>
-          Call
-        </span>
-        <span css={styles.phoneNumber}>
-          {PHONE_NUMBER}
-        </span>
+        {PHONE_NUMBER}
       </a>
     </div>
   );
