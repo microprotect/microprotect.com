@@ -59,10 +59,10 @@ export default function InsuranceHeaderPanel({ t, product }) {
         alt=""
       />
       <h1 css={styles.title}>
-        {t[`insurance_title_${product}`]}
         <small>
           {t[`insurance_subtitle_${product}`]}
         </small>
+        {t[`insurance_title_${product}`]}
       </h1>
     </div>
   );

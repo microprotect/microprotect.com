@@ -93,20 +93,28 @@ const styles = {
       width: '80%',
     },
   },
+  target: {
+    color: '#1F346B',
+    fontSize: '1.1em',
+    [BASE_MQ]: {
+      fontSize: '1em',
+    },
+  },
   title: {
-    margin: 0,
+    margin: '.4em 0 .7em',
     fontSize: '1.7em',
     letterSpacing: '-1.5px',
+    color: '#1157EC',
     [BASE_MQ]: {
       fontSize: '1.4em',
     },
   },
   description: {
-    marginTop: '1em',
     color: '#5C5C5C',
-  },
-  note: {
-    color: '#ADB5C1',
+    fontSize: '1.1em',
+    [BASE_MQ]: {
+      fontSize: '1em',
+    },
   },
   button: {
     [BASE_MQ]: {
@@ -139,14 +147,14 @@ export default function Products({ t }) {
                   src={image}
                   alt=""
                 />
+                <div css={styles.target}>
+                  <Text value={t[`products_target${index + 1}`]} />
+                </div>
                 <h2 css={styles.title}>
                   {t[`products_title${index + 1}`]}
                 </h2>
                 <div css={styles.description}>
                   <Text value={t[`products_description${index + 1}`]} />
-                </div>
-                <div css={styles.note}>
-                  <Text value={t[`products_note${index + 1}`]} />
                 </div>
                 <ArrowButton
                   style={styles.button}
