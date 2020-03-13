@@ -48,6 +48,9 @@ import IconVImage from './images/icon-v.png';
 import IconXImage from './images/icon-x.png';
 import IconCallImage from './images/icon-call.png';
 
+import LogoCareConceptImage from './images/logo-care-concept.png';
+import LogoAllianzCareImage from './images/logo-allianz-care.png';
+
 export {
   LogoImage,
   WhiteLogoImage,
@@ -87,4 +90,6 @@ export {
   IconVImage,
   IconXImage,
   IconCallImage,
+  LogoCareConceptImage,
+  LogoAllianzCareImage,
 };

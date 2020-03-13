@@ -4,23 +4,22 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import WeakText from '../WeakText';
 import PricingText from '../PricingText';
 
 import products from '../../data/products-ko.json';
 
 const styles = {
-  table: {
+  table: (product) => ({
     width: '100%',
     marginTop: '1.5em',
     borderSpacing: 0,
     background: '#FAFCFF',
     boxShadow: '2px 2px 10px 0 rgba(200, 200, 200, 0.5)',
     '& th': {
-      padding: '.8em',
+      padding: '1em 0',
       lineHeight: '110%',
       background: '#E7EDF6',
-      verticalAlign: 'top',
+      verticalAlign: product === 'privateinsurance' ? 'bottom' : 'top',
       fontSize: '.9em',
     },
     '& tbody td': {
@@ -44,7 +43,7 @@ const styles = {
       color: '#2C65ED',
       fontWeight: 'normal',
     },
-  },
+  }),
 };
 
 function key(value, index) {
@@ -61,12 +60,12 @@ function renderCells(values) {
 
 export default function InsurancePricing({ t, product }) {
   return (
-    <table css={styles.table}>
+    <table css={styles.table(product)}>
       <thead>
         <tr>
           {products[product].pricing.labels.map((label) => (
             <th key={label}>
-              <WeakText value={label} />
+              <PricingText value={label} />
             </th>
           ))}
         </tr>

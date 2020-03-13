@@ -66,7 +66,7 @@ const styles = {
   },
 };
 
-const PHONE_NUMBER = '+49 (0)151-2622-4850';
+const PHONE_NUMBER = '06196-7691774';
 
 export default function InsuranceCallBanner({ t, product }) {
   if (product !== 'privateinsurance') {

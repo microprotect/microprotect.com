@@ -48,3 +48,6 @@ export const KakaoTalkChannelImage = '';
 export const IconVImage = '';
 export const IconXImage = '';
 export const IconCallImage = '';
+
+export const LogoCareConceptImage = '';
+export const LogoAllianzCareImage = '';
