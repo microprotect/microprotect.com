@@ -81,6 +81,22 @@ const styles = {
       width: 'auto',
     },
   },
+  directions: {
+    padding: '.5em',
+    color: '#7C8195',
+    fontSize: '.9em',
+    '& h3': {
+      margin: 0,
+      fontSize: '1.1em',
+    },
+    '& ol': {
+      margin: '0 0 1em',
+      paddingLeft: '2em',
+    },
+    '& li': {
+      margin: '.4em 0',
+    },
+  },
 };
 
 const underlinedToBold = css`
@@ -112,6 +128,16 @@ export default function InsuranceIntroduction({ t, product, tester }) {
             {t.insurance_application_button}
           </Link>
         </div>
+      )}
+      {product !== 'privateinsurance' && (
+        <>
+          <h2 css={styles.title}>
+            {t.insurance_directions_title}
+          </h2>
+          <div css={styles.directions}>
+            <ReactMarkdown source={t.insurance_careconcept_directions} />
+          </div>
+        </>
       )}
     </Section>
   );
