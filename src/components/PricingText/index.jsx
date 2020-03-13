@@ -10,6 +10,8 @@ import SmallText from './SmallText';
 import Icon from './Icon';
 import Text from '../Text';
 
+const ICONS = ['V', 'X', 'careconcept', 'allianzcare'];
+
 const NULL_PART = { type: null };
 
 function key(text, index) {
@@ -45,13 +47,17 @@ function splitIcon(value, symbol, next) {
   ], []);
 }
 
-function renderPart(type, value) {
+function renderPart(type, value = '') {
   const Part = {
     text: Text,
     strong: StrongText,
     small: SmallText,
     icon: Icon,
   }[type] || NullPart;
+
+  if (value.trim() === '---') {
+    return <div>&nbsp;</div>;
+  }
 
   return (
     <Part value={value} />
@@ -70,10 +76,11 @@ function renderParts(parts) {
   );
 }
 
-export default function Index({ value = '' }) {
-  const parts = splitIcon(value, 'V', (text) => (
-    splitIcon(text, 'X', splitStrongAndWeakText)
-  ));
+export default function PricingText({ value = '' }) {
+  const parts = ICONS.reduce(
+    (acc, cur) => (text) => splitIcon(text, cur, acc),
+    splitStrongAndWeakText,
+  )(value);
 
   return renderParts(parts);
 }
