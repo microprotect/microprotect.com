@@ -1,21 +1,18 @@
-import '@testing-library/jest-dom/extend-expect';
-
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 import HeaderPanel from './HeaderPanel';
 
-jest.mock('../../assets/v5');
+Enzyme.configure({ adapter: new Adapter() });
 
 describe('HeaderPanel', () => {
-  it('renders slogan', () => {
-    const t = {
-      v5_slogan1: '당신이 보호받으면 세상도 함께 보호받습니다',
-    };
+  it('renders <div> tag', () => {
+    const wrapper = shallow(
+      <HeaderPanel />,
+    );
 
-    render(<HeaderPanel t={t} />);
-
-    expect(screen.getByText(/당신이 보호받으면 세상도 함께 보호받습니다/))
-      .toBeInTheDocument();
+    expect(wrapper.html()).toMatch('<div');
   });
 });
