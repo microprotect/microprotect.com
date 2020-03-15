@@ -1,89 +1,78 @@
 /* @jsx jsx */
 
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
 
-import { css, jsx } from '@emotion/core';
+import { jsx } from '@emotion/core';
 
-import { setLocale } from '../appSlice';
+import Link from './Link';
 
-import { mq, imageReplacement } from '../styles/utils';
+import { imageReplacement } from '../styles/utils';
 import clearAfter from '../styles/clearAfter';
+import {
+  CONTENT_PADDING,
+  BASE_MQ,
+} from '../styles/constants-v5';
 
-import { LogoImage } from '../assets';
+import { LogoImage } from '../assets/v5';
 
 const styles = {
   container: {
-    margin: '1.5em auto 0',
-    width: '95%',
-    maxWidth: '1550px',
+    zIndex: 100,
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '60px',
+    linHeight: '60px',
+    padding: '0 5%',
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    boxShadow: '0 0 6px 0 rgba(200, 200, 200, 0)',
+    transition: '.3s ease-out',
+    [BASE_MQ]: {
+      height: '3em',
+      padding: `0 ${CONTENT_PADDING}`,
+    },
   },
   logo: {
     float: 'left',
     display: 'block',
-    width: '120px',
-    height: '30px',
-    [mq(1100)]: {
-      width: '250px',
-      height: '46px',
-    },
     ...imageReplacement(LogoImage),
+    backgroundPosition: '0 50%',
+    backgroundSize: `${30 * (800 / 145)}px`,
+    width: `${30 * (800 / 145)}px`,
+    height: '100%',
+    cursor: 'pointer',
   },
-  languages: {
-    float: 'right',
-    margin: 0,
-    padding: 0,
-    listStyle: 'none',
-  },
-  languageItem: {
-    float: 'left',
-  },
-  localeLink: {
-    display: 'inline-block',
-    padding: '0 .7em',
-    height: '30px',
-    [mq(1100)]: {
-      height: '46px',
-    },
-    lineHeight: 1,
-    textDecoration: 'none',
+  filled: {
+    backgroundColor: '#7AC7F8',
+    boxShadow: '0 0 6px 0 rgba(200, 200, 200, .5)',
   },
 };
 
-function LocaleLink({ children, locale, target }) {
-  const dispatch = useDispatch();
+export default function Header({ fill = false }) {
+  const [filled, setFilled] = useState(false);
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    dispatch(setLocale(target));
-  };
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setFilled(window.scrollY > 20);
+    });
+  });
 
   return (
-    <a
-      href={`?locale=${target}`}
+    <header
       css={[
-        styles.localeLink,
-        locale === target ? { textDecoration: 'underline' } : {},
+        styles.container,
+        clearAfter,
+        fill || filled ? styles.filled : {},
       ]}
-      onClick={handleClick}
     >
-      {children}
-    </a>
-  );
-}
-
-export default function Header({ locale }) {
-  return (
-    <header css={[styles.container, clearAfter]}>
-      <div id="logo" css={styles.logo}>microprotect</div>
-      <ul css={styles.languages}>
-        <li css={styles.languageItem}>
-          <LocaleLink locale={locale} target="ko">Korean</LocaleLink>
-        </li>
-        <li css={css(styles.languageItem)}>
-          <LocaleLink locale={locale} target="en">English</LocaleLink>
-        </li>
-      </ul>
+      <Link
+        style={styles.logo}
+        to="/"
+        id="logo"
+      >
+        Microprotect
+      </Link>
     </header>
   );
 }
