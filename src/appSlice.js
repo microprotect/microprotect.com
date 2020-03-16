@@ -10,7 +10,6 @@ const { actions, reducer } = createSlice({
     t: {},
     locale: '',
     tester: false,
-    version: 2,
     menuOpen: false,
     applicationForm: {
       firstName: 'Bruce',
@@ -47,10 +46,6 @@ const { actions, reducer } = createSlice({
       ...state,
       tester,
     }),
-    setVersion: (state, { payload: version }) => ({
-      ...state,
-      version,
-    }),
     openMenu: (state) => ({
       ...state,
       menuOpen: true,
@@ -72,7 +67,6 @@ const { actions, reducer } = createSlice({
 export const {
   setLocale,
   setTester,
-  setVersion,
   openMenu,
   closeMenu,
   setApplicationField,

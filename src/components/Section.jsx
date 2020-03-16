@@ -6,24 +6,23 @@ import { jsx } from '@emotion/core';
 
 import {
   BASE_MQ,
-  white,
+  CONTENT_PADDING,
 } from '../styles/constants-v5';
 
 const styles = {
   container: {
-    padding: '1em',
-    background: white,
-    boxShadow: '2px 2px 10px 0 rgba(200, 200, 200, 0.5)',
+    padding: '10vw 5%',
     [BASE_MQ]: {
-      padding: '2em',
+      margin: '0 auto',
+      padding: `3em ${CONTENT_PADDING}`,
     },
   },
 };
 
-export default function Box({ style, children }) {
+export default function Section({ style, children }) {
   return (
-    <div css={[styles.container, style]}>
+    <section css={[styles.container, style]}>
       {children}
-    </div>
+    </section>
   );
 }
