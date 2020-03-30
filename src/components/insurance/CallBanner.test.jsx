@@ -28,7 +28,7 @@ describe('InsuranceCallBanner', () => {
         <CallBanner t={t} product="privateinsurance" />,
       );
 
-      expect(wrapper.text()).toMatch('06196-7691774');
+      expect(wrapper.text()).toMatch('0151-2622-4850');
     });
   });
 });
