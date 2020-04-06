@@ -1,7 +1,6 @@
 import reducer, {
   setLocale,
   setTester,
-  setApplicationField,
 } from './appSlice';
 
 describe('reducer', () => {
@@ -19,21 +18,5 @@ describe('reducer', () => {
     };
     const state = reducer(initialState, setTester(true));
     expect(state.tester).toBeTruthy();
-  });
-
-  test('setApplicationField', () => {
-    const initialState = {
-      applicationForm: {
-        firstName: '',
-      },
-    };
-    const state = reducer(
-      initialState,
-      setApplicationField({
-        key: 'firstName',
-        value: 'Bruce',
-      }),
-    );
-    expect(state.applicationForm.firstName).toBe('Bruce');
   });
 });

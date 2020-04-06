@@ -113,11 +113,3 @@ p {
         visibility: hidden;
     }
 }
-
-/* hack */
-
-#givikiWidgetContainer,
-#givikiWidgetContainer * {
-    width: 0 !important;
-    overflow: hidden !important;
-}

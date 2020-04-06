@@ -15,7 +15,6 @@ import AboutUsPage from './AboutUsPage';
 import PartnersPage from './PartnersPage';
 import FreeInsurancePage from './FreeInsurancePage';
 import InsurancePage from './InsurancePage';
-import ApplicationPage from './ApplicationPage';
 import ChatBubble from '../components/ChatBubble';
 
 import {
@@ -59,9 +58,6 @@ export default function Root({ t, locale }) {
           </Route>
           <Route path="/insurances/private-insurance">
             <InsurancePage t={t} product="privateinsurance" />
-          </Route>
-          <Route path="/applications/new">
-            <ApplicationPage t={t} product="carediscover" />
           </Route>
           <Route path="/">
             <HomePage t={t} />
