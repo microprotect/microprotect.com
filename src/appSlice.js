@@ -11,27 +11,6 @@ const { actions, reducer } = createSlice({
     locale: '',
     tester: false,
     menuOpen: false,
-    applicationForm: {
-      firstName: 'Bruce',
-      lastName: 'Lee',
-      birthDate: '2000-01-01',
-      nationality: 'kr',
-      country: 'kr',
-      zipCode: '04055',
-      region: '',
-      city: 'Seoul',
-      address1: 'HeyGround 403',
-      address2: '',
-      email: 'tester@example.com',
-      phoneNumber: '01012345678',
-      coverageBeginDate: '2020-03-01',
-      coverageEndDate: '2020-03-31',
-      countryBeforeTrip: 'South Korea',
-      countryDestination: 'Germany',
-      entryDate: '2020-03-01',
-      reason: 'Tour',
-      cardNumber: '1234567890123456',
-    },
   },
   reducers: {
     setLocale(state, { payload: locale }) {
@@ -53,13 +32,6 @@ const { actions, reducer } = createSlice({
     closeMenu: (state) => ({
       ...state,
       menuOpen: false,
-    }),
-    setApplicationField: (state, { payload: { key, value } }) => ({
-      ...state,
-      applicationForm: {
-        ...state.applicationForm,
-        [key]: value,
-      },
     }),
   },
 });

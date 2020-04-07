@@ -6,7 +6,6 @@ import { jsx } from '@emotion/core';
 
 import PricingText from '../PricingText';
 import Text from '../Text';
-import Link from '../Link';
 
 import products from '../../data/products-ko.json';
 
@@ -90,24 +89,6 @@ function renderCells(product, values) {
   ));
 }
 
-function renderCareDiscoverApplicationButton() {
-  const { labels } = products.carediscover.pricing;
-
-  return (
-    <tr>
-      <td />
-      <td colSpan={labels.length - 1}>
-        <Link
-          style={styles.button}
-          to="/applications/new"
-        >
-          가입하기
-        </Link>
-      </td>
-    </tr>
-  );
-}
-
 function renderPrivateInsuranceApplicationButton() {
   const { labels } = products.privateinsurance.pricing;
 
@@ -132,7 +113,6 @@ function renderPrivateInsuranceApplicationButton() {
 
 function renderApplicationButton(product) {
   const render = {
-    carediscover: renderCareDiscoverApplicationButton,
     privateinsurance: renderPrivateInsuranceApplicationButton,
   }[product];
 
