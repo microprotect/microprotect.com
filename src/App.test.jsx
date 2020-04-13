@@ -36,6 +36,6 @@ describe('App', () => {
   it('renders home page', () => {
     const wrapper = render(<App store={given.store} />);
     expect(wrapper.text())
-      .toMatch('당신이 보호받으면');
+      .toMatch('Secure more people equally');
   });
 });

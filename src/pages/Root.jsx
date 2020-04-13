@@ -10,7 +10,6 @@ import {
 
 import { jsx } from '@emotion/core';
 
-import HomePage from './HomePage';
 import AboutUsPage from './AboutUsPage';
 import PartnersPage from './PartnersPage';
 import FreeInsurancePage from './FreeInsurancePage';
@@ -60,7 +59,7 @@ export default function Root({ t, locale }) {
             <InsurancePage t={t} product="privateinsurance" />
           </Route>
           <Route path="/">
-            <HomePage t={t} />
+            <FreeInsurancePage t={t} locale={locale} />
           </Route>
         </Switch>
       </Router>
