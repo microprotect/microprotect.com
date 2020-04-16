@@ -14,6 +14,7 @@ import AboutUsPage from './AboutUsPage';
 import PartnersPage from './PartnersPage';
 import FreeInsurancePage from './FreeInsurancePage';
 import InsurancePage from './InsurancePage';
+import MyFriendPage from './MyFriendPage';
 import ChatBubble from '../components/ChatBubble';
 
 import {
@@ -38,6 +39,7 @@ const styles = {
 export default function Root({ t, locale }) {
   return (
     <div css={styles.container}>
+      <ChatBubble />
       <Router>
         <Switch>
           <Route path="/about-us">
@@ -58,12 +60,14 @@ export default function Root({ t, locale }) {
           <Route path="/insurances/private-insurance">
             <InsurancePage t={t} product="privateinsurance" />
           </Route>
+          <Route path="/myfriend">
+            <MyFriendPage t={t} />
+          </Route>
           <Route path="/">
             <FreeInsurancePage t={t} locale={locale} />
           </Route>
         </Switch>
       </Router>
-      <ChatBubble />
     </div>
   );
 }
