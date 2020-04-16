@@ -8,6 +8,7 @@ import { KakaoTalkChannelImage } from '../assets';
 
 const styles = {
   container: {
+    zIndex: 1000,
     position: 'fixed',
     right: '20px',
     bottom: '20px',
@@ -27,9 +28,9 @@ const styles = {
   },
 };
 
-export default function ChatBubble() {
+export default function ChatBubble({ type = 'kakaotalk-chat' }) {
   const handleClick = () => {
-    window.postMessage({ type: 'kakaotalk-chat' }, '*');
+    window.postMessage({ type }, '*');
   };
 
   return (
