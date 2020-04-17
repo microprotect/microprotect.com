@@ -53,11 +53,6 @@ import LogoAllianzCareImage from './images/logo-allianz-care.png';
 
 import MyFriendImage from './images/myfriend/myfriend.png';
 
-import MyFriendGuideImage1 from './images/myfriend/myfriend-guide-1.png';
-import MyFriendGuideImage2 from './images/myfriend/myfriend-guide-2.png';
-import MyFriendGuideImage3 from './images/myfriend/myfriend-guide-3.png';
-import MyFriendGuideImage4 from './images/myfriend/myfriend-guide-4.png';
-
 export {
   LogoImage,
   WhiteLogoImage,
@@ -100,8 +95,4 @@ export {
   LogoCareConceptImage,
   LogoAllianzCareImage,
   MyFriendImage,
-  MyFriendGuideImage1,
-  MyFriendGuideImage2,
-  MyFriendGuideImage3,
-  MyFriendGuideImage4,
 };
