@@ -53,3 +53,8 @@ export const LogoCareConceptImage = '';
 export const LogoAllianzCareImage = '';
 
 export const MyFriendImage = '';
+
+export const MyFriendGuideImage1 = '';
+export const MyFriendGuideImage2 = '';
+export const MyFriendGuideImage3 = '';
+export const MyFriendGuideImage4 = '';

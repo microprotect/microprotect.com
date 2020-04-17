@@ -12,11 +12,11 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('Information', () => {
   it('renders title', () => {
     const t = {
-      myfriend_description: '마이프렌드 무료통역이란',
+      myfriend_description: '마이프렌드',
     };
 
     const wrapper = render(<Information t={t} />);
 
-    expect(wrapper.text()).toMatch('마이프렌드 무료통역이란');
+    expect(wrapper.text()).toMatch('마이프렌드');
   });
 });

@@ -25,10 +25,13 @@ const styles = {
     lineHeight: '140%',
     fontWeight: 'normal',
   },
+  center: {
+    textAlign: 'center',
+  },
 };
 
 export default function Title({
-  style, heavy, level = 2, value,
+  style, heavy, center, level = 2, value,
 }) {
   const Heading = ['h2', 'h3'][level - 2];
 
@@ -37,6 +40,7 @@ export default function Title({
       css={[
         styles.title(level),
         heavy ? styles.heavy : {},
+        center ? styles.center : {},
         style,
       ]}
     >
