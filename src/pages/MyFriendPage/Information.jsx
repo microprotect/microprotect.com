@@ -7,121 +7,90 @@ import { jsx } from '@emotion/core';
 import ReactMarkdown from 'react-markdown';
 
 import Section from '../../components/Section';
-import StrongText from '../../components/StrongText';
-import WeakText from '../../components/WeakText';
-import Title from '../../components/Title';
-import ListContainer from '../../components/ListContainer';
-import ListItem from '../../components/ListItem';
-import Text from '../../components/Text';
 
 import {
   BASE_MQ,
   backgroundColor,
-  blue,
-  gray,
   darkGray,
+  black,
 } from '../../styles/constants-v5';
+import { imageReplacement } from '../../styles/utils';
 
-import {
-  MyFriendGuideImage1,
-  MyFriendGuideImage2,
-  MyFriendGuideImage3,
-  MyFriendGuideImage4,
-} from '../../assets';
-
-const IMAGES = [
-  MyFriendGuideImage1,
-  MyFriendGuideImage2,
-  MyFriendGuideImage3,
-  MyFriendGuideImage4,
-];
+import { MyFriendImage } from '../../assets';
 
 const styles = {
   container: {
     position: 'relative',
-    marginTop: '-2.4em',
-    paddingTop: '2em',
-    borderTopLeftRadius: '2.5em',
-    borderTopRightRadius: '2.5em',
+    paddingTop: '7em',
+    paddingBottom: '5em',
     backgroundColor,
     [BASE_MQ]: {
-      borderRadius: 0,
+      paddingTop: '8em',
+      paddingBottom: '8em',
     },
+  },
+  brand: {
+    ...imageReplacement(MyFriendImage),
+    margin: '0 0 2em',
+    height: 0,
+    paddingBottom: `${(372 / 982) * 100}%`,
   },
   description: {
-    '& b': {
-      fontWeight: 'normal',
-      color: blue,
+    '& p': {
+      marginBottom: '1.4em',
     },
-  },
-  chatTime: {
-    marginTop: '2em',
-    '& small': {
-      fontSize: '1em',
+    '& h3': {
+      margin: '0 0 .3em',
+      fontSize: '1.6em',
+    },
+    '& blockquote': {
+      margin: '4em 0',
       color: darkGray,
+      fontSize: '0.9em',
+      '& h3': {
+        color: black,
+        fontSize: '1em',
+      },
     },
-  },
-  title: {
-    marginTop: '3em',
-  },
-  step: {
-    margin: '2em 0',
-    paddingBottom: '2em',
-    borderBottom: `2px solid ${gray}`,
-    textAlign: 'center',
-  },
-  figure: {
-    display: 'block',
-    margin: '0 auto 1em',
-    paddingLeft: '8.5%',
-    width: '70%',
-    maxWidth: '400px',
-  },
-  caution: {
-    color: darkGray,
     '& ol': {
-      margin: '0 0 1em',
-      paddingLeft: '1.3em',
+      margin: '.5em 0',
     },
     '& li': {
-      margin: '.4em 0',
+      marginBottom: '.5em',
     },
+  },
+  button: {
+    marginTop: '2em',
+    padding: '1em 0',
+    width: '100%',
+    border: 0,
+    backgroundColor: '#FDE104',
+    color: black,
+    fontSize: '1.5em',
+    fontWeight: 'bold',
   },
 };
 
 export default function Information({ t }) {
+  const handleClick = () => {
+    window.postMessage({ type: 'myfriend-chat' }, '*');
+  };
+
   return (
     <Section style={styles.container}>
+      <h1 css={styles.brand}>
+        {t.myfriend_title}
+      </h1>
       <div css={styles.description}>
-        <StrongText value={t.myfriend_description} />
+        <ReactMarkdown source={t.myfriend_description} />
       </div>
-      <div css={styles.chatTime}>
-        <WeakText value={t.myfriend_chat_time} />
-      </div>
-      <div css={styles.title}>
-        <Title level={3} value={t.myfriend_guide} />
-      </div>
-      <ListContainer>
-        {[1, 2, 3, 4].map((index) => (
-          <ListItem
-            key={index}
-            style={styles.step}
-          >
-            <img
-              css={styles.figure}
-              src={IMAGES[index - 1]}
-              alt=""
-            />
-            <Text value={t[`myfriend_guide_step${index}`]} />
-          </ListItem>
-        ))}
-      </ListContainer>
-      <div css={styles.title}>
-        <Title level={3} value={t.myfriend_caution_title} />
-      </div>
-      <div css={styles.caution}>
-        <ReactMarkdown source={t.myfriend_caution_description} />
-      </div>
+      <button
+        type="button"
+        css={styles.button}
+        onClick={handleClick}
+      >
+        병원 통역 신청하기
+      </button>
     </Section>
   );
 }
