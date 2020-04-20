@@ -18,6 +18,7 @@ import {
   red,
 } from '../../styles/constants-v5';
 import { imageReplacement } from '../../styles/utils';
+import multilinesOnDesktop from '../../styles/multilinesOnDesktop';
 
 import {
   MyFriendImage,
@@ -102,7 +103,7 @@ export default function Information({ t }) {
       <h1 css={styles.brand}>
         {t.myfriend_title}
       </h1>
-      <div css={styles.description}>
+      <div css={[styles.description, multilinesOnDesktop]}>
         <ReactMarkdown source={t.myfriend_description} />
       </div>
       <Guide t={t} />
