@@ -4,13 +4,13 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import Section from './Section';
-import Title from './Title';
-
+import Section from '../Section';
 import Text from '../Text';
 import Box from '../Box';
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
+
+import Title from './Title';
 
 import {
   BASE_MQ,
@@ -24,6 +24,10 @@ import {
 } from '../../assets/v4';
 
 const styles = {
+  container: {
+    marginTop: '-2em',
+    backgroundColor,
+  },
   problem1: {
     marginTop: '8vw',
     fontFamily: 'S-CoreDream',
@@ -139,7 +143,7 @@ const styles = {
 
 export default function WhyDonate({ t }) {
   return (
-    <Section>
+    <Section style={styles.container}>
       <Title value={t.why_donate_title} />
       <div css={styles.problem1}>
         <Text value={t.why_donate_problem1} />

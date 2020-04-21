@@ -14,6 +14,7 @@ import {
 
 const styles = {
   items: {
+    marginTop: '3em',
     [BASE_MQ]: {
       display: 'flex',
       flexWrap: 'wrap',

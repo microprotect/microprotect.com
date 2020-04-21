@@ -8,10 +8,10 @@ import PartnerBox from './PartnerBox';
 
 import Section from '../../components/Section';
 import Text from '../../components/Text';
-import Title from '../../components/Title';
 import ListContainer from '../../components/ListContainer';
 import ListItem from '../../components/ListItem';
 import GridList from '../../components/GridList';
+import Title from '../../components/free-insurance/Title';
 
 import {
   BASE_MQ,
@@ -21,10 +21,8 @@ import partners from '../../data/partners';
 
 const styles = {
   container: {
-    paddingTop: '10vw',
     paddingBottom: '10vw',
     [BASE_MQ]: {
-      paddingTop: '5em',
       paddingBottom: '5em',
     },
   },

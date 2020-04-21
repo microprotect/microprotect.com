@@ -18,11 +18,11 @@ import {
 const styles = {
   container: {
     position: 'relative',
-    margin: '13vw 0 4vw',
+    margin: '13vw 0 5vw',
     padding: '5vw 7vw 3vw',
     fontSize: '4vw',
     [BASE_MQ]: {
-      margin: '3em 0',
+      margin: '3em 0 0',
       padding: '3em 1.5em 1.2em 3.5em',
       fontSize: '1.5em',
     },

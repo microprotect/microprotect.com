@@ -4,7 +4,8 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
-import Section from './Section';
+import Section from '../Section';
+
 import Title from './Title';
 import HowDonateBox from './HowDonateBox';
 import PriceExample from './PriceExample';
