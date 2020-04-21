@@ -7,11 +7,10 @@ import { jsx } from '@emotion/core';
 import _ from 'lodash';
 
 import Section from '../../components/Section';
-import Title from '../../components/Title';
 import Text from '../../components/Text';
 import GridList from '../../components/GridList';
+import Title from '../../components/free-insurance/Title';
 
-import BossVideo from './BossVideo';
 import MemberBox from './MemberBox';
 
 function members(t) {
@@ -30,7 +29,6 @@ export default function AboutUs({ t }) {
   return (
     <Section>
       <Title value={t.about_us_title} />
-      <BossVideo />
       <GridList
         items={members(t)}
         render={(item) => (

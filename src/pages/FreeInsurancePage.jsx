@@ -6,13 +6,15 @@ import { jsx } from '@emotion/core';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
 import HeaderPanel from '../components/free-insurance/HeaderPanel';
-import Donation from '../components/free-insurance/Donation';
+import Dome from '../components/free-insurance/Dome';
 import WhyDonate from '../components/free-insurance/WhyDonate';
 import HowDonate from '../components/free-insurance/HowDonate';
-import SubscriptionInsurance from '../components/free-insurance/SubscriptionInsurance';
-import Features from '../components/free-insurance/Features';
-import HowWorks from '../components/free-insurance/HowWorks';
+import Donation from '../components/free-insurance/Donation';
+
+import AboutUs from './AboutUsPage/AboutUs';
+import Partners from './PartnersPage/Partners';
 
 import { BASE_MQ } from '../styles/constants-v5';
 
@@ -30,12 +32,12 @@ export default function FreeInsurancePage({ t, locale }) {
       <Header fill />
       <div css={styles.container}>
         <HeaderPanel t={t} />
-        <Donation t={t} />
+        <Dome />
         <WhyDonate t={t} />
         <HowDonate t={t} locale={locale} />
-        <SubscriptionInsurance t={t} />
-        <Features t={t} />
-        <HowWorks t={t} />
+        <Donation t={t} />
+        <AboutUs t={t} />
+        <Partners t={t} />
       </div>
       <Footer t={t} />
     </>

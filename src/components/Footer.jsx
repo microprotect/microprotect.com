@@ -6,7 +6,6 @@ import { jsx } from '@emotion/core';
 
 import Text from './Text';
 import Newsletter from './Newsletter';
-import Link from './Link';
 import ListContainer from './ListContainer';
 import ListItem from './ListItem';
 
@@ -72,10 +71,6 @@ const styles = {
   email: {
     fontSize: '1.3em',
   },
-  menu: {
-    margin: '.5em 0',
-    fontSize: '1.2em',
-  },
   medias: {
     [BASE_MQ]: {
       marginTop: '5em',
@@ -122,20 +117,6 @@ export default function Footer({ t }) {
           </h2>
           <div css={styles.email}>
             <a href="mailto:hello@microprotect.com">hello@microprotect.com</a>
-          </div>
-          <div css={styles.menu}>
-            <ListContainer>
-              <ListItem>
-                <Link to="/about-us">
-                  About us
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link to="/partners">
-                  Partners
-                </Link>
-              </ListItem>
-            </ListContainer>
           </div>
         </div>
         <div css={[styles.item, styles.medias]}>
