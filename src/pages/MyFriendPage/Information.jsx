@@ -9,6 +9,7 @@ import ReactMarkdown from 'react-markdown';
 import Section from '../../components/Section';
 
 import Guide from './Guide';
+import ApplicationButton from './ApplicationButton';
 
 import {
   BASE_MQ,
@@ -41,6 +42,11 @@ const styles = {
     height: 0,
     paddingBottom: `${(372 / 982) * 100}%`,
   },
+  slogan: {
+    margin: '0 0 1em',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
   description: {
     marginBottom: '4em',
     '& p': {
@@ -50,6 +56,9 @@ const styles = {
       margin: '0 0 .3em',
       fontSize: '1.6em',
     },
+  },
+  caution: {
+    margin: '2em 0 4em',
     '& blockquote': {
       margin: '3em 0',
       color: darkGray,
@@ -64,19 +73,6 @@ const styles = {
     },
     '& li': {
       marginBottom: '.5em',
-    },
-  },
-  button: {
-    margin: '1em 0 3em',
-    padding: '1em 0',
-    width: '100%',
-    border: 0,
-    backgroundColor: '#FDE104',
-    color: black,
-    fontSize: '1.5em',
-    fontWeight: 'bold',
-    [BASE_MQ]: {
-      display: 'none',
     },
   },
   mobileOnly: {
@@ -94,30 +90,23 @@ const styles = {
 };
 
 export default function Information({ t }) {
-  const handleClick = () => {
-    window.postMessage({ type: 'myfriend-chat' }, '*');
-  };
-
   return (
     <Section style={styles.container}>
       <h1 css={styles.brand}>
         {t.myfriend_title}
       </h1>
+      <h2 css={styles.slogan}>
+        {t.myfriend_slogan}
+      </h2>
       <div css={[styles.description, multilinesOnDesktop]}>
         <ReactMarkdown source={t.myfriend_description} />
       </div>
       <Guide t={t} />
-      <button
-        type="button"
-        css={styles.button}
-        onClick={handleClick}
-      >
-        {t.myfriend_request_button}
-      </button>
+      <ApplicationButton t={t} />
       <div css={styles.mobileOnly}>
         {t.myfriend_mobile_only}
       </div>
-      <div css={styles.description}>
+      <div css={styles.caution}>
         <ReactMarkdown source={t.myfriend_caution} />
       </div>
     </Section>
