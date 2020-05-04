@@ -1,13 +1,9 @@
 import React from 'react';
-
-import Enzyme, { render } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { render } from '@testing-library/react';
 
 import RadioButton from './RadioButton';
 
 jest.mock('../assets');
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe('RadioButton', () => {
   it('renders options', () => {
@@ -17,7 +13,7 @@ describe('RadioButton', () => {
       form_select_2: 'Option#2',
     };
 
-    const wrapper = render(
+    const { container } = render(
       <RadioButton
         field={{
           name: 'select',
@@ -26,9 +22,10 @@ describe('RadioButton', () => {
         t={t}
       />,
     );
-    expect(wrapper.html()).toMatch('name="select"');
-    expect(wrapper.text()).toMatch('Select!');
-    expect(wrapper.text()).toMatch('Option#1');
-    expect(wrapper.text()).toMatch('Option#2');
+
+    expect(container).toContainHTML('name="select"');
+    expect(container).toHaveTextContent('Select!');
+    expect(container).toHaveTextContent('Option#1');
+    expect(container).toHaveTextContent('Option#2');
   });
 });

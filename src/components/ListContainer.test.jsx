@@ -1,12 +1,8 @@
 import React from 'react';
-
-import Enzyme, { render } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { render } from '@testing-library/react';
 
 import ListContainer from './ListContainer';
 import ListItem from './ListItem';
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe('ListContainer', () => {
   const items = [
@@ -16,7 +12,7 @@ describe('ListContainer', () => {
   ];
 
   it('renders items', () => {
-    const wrapper = render(
+    const { container } = render(
       <ListContainer>
         {items.map((item) => (
           <ListItem key={item.id}>
@@ -25,7 +21,7 @@ describe('ListContainer', () => {
         ))}
       </ListContainer>,
     );
-    expect(wrapper.text()).toMatch('Jayde Duke');
-    expect(wrapper.text()).toMatch('Aniyah Kelley');
+    expect(container).toHaveTextContent('Jayde Duke');
+    expect(container).toHaveTextContent('Aniyah Kelley');
   });
 });

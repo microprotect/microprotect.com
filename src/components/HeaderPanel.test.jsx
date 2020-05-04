@@ -1,18 +1,12 @@
 import React from 'react';
-
-import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { render } from '@testing-library/react';
 
 import HeaderPanel from './HeaderPanel';
 
-Enzyme.configure({ adapter: new Adapter() });
-
 describe('HeaderPanel', () => {
   it('renders <div> tag', () => {
-    const wrapper = shallow(
-      <HeaderPanel />,
-    );
+    const { container } = render(<HeaderPanel />);
 
-    expect(wrapper.html()).toMatch('<div');
+    expect(container).toContainHTML('<div');
   });
 });

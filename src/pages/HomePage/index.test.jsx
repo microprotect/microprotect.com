@@ -1,7 +1,5 @@
-import '@testing-library/jest-dom/extend-expect';
-
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -16,13 +14,12 @@ describe('Home', () => {
       v5_slogan1: 'Slogan',
     };
 
-    render(
+    const { container } = render(
       <Router>
         <HomePage t={t} />
       </Router>,
     );
 
-    expect(screen.getByText(/Slogan/))
-      .toBeInTheDocument();
+    expect(container).toHaveTextContent('Slogan');
   });
 });

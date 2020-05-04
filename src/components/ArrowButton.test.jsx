@@ -1,7 +1,5 @@
-import '@testing-library/jest-dom/extend-expect';
-
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import ArrowButton from './ArrowButton';
 
@@ -9,9 +7,8 @@ jest.mock('../assets/v5');
 
 describe('ArrowButton', () => {
   it('renders text', () => {
-    render(<ArrowButton label="See more" />);
+    const { container } = render(<ArrowButton label="See more" />);
 
-    expect(screen.getByText(/See more/))
-      .toBeInTheDocument();
+    expect(container).toHaveTextContent('See more');
   });
 });
