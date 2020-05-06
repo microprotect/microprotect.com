@@ -1,18 +1,14 @@
 import React from 'react';
-
-import Enzyme, { render } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { render } from '@testing-library/react';
 
 import ChatBubble from './ChatBubble';
 
 jest.mock('../assets');
 
-Enzyme.configure({ adapter: new Adapter() });
-
 describe('ChatBubble', () => {
   it('renders text', () => {
-    const wrapper = render(<ChatBubble />);
+    const { container } = render(<ChatBubble />);
 
-    expect(wrapper.html()).toContain('KakaoTalk');
+    expect(container).toContainHTML('KakaoTalk');
   });
 });

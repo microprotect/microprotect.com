@@ -1,7 +1,5 @@
-import '@testing-library/jest-dom/extend-expect';
-
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -11,13 +9,12 @@ jest.mock('../assets/v5');
 
 describe('Header', () => {
   it('renders logo', () => {
-    render(
+    const { container } = render(
       <Router>
         <Header />
       </Router>,
     );
 
-    expect(screen.getByText(/Microprotect/))
-      .toBeInTheDocument();
+    expect(container).toHaveTextContent('Microprotect');
   });
 });

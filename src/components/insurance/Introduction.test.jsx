@@ -1,7 +1,5 @@
-import '@testing-library/jest-dom/extend-expect';
-
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -16,13 +14,12 @@ describe('Introduction', () => {
       insurance_information_title: '보험정보',
     };
 
-    render(
+    const { container } = render(
       <Router>
         <Introduction t={t} product="carediscover" />
       </Router>,
     );
 
-    expect(screen.getByText(/보험정보/))
-      .toBeInTheDocument();
+    expect(container).toHaveTextContent('보험정보');
   });
 });
