@@ -109,7 +109,7 @@ const styles = {
 
 function Step({ t, index }) {
   return (
-    <ListItem style={styles.step(index)}>
+    <ListItem _css={styles.step(index)}>
       <img
         css={styles.figure(index)}
         src={FIGURES[index]}
@@ -129,7 +129,7 @@ function Symbol({ index }) {
 export default function HowWorks({ t }) {
   return (
     <Section>
-      <ListContainer style={styles.steps}>
+      <ListContainer _css={styles.steps}>
         {[...Array(7)].map((_, i) => i)
           .map((index) => (
             index % 2 === 0

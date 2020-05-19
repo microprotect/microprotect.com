@@ -3,6 +3,7 @@
 import React from 'react';
 
 import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import Section from './Section';
 
@@ -40,13 +41,6 @@ const products = [
 ];
 
 const styles = {
-  container: {
-    position: 'relative',
-    marginTop: '-28vw',
-    [BASE_MQ]: {
-      marginTop: '-10em',
-    },
-  },
   box: {
     padding: '1em 5%',
     borderRadius: '.3em',
@@ -132,14 +126,22 @@ const styles = {
   },
 };
 
+const Container = styled(Box)({
+  position: 'relative',
+  marginTop: '-28vw',
+  [BASE_MQ]: {
+    marginTop: '-10em',
+  },
+});
+
 export default function Products({ t }) {
   return (
-    <Section style={styles.container}>
-      <Box style={styles.box}>
-        <ListContainer style={styles.products}>
+    <Section _css={styles.container}>
+      <Container>
+        <ListContainer _css={styles.products}>
           {products.map(({ key, image, to }, index) => (
             <ListItem
-              style={styles.product}
+              _css={styles.product}
               key={key}
             >
               <Link to={to}>
@@ -158,14 +160,14 @@ export default function Products({ t }) {
                   <Text value={t[`products_description${index + 1}`]} />
                 </div>
                 <ArrowButton
-                  style={styles.button}
+                  _css={styles.button}
                   label="자세히 보기"
                 />
               </Link>
             </ListItem>
           ))}
         </ListContainer>
-      </Box>
+      </Container>
     </Section>
   );
 }

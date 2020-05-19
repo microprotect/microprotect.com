@@ -105,11 +105,11 @@ export default function BenefitShare({ t }) {
   return (
     <Section>
       <Title value={t.benefit_share_title} />
-      <ListContainer style={styles.descriptions}>
+      <ListContainer _css={styles.descriptions}>
         {[1, 2].map((index) => (
           <ListItem
             key={index}
-            style={styles.description}
+            _css={styles.description}
           >
             <StrongText value={t[`benefit_share_description${index}`]} />
           </ListItem>
@@ -146,11 +146,11 @@ export default function BenefitShare({ t }) {
           </div>
         </div>
       </div>
-      <Box style={styles.more}>
+      <Box _css={styles.more}>
         <Link to="/free-insurance">
           <StrongText value={t.benefit_share_more} />
           <ArrowButton
-            style={styles.button}
+            _css={styles.button}
             pink
             label="자세히 보기"
           />

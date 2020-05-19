@@ -70,12 +70,12 @@ const styles = {
 
 export default function InsurancePartners({ t }) {
   return (
-    <Section style={styles.container}>
+    <Section _css={styles.container}>
       <Title value={t.insurance_partners_title} />
       <div css={styles.description}>
         <StrongText value={t.insurance_partners_description} />
       </div>
-      <Box style={styles.partners}>
+      <Box _css={styles.partners}>
         {['allianz', 'careconcept'].map((key, index) => (
           <div
             key={key}

@@ -1,20 +1,10 @@
-/* @jsx jsx */
+import styled from '@emotion/styled';
 
-import React from 'react';
+const HeaderPanel = styled.div({
+  position: 'relative',
+  height: '3em',
+  background: 'linear-gradient(135deg, #7AC7F8 0%, #6594F8 100%)',
+  color: '#FFF',
+});
 
-import { jsx } from '@emotion/core';
-
-const styles = {
-  container: {
-    position: 'relative',
-    height: '3em',
-    background: 'linear-gradient(135deg, #7AC7F8 0%, #6594F8 100%)',
-    color: '#FFF',
-  },
-};
-
-export default function HeaderPanel() {
-  return (
-    <div css={styles.container} />
-  );
-}
+export default HeaderPanel;

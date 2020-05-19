@@ -12,12 +12,13 @@ describe('GridList', () => {
 
   describe('without “limit” attribute', () => {
     it('renders items', () => {
-      const { container } = render(
+      const { container } = render((
         <GridList
           items={items}
           render={(item) => <p>{item.name}</p>}
-        />,
-      );
+        />
+      ));
+
       expect(container).toHaveTextContent('Jayde Duke');
       expect(container).toHaveTextContent('Aniyah Kelley');
       expect(container).not.toHaveTextContent('See more');
@@ -26,14 +27,15 @@ describe('GridList', () => {
 
   describe('with “limit” attribute', () => {
     it('renders items and “See more” button', () => {
-      const { container } = render(
+      const { container } = render((
         <GridList
           limit={2}
           items={items}
           render={(item) => <p>{item.name}</p>}
           renderMore={() => <p>See more</p>}
-        />,
-      );
+        />
+      ));
+
       expect(container).toHaveTextContent('Jayde Duke');
       expect(container).toHaveTextContent('Aniyah Kelley');
       expect(container).toHaveTextContent('See more');

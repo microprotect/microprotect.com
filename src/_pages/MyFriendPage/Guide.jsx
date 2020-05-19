@@ -51,7 +51,7 @@ export default function Guide({ t }) {
         {[1, 2, 3, 4].map((index) => (
           <ListItem
             key={index}
-            style={styles.step}
+            _css={styles.step}
           >
             <img
               css={styles.figure}

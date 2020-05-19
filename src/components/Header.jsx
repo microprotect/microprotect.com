@@ -1,8 +1,6 @@
-/* @jsx jsx */
-
 import React, { useState, useEffect } from 'react';
 
-import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import Link from './Link';
 
@@ -15,8 +13,8 @@ import {
 
 import { LogoImage } from '../assets/v5';
 
-const styles = {
-  container: {
+const Container = styled.header(({ filled }) => [
+  {
     zIndex: 100,
     position: 'fixed',
     top: 0,
@@ -25,29 +23,27 @@ const styles = {
     height: '60px',
     linHeight: '60px',
     padding: '0 5%',
-    backgroundColor: 'rgba(255, 255, 255, 0)',
-    boxShadow: '0 0 6px 0 rgba(200, 200, 200, 0)',
+    backgroundColor: filled ? '#7AC7F8' : 'rgba(255, 255, 255, 0)',
+    boxShadow: `0 0 6px 0 rgba(200, 200, 200, ${filled ? 0.5 : 0})`,
     transition: '.3s ease-out',
     [BASE_MQ]: {
       height: '3em',
       padding: `0 ${CONTENT_PADDING}`,
     },
   },
-  logo: {
-    float: 'left',
-    display: 'block',
-    ...imageReplacement(LogoImage),
-    backgroundPosition: '0 50%',
-    backgroundSize: `${30 * (800 / 145)}px`,
-    width: `${30 * (800 / 145)}px`,
-    height: '100%',
-    cursor: 'pointer',
-  },
-  filled: {
-    backgroundColor: '#7AC7F8',
-    boxShadow: '0 0 6px 0 rgba(200, 200, 200, .5)',
-  },
-};
+  clearAfter,
+]);
+
+const LogoLink = styled(Link)({
+  ...imageReplacement(LogoImage),
+  backgroundPosition: '0 50%',
+  backgroundSize: `${30 * (800 / 145)}px`,
+  float: 'left',
+  display: 'block',
+  width: `${30 * (800 / 145)}px`,
+  height: '100%',
+  cursor: 'pointer',
+});
 
 export default function Header({ fill = false }) {
   const [filled, setFilled] = useState(false);
@@ -59,20 +55,10 @@ export default function Header({ fill = false }) {
   });
 
   return (
-    <header
-      css={[
-        styles.container,
-        clearAfter,
-        fill || filled ? styles.filled : {},
-      ]}
-    >
-      <Link
-        style={styles.logo}
-        to="/"
-        id="logo"
-      >
+    <Container filled={fill || filled}>
+      <LogoLink id="logo" to="/">
         Microprotect
-      </Link>
-    </header>
+      </LogoLink>
+    </Container>
   );
 }

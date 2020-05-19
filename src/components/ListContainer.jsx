@@ -1,15 +1,12 @@
-/* @jsx jsx */
-
-import React from 'react';
-
-import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import { listContainer } from '../styles/list';
 
-export default function ListContainer({ style, children }) {
-  return (
-    <ul css={[listContainer, style]}>
-      {children}
-    </ul>
-  );
-}
+const ListContainer = styled.ul(({ _css }) => [
+  {
+    ...listContainer,
+  },
+  _css,
+]);
+
+export default ListContainer;
