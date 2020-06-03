@@ -43,7 +43,10 @@ const styles = {
     '& thead td:first-of-type': {
       textAlign: product === 'carediscover' ? 'left' : 'center',
     },
-    '& tbody td': bodyStyle(product),
+    '& tbody td': {
+      ...bodyStyle(product),
+      verticalAlign: 'top',
+    },
     '& tfoot': {
       color: '#ADB5C1',
       fontSize: '.8em',
