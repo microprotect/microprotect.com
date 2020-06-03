@@ -4,6 +4,8 @@ import React from 'react';
 
 import { jsx } from '@emotion/core';
 
+import WeakText from '../WeakText';
+
 import products from '../../data/products-ko.json';
 
 import {
@@ -40,6 +42,12 @@ const styles = {
   description: {
     padding: '.2em .5em',
     color: '#2C65ED',
+    '& small': {
+      display: 'inline-block',
+      marginTop: '.2em',
+      fontSize: '.9em',
+      color: '#888',
+    },
   },
 };
 
@@ -60,7 +68,7 @@ export default function Information({ product }) {
               {item.label}
             </th>
             <td css={styles.description}>
-              {item.description}
+              <WeakText value={item.description} />
             </td>
           </tr>
         ))}

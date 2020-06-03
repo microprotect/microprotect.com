@@ -34,6 +34,12 @@ const styles = {
   description: {
     lineHeight: '180%',
     color: '#7C8195',
+    '& p': {
+      marginBottom: '.6em',
+      '&:first-child': {
+        marginBottom: 0,
+      },
+    },
     '& strong': {
       display: 'inline-block',
       fontSize: '1em',
