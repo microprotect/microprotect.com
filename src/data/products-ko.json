@@ -117,7 +117,7 @@
       {
         "icon": "region",
         "label": "보험지역",
-        "description": "유럽연합(EU),\n솅겐지역(Schegen Area)"
+        "description": "유럽연합(EU)\n쉥겐지역(Schegen Area)\n_단, 오스트리아 (Austria) 제외_"
       }
     ],
     "pricing": {
