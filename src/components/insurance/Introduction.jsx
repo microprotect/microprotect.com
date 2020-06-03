@@ -82,6 +82,7 @@ const styles = {
     },
   },
   directions: {
+    marginTop: '1.5em',
     padding: '.5em',
     color: '#7C8195',
     fontSize: '.9em',
@@ -95,6 +96,13 @@ const styles = {
     },
     '& li': {
       margin: '.4em 0',
+    },
+  },
+  note: {
+    marginTop: '1.5em',
+    fontSize: '.8em',
+    '& a': {
+      textDecoration: 'underline',
     },
   },
 };
@@ -111,18 +119,30 @@ function Directions({ t, product }) {
   }
 
   return (
-    <>
-      <h2 css={styles.title}>
-        {t.insurance_directions_title}
-      </h2>
-      <div css={styles.directions}>
-        <ReactMarkdown source={t.insurance_careconcept_directions} />
-      </div>
-    </>
+    <div css={styles.directions}>
+      <ReactMarkdown source={t.insurance_careconcept_directions} />
+    </div>
   );
 }
 
 export default function Introduction({ t, product }) {
+  const handleClick = (event) => {
+    const { target: { href: url } } = event;
+
+    event.preventDefault();
+
+    if (!window.ReactNativeWebView) {
+      window.open(url, '_blank');
+      return;
+    }
+
+    const data = JSON.stringify({
+      type: 'open-document',
+      url,
+    });
+    window.ReactNativeWebView.postMessage(data);
+  };
+
   return (
     <Section style={styles.container}>
       <div css={[styles.description, underlinedToBold]}>
@@ -137,6 +157,19 @@ export default function Introduction({ t, product }) {
         {t.insurance_pricing_title}
       </h2>
       <Pricing t={t} product={product} />
+      <p css={styles.note}>
+        본 내용은 Care College의 약관에 기초하여 안내자료로 요약한 것으로
+        보험금의 종류 및 지급 사유, 보험금을 지급하지 아니하는 사유 및 제반 사항 등
+        기타 자세한 사항은 약관 및
+        {' '}
+        <a
+          href="https://drive.google.com/file/d/1WyWo8L1M2zaiNmJd3CamowSo9oR1rQul/view?usp=sharing"
+          onClick={handleClick}
+        >
+          상품설명서
+        </a>
+        를 참조하시기 바랍니다.
+      </p>
       <Directions t={t} product={product} />
     </Section>
   );
