@@ -10,6 +10,7 @@ import {
 
 import { jsx } from '@emotion/core';
 
+import HomePage from './HomePage';
 import AboutUsPage from './AboutUsPage';
 import PartnersPage from './PartnersPage';
 import FreeInsurancePage from './FreeInsurancePage';
@@ -42,6 +43,9 @@ export default function Root({ t, locale }) {
       <ChatBubble />
       <Router>
         <Switch>
+          <Route path="/home">
+            <HomePage t={t} />
+          </Route>
           <Route path="/about-us">
             <AboutUsPage t={t} />
           </Route>
