@@ -1,4 +1,7 @@
 .idea/
+.cache/
 tmp/
 node_modules/
 output/
+dist/
+public/
