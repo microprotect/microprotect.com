@@ -58,3 +58,7 @@ export const MyFriendGuideImage1 = '';
 export const MyFriendGuideImage2 = '';
 export const MyFriendGuideImage3 = '';
 export const MyFriendGuideImage4 = '';
+
+export const images = {
+  logos: {},
+};

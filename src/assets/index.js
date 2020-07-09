@@ -58,6 +58,12 @@ import MyFriendGuideImage2 from './images/myfriend/myfriend-guide-02.png';
 import MyFriendGuideImage3 from './images/myfriend/myfriend-guide-03.png';
 import MyFriendGuideImage4 from './images/myfriend/myfriend-guide-04.png';
 
+export const images = {
+  logos: {
+    white: WhiteLogoImage,
+  },
+};
+
 export {
   LogoImage,
   WhiteLogoImage,

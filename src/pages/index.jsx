@@ -2,11 +2,13 @@ import React from 'react';
 
 import { Link } from 'gatsby';
 
+import Layout from '../layouts/DefaultLayout';
+
 export default function IndexPage() {
   return (
-    <div>
-      <p>Welcome, world!</p>
+    <Layout>
+      <h1>Welcome, world!</h1>
       <Link to="/about">About</Link>
-    </div>
+    </Layout>
   );
 }
