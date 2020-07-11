@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
+import Layout from '../layouts/HomeLayout';
 
-import Layout from '../layouts/DefaultLayout';
+import HeaderPanel from '../components/v6/home/HeaderPanel';
 
 export default function IndexPage() {
   return (
     <Layout>
-      <h1>Welcome, world!</h1>
-      <Link to="/about">About</Link>
+      <HeaderPanel />
     </Layout>
   );
 }
