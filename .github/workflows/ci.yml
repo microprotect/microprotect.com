@@ -17,15 +17,21 @@ jobs:
         run: npm ci
       - name: Lint
         run: npx eslint --ext .js,.jsx src test
-      - name: Run tests
-        run: HEADLESS=true npm test
+      - name: Run unit tests
+        run: npm run test:unit
       - name: Build
         run: |
+          npx webpack --mode=production
           npm run build
-          cp CNAME dist/
-          cp favicon.ico dist/
-          cp -r assets dist/
-          cp dist/index.html dist/404.html
+          cp -r dist/bundle-*.js public/
+          cp -r dist/*.png public/
+          cp -r assets public/
+          cp dist/index.html public/404.html
+          cp favicon.ico public/
+      - name: Run E2E tests
+        run: |
+          cp -r _test/* test/
+          HEADLESS=true npm run test:ci-e2e
       - name: Deploy
         if: github.ref == 'refs/heads/master'
         uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -33,4 +39,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BASE_BRANCH: master
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: public

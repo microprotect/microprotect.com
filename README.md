@@ -20,17 +20,18 @@ npm start
 npm run lint
 ```
 
-## Run tests
+## Run unit tests
 
 ```bash
-# Run unit tests
-npm run test:unit
-
-# Run E2E tests
-npm run test:e2e
-
-# Run all tests
 npm test
+# or
+npm run test:unit
+```
+
+## Run E2E tests
+
+```bash
+npm run test:e2e
 ```
 
 ## Generate locales

@@ -6,13 +6,13 @@
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop --host=0.0.0.0",
-    "build": "webpack --mode=production",
+    "build": "gatsby build",
+    "serve": "gatsby serve --port=8000",
     "lint": "eslint --fix --ext .js,.jsx src test",
-    "test": "npm run test:unit && npm run test:e2e",
+    "test": "npm run test:unit",
     "test:unit": "jest",
-    "test:e2e": "concurrently -k -s first npm:e2e-start npm:e2e-test",
-    "e2e-start": "webpack-dev-server --config webpack.test.config.js",
-    "e2e-test": "sleep 2 && codeceptjs run --steps",
+    "test:e2e": "codeceptjs run --steps",
+    "test:ci-e2e": "concurrently -k -s first npm:serve 'sleep 5 && npm run test:e2e'",
     "watch": "jest --watchAll",
     "locales": "node script/generate-locales.js > src/locales.json",
     "products": "node script/generate-products.js > src/data/products-ko.json"
