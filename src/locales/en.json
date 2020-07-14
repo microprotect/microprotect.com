@@ -1,0 +1,22 @@
+{
+  "home": {
+    "slogan1": "Insurance, redefined",
+    "slogan2": "Our experience, insight, and creativity to provide better insurance services for all",
+    "links": {
+      "purpose": "See our purpose",
+      "approach": "See our approach"
+    }
+  },
+  "about": {
+    "sidebar": {
+      "purpose": "See our purpose",
+      "approach": "See our approach"
+    },
+    "purpose": {
+      "title": "Our Purpose"
+    },
+    "approach": {
+      "title": "Our Approach"
+    }
+  }
+}

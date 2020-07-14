@@ -62,4 +62,5 @@ export const MyFriendGuideImage4 = '';
 export const images = {
   logos: {},
   home: {},
+  about: {},
 };

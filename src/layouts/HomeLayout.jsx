@@ -20,7 +20,7 @@ const Content = styled.div({
 export default function HomeLayout({ children }) {
   return (
     <Wrapper>
-      <Header />
+      <Header full />
       <Content>
         {children}
       </Content>

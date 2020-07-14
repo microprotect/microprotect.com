@@ -59,6 +59,8 @@ import MyFriendGuideImage3 from './images/myfriend/myfriend-guide-03.png';
 import MyFriendGuideImage4 from './images/myfriend/myfriend-guide-04.png';
 
 import HomeBackgroundImage from './images/v6/home/background.png';
+import PurposeImage from './images/v6/about/purpose.jpg';
+import ApproachImage from './images/v6/about/approach.jpg';
 
 export const images = {
   logos: {
@@ -66,6 +68,10 @@ export const images = {
   },
   home: {
     background: HomeBackgroundImage,
+  },
+  about: {
+    purpose: PurposeImage,
+    approach: ApproachImage,
   },
 };
 
