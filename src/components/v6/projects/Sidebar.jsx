@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link, FormattedMessage } from 'gatsby-plugin-intl';
+import { Link } from 'gatsby-plugin-intl';
 
 import styled from '@emotion/styled';
 
@@ -9,13 +9,9 @@ import {
   MOBILE_PADDING_HORIZONTAL,
 } from '../../../styles/constants-v6';
 
-const ITEMS = ['purpose', 'approach'];
-
 const Wrapper = styled.div({
   margin: '0 calc((100% - 100vw) / 2)',
   padding: `2em ${MOBILE_PADDING_HORIZONTAL}`,
-  background: '#444',
-  color: '#FFF',
   [BASE_MQ]: {
     position: 'absolute',
     top: 0,
@@ -28,29 +24,29 @@ const Wrapper = styled.div({
 });
 
 const List = styled.ul({
-  borderTop: '2px solid #FFF',
+  borderTop: '2px solid #040A1E',
 });
 
-const Item = styled.li({
-  '& a': {
-    display: 'block',
-    padding: '1em',
-    borderBottom: '2px solid #FFF',
-    textTransform: 'capitalize',
-  },
+const Item = styled.li({});
+
+const ItemLink = styled(Link)({
+  display: 'block',
+  padding: '1em',
+  borderBottom: '2px solid #040A1E',
+  color: '#000',
+  textTransform: 'capitalize',
 });
 
 export default function Sidebar() {
   return (
     <Wrapper>
       <List>
-        {ITEMS.map((item) => (
-          <Item key={item}>
-            <Link to={`/about/${item}`}>
-              <FormattedMessage id={`about.sidebar.${item}`} />
-            </Link>
-          </Item>
-        ))}
+        <Item>
+          <ItemLink to="/about/purpose">See our purpose</ItemLink>
+        </Item>
+        <Item>
+          <ItemLink to="/about/approach">See our approach</ItemLink>
+        </Item>
       </List>
     </Wrapper>
   );
