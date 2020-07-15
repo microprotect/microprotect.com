@@ -58,12 +58,13 @@ import MyFriendGuideImage2 from './images/myfriend/myfriend-guide-02.png';
 import MyFriendGuideImage3 from './images/myfriend/myfriend-guide-03.png';
 import MyFriendGuideImage4 from './images/myfriend/myfriend-guide-04.png';
 
-import HomeBackgroundImage from './images/v6/home/background.png';
+import HomeBackgroundImage from './images/v6/home/background.jpg';
 import PurposeImage from './images/v6/about/purpose.jpg';
 import ApproachImage from './images/v6/about/approach.jpg';
 
 import SelfEmployedInsuranceImage from './images/v6/projects/self-employed-insurance.jpg';
 import CreditDefaultInsuranceImage from './images/v6/projects/credit-default-insurance.jpg';
+import CompulsoryInsuranceImage from './images/v6/projects/compulsory-insurance.jpg';
 
 export const images = {
   logos: {
@@ -79,6 +80,7 @@ export const images = {
   projects: {
     selfEmployedInsurance: SelfEmployedInsuranceImage,
     creditDefaultInsurance: CreditDefaultInsuranceImage,
+    compulsoryInsurance: CompulsoryInsuranceImage,
   },
 };
 

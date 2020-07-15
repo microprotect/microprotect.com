@@ -13,6 +13,7 @@ import { images } from '../../../assets';
 const NAMES = [
   'self-employed-insurance',
   'credit-default-insurance',
+  'compulsory-insurance',
 ];
 
 const List = styled.ul({

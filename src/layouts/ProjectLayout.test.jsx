@@ -12,8 +12,6 @@ describe('ProjectLayout', () => {
     const { container } = render((
       <ProjectLayout
         name="self-employed-insurance"
-        title="Self-employed insurance"
-        partner="Partner Korea Credit Data (KCD)"
         contents={[
           'Hello, world!',
         ]}
