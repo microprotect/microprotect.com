@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from 'gatsby';
+import { Link, FormattedMessage } from 'gatsby-plugin-intl';
 
 import styled from '@emotion/styled';
 
@@ -17,7 +17,7 @@ const Wrapper = styled.div({
   display: 'flex',
   padding: `${HEADER_HEIGHT} ${MOBILE_PADDING_HORIZONTAL} 0`,
   height: '100vh',
-  minHeight: '40em',
+  minHeight: '35em',
   background: `url(${images.home.background}) 50% 50% no-repeat`,
   backgroundSize: 'cover',
   alignItems: 'center',
@@ -87,19 +87,22 @@ export default function HeaderPanel() {
       <Content>
         <Slogan>
           <strong>
-            Insurance, redefined
+            <FormattedMessage id="home.slogan1" />
           </strong>
           <small>
-            Our experience, insight, and creativity
-            to provide better insurance services for all
+            <FormattedMessage id="home.slogan2" />
           </small>
         </Slogan>
         <List>
           <Item>
-            <Link to="/about">See our purpose</Link>
+            <Link to="/about/purpose">
+              <FormattedMessage id="home.links.purpose" />
+            </Link>
           </Item>
           <Item>
-            <Link to="/">See our approach</Link>
+            <Link to="/about/approach">
+              <FormattedMessage id="home.links.approach" />
+            </Link>
           </Item>
         </List>
       </Content>

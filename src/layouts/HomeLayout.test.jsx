@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render } from '@testing-library/react';
+import { render } from '../utils/test-intl';
 
 import HomeLayout from './HomeLayout';
 

@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 
-import { Link } from 'gatsby';
+import { Link, changeLocale } from 'gatsby-plugin-intl';
 
 import styled from '@emotion/styled';
+
+import Container from './Container';
 
 import { imageReplacement } from '../../styles/utils';
 
@@ -18,19 +20,19 @@ import { images } from '../../assets';
 const LOGO_WIDTH = 2638;
 const LOGO_HEIGHT = 485;
 
-const Wrapper = styled.header(({ filled }) => ({
+const Wrapper = styled.header(({ full, filled }) => ({
   zIndex: 100,
   position: 'fixed',
   top: 0,
   left: 0,
-  padding: `0 ${MOBILE_PADDING_HORIZONTAL}`,
+  padding: `0 ${full ? MOBILE_PADDING_HORIZONTAL : 0}`,
   width: '100%',
   height: HEADER_HEIGHT,
   lineHeight: HEADER_HEIGHT,
   color: '#FFF',
   background: filled ? 'rgba(0, 0, 0, .8)' : 'transparent',
   [BASE_MQ]: {
-    padding: `0 ${DESKTOP_PADDING_HORIZONTAL}`,
+    padding: `0 ${full ? DESKTOP_PADDING_HORIZONTAL : 0}`,
   },
 }));
 
@@ -63,7 +65,7 @@ const Language = styled.li({
   },
 });
 
-export default function Header() {
+export default function Header({ full }) {
   const [filled, setFilled] = useState(false);
 
   useEffect(() => {
@@ -78,19 +80,32 @@ export default function Header() {
     };
   }, []);
 
+  const handleChangeLocale = (locale) => (event) => {
+    event.preventDefault();
+    changeLocale(locale);
+  };
+
+  const Inner = full ? Fragment : Container;
+
   return (
-    <Wrapper filled={filled}>
-      <HomeLink to="/" id="logo">
-        Microprotect
-      </HomeLink>
-      <Languages>
-        <Language>
-          <Link to="/">KR</Link>
-        </Language>
-        <Language>
-          <Link to="/">EN</Link>
-        </Language>
-      </Languages>
+    <Wrapper full={full} filled={filled}>
+      <Inner>
+        <HomeLink to="/" id="logo">
+          Microprotect
+        </HomeLink>
+        <Languages>
+          <Language>
+            <a href="/ko/" onClick={handleChangeLocale('ko')}>
+              KR
+            </a>
+          </Language>
+          <Language>
+            <a href="/en/" onClick={handleChangeLocale('en')}>
+              EN
+            </a>
+          </Language>
+        </Languages>
+      </Inner>
     </Wrapper>
   );
 }
