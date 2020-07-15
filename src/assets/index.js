@@ -62,6 +62,8 @@ import HomeBackgroundImage from './images/v6/home/background.png';
 import PurposeImage from './images/v6/about/purpose.jpg';
 import ApproachImage from './images/v6/about/approach.jpg';
 
+import SelfEmployedInsuranceImage from './images/v6/projects/self-employed-insurance.jpg';
+
 export const images = {
   logos: {
     white: WhiteLogoImage,
@@ -72,6 +74,9 @@ export const images = {
   about: {
     purpose: PurposeImage,
     approach: ApproachImage,
+  },
+  projects: {
+    selfEmployedInsurance: SelfEmployedInsuranceImage,
   },
 };
 

@@ -12,7 +12,7 @@
     "test": "npm run test:unit",
     "test:unit": "jest",
     "test:e2e": "codeceptjs run --steps",
-    "test:ci-e2e": "concurrently -k -s first npm:serve 'sleep 5 && npm run test:e2e'",
+    "test:ci-e2e": "concurrently -k -s first npm:serve 'sleep 10 && npm run test:e2e'",
     "watch": "jest --watchAll",
     "locales": "node script/generate-locales.js > src/locales.json",
     "products": "node script/generate-products.js > src/data/products-ko.json"

@@ -1,10 +1,8 @@
 import React from 'react';
 
-
 import { useIntl } from 'gatsby-plugin-intl';
 
 import Layout from '../../layouts/AboutLayout';
-
 
 import en from '../../data/approach.en';
 import ko from '../../data/approach.ko';

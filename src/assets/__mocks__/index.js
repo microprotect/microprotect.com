@@ -63,4 +63,5 @@ export const images = {
   logos: {},
   home: {},
   about: {},
+  projects: {},
 };
