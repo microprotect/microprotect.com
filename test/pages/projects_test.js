@@ -27,3 +27,17 @@ Scenario('Visit self-employed insurance', (I) => {
 
   I.see('As a product that cooperates with the People Fund Company');
 });
+
+Scenario('Click compulsory insurance for foreign residents', (I) => {
+  I.amOnPage('/en/');
+
+  I.click('Compulsory Insurance for Foreign Residents');
+
+  I.see('To stay in Germany for longer than 30 days');
+});
+
+Scenario('Visit compulsory insurance for foreign residents', (I) => {
+  I.amOnPage('/en/projects/compulsory-insurance');
+
+  I.see('To stay in Germany for longer than 30 days');
+});

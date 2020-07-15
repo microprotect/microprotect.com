@@ -4,17 +4,17 @@ import { useIntl } from 'gatsby-plugin-intl';
 
 import Layout from '../../layouts/ProjectLayout';
 
-import en from '../../data/credit-default-insurance.en';
-import ko from '../../data/credit-default-insurance.ko';
+import en from '../../data/compulsory-insurance.en';
+import ko from '../../data/compulsory-insurance.ko';
 
 const contents = { en, ko };
 
-export default function CreditDefaultInsurancePage() {
+export default function CompulsoryInsurancePage() {
   const intl = useIntl();
 
   return (
     <Layout
-      name="credit-default-insurance"
+      name="compulsory-insurance"
       contents={contents[intl.locale]}
     />
   );

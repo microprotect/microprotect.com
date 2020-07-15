@@ -8,7 +8,8 @@
     },
     "projects": {
       "self-employed-insurance": "Self-employed insurance / new startup system",
-      "credit-default-insurance": "Credit Default Insurance"
+      "credit-default-insurance": "Credit Default Insurance",
+      "compulsory-insurance": "Compulsory Insurance for Foreign Residents"
     }
   },
   "about": {
@@ -21,6 +22,20 @@
     },
     "approach": {
       "title": "Our Approach"
+    }
+  },
+  "projects": {
+    "self-employed-insurance": {
+      "title": "Self-employed insurance / new startup system",
+      "partner": "Partner Korea Credit Data (KCD)"
+    },
+    "credit-default-insurance": {
+      "title": "Credit Default Insurance",
+      "partner": "with PEOPLE FUND"
+    },
+    "compulsory-insurance": {
+      "title": "Compulsory Insurance for Foreign Residents",
+      "partner": "Partner Allianz"
     }
   }
 }

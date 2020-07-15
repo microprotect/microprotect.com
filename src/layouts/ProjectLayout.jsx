@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet';
 
 import ReactMarkdown from 'react-markdown';
 
+import { useIntl } from 'gatsby-plugin-intl';
+
 import _ from 'lodash';
 
 import styled from '@emotion/styled';
@@ -34,9 +36,14 @@ const RelativeContainer = styled(Container)({
   position: 'relative',
 });
 
-export default function ProjectLayout({
-  name, title, partner, contents,
-}) {
+export default function ProjectLayout({ name, contents }) {
+  const intl = useIntl();
+
+  const t = (key) => intl.formatMessage({ id: `projects.${name}.${key}` });
+
+  const title = t('title');
+  const partner = t('partner');
+
   return (
     <Wrapper>
       <Helmet>

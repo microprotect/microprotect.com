@@ -15,8 +15,6 @@ export default function SelfEmployedInsurancePage() {
   return (
     <Layout
       name="self-employed-insurance"
-      title="Self-employed insurance / new startup system"
-      partner="Partner Korea Credit Data (KCD)"
       contents={contents[intl.locale]}
     />
   );
