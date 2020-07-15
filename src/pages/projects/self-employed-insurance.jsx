@@ -2,8 +2,6 @@ import React from 'react';
 
 import { useIntl } from 'gatsby-plugin-intl';
 
-// import styled from '@emotion/styled';
-
 import Layout from '../../layouts/ProjectLayout';
 
 import en from '../../data/self-employed-insurance.en';

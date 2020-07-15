@@ -63,6 +63,7 @@ import PurposeImage from './images/v6/about/purpose.jpg';
 import ApproachImage from './images/v6/about/approach.jpg';
 
 import SelfEmployedInsuranceImage from './images/v6/projects/self-employed-insurance.jpg';
+import CreditDefaultInsuranceImage from './images/v6/projects/credit-default-insurance.jpg';
 
 export const images = {
   logos: {
@@ -77,6 +78,7 @@ export const images = {
   },
   projects: {
     selfEmployedInsurance: SelfEmployedInsuranceImage,
+    creditDefaultInsurance: CreditDefaultInsuranceImage,
   },
 };
 

@@ -21,8 +21,10 @@ Estimated Sales/Purchase Data + Closed Compensation Insurance + Franchise Know-h
 const text2 = `
 ## Sales/Marketing Strategy
 
-"KCD’s Cash Note currently attracts 650,000 customers, 30,000 ~ 50,000 new subscriptions are expected every month, expected to reach 1 million subscriptions by end of 2020
-Using a powerful platform with many self-employed customers"
+KCD’s Cash Note currently attracts 650,000 customers,
+30,000 ~ 50,000 new subscriptions are expected every month,
+expected to reach 1 million subscriptions by end of 2020
+Using a powerful platform with many self-employed customers
 `;
 
 export default [text1.trim(), text2.trim()];
