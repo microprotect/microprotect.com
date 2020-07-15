@@ -8,6 +8,7 @@ import { BASE_MQ } from '../../../styles/constants-v6';
 
 const NAMES = [
   'self-employed-insurance',
+  'credit-default-insurance',
 ];
 
 const List = styled.ul({
