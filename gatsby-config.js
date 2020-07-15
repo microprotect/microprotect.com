@@ -10,5 +10,16 @@ module.exports = {
         redirect: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [
+          'UA-153178350-1',
+        ],
+        pluginConfig: {
+          head: false,
+        },
+      },
+    },
   ],
 };

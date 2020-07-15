@@ -68,6 +68,7 @@
     "axios": "^0.19.1",
     "csv-parse": "^4.8.3",
     "gatsby": "^2.23.21",
+    "gatsby-plugin-google-gtag": "^2.1.10",
     "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "lodash": "^4.17.15",
