@@ -133,11 +133,11 @@ export default function Header({ locale }) {
       >
         Microprotect
       </div>
-      <ListContainer style={styles.languages}>
-        <ListItem style={styles.languageItem}>
+      <ListContainer _css={styles.languages}>
+        <ListItem _css={styles.languageItem}>
           <LocaleLink locale={locale} target="ko">Korean</LocaleLink>
         </ListItem>
-        <ListItem style={styles.languageItem}>
+        <ListItem _css={styles.languageItem}>
           <LocaleLink locale={locale} target="en">English</LocaleLink>
         </ListItem>
       </ListContainer>

@@ -1,8 +1,6 @@
-/* @jsx jsx */
-
 import React from 'react';
 
-import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import { imageReplacement } from '../styles/utils';
 
@@ -13,8 +11,8 @@ import {
   ArrowPinkImage,
 } from '../assets/v5';
 
-const styles = {
-  button: (pink) => ({
+const Button = styled.button(({ pink, _css }) => [
+  {
     ...imageReplacement(pink ? ArrowPinkImage : ArrowImage),
     position: 'absolute',
     top: '50%',
@@ -37,16 +35,14 @@ const styles = {
       color: '#FFF',
       textIndent: 0,
     },
-  }),
-};
+  },
+  _css,
+]);
 
-export default function ArrowButton({ label, style, pink }) {
+export default function ArrowButton({ label, pink, _css }) {
   return (
-    <button
-      type="button"
-      css={[styles.button(pink), style || {}]}
-    >
+    <Button type="button" pink={pink} _css={_css}>
       {label}
-    </button>
+    </Button>
   );
 }

@@ -1,8 +1,6 @@
-/* @jsx jsx */
-
 import React from 'react';
 
-import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import {
   IconVImage,
@@ -18,11 +16,17 @@ const icons = {
   allianzcare: { image: LogoAllianzCareImage, size: '1em' },
 };
 
+const Image = styled.img(({ size }) => ({
+  height: size,
+}));
+
 export default function Icon({ value }) {
+  const { image, size } = icons[value];
+
   return (
-    <img
-      css={{ height: icons[value].size }}
-      src={icons[value].image}
+    <Image
+      src={image}
+      size={size}
       alt={value}
     />
   );

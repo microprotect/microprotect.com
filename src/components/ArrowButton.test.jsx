@@ -7,7 +7,9 @@ jest.mock('../assets/v5');
 
 describe('ArrowButton', () => {
   it('renders text', () => {
-    const { container } = render(<ArrowButton label="See more" />);
+    const { container } = render((
+      <ArrowButton label="See more" />
+    ));
 
     expect(container).toHaveTextContent('See more');
   });

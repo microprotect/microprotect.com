@@ -1,8 +1,6 @@
-/* @jsx jsx */
-
 import React from 'react';
 
-import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import Text from '../Text';
 
@@ -18,47 +16,47 @@ const FIGURES = {
   en: DonatePriceEnImage,
 };
 
-const styles = {
-  container: {
-    [BASE_MQ]: {
-      position: 'absolute',
-      top: '50%',
-      right: '3%',
-      transform: 'translate3D(0, -50%, 0)',
-    },
+const Container = styled.div({
+  [BASE_MQ]: {
+    position: 'absolute',
+    top: '50%',
+    right: '3%',
+    transform: 'translate3D(0, -50%, 0)',
   },
-  figure: (locale) => ({
-    display: 'none',
-    [BASE_MQ]: {
-      display: 'block',
-      margin: '0 auto',
-      width: { ko: '80%', en: '60%' }[locale],
-    },
-  }),
-  text: {
+});
+
+const Figure = styled.img(({ locale }) => ({
+  display: 'none',
+  [BASE_MQ]: {
+    display: 'block',
+    margin: '0 auto',
+    width: { ko: '80%', en: '60%' }[locale],
+  },
+}));
+
+const Message = styled.div({
+  fontFamily: 'S-CoreDream',
+  fontSize: '4vw',
+  textAlign: 'center',
+  [BASE_MQ]: {
+    width: '60%',
+    margin: '1em auto 0',
     fontFamily: 'S-CoreDream',
-    fontSize: '4vw',
-    textAlign: 'center',
-    [BASE_MQ]: {
-      width: '60%',
-      margin: '1em auto 0',
-      fontFamily: 'S-CoreDream',
-      fontSize: '1.4em',
-    },
+    fontSize: '1.4em',
   },
-};
+});
 
 export default function PriceExample({ t, locale }) {
   return (
-    <div css={styles.container}>
-      <img
-        css={styles.figure(locale)}
+    <Container>
+      <Figure
+        locale={locale}
         src={FIGURES[locale]}
         alt=""
       />
-      <div css={styles.text}>
+      <Message>
         <Text value={t.how_donate_example} />
-      </div>
-    </div>
+      </Message>
+    </Container>
   );
 }

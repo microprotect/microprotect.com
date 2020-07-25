@@ -97,7 +97,7 @@ export default function MicroCare({ t }) {
         onTouchEnd={handleTouchEnd}
       >
         <ListContainer
-          style={[
+          _css={[
             { marginLeft: `calc(-${(page - 1) * 100}% + ${offset}px)` },
             styles.items,
             offset ? { transition: '0s' } : {},
@@ -105,7 +105,7 @@ export default function MicroCare({ t }) {
         >
           {[1, 2].map((index) => (
             <ListItem
-              style={styles.item}
+              _css={styles.item}
               key={index}
             >
               <MicroCareItem

@@ -99,7 +99,7 @@ export default function Footer({ t }) {
             {['kr', 'de'].map((country) => (
               <ListItem
                 key={country}
-                style={styles.addressItem}
+                _css={styles.addressItem}
               >
                 <div css={styles.addressCountry}>
                   {t[`country_${country}`]}
@@ -124,7 +124,7 @@ export default function Footer({ t }) {
             {medias.map(({ title, url }) => (
               <ListItem
                 key={title}
-                style={styles.mediaItem}
+                _css={styles.mediaItem}
                 inline
               >
                 <a

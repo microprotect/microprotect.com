@@ -91,7 +91,7 @@ const styles = {
 
 export default function Information({ t }) {
   return (
-    <Section style={styles.container}>
+    <Section _css={styles.container}>
       <h1 css={styles.brand}>
         {t.myfriend_title}
       </h1>

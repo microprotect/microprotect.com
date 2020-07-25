@@ -150,7 +150,7 @@ export default function Introduction({ t, product }) {
   };
 
   return (
-    <Section style={styles.container}>
+    <Section _css={styles.container}>
       <div css={[styles.description, underlinedToBold]}>
         <ReactMarkdown source={t[`insurance_description_${product}`]} />
       </div>

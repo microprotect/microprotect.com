@@ -143,7 +143,7 @@ const styles = {
 
 export default function WhyDonate({ t }) {
   return (
-    <Section style={styles.container}>
+    <Section _css={styles.container}>
       <Title value={t.why_donate_title} />
       <div css={styles.problem1}>
         <Text value={t.why_donate_problem1} />
@@ -153,17 +153,17 @@ export default function WhyDonate({ t }) {
       </div>
       <div css={styles.content}>
         <div css={styles.questionBackground} />
-        <ListContainer style={styles.questions}>
+        <ListContainer _css={styles.questions}>
           {[0, 1, 2].map((index) => (
             <ListItem
               key={index}
-              style={styles.question(index)}
+              _css={styles.question(index)}
             >
               <Text value={t[`why_donate_question${index + 1}`]} />
             </ListItem>
           ))}
         </ListContainer>
-        <Box style={styles.box}>
+        <Box _css={styles.box}>
           <div css={styles.solutionTitle}>
             <Text value={t.why_donate_solution_title} />
             <img

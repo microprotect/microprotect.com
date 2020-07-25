@@ -1,28 +1,19 @@
-/* @jsx jsx */
-
-import React from 'react';
-
-import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import {
   BASE_MQ,
   CONTENT_PADDING,
 } from '../styles/constants-v5';
 
-const styles = {
-  container: {
+const Section = styled.section(({ _css }) => [
+  {
     padding: '10vw 5%',
     [BASE_MQ]: {
       margin: '0 auto',
       padding: `3em ${CONTENT_PADDING}`,
     },
   },
-};
+  _css,
+]);
 
-export default function Section({ style, children }) {
-  return (
-    <section css={[styles.container, style]}>
-      {children}
-    </section>
-  );
-}
+export default Section;

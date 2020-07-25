@@ -68,13 +68,13 @@ function Partner({ partner }) {
 
 export default function Partners({ t }) {
   return (
-    <Section style={styles.container}>
+    <Section _css={styles.container}>
       <Title value={t.partners_title} />
-      <ListContainer style={styles.items}>
+      <ListContainer _css={styles.items}>
         {partners.map((partner) => (
           <ListItem
             key={partner.id}
-            style={styles.item}
+            _css={styles.item}
           >
             <Partner partner={partner} />
           </ListItem>

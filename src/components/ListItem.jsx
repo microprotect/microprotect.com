@@ -1,21 +1,13 @@
-/* @jsx jsx */
-
-import React from 'react';
-
-import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import { listItem } from '../styles/list';
 
-export default function ListItem({ inline, style, children }) {
-  return (
-    <li
-      css={[
-        listItem,
-        inline ? { display: 'inline-block' } : {},
-        style,
-      ]}
-    >
-      {children}
-    </li>
-  );
-}
+const ListItem = styled.li(({ inline, _css }) => [
+  {
+    ...listItem,
+    display: inline ? 'inline-block' : 'block',
+  },
+  _css,
+]);
+
+export default ListItem;

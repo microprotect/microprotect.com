@@ -1,14 +1,10 @@
-/* @jsx jsx */
-
 import React from 'react';
-
-import { jsx } from '@emotion/core';
-
-import Section from './Section';
-import FeatureBox from './FeatureBox';
 
 import ListContainer from '../ListContainer';
 import ListItem from '../ListItem';
+
+import Section from './Section';
+import FeatureBox from './FeatureBox';
 
 export default function Features({ t }) {
   return (

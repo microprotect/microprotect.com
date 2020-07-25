@@ -1,8 +1,6 @@
-/* @jsx jsx */
-
 import React from 'react';
 
-import { jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 
 import Section from '../Section';
 
@@ -22,10 +20,11 @@ const styles = {
       textAlign: 'center',
     },
   },
-  content: {
-    position: 'relative',
-  },
 };
+
+const Content = styled.div({
+  position: 'relative',
+});
 
 export default function HowDonate({ t, locale }) {
   return (
@@ -36,10 +35,10 @@ export default function HowDonate({ t, locale }) {
         level={3}
         value={t.how_donate_subtitle}
       />
-      <div css={styles.content}>
+      <Content>
         <HowDonateBox t={t} />
         <PriceExample t={t} locale={locale} />
-      </div>
+      </Content>
     </Section>
   );
 }
