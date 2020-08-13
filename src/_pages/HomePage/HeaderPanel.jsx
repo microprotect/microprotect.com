@@ -75,9 +75,6 @@ export default function HomeHeaderPanel({ t }) {
       <h1 css={styles.slogan1}>
         <StrongText value={t.v5_slogan1} />
       </h1>
-      <h2 css={styles.slogan2}>
-        {t.v5_slogan2}
-      </h2>
     </div>
   );
 }

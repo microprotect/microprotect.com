@@ -23,6 +23,6 @@ describe('App', () => {
   it('renders home page', () => {
     const { container } = render(<App />);
 
-    expect(container).toHaveTextContent('Secure more people equally');
+    expect(container).toHaveTextContent('당신이 보호받으면 세상도 함께 보호받습니다');
   });
 });

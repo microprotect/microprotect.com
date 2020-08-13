@@ -43,7 +43,7 @@ export default function Root({ t, locale }) {
       <ChatBubble />
       <Router>
         <Switch>
-          <Route path="/home">
+          <Route path="/insurance">
             <HomePage t={t} />
           </Route>
           <Route path="/about-us">
@@ -68,7 +68,7 @@ export default function Root({ t, locale }) {
             <MyFriendPage t={t} />
           </Route>
           <Route path="/">
-            <FreeInsurancePage t={t} locale={locale} />
+            <HomePage t={t} locale={locale} />
           </Route>
         </Switch>
       </Router>
