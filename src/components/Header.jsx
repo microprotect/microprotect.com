@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import styled from '@emotion/styled';
 
-import Link from './Link';
-
 import { imageReplacement } from '../styles/utils';
 import clearAfter from '../styles/clearAfter';
 import {
@@ -34,7 +32,7 @@ const Container = styled.header(({ filled }) => [
   clearAfter,
 ]);
 
-const LogoLink = styled(Link)({
+const LogoLink = styled.a({
   ...imageReplacement(LogoImage),
   backgroundPosition: '0 50%',
   backgroundSize: `${30 * (800 / 145)}px`,
@@ -56,7 +54,7 @@ export default function Header({ fill = false }) {
 
   return (
     <Container filled={fill || filled}>
-      <LogoLink id="logo" to="/">
+      <LogoLink id="logo" href="/">
         Microprotect
       </LogoLink>
     </Container>

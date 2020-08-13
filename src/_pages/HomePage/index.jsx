@@ -10,7 +10,6 @@ import Footer from '../../components/Footer';
 import HomeHeaderPanel from './HeaderPanel';
 import Products from './Products';
 import MicroCare from './MicroCare';
-import BenefitShare from './BenefitShare';
 import InsurancePartners from './InsurancePartners';
 
 export default function HomePage({ t }) {
@@ -20,7 +19,6 @@ export default function HomePage({ t }) {
       <HomeHeaderPanel t={t} />
       <Products t={t} />
       <MicroCare t={t} />
-      <BenefitShare t={t} />
       <InsurancePartners t={t} />
       <Footer t={t} />
     </>
