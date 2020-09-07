@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { render } from '../utils/test-intl';
+import { render } from '../../utils/test-intl';
 
-import IndexPage from './index';
+import IndexPage from '../../pages/index';
 
-jest.mock('../assets');
+jest.mock('../../assets');
 
 describe('IndexPage', () => {
   it('renders without crash', () => {

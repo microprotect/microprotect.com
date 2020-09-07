@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { render } from '../../utils/test-intl';
+import { render } from '../../../utils/test-intl';
 
-import PurposePage from './purpose';
+import PurposePage from '../../../pages/about/purpose';
 
-jest.mock('../../assets');
+jest.mock('../../../assets');
 
 describe('PurposePage', () => {
   it('renders without crash', () => {
