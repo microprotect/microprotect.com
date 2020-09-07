@@ -1,6 +1,7 @@
 # microprotect
 
 [![Build Status](https://github.com/microprotect/microprotect.com/workflows/CI/badge.svg?branch=main)](https://github.com/microprotect/microprotect.com/actions)
+[![HitCount](http://hits.dwyl.com/microprotect/microprotectcom.svg)](http://hits.dwyl.com/microprotect/microprotectcom)
 
 ## Install dependencies
 
