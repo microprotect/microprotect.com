@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Link, changeLocale } from 'gatsby-plugin-intl';
 
@@ -65,7 +65,7 @@ const Language = styled.li({
   },
 });
 
-export default function Header({ full }) {
+export default function Header() {
   const [filled, setFilled] = useState(false);
 
   useEffect(() => {
@@ -85,11 +85,9 @@ export default function Header({ full }) {
     changeLocale(locale);
   };
 
-  const Inner = full ? Fragment : Container;
-
   return (
-    <Wrapper full={full} filled={filled}>
-      <Inner>
+    <Wrapper filled={filled}>
+      <Container>
         <HomeLink to="/" id="logo">
           Microprotect
         </HomeLink>
@@ -105,7 +103,7 @@ export default function Header({ full }) {
             </a>
           </Language>
         </Languages>
-      </Inner>
+      </Container>
     </Wrapper>
   );
 }
