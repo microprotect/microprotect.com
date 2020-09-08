@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 12
+
+install:
+  - npm ci
+
+script:
+  - npx eslint --ext .js,.jsx src test
+  - npx jest --ci --coverage
+  - npx codecov --disable=gcov
+  - npx webpack --mode=production
+  - npm run build
+  - cp -r dist/bundle-*.js public/
+  - cp -r dist/*.png public/
+  - cp -r assets public/
+  - cp dist/index.html public/404.html
+  - cp -r _test/* test/
+  - HEADLESS=true npm run test:ci-e2e
