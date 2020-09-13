@@ -18,7 +18,7 @@ export default function Footer() {
     <Wrapper>
       <Container>
         <p>
-          주)마이크로프로텍트
+          (주)마이크로프로텍트
         </p>
         <p>
           서울시 성동구 뚝섬로1나길 5, HEYGROUND 성수시작점 4층 G406

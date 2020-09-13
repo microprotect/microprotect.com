@@ -6,8 +6,7 @@ module.exports = {
       options: {
         path: `${__dirname}/src/locales`,
         languages: ['en', 'ko'],
-        defaultLanguage: 'en',
-        redirect: true,
+        defaultLanguage: 'ko',
       },
     },
     {

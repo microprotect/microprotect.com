@@ -4,11 +4,12 @@ import { Link, FormattedMessage } from 'gatsby-plugin-intl';
 
 import styled from '@emotion/styled';
 
+import Container from '../Container';
+
 import {
   BASE_MQ,
   HEADER_HEIGHT,
   MOBILE_PADDING_HORIZONTAL,
-  DESKTOP_PADDING_HORIZONTAL,
 } from '../../../styles/constants-v6';
 
 import { images } from '../../../assets';
@@ -22,12 +23,8 @@ const Wrapper = styled.div({
   backgroundSize: 'cover',
   alignItems: 'center',
   [BASE_MQ]: {
-    padding: `${HEADER_HEIGHT} ${DESKTOP_PADDING_HORIZONTAL} 0`,
+    padding: 0,
   },
-});
-
-const Content = styled.div({
-  width: '100%',
 });
 
 const Slogan = styled.h1({
@@ -84,7 +81,7 @@ const Item = styled.li({
 export default function HeaderPanel() {
   return (
     <Wrapper>
-      <Content>
+      <Container>
         <Slogan>
           <strong>
             <FormattedMessage id="home.slogan1" />
@@ -105,7 +102,7 @@ export default function HeaderPanel() {
             </Link>
           </Item>
         </List>
-      </Content>
+      </Container>
     </Wrapper>
   );
 }

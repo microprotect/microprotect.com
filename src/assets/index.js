@@ -66,6 +66,8 @@ import SelfEmployedInsuranceImage from './images/v6/projects/self-employed-insur
 import CreditDefaultInsuranceImage from './images/v6/projects/credit-default-insurance.jpg';
 import CompulsoryInsuranceImage from './images/v6/projects/compulsory-insurance.jpg';
 
+import GermanyHaileyImage from './images/germany/hailey.jpg';
+
 export const images = {
   logos: {
     white: WhiteLogoImage,
@@ -81,6 +83,9 @@ export const images = {
     selfEmployedInsurance: SelfEmployedInsuranceImage,
     creditDefaultInsurance: CreditDefaultInsuranceImage,
     compulsoryInsurance: CompulsoryInsuranceImage,
+  },
+  germany: {
+    hailey: GermanyHaileyImage,
   },
 };
 
