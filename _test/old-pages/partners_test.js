@@ -1,6 +1,6 @@
 Feature('Partners');
 
-Scenario('Visit the partners page', (I) => {
+Scenario('Visit the partners page', ({ I }) => {
   I.amOnPage('/partners?locale=en');
   I.see('Balance Hero');
 
