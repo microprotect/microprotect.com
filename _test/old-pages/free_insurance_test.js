@@ -1,6 +1,6 @@
 Feature('Free insurance page');
 
-Scenario('Show free insurance page', (I) => {
+Scenario('Show free insurance page', ({ I }) => {
   I.amOnPage('/free-insurance?locale=en');
   I.see('FREE INSURANCE\nFOR LOW-INCOME PEOPLE');
 

@@ -1,6 +1,6 @@
 Feature('About us');
 
-Scenario('Visit about us page', (I) => {
+Scenario('Visit about us page', ({ I }) => {
   I.amOnPage('/about-us?locale=en');
   I.see('Chief Exeutive Officer • SANGMIN KWON');
 
