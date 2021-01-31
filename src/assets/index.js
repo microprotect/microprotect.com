@@ -68,9 +68,12 @@ import CompulsoryInsuranceImage from './images/v6/projects/compulsory-insurance.
 
 import GermanyHaileyImage from './images/germany/hailey.jpg';
 
+import ReturnsLogoImage from './images/returns/logo.png';
+
 export const images = {
   logos: {
     white: WhiteLogoImage,
+    returns: ReturnsLogoImage,
   },
   home: {
     background: HomeBackgroundImage,
