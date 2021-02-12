@@ -1,7 +1,7 @@
 Feature('Home page');
 
 Scenario('Slogan', ({ I }) => {
-  I.amOnPage('/en/');
+  I.amOnPage('/');
 
-  I.see('insurance, redefined');
+  I.see('Our experience insight and creativity');
 });

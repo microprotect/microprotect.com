@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+button {
+  font-size: 1em;
+}
+
+body {
+  background: #000;
+  color: #FFF;
+  font-size: 16px;
+  word-break: keep-all;
+}
+
+a {
+  color: #FFF;
+}
+
+input,
+select {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+button {
+  cursor: pointer;
+}
