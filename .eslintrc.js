@@ -1,17 +1,14 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true,
+    es2021: true,
     jest: true,
   },
   extends: [
     'plugin:react/recommended',
     'airbnb',
-    'plugin:codeceptjs/recommended',
   ],
   globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
     context: true,
     given: true,
   },
@@ -19,12 +16,11 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018,
+    ecmaVersion: 12,
     sourceType: 'module',
   },
   plugins: [
     'react',
-    'emotion',
   ],
   rules: {
     indent: ['error', 2],
@@ -48,6 +44,8 @@ module.exports = {
     'key-spacing': ['error', { mode: 'strict' }],
     'arrow-spacing': ['error', { before: true, after: true }],
     'react/prop-types': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
     'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
     'no-unused-vars': ['error', { varsIgnorePattern: 'jsx' }],
   },
