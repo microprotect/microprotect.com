@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="14px" viewBox="0 0 26 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-330.000000, -3551.000000)">
+            <g transform="translate(0.000000, 2909.000000)">
+                <g transform="translate(0.000000, 60.000000)" stroke="#42FC54" stroke-linecap="square" stroke-width="0.5">
+                    <line x1="0" y1="596" x2="375" y2="596"></line>
+                </g>
+                <g transform="translate(0.000000, 626.000000)">
+                    <rect fill="#42FC54" x="0" y="0" width="375" height="45"></rect>
+                    <g transform="translate(343.000000, 23.000000) rotate(-90.000000) translate(-343.000000, -23.000000) translate(337.000000, 11.000000)" stroke="#000000" stroke-width="2">
+                        <line x1="5.95677204" y1="0.5" x2="5.95677204" y2="22.5" stroke-linecap="square"></line>
+                        <polyline points="-4.54747351e-13 15.0879068 5.95677204 23.0879068 11.3899388 15.0879068"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

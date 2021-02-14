@@ -1,49 +1,35 @@
-import { useEffect } from 'react';
-
-import { Helmet } from 'react-helmet';
-
 import styled from '@emotion/styled';
+
+import Summary from '../components/Summary';
+import JumpTo from '../components/JumpTo';
+import Partnership from '../components/Partnership';
+import Milestones from '../components/Milestones';
+import Team from '../components/Team';
+import Article from '../components/Article';
+import Media from '../components/Media';
+import Footer from '../components/Footer';
 
 import Layout from '../components/layouts/DefaultLayout';
 
-import { colors } from '../designSystem';
-
-const Brand = styled.div({
-  fontFamily: 'Circular Air Bold',
-  fontSize: '1em',
-  padding: '1em 0',
-  color: colors.primary,
-  textTransform: 'lowercase',
-});
-
-const Slogan = styled.h1({
-  fontFamily: 'Didot',
-  fontSize: '2em',
-  color: colors.primary,
+const Container = styled.div({
+  maxWidth: '1230px',
+  margin: '0 auto',
+  position: 'relative',
 });
 
 export default function IndexPage() {
-  useEffect(() => {
-    setTimeout(() => {
-      window.location.href = 'https://microprotect.github.io/';
-    }, 2000);
-  });
-
   return (
     <Layout>
-      <Helmet>
-        <title>Microprotect</title>
-      </Helmet>
-      <Brand>
-        Microprotect
-      </Brand>
-      <Slogan>
-        Our experience
-        insight and creativity
-        to provide better
-        insurance services
-        for all
-      </Slogan>
+      <Container>
+        <Summary />
+        <JumpTo />
+        <Partnership />
+        <Milestones />
+        <Team />
+        <Article />
+        <Media />
+      </Container>
+      <Footer />
     </Layout>
   );
 }
