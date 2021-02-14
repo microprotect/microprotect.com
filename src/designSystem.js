@@ -2,22 +2,34 @@ export const sizes = {
   contentMaxWidth: '540px',
 };
 
-export const mq = {
-  desktop: '@media screen and (min-width: 600px)',
+export const breakpoints = {
+  maxMobile: '@media screen and (max-width: 599px)',
+  minTablet: '@media screen and (min-width: 600px)',
+  maxTablet: '@media screen and (max-width: 1229px)',
+  minDesktop: '@media screen and (min-width: 1230px)',
+};
+
+export const flex = {
+  col: '1 0 0%',
+};
+
+export const fontWeights = {
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
 };
 
 export const colors = {
   black: '#000',
   white: '#FFF',
-  primary: '#FF6527',
-  highlight: '#00F87D',
-  disable: '#888',
+  primary: '#FF4513',
+  secondary: '#42FC54',
+  footerBackground: '#302F2F',
 };
 
 export const styles = {
-  center: {
-    padding: `0 calc((100vw - min(90vw, ${sizes.contentMaxWidth})) / 2)`,
-  },
   screenReaderOnly: {
     position: 'absolute',
     width: '1px',

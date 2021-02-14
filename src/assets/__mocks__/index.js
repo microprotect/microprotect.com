@@ -1,5 +1,10 @@
 export const images = {
+  backgrounds: {},
+  thumbnails: {},
+  arrows: {},
+  faces: {},
+  partners: {},
 };
 
-// TODO: delete this
+// TODO: Delete this!
 export default {};

@@ -10,14 +10,25 @@ button {
   font-size: 1em;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
-  background: #000;
+  font-size: 1rem;
+  font-family: 'Spoqa Han Sans Neo';
+  background: #0E0E0E;
   color: #FFF;
   font-size: 16px;
   word-break: keep-all;
 }
 
 a {
+  color: #FFF;
+}
+
+::selection {
+  background-color: #FF4513;
   color: #FFF;
 }
 
