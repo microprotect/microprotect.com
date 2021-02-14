@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Circular Air Bold";
+  src: url("../webfonts/circular-air-bold.eot"); /* IE9 */
+  src: url("../webfonts/iefix/circular-air-bold.eot") format("embedded-opentype"), /* IE6-IE8 */
+    url("../webfonts/circular-air-bold.woff2") format("woff2"), /* Chrome, Firefox */
+    url("../webfonts/circular-air-bold.woff") format("woff"), /* Chrome, Firefox */
+    url("../webfonts/circular-air-bold.ttf") format("truetype"), /* Chrome, Firefox, Opera, Safari, Android, iOS 4.2+ */
+    url("../webfonts/circular-air-bold.svg") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+  font-family: "Henri Didot";
+  src: url("../webfonts/henri-didot.eot"); /* IE9 */
+  src: url("../webfonts/henri-didot.eot?") format("embedded-opentype"), /* IE6-IE8 */
+    url("../webfonts/henri-didot.woff2") format("woff2"), /* Chrome, Firefox */
+    url("../webfonts/henri-didot.woff") format("woff"), /* Chrome, Firefox */
+    url("../webfonts/henri-didot.ttf") format("truetype"), /* Chrome, Firefox, Opera, Safari, Android, iOS 4.2+ */
+    url("../webfonts/henri-didot.svg") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+  font-family: "Orator Std";
+  src: url("../webfonts/orator-std.eot"); /* IE9 */
+  src: url("../webfonts/orator-std.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../webfonts/orator-std.woff2") format("woff2"), /* Chrome, Firefox */
+    url("../webfonts/orator-std.woff") format("woff"), /* Chrome, Firefox */
+    url("../webfonts/orator-std.ttf") format("truetype"), /* Chrome, Firefox, Opera, Safari, Android, iOS 4.2+ */
+    url("../webfonts/orator-std.svg") format("svg"); /* iOS 4.1- */
+}
