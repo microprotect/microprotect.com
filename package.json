@@ -4,7 +4,7 @@
   "description": "microproect.com",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --port 8000",
+    "start": "webpack serve --mode=development --port 8000",
     "serve": "serve dist -l 8000",
     "build": "npx webpack --mode=production",
     "lint": "eslint --fix --ext .js,.jsx src test",
@@ -63,6 +63,7 @@
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
+    "lodash": "^4.17.20",
     "next": "^10.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

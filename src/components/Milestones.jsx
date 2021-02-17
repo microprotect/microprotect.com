@@ -4,12 +4,14 @@ import {
   breakpoints, fontWeights, colors, flex, styles,
 } from '../designSystem';
 
+import { calculateRem } from '../utils';
+
 const Headline = styled.h2({
-  fontSize: '28px',
+  fontSize: `${calculateRem(28)}`,
   fontWeight: fontWeights.bold,
   margin: '100px 20px 30px',
   [breakpoints.minDesktop]: {
-    margin: '130px 15px 30px',
+    margin: '130px 15px 30px 0',
   },
 });
 
@@ -18,7 +20,7 @@ const MilestonesSection = styled.section();
 const Timeline = styled.ul({
   listStyle: 'none',
   '& p': {
-    fontSize: '18px',
+    fontSize: `${calculateRem(18)}`,
     fontWeight: fontWeights.regular,
     position: 'relative',
     lineHeight: 1.7,
@@ -46,7 +48,7 @@ const Timeline = styled.ul({
   [breakpoints.minDesktop]: {
     display: 'flex',
     flexWrap: 'wrap',
-    padding: '0 15px',
+    padding: 0,
   },
 });
 
@@ -69,7 +71,7 @@ const TimelineItem = styled.li({
 });
 
 const TimelineMonth = styled.time({
-  fontSize: '14px',
+  fontSize: `${calculateRem(14)}`,
   fontWeight: fontWeights.light,
   display: 'flex',
   justifyContent: 'flex-end',
@@ -115,7 +117,7 @@ const TimelineDayDetail = styled.div({
 });
 
 const TimelineDay = styled.time({
-  fontSize: '20px',
+  fontSize: `${calculateRem(20)}`,
   fontWeight: fontWeights.thin,
   color: colors.primary,
   [breakpoints.maxTablet]: {

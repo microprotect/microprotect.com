@@ -4,11 +4,14 @@ import {
   breakpoints, fontWeights, colors, styles,
 } from '../designSystem';
 
+import { calculateRem } from '../utils';
+
 const FooterArea = styled.footer({
   padding: '50px 35px',
+  position: 'relative',
   backgroundColor: colors.footerBackground,
   '& strong': {
-    fontSize: '20px',
+    fontSize: `${calculateRem(20)}`,
     fontFamily: 'Circular Air Bold',
     display: 'block',
     paddingBottom: '15px',
@@ -24,19 +27,18 @@ const FooterArea = styled.footer({
   },
   [breakpoints.minDesktop]: {
     marginTop: '220px',
+    paddingRight: 0,
+    paddingLeft: 0,
   },
 });
 
 const FooterContainer = styled.div({
   maxWidth: '1230px',
   margin: '0 auto',
-  [breakpoints.minDesktop]: {
-    padding: '0 15px',
-  },
 });
 
 const CompanyInfo = styled.ul({
-  fontSize: '16px',
+  fontSize: `${calculateRem(16)}`,
   fontWeight: fontWeights.thin,
   listStyle: 'none',
   [breakpoints.minDesktop]: {
@@ -69,7 +71,7 @@ const CompanyContact = styled.dl({
 });
 
 const LawInfo = styled.ul({
-  fontSize: '14px',
+  fontSize: `${calculateRem(14)}`,
   fontWeight: fontWeights.thin,
   marginTop: '25px',
   listStyle: 'none',
@@ -117,13 +119,13 @@ const Address = styled.dl({
 });
 
 const Copyrights = styled.p({
-  fontSize: '14px',
+  fontSize: `${calculateRem(14)}`,
   fontWeight: fontWeights.thin,
   marginTop: '3px',
   opacity: '.5',
 });
 
-export default function Summary() {
+export default function Footer() {
   return (
     <FooterArea>
       <FooterContainer>
@@ -173,7 +175,7 @@ export default function Summary() {
             </Address>
           </li>
         </LawInfo>
-        <Copyrights>Microprotect ⓒ 2020 All Rights Reserved.</Copyrights>
+        <Copyrights>Microprotect ⓒ 2021 All Rights Reserved.</Copyrights>
       </FooterContainer>
     </FooterArea>
   );

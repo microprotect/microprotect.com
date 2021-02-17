@@ -13,6 +13,8 @@ export const images = {
     diagonalBlack: require('./images/arrows/diagonal-black.svg'),
     diagonalRed: require('./images/arrows/diagonal-red.svg'),
     hiring: require('./images/arrows/hiring.svg'),
+    toggleClosed: require('./images/arrows/toggle-closed.svg'),
+    toggleOpened: require('./images/arrows/toggle-opened.svg'),
   },
   faces: {
     lion: require('./images/faces/lion.png'),

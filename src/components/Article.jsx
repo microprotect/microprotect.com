@@ -6,12 +6,14 @@ import {
 
 import { images } from '../assets';
 
+import { calculateRem } from '../utils';
+
 const Headline = styled.h2({
-  fontSize: '28px',
+  fontSize: `${calculateRem(28)}`,
   fontWeight: fontWeights.bold,
   margin: '100px 20px 30px',
   [breakpoints.minDesktop]: {
-    margin: '130px 15px 30px',
+    margin: '130px 15px 30px 0',
   },
 });
 
@@ -21,7 +23,7 @@ const Press = styled.ul({
   borderBottom: `1px solid ${colors.primary}`,
   listStyle: 'none',
   [breakpoints.minDesktop]: {
-    margin: '0 15px',
+    margin: 0,
   },
 });
 
@@ -48,13 +50,13 @@ const PressItem = styled.li({
     },
   },
   '& time': {
-    fontSize: '14px',
+    fontSize: `${calculateRem(14)}`,
     fontWeight: fontWeights.thin,
     marginBottom: '7px',
     color: colors.primary,
   },
   '& strong': {
-    fontSize: '18px',
+    fontSize: `${calculateRem(18)}`,
     fontWeight: fontWeights.thin,
     lineHeight: 1.5,
   },
@@ -69,7 +71,7 @@ const PressItem = styled.li({
       padding: '30px 20px',
     },
     '& time': {
-      fontSize: '20px',
+      fontSize: `${calculateRem(20)}`,
       marginBottom: 0,
       width: '150px',
       lineHeight: 1.5,
@@ -77,7 +79,7 @@ const PressItem = styled.li({
   },
 });
 
-export default function Summary() {
+export default function Article() {
   return (
     <ArticleSection>
       <Headline>Article</Headline>

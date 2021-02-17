@@ -4,8 +4,10 @@ import {
   breakpoints, fontWeights, styles,
 } from '../designSystem';
 
+import { calculateRem } from '../utils';
+
 const Headline = styled.h2({
-  fontSize: '28px',
+  fontSize: `${calculateRem(28)}`,
   fontWeight: fontWeights.bold,
   margin: '100px 20px 30px',
   [breakpoints.minDesktop]: {

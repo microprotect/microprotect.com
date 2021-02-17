@@ -8,32 +8,44 @@ import {
 
 import { images } from '../assets';
 
+import { calculateRem } from '../utils';
+
 const SummarySection = styled.section({
   padding: '0 20px',
   marginTop: '35px',
   [breakpoints.minDesktop]: {
-    padding: '0',
+    padding: 0,
   },
 });
 
 const Brand = styled.h1({
-  fontSize: '24px',
+  fontSize: `${calculateRem(24)}`,
   fontFamily: 'Circular Air Bold',
   color: colors.primary,
   textTransform: 'lowercase',
 });
 
 const Slogan = styled.p({
-  fontSize: '40px',
+  fontSize: '10.666vw',
   fontFamily: 'Henri Didot',
   position: 'absolute',
   top: '120px',
   left: '20px',
-  maxWidth: '330px',
+  maxWidth: '88%',
   color: colors.primary,
   lineHeight: 1,
+  '&::before, &::after': {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    content: '"Our experience insight and creativity to provide better insurance services for all"',
+  },
+  [breakpoints.minTablet]: {
+    fontSize: '8.166vw',
+    maxWidth: '68%',
+  },
   [breakpoints.minDesktop]: {
-    fontSize: '100px',
+    fontSize: `${calculateRem(100)}`,
     maxWidth: '970px',
     left: 0,
     lineHeight: 1.1,
@@ -41,22 +53,43 @@ const Slogan = styled.p({
 });
 
 const SloganBackground = styled.div({
-  background: `url(${images.backgrounds.slogan}) no-repeat 50% 50%/583px 458px`,
   margin: '0 -20px',
-  height: '825px',
-  [breakpoints.minDesktop]: {
-    backgroundPosition: 'calc(100% - 90px) 100%',
-    backgroundSize: '847px 666px',
-    margin: '0',
-    height: '760px',
+  height: 'calc(100vw + 234px)',
+  position: 'relative',
+  '&::after': {
+    display: 'block',
+    position: 'absolute',
+    bottom: 0,
+    background: `url(${images.backgrounds.slogan}) no-repeat 50% 50%/contain`,
+    content: '""',
+  },
+  [breakpoints.maxMobile]: {
+    '&::after': {
+      left: '50%',
+      transform: 'translate(-50%, 0)',
+      width: '583px',
+      height: '458px',
+    },
+  },
+  [breakpoints.minTablet]: {
+    margin: 0,
+    height: '829px',
+    '&::after': {
+      bottom: 0,
+      right: '-90px',
+      width: '847px',
+      height: '666px',
+    },
   },
 });
 
 const Vision = styled.p({
+  marginTop: '55px',
+  textTransform: 'lowercase',
   fontFamily: 'Orator Std',
   color: colors.secondary,
   [breakpoints.maxTablet]: {
-    fontSize: '22px',
+    fontSize: `${calculateRem(22)}`,
     position: 'relative',
     paddingBottom: '100px',
     marginBottom: '40px',
@@ -67,7 +100,7 @@ const Vision = styled.p({
       position: 'absolute',
       width: '12px',
       height: '60px',
-      bottom: '0',
+      bottom: 0,
       left: '50%',
       transform: 'translate(-50%, 0)',
       background: `url(${images.arrows.flow}) no-repeat 50% 50%/contain`,
@@ -75,25 +108,28 @@ const Vision = styled.p({
     },
   },
   [breakpoints.minDesktop]: {
+    marginTop: '10px',
     fontSize: '32px',
     paddingBottom: '20px',
   },
 });
 
 const Mission = styled.p({
-  fontSize: '20px',
+  fontSize: `${calculateRem(20)}`,
   fontWeight: fontWeights.thin,
   lineHeight: '1.5',
   textAlign: 'center',
   '& strong': {
     fontWeight: fontWeights.bold,
   },
-  [breakpoints.minDesktop]: {
-    fontSize: '24px',
-    textAlign: 'left',
+  [breakpoints.minTablet]: {
     '& span': {
       display: 'block',
     },
+  },
+  [breakpoints.minDesktop]: {
+    fontSize: `${calculateRem(24)}`,
+    textAlign: 'left',
   },
 });
 
@@ -101,7 +137,7 @@ export default function Summary() {
   return (
     <SummarySection>
       <Helmet>
-        <title>Microprotect</title>
+        <title>마이크로프로텍트 Microprotect</title>
       </Helmet>
       <Brand>
         Microprotect
@@ -111,7 +147,7 @@ export default function Summary() {
       </Slogan>
       <SloganBackground />
       <Vision>
-        secure more people equarlly
+        Secure more people equally
       </Vision>
       <Mission>
         <strong>마이크로프로텍트</strong>
