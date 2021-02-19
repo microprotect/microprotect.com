@@ -6,12 +6,14 @@ import {
 
 import { images } from '../assets';
 
+import { calculateRem } from '../utils';
+
 const Headline = styled.h2({
-  fontSize: '28px',
+  fontSize: `${calculateRem(28)}`,
   fontWeight: fontWeights.bold,
   margin: '100px 20px 30px',
   [breakpoints.minDesktop]: {
-    margin: '130px 15px 30px',
+    margin: '130px 15px 30px 0',
   },
 });
 
@@ -44,14 +46,15 @@ const TeamMember = styled.ul({
     },
   },
   '& cite': {
-    fontSize: '20px',
+    fontSize: `${calculateRem(20)}`,
     fontWeight: fontWeights.bold,
     fontStyle: 'normal',
     marginBottom: '10px',
     color: colors.secondary,
   },
   '& p': {
-    fontSize: '18px',
+    fontSize: `${calculateRem(18)}`,
+    fontWeight: fontWeights.thin,
     lineHeight: 1.7,
   },
   '& i': {
@@ -72,7 +75,7 @@ const TeamMember = styled.ul({
     },
   },
   [breakpoints.minDesktop]: {
-    margin: '0 15px',
+    margin: 0,
     '& li': {
       padding: '30px 20px 30px 80px',
     },
@@ -107,7 +110,7 @@ const TeamMemberAlison = styled.li({
 const HiringlLinkTo = styled.div({
   backgroundColor: colors.secondary,
   '& a': {
-    fontSize: '18px',
+    fontSize: `${calculateRem(18)}`,
     fontWeight: fontWeights.bold,
     display: 'flex',
     height: '45px',
@@ -131,7 +134,7 @@ const HiringlLinkTo = styled.div({
   },
 });
 
-export default function Summary() {
+export default function Team() {
   return (
     <TeamSection>
       <Headline>Team</Headline>
