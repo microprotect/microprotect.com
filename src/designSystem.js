@@ -38,7 +38,6 @@ export const styles = {
     overflow: 'hidden',
     clip: 'rect(0,0,0,0)',
     whiteSpace: 'nowrap',
-    WebkitClipPath: 'inset(50%)',
     clipPath: 'inset(50%)',
     border: 0,
   },

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="195px" height="196px" viewBox="0 0 195 196" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <rect x="0" y="0" width="1200" height="635"></rect>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-895.000000, -3702.000000)">
+            <g transform="translate(390.000000, 3482.000000)">
+                <circle fill="#42FC54" mask="url(#mask-2)" cx="602.5" cy="318" r="97.5"></circle>
+                <polygon fill="#000000" mask="url(#mask-2)" transform="translate(610.000000, 317.000000) rotate(90.000000) translate(-610.000000, -317.000000) " points="610 280 658 354 562 354"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

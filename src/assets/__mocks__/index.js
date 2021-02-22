@@ -4,6 +4,10 @@ export const images = {
   arrows: {},
   faces: {},
   partners: {},
+  videos: {
+    buttons: {},
+    thumbnails: {},
+  },
 };
 
 // TODO: Delete this!
