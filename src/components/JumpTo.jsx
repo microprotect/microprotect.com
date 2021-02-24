@@ -48,6 +48,9 @@ const Figure = styled.figure({
         content: '""',
       },
     },
+    '&:focus strong': {
+      textDecoration: 'underline',
+    },
   },
   '& img': {
     display: 'block',

@@ -48,6 +48,9 @@ const PressItem = styled.li({
         right: '45px',
       },
     },
+    '&:focus strong': {
+      textDecoration: 'underline',
+    },
   },
   '& time': {
     fontSize: `${calculateRem(14)}`,

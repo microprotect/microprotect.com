@@ -131,6 +131,9 @@ const HiringlLinkTo = styled.div({
       transform: 'translate(0, -50%)',
       content: '""',
     },
+    '&:focus': {
+      textDecoration: 'underline',
+    },
   },
 });
 
