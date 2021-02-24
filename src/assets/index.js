@@ -27,6 +27,15 @@ export const images = {
     facebook: require('./images/partners/facebook.png'),
     mediage: require('./images/partners/mediage.png'),
   },
+  videos: {
+    buttons: {
+      normal: require('./images/videos/normal.svg'),
+      hover: require('./images/videos/hover.svg'),
+    },
+    thumbnails: {
+      kb: require('./images/videos/kb.png'),
+    },
+  },
 };
 
 // TODO: Delete this!
