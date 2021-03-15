@@ -64,12 +64,6 @@ const CompanyPresident = styled.dl({
   },
 });
 
-const CompanyContact = styled.dl({
-  '& dt': {
-    paddingRight: '10px',
-  },
-});
-
 const LawInfo = styled.ul({
   fontSize: `${calculateRem(14)}`,
   fontWeight: fontWeights.thin,
@@ -142,12 +136,6 @@ export default function Footer() {
               <dt>대표자</dt>
               <dd>권상민</dd>
             </CompanyPresident>
-          </li>
-          <li>
-            <CompanyContact>
-              <dt>대표번호</dt>
-              <dd>02-555-3332</dd>
-            </CompanyContact>
           </li>
         </CompanyInfo>
         <LawInfo>
