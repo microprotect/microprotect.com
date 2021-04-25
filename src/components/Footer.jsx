@@ -156,8 +156,9 @@ export default function Footer() {
               <dt>주소</dt>
               <dd>
                 <address>
-                  <span>서울특별시 영등포구 의사당대로 83,</span>
-                  오투타워(서울핀테크랩) 4층 112호 (우편번호: 07323)
+                  <span>서울특별시 강남구 테헤란로 443,</span>
+                  {' '}
+                  애플트리타워 13층 마이크로프로텍트 (우편번호 06158)
                 </address>
               </dd>
             </Address>
